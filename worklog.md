@@ -192,3 +192,24 @@ Work Log:
 Stage Summary:
 - KETIGA PERMINTAAN KLIEN SELESAI: (1) ARTIKEL BULANAN — 12 panduan SSR dalam 6 edisi (Agu/Okt 2026 + arsip Jan–Mar), UI edisi bilingual; (2) SAUDI DESK MISA — section landing #misa full bilingual (banner AI, 2 arah investasi 12 layanan, 5 langkah, 3 FAQ, trust bar) + JSON-LD FAQPage 16 Q + sitemap + nav; (3) VERSI INGGRIS — i18n ID⇄EN seluruh 19 section (kamus ~200 keys + 25 bundle data EN), toggle Globe di navbar, hydration-safe, SSR default ID tetap 100% crawlable Google, entri katalog/artikel tetap ID dengan catatan EN.
 - Arsitektur: Copy bundle data-driven (bukan t() string-by-string) menekan diff; section berat (600 layanan) tetap server + helper client untuk label; phases di-split wrapper/view agar bundle client ramping.
+
+---
+Task ID: 8
+Agent: Z.ai Code (Main Orchestrator)
+Task: Membuat logo resmi Gunara Consultant — konsep "The Sovereign G" (46 dewan pakar) + integrasi penuh ke website
+
+Work Log:
+- Muat skill image-generation; generate 3 aset brand via z-ai CLI (1024x1024 & 1344x768): logo-icon.png (perisai emas-emerald + monogram G pilar Ionic, bg putih), logo-icon-dark.png (tile emerald gelap + matahari terbit emas), logo-lockup.png (wordmark GUNARA CONSULTANT — ejaan terverifikasi benar).
+- QA visual manual: ketiga aset lolos (zero typo, komposisi heraldika benar, palet #0a4f38 + #d4af37 konsisten).
+- sharp: buat favicon src/app/icon.png (256px, 77KB) + src/app/apple-icon.png (180px) + varian web terkompresi (logo-icon-256, logo-icon-dark-256, logo-lockup-web 1024px).
+- Rewrite src/components/ui-custom/logo.tsx: LogoMark kini next/image tile emerald gelap rounded-xl ring-gold/40 (tampil konsisten light/dark); Logo dipertahankan + tambah shrink-0 & whitespace-nowrap (perbaikan wordmark wrap yang terpicu tambahan tombol EN di navbar).
+- Tambah 16 key bilingual (brand*) ke UI_ID & UI_EN di src/lib/i18n.ts (brandEyebrow/Title/Highlight/Desc/3 Alt/4x Mean/Badge).
+- src/components/sections/heritage.tsx: sisipkan blok "Identitas Merek — Filosofi Logo The Sovereign G" setelah grid timeline+sertifikat: 2 motion.figure emblem (tilt -3°/+3°, animasi whileInView), lockup strip putih, 4 kartu makna (Landmark/ShieldCheck/Sunrise/Gem) via Stagger, badge ISO BadgeCheck. Full i18n.
+- Temuan penting: subagent 7-d-1 ternyata sudah mengi18n-kan lebih banyak section dari laporannya (about, heritage terbukti pakai useLang).
+- Verifikasi: lint 0 error; SSR tetap 100% Indonesia (0 leak EN); favicon 200; Agent Browser E2E — navbar light/dark rapi satu baris, blok Filosofi Logo render sempurna, toggle EN→"Logo Philosophy/The Sovereign G" + document.lang=en, balik ke ID OK, mobile 375px tanpa scroll horizontal, 0 console error.
+- Screenshot bukti: public/images/verify-logo-{nav2,brand3,mobile}.png.
+
+Stage Summary:
+- Identitas visual Gunara Consultant kini konsisten: "The Sovereign G" (pilar hukum + perisai perlindungan + matahari terbit era 2024) menghiasi navbar, footer, favicon, dan blok filosofi brand bilingual di section #legasi.
+- Aset siap pakai untuk cetak/media sosial tersimpan di public/images/logo-{icon,icon-dark,lockup}.png + varian web.
+- Website tetap: SSR Indonesia penuh (SEO aman), lint bersih, tanpa error runtime.

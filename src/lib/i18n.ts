@@ -1482,6 +1482,25 @@ const UI_ID = {
   herChipVerified: "Legalitas Terverifikasi",
   herChipServing: "Melayani Seluruh Indonesia",
 
+  /* ---- Brand / Filosofi Logo ---- */
+  brandEyebrow: "Identitas Merek",
+  brandTitle: "Filosofi Logo",
+  brandHighlight: "The Sovereign G",
+  brandDesc:
+    "Setiap elemen emblem Gunara Consultant dirancang dengan presisi heraldika korporat — menceritakan siapa kami: konsultan yang menjaga struktur hukum, melindungi bisnis, dan membuka era baru bagi klien.",
+  brandIconAlt: "Emblem logo Gunara Consultant — monogram G dengan pilar klasik di dalam perisai",
+  brandTileAlt: "Emblem logo Gunara Consultant versi gelap dengan matahari terbit emas",
+  brandLockAlt: "Logo lengkap Gunara Consultant — emblem perisai dengan wordmark GUNARA CONSULTANT",
+  brandMean1Title: "Pilar Klasik",
+  brandMean1Text: "Batang monogram G dibangun dari pilar Ionic — simbol struktur hukum yang kokoh sejak 2009.",
+  brandMean2Title: "Perisai",
+  brandMean2Text: "Bentuk perisai melambangkan perlindungan penuh atas legalitas dan kepentingan bisnis klien.",
+  brandMean3Title: "Matahari Terbit",
+  brandMean3Text: "Sinar matahari menandai era baru 2024 dan jangkauan Asia yang terus naik kelas.",
+  brandMean4Title: "Emerald & Gold",
+  brandMean4Text: "Hijau zamrud kemewahan dan emas standar kelas dunia — warna otoritas, bukan sekadar gaya.",
+  brandBadge: "Identitas resmi — selaras ISO 9001:2015",
+
   /* ---- Services (16) ---- */
   svcAria: "Layanan perizinan Gunara Consultant",
   svcEyebrow: "Layanan Kami",
@@ -1837,6 +1856,25 @@ const UI_EN: Record<UIKey, string> = {
   herChipGroup: "Group: pusatperizinan.com",
   herChipVerified: "Verified Legality",
   herChipServing: "Serving All of Indonesia",
+
+  /* ---- Brand / Logo Philosophy ---- */
+  brandEyebrow: "Brand Identity",
+  brandTitle: "Logo Philosophy",
+  brandHighlight: "The Sovereign G",
+  brandDesc:
+    "Every element of the Gunara Consultant emblem is crafted with corporate heraldic precision — telling who we are: consultants who uphold legal structure, protect businesses, and open a new era for clients.",
+  brandIconAlt: "Gunara Consultant logo emblem — monogram G with classical pillars inside a shield",
+  brandTileAlt: "Gunara Consultant dark logo emblem with a golden rising sun",
+  brandLockAlt: "Full Gunara Consultant logo — shield emblem with the GUNARA CONSULTANT wordmark",
+  brandMean1Title: "Classical Pillar",
+  brandMean1Text: "The G monogram is built from an Ionic column — a symbol of solid legal structure since 2009.",
+  brandMean2Title: "Shield",
+  brandMean2Text: "The shield shape represents full protection of clients' legality and business interests.",
+  brandMean3Title: "Rising Sun",
+  brandMean3Text: "Sun rays mark the new era of 2024 and a rising reach across Asia.",
+  brandMean4Title: "Emerald & Gold",
+  brandMean4Text: "Luxurious emerald green and world-class gold — colors of authority, not mere style.",
+  brandBadge: "Official identity — aligned with ISO 9001:2015",
 
   /* ---- Services (16) ---- */
   svcAria: "Gunara Consultant licensing services",

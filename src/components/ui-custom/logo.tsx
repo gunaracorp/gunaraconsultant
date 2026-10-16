@@ -1,42 +1,25 @@
 import Link from "next/link";
+import Image from "next/image";
 
+/**
+ * Logo Gunara Consultant — "The Sovereign G"
+ * Emblem AI: monogram G pilar klasik + perisai + matahari terbit,
+ * tile emerald gelap dengan ring emas — terbaca di tema terang & gelap.
+ */
 export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 64 64"
-      className={className}
-      role="img"
-      aria-label="Logo Gunara Consultant"
+    <span
+      className={`relative inline-block shrink-0 overflow-hidden rounded-xl ring-1 ring-gold/40 ${className}`}
+      aria-hidden="true"
     >
-      <defs>
-        <linearGradient id="logo-em" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#108a5f" />
-          <stop offset="100%" stopColor="#0a4f38" />
-        </linearGradient>
-        <linearGradient id="logo-gd" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#f5c94c" />
-          <stop offset="100%" stopColor="#c9922a" />
-        </linearGradient>
-      </defs>
-      <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#logo-em)" />
-      <path
-        d="M32 10l18 7.2v12.6C50 41.6 42.4 49 32 53.2 21.6 49 14 41.6 14 29.8V17.2L32 10z"
-        fill="none"
-        stroke="url(#logo-gd)"
-        strokeWidth="2.6"
+      <Image
+        src="/images/logo-icon-dark-256.png"
+        alt=""
+        width={256}
+        height={256}
+        className="h-full w-full object-cover"
       />
-      <text
-        x="32"
-        y="41"
-        fontFamily="inherit"
-        fontSize="25"
-        fontWeight="800"
-        fill="url(#logo-gd)"
-        textAnchor="middle"
-      >
-        G
-      </text>
-    </svg>
+    </span>
   );
 }
 
@@ -44,7 +27,7 @@ export function Logo({ dark = false }: { dark?: boolean }) {
   return (
     <Link
       href="#beranda"
-      className="group flex items-center gap-3"
+      className="group flex shrink-0 items-center gap-3 whitespace-nowrap"
       aria-label="Gunara Consultant - Beranda"
     >
       <div className="relative">
@@ -57,10 +40,10 @@ export function Logo({ dark = false }: { dark?: boolean }) {
             dark ? "text-white" : "text-foreground"
           }`}
         >
-          Gunara<span className="text-gold"> Consultant</span>
+          Gunara<span className="text-gold">&nbsp;Consultant</span>
         </span>
         <span
-          className={`block text-[10px] font-bold uppercase tracking-[0.22em] ${
+          className={`block whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.22em] ${
             dark ? "text-white/50" : "text-muted-foreground"
           }`}
         >
