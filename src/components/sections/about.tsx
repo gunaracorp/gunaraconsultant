@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2, Target, Eye, HeartHandshake } from "lucide-react";
+import { CheckCircle2, Target, Eye, HeartHandshake, ArrowDown } from "lucide-react";
 import { SectionHeading, Reveal, Stagger, StaggerItem } from "@/components/ui-custom/animated";
 import { AnimatedCounter } from "@/components/ui-custom/counter";
 
@@ -25,8 +25,9 @@ const VALUES = [
 ] as const;
 
 const TRUST_POINTS = [
-  "Berdiri sejak 2010 — 15 tahun pengalaman",
-  "Bagian dari Gunara Group bersama PusatPerizinan.com",
+  "Berakar sejak 2009 — 15+ tahun pengalaman konsultansi kelas dunia",
+  "Resmi berbadan hukum 2024: PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI)",
+  "Bagian dari Gunara Consultant Group bersama pusatperizinan.com",
   "Sistem manajemen mutu ISO 9001:2015 teraudit",
   "Tim bersertifikasi: hukum, perpajakan & lingkungan",
 ] as const;
@@ -67,7 +68,7 @@ export function About() {
             >
               <div className="glass rounded-3xl border border-gold/30 p-5 shadow-xl animate-floaty">
                 <p className="text-4xl font-extrabold text-gradient-gold">
-                  <AnimatedCounter value={15} suffix="+" />
+                  <AnimatedCounter value={16} suffix="+" />
                 </p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Tahun Pengalaman
@@ -97,8 +98,33 @@ export function About() {
               eyebrow="Tentang Kami"
               title="Konsultan Perizinan dengan Standar"
               highlight="Kelas Dunia"
-              description="Gunara Consultant berdiri sejak 2010 sebagai bagian dari Gunara Group — rumah layanan legalitas bersama PusatPerizinan.com. Lebih dari 15 tahun, kami menjadi jembatan antara ambisi bisnis Anda dan kepastian hukum: dari warung kopi hingga korporasi lintas negara."
+              description="Gunara Consultant berakar pada pengalaman konsultansi sejak 2009 dan resmi berbadan hukum pada 2024 sebagai PT TOP KONSULTAN INTERNASIONAL — rumah layanan legalitas bersama pusatperizinan.com. Lebih dari 15 tahun, kami menjadi jembatan antara ambisi bisnis Anda dan kepastian hukum: dari warung kopi hingga korporasi lintas negara."
             />
+
+            {/* Paragraf narasi legasi */}
+            <Reveal delay={0.15} className="mt-6">
+              <p className="rounded-2xl border-l-4 border-gold/60 bg-secondary/60 p-5 text-[15px] leading-relaxed text-foreground/85">
+                Cerita kami dimulai di ruang kelas konsultansi dunia: sejak{" "}
+                <strong className="text-foreground">2009</strong>, para pendiri kami
+                menekuni ilmu konsultansi di bawah naungan{" "}
+                <strong className="text-foreground">Mic Kinsey</strong> — menyerap
+                disiplin mutu dan budaya solusi global. Puncaknya tercapai pada{" "}
+                <strong className="text-foreground">11 Juli 2024</strong>, ketika
+                Gunara Consultant resmi berbadan hukum sebagai{" "}
+                <strong className="text-foreground">PT TOP KONSULTAN INTERNASIONAL</strong>
+                {" "}— dan kini mengelola grup{" "}
+                <strong className="text-foreground">pusatperizinan.com</strong> untuk
+                seluruh Indonesia.
+              </p>
+              <a
+                href="#legasi"
+                className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-secondary px-4 py-2 text-sm font-bold text-primary transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                aria-label="Baca perjalanan kami di bagian Warisan dan Legalitas"
+              >
+                Baca Perjalanan Kami
+                <ArrowDown className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </Reveal>
 
             <Stagger className="mt-8 space-y-3">
               {TRUST_POINTS.map((point) => (

@@ -180,6 +180,25 @@ export function Footer() {
             <span>Dibuat dengan standar kelas dunia di Indonesia</span>
           </div>
         </div>
+        {/* Baris verifikasi legalitas */}
+        <div className="border-t border-white/5">
+          <p className="mx-auto max-w-7xl px-4 py-4 text-center text-[11px] leading-relaxed text-white/40 sm:px-6">
+            <span className="font-bold text-white/60">{SITE.legalName}</span>
+            {" — "}Terverifikasi Kemenkumham RI No.{" "}
+            <span className="font-mono font-bold text-gold/80">{SITE.ahucert}</span>
+            {" • "}Sistem Manajemen Mutu ISO 9001:2015
+            {" • "}Bagian dari Gunara Consultant Group (
+            <a
+              href="https://www.pusatperizinan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-gold/30 underline-offset-2 transition-colors hover:text-gold"
+            >
+              pusatperizinan.com
+            </a>
+            )
+          </p>
+        </div>
       </div>
     </footer>
   );

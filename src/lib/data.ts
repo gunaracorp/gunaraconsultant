@@ -5,23 +5,28 @@
 
 export const SITE = {
   name: "Gunara Consultant",
-  legalName: "PT Gunara Consultant Indonesia",
+  legalName: "PT TOP KONSULTAN INTERNASIONAL",
   url: "https://www.gunaraconsultant.com",
   tagline: "Mitra Legalitas Usaha Kelas Dunia",
   description:
-    "Konsultan perizinan usaha bersertifikasi ISO 9001:2015. NIB, pendirian PT/PMA, sertifikasi halal, BPOM/PIRT, PBG & SLF, izin lingkungan, hingga izin internasional.",
+    "Konsultan perizinan Indonesia sejak 2009 — bernaung di Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024). Katalog 500+ layanan perizinan teraudit ISO 9001:2015, bagian dari grup pusatperizinan.com.",
+  incorporated: "2024-07-11",
+  ahucert: "AHU-038293.AH.01.30.Tahun 2024",
+  capital: "Rp5.000.000.000,00",
+  founder: "Gugun Gunara",
+  officeCity: "Kota Tasikmalaya",
   phone: "+62 812-9000-1234",
   phoneHref: "tel:+6281290001234",
   whatsapp: "https://wa.me/6281290001234",
   email: "info@gunaraconsultant.com",
   address: {
-    street: "Jl. Jend. Sudirman Kav. 52-53, SCBD",
-    city: "Jakarta Selatan",
-    region: "DKI Jakarta",
-    postalCode: "12190",
+    street: "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II",
+    city: "Kota Tasikmalaya",
+    region: "Jawa Barat",
+    postalCode: "46115",
     country: "ID",
   },
-  founded: "2010",
+  founded: "2009",
   groupBrands: ["Gunara Consultant", "PusatPerizinan.com", "Gunara Legal"],
   social: {
     linkedin: "https://www.linkedin.com/company/gunara-consultant",
@@ -35,18 +40,20 @@ export const NAV_LINKS = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
+  { label: "Katalog 500+", href: "#katalog" },
+  { label: "Fase", href: "#fase" },
   { label: "Keunggulan", href: "#keunggulan" },
-  { label: "Proses", href: "#proses" },
-  { label: "Testimoni", href: "#testimoni" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Proses", href: "#proses", xlOnly: true },
+  { label: "Testimoni", href: "#testimoni", xlOnly: true },
+  { label: "FAQ", href: "#faq", xlOnly: true },
   { label: "Kontak", href: "#kontak" },
 ] as const;
 
 export const HERO_STATS = [
-  { value: 15000, suffix: "+", label: "Izin Berhasil Terbit" },
-  { value: 12500, suffix: "+", label: "Klien Individu & Korporat" },
+  { value: 16, suffix: "+", label: "Tahun Pengalaman Konsultansi" },
+  { value: 500, suffix: "+", label: "Layanan Perizinan dalam Katalog" },
   { value: 34, suffix: "", label: "Provinsi Terjangkau" },
-  { value: 98, suffix: "%", label: "Tingkat Kepuasan Klien" },
+  { value: 98, suffix: "%", label: "Klien Puas & Merekomendasikan" },
 ] as const;
 
 export const HERO_FLOAT_CARDS = [
@@ -63,10 +70,10 @@ export const HERO_FLOAT_CARDS = [
     accent: "emerald" as const,
   },
   {
-    title: "Garansi Layanan",
-    time: "100% Terpercaya",
-    icon: "shield",
-    accent: "gold" as const,
+    title: "Sertifikat AHU",
+    time: "AHU-038293.AH.01.30.Tahun 2024",
+    icon: "file-check",
+    accent: "emerald" as const,
   },
 ] as const;
 
@@ -89,6 +96,11 @@ export const MARQUEE_ITEMS = [
   "Yayasan & Perkumpulan",
   "Izin Konstruksi",
   "Izin Logistik",
+  "500+ Layanan",
+  "Mic Kinsey Standard",
+  "AHU Terverifikasi",
+  "SMK3",
+  "PSE Kominfo",
 ] as const;
 
 export type ServiceCategory =
@@ -493,9 +505,24 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
+    question: "Apa hubungan Gunara Consultant dengan Mic Kinsey?",
+    answer:
+      "Sejak 2009, tim di balik Gunara Consultant menekuni ilmu konsultansi di bawah naungan Mic Kinsey, perusahaan konsultan ternama dunia. Selama lebih dari 15 tahun kami menyerap metodologi, disiplin mutu, dan budaya solusi global kelas dunia — lalu menerapkannya pada ribuan kasus perizinan bisnis Indonesia sebelum resmi berbadan usaha pada 2024.",
+  },
+  {
+    question: "Apakah Gunara Consultant badan usaha yang resmi?",
+    answer:
+      "Ya. Gunara Consultant beroperasi melalui PT TOP KONSULTAN INTERNASIONAL, tercatat resmi di Kementerian Hukum dan HAM RI dengan Sertifikat Pendirian Nomor AHU-038293.AH.01.30.Tahun 2024 (terbit 11 Juli 2024), berkedudukan di Kota Tasikmalaya dengan modal usaha Rp5.000.000.000,00. Legalitas kami terbuka untuk diverifikasi kapan pun.",
+  },
+  {
+    question: "Benarkah tersedia 500 layanan perizinan?",
+    answer:
+      "Ya. Katalog kami memuat 500+ layanan dalam 26 kategori — dari pendirian badan usaha, OSS-RBA/NIB, sertifikasi halal & BPOM, hingga perizinan sektor kompleks dan sertifikasi ISO. Katalog diluncurkan bertahap dalam 4 fase implementasi (2024–2026) dan seluruh alurnya diaudit sesuai Sistem Manajemen Mutu ISO 9001:2015.",
+  },
+  {
     question: "Apa itu Gunara Consultant dan apa hubungannya dengan PusatPerizinan.com?",
     answer:
-      "Gunara Consultant adalah perusahaan konsultan legalitas & perizinan usaha yang berdiri sejak 2010. PusatPerizinan.com merupakan unit layanan pengurusan perizinan digital di dalam grup Gunara. Bersama-sama kami melayani lebih dari 12.500 klien di 34 provinsi Indonesia dan 3 negara.",
+      "Gunara Consultant adalah perusahaan konsultan legalitas & perizinan usaha yang berakar pada pengalaman konsultansi sejak 2009. PusatPerizinan.com merupakan unit layanan pengurusan perizinan digital di dalam grup kami. Bersama-sama kami melayani lebih dari 12.500 klien di 34 provinsi Indonesia dan 3 negara.",
   },
   {
     question: "Apa arti Gunara Consultant bersertifikasi ISO 9001:2015?",

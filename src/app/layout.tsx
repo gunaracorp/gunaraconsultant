@@ -43,6 +43,14 @@ const BASE_KEYWORDS = [
   "konsultan bisnis",
   "izin usaha cepat",
   "jasa legalitas perusahaan",
+  "Mic Kinsey",
+  "PT Top Konsultan Internasional",
+  "AHU-038293.AH.01.30.Tahun 2024",
+  "konsultan perizinan Tasikmalaya",
+  "katalog 500 layanan perizinan",
+  "konsultan perizinan terlengkap",
+  "jasa perizinan seluruh Indonesia",
+  "konsultan izin berbasis risiko",
 ];
 
 export const metadata: Metadata = {
@@ -53,7 +61,7 @@ export const metadata: Metadata = {
     template: "%s | Gunara Consultant",
   },
   description:
-    "Gunara Consultant adalah konsultan perizinan usaha kelas dunia bersertifikasi ISO 9001:2015. Pengurusan NIB, pendirian PT/PMA, sertifikasi halal, BPOM/PIRT, PBG & SLF, izin lingkungan, hingga izin internasional. Cepat, resmi, transparan, bergaransi 100%.",
+    "Konsultan perizinan Indonesia bernaung di Mic Kinsey sejak 2009, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI). Katalog 500+ layanan perizinan — NIB, PT/PMA, halal, BPOM, PBG/SLF — teraudit ISO 9001:2015, bergaransi 100%.",
   keywords: BASE_KEYWORDS,
   authors: [{ name: "Gunara Consultant", url: SITE.url }],
   creator: "Gunara Consultant",
@@ -89,7 +97,7 @@ export const metadata: Metadata = {
     title:
       "Gunara Consultant — Konsultan Perizinan Usaha Terbaik Indonesia | ISO 9001:2015",
     description:
-      "Mengurus segala perizinan usaha Anda: NIB 1 hari, PT 3 hari, sertifikasi halal, BPOM, PBG/SLF, hingga izin internasional. Tersertifikasi ISO 9001:2015, bergaransi 100%.",
+      "Sejak 2009 di bawah standar konsultansi dunia Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL. Katalog 500+ layanan perizinan teraudit ISO 9001:2015 — cepat, resmi, bergaransi 100%.",
     images: [
       {
         url: "/images/og-image.png",
@@ -104,7 +112,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gunara Consultant — Konsultan Perizinan Usaha Terbaik Indonesia",
     description:
-      "Tersertifikasi ISO 9001:2015. NIB 1 hari, PT 3 hari, segala izin usaha diurus cepat, resmi & bergaransi 100%. Grup PusatPerizinan.com.",
+      "Bernaung di Mic Kinsey sejak 2009 • Berbadan hukum 2024 (PT TOP KONSULTAN INTERNASIONAL). 500+ layanan perizinan, ISO 9001:2015, grup pusatperizinan.com.",
     images: ["/images/og-image.png"],
   },
   icons: {

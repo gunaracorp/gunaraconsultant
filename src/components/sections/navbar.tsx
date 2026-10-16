@@ -142,8 +142,13 @@ export function Navbar() {
           <ul className="hidden lg:flex items-center gap-1">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.href;
+              // Link sekunder hanya tampil di layar xl+ agar navbar tetap rapi
+              const isXlOnly = "xlOnly" in link && link.xlOnly;
               return (
-                <li key={link.href}>
+                <li
+                  key={link.href}
+                  className={isXlOnly ? "hidden xl:block" : undefined}
+                >
                   <a
                     href={link.href}
                     className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors ${

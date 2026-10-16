@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ChevronDown, PlayCircle, Sparkles } from "lucide-react";
+import { ArrowRight, ChevronDown, PlayCircle, Sparkles, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedCounter } from "@/components/ui-custom/counter";
 import { DynamicIcon } from "@/components/ui-custom/icon";
@@ -76,10 +76,16 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: EASE }}
             >
-              <span className="inline-flex items-center gap-2.5 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-gold sm:text-[13px]">
-                <Sparkles className="h-4 w-4 animate-glow" aria-hidden="true" />
-                Tersertifikasi ISO 9001:2015 • Sejak {SITE.founded}
-              </span>
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="inline-flex items-center gap-2.5 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-gold sm:text-[13px]">
+                  <Sparkles className="h-4 w-4 animate-glow" aria-hidden="true" />
+                  Bernaung di Mic Kinsey sejak {SITE.founded}
+                </span>
+                <span className="inline-flex items-center gap-2.5 rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-emerald-300 sm:text-[13px]">
+                  <BadgeCheck className="h-4 w-4" aria-hidden="true" />
+                  Berbadan Hukum 2024 • ISO 9001:2015
+                </span>
+              </div>
             </motion.div>
 
             {/* Headline dengan word-reveal */}
@@ -106,12 +112,14 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.95, ease: EASE }}
               className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
             >
-              <strong className="text-white">Gunara Consultant</strong> — konsultan
-              perizinan kelas dunia yang mengurus NIB, pendirian PT & PMA, sertifikasi
-              halal, BPOM/PIRT, PBG &amp; SLF, hingga izin internasional.{" "}
-              <span className="text-gold font-semibold">
-                Cepat, resmi, transparan, bergaransi 100%.
-              </span>
+              <strong className="text-white">Gunara Consultant</strong> — sejak {" "}
+              {SITE.founded} kami menyerap standar konsultansi kelas dunia di bawah
+              naungan <strong className="text-white">Mic Kinsey</strong>, kini resmi
+              berbadan hukum 2024 sebagai <strong className="text-white">PT TOP
+              KONSULTAN INTERNASIONAL</strong> (AHU Kemenkumham RI). Lebih dari{" "}
+              <span className="text-gold font-semibold">500+ layanan perizinan</span>{" "}
+              dalam satu pintu — bagian dari grup pusatperizinan.com. Cepat, resmi,
+              transparan, bergaransi 100%.
             </motion.p>
 
             <motion.div
@@ -201,21 +209,19 @@ export function Hero() {
             >
               <div className="rounded-3xl border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/20">
-                    <DynamicIcon name="building" className="h-6 w-6 text-emerald-300" />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/20">
+                    <DynamicIcon name="building" className="h-6 w-6 text-gold" />
                   </span>
                   <div>
                     <p className="text-sm font-bold text-white">Pendirian PT</p>
-                    <p className="text-xl font-extrabold text-emerald-300">
-                      3 Hari Kerja
-                    </p>
+                    <p className="text-xl font-extrabold text-gold">3 Hari Kerja</p>
                   </div>
                 </div>
                 <div className="mt-4 flex items-center gap-1.5">
                   {[1, 2, 3, 4].map((n) => (
                     <motion.span
                       key={n}
-                      className="h-2 w-2 rounded-full bg-emerald-300"
+                      className="h-2 w-2 rounded-full bg-gold"
                       animate={{ opacity: [0.2, 1, 0.2] }}
                       transition={{
                         duration: 1.6,
@@ -238,16 +244,19 @@ export function Hero() {
               transition={{ duration: 1, delay: 1.55, ease: EASE }}
               className="absolute bottom-2 right-14 w-72 animate-floaty"
             >
-              <div className="flex items-center gap-4 rounded-3xl border border-gold/30 bg-gradient-to-br from-gold/25 to-gold/5 p-5 shadow-2xl backdrop-blur-xl">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-gold/60">
-                  <DynamicIcon name="shield" className="h-7 w-7 text-gold" />
+              <div className="flex items-center gap-4 rounded-3xl border border-emerald-300/30 bg-gradient-to-br from-emerald-400/25 to-emerald-400/5 p-5 shadow-2xl backdrop-blur-xl">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-emerald-300/60">
+                  <DynamicIcon name="file-check" className="h-7 w-7 text-emerald-300" />
                 </span>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-extrabold text-white">
-                    Garansi Layanan 100%
+                    Sertifikat AHU
                   </p>
-                  <p className="text-xs text-white/65">
-                    Uang kembali jika izin tidak terbit
+                  <p className="truncate font-mono text-xs font-bold text-emerald-300">
+                    {SITE.ahucert}
+                  </p>
+                  <p className="text-[11px] text-white/65">
+                    Kemenkumham RI • 11 Juli 2024
                   </p>
                 </div>
               </div>

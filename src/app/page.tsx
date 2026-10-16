@@ -2,7 +2,10 @@ import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
 import { BrandStrip } from "@/components/sections/brand-strip";
 import { About } from "@/components/sections/about";
+import { Heritage } from "@/components/sections/heritage";
 import { Services } from "@/components/sections/services";
+import { ServicesExplorer } from "@/components/sections/services-explorer";
+import { PhasesSection } from "@/components/sections/phases";
 import { WhyUs } from "@/components/sections/why-us";
 import { Process } from "@/components/sections/process";
 import { IsoSection } from "@/components/sections/iso";
@@ -14,6 +17,7 @@ import { Footer } from "@/components/sections/footer";
 import { WhatsAppFloat } from "@/components/sections/whatsapp-float";
 import { ScrollProgress, BackToTop } from "@/components/ui-custom/scroll-progress";
 import { SITE, FAQS, TESTIMONIALS } from "@/lib/data";
+import { SERVICES as CATALOG_SERVICES } from "@/data/services";
 
 /* ============ JSON-LD Structured Data (FULL SEO) ============ */
 
@@ -63,16 +67,30 @@ const organizationJsonLd = {
     "Sertifikasi ISO 9001:2015",
     "KITAS dan KITAP",
     "Izin Ekspor Impor",
+    "Mic Kinsey",
+    "Katalog 500 Layanan Perizinan",
+    "Perizinan UMKM",
   ],
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    credentialCategory: "certification",
-    name: "ISO 9001:2015 Quality Management System",
-    recognizedBy: {
-      "@type": "Organization",
-      name: "International Accreditation Forum (IAF)",
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: "ISO 9001:2015 Quality Management System",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "International Accreditation Forum (IAF)",
+      },
     },
-  },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "business registration",
+      name: "Sertifikat Pendirian PT TOP KONSULTAN INTERNASIONAL — Nomor AHU-038293.AH.01.30.Tahun 2024",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia",
+      },
+    },
+  ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
@@ -83,7 +101,7 @@ const organizationJsonLd = {
   },
   parentOrganization: {
     "@type": "Organization",
-    name: "Gunara Group",
+    name: "Gunara Consultant Group",
     url: SITE.url,
   },
   sameAs: [
@@ -141,14 +159,51 @@ const reviewsJsonLd = {
   })),
 };
 
+/** ItemList layanan unggulan katalog (10 pertama yang popular; fallback 10 pertama) */
+const featuredCatalogServices = (() => {
+  const popular = CATALOG_SERVICES.filter((s) => s.popular);
+  const source = popular.length >= 10 ? popular : CATALOG_SERVICES;
+  return source.slice(0, 10);
+})();
+
+const catalogJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Katalog 500+ Layanan Perizinan Gunara Consultant",
+  url: `${SITE.url}/#katalog`,
+  numberOfItems: featuredCatalogServices.length,
+  itemListElement: featuredCatalogServices.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Service",
+      name: s.name,
+      url: `${SITE.url}/#katalog`,
+      description: s.desc,
+    },
+  })),
+};
+
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Beranda", item: SITE.url },
     { "@type": "ListItem", position: 2, name: "Layanan", item: `${SITE.url}/#layanan` },
-    { "@type": "ListItem", position: 3, name: "Tentang", item: `${SITE.url}/#tentang` },
-    { "@type": "ListItem", position: 4, name: "Kontak", item: `${SITE.url}/#kontak` },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Katalog 500+ Layanan",
+      item: `${SITE.url}/#katalog`,
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Fase Implementasi",
+      item: `${SITE.url}/#fase`,
+    },
+    { "@type": "ListItem", position: 5, name: "Tentang", item: `${SITE.url}/#tentang` },
+    { "@type": "ListItem", position: 6, name: "Kontak", item: `${SITE.url}/#kontak` },
   ],
 };
 
@@ -170,6 +225,7 @@ export default function Home() {
       <JsonLd data={websiteJsonLd} />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={reviewsJsonLd} />
+      <JsonLd data={catalogJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
 
       <ScrollProgress />
@@ -180,7 +236,10 @@ export default function Home() {
           <Hero />
           <BrandStrip />
           <About />
+          <Heritage />
           <Services />
+          <ServicesExplorer />
+          <PhasesSection />
           <WhyUs />
           <Process />
           <IsoSection />
