@@ -18,7 +18,7 @@ const TIMELINE = [
     year: "2009–2024",
     icon: "briefcase",
     title: "15 Tahun Membekali Ribuan Pelaku Usaha",
-    text: "Lebih dari satu dekade menemani UMKM hingga korporasi menembus kerumitan birokrasi. Pengalaman lintas sektor itu mengkristal menjadi penguasaan 500+ jenis perizinan — dari izin UMKM kampung hingga legalitas investasi lintas negara.",
+    text: "Lebih dari satu dekade menemani UMKM hingga korporasi menembus kerumitan birokrasi. Pengalaman lintas sektor itu mengkristal menjadi penguasaan 600+ jenis perizinan — terlengkap di Asia — dari izin UMKM kampung hingga pendirian perusahaan di Singapura, Dubai, dan Arab Saudi.",
   },
   {
     year: "11 Juli 2024",

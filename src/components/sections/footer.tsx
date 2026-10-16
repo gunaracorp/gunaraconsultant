@@ -67,7 +67,8 @@ export function Footer() {
             >
               PusatPerizinan.com
             </a>
-            . Berdiri sejak {SITE.founded}, dipercaya 12.500+ klien di 34 provinsi.
+            . Berdiri sejak {SITE.founded}, dipercaya 12.500+ klien di 34 provinsi
+            Indonesia dan 8 negara — pusat perizinan terlengkap di Asia.
           </p>
           <div className="mt-5 flex gap-2.5">
             {SOCIALS.map((s) => (
@@ -108,7 +109,16 @@ export function Footer() {
                 className="inline-flex items-center gap-1.5 text-white/60 transition-colors hover:text-gold"
               >
                 <span className="h-px w-3 bg-gold/50" aria-hidden="true" />
-                Indeks Katalog 500 Layanan
+                Indeks Katalog 600 Layanan
+              </a>
+            </li>
+            <li>
+              <a
+                href="#artikel"
+                className="inline-flex items-center gap-1.5 text-white/60 transition-colors hover:text-gold"
+              >
+                <span className="h-px w-3 bg-gold/50" aria-hidden="true" />
+                Artikel & Panduan Perizinan
               </a>
             </li>
           </ul>

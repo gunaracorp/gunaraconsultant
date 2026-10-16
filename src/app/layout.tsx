@@ -54,7 +54,13 @@ const BASE_KEYWORDS = [
   "PT Top Konsultan Internasional",
   "AHU-038293.AH.01.30.Tahun 2024",
   "konsultan perizinan Tasikmalaya",
-  "katalog 500 layanan perizinan",
+  "katalog 600 layanan perizinan",
+  "pusat perizinan terlengkap di asia",
+  "konsultan perizinan terlengkap dunia",
+  "pendirian perusahaan singapura",
+  "investment license misa arab saudi",
+  "perizinan global internasional",
+  "konsultan perizinan asia tenggara",
   "konsultan perizinan terlengkap",
   "jasa perizinan seluruh Indonesia",
   "konsultan izin berbasis risiko",
@@ -68,7 +74,7 @@ export const metadata: Metadata = {
     template: "%s | Gunara Consultant",
   },
   description:
-    "Konsultan perizinan Indonesia bernaung di Mic Kinsey sejak 2009, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI). Katalog 500+ layanan perizinan — NIB, PT/PMA, halal, BPOM, PBG/SLF — teraudit ISO 9001:2015, bergaransi 100%.",
+    "Pusat perizinan terlengkap di Asia — bernaung di Mic Kinsey sejak 2009, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI). Katalog 600+ layanan perizinan dalam 27 bidang — NIB, PT/PMA, halal, BPOM, PBG/SLF, hingga pendirian perusahaan internasional — teraudit ISO 9001:2015, bergaransi 100%.",
   keywords: BASE_KEYWORDS,
   authors: [{ name: "Gunara Consultant", url: SITE.url }],
   creator: "Gunara Consultant",
@@ -119,7 +125,7 @@ export const metadata: Metadata = {
     title:
       "Gunara Consultant — Konsultan Perizinan Usaha Terbaik Indonesia | ISO 9001:2015",
     description:
-      "Sejak 2009 di bawah standar konsultansi dunia Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL. Katalog 500+ layanan perizinan teraudit ISO 9001:2015 — cepat, resmi, bergaransi 100%.",
+      "Pusat perizinan terlengkap di Asia: sejak 2009 di bawah standar konsultansi dunia Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL. Katalog 600+ layanan perizinan dalam 27 bidang teraudit ISO 9001:2015 — cepat, resmi, bergaransi 100%.",
     images: [
       {
         url: "/images/og-image.png",
@@ -134,7 +140,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gunara Consultant — Konsultan Perizinan Usaha Terbaik Indonesia",
     description:
-      "Bernaung di Mic Kinsey sejak 2009 • Berbadan hukum 2024 (PT TOP KONSULTAN INTERNASIONAL). 500+ layanan perizinan, ISO 9001:2015, grup pusatperizinan.com.",
+      "Terlengkap di Asia • Bernaung di Mic Kinsey sejak 2009 • Berbadan hukum 2024 (PT TOP KONSULTAN INTERNASIONAL). 600+ layanan perizinan, ISO 9001:2015, grup pusatperizinan.com.",
     images: ["/images/og-image.png"],
   },
   icons: {

@@ -15,7 +15,7 @@ const VALUES = [
   {
     icon: Eye,
     title: "Visi",
-    text: "Menjadi konsultan perizinan paling terpercaya di Asia Tenggara dengan standar mutu internasional ISO 9001:2015.",
+    text: "Menjadi pusat perizinan terlengkap di Asia — bahkan dunia — dengan standar mutu internasional ISO 9001:2015 yang paling terpercaya.",
   },
   {
     icon: HeartHandshake,
@@ -27,6 +27,7 @@ const VALUES = [
 const TRUST_POINTS = [
   "Berakar sejak 2009 — 15+ tahun pengalaman konsultansi kelas dunia",
   "Resmi berbadan hukum 2024: PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI)",
+  "Katalog 600+ layanan — terlengkap di Asia, mencakup perizinan lintas negara",
   "Bagian dari Gunara Consultant Group bersama pusatperizinan.com",
   "Sistem manajemen mutu ISO 9001:2015 teraudit",
   "Tim bersertifikasi: hukum, perpajakan & lingkungan",

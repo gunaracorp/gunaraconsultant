@@ -6,7 +6,7 @@ import { SERVICES, CATEGORIES } from "@/data/services";
 /**
  * Indeks Katalog Lengkap — dirender 100% di server (SSR HTML).
  *
- * Ini bagian SEO paling krusial: seluruh 500 nama layanan, kode,
+ * Ini bagian SEO paling krusial: seluruh 600 nama layanan, kode,
  * dan deskripsi tersedia sebagai HTML statis sehingga Googlebot
  * dapat mengindeksnya tanpa harus mengeksekusi JavaScript.
  * Elemen <details> native = dapat di-crawl + aksesibel tanpa JS.
@@ -17,7 +17,7 @@ export function CatalogIndex() {
   return (
     <section
       id="indeks-katalog"
-      aria-label="Indeks lengkap 500 layanan perizinan Gunara Consultant"
+      aria-label="Indeks lengkap 600 layanan perizinan terlengkap di Asia Gunara Consultant"
       className="relative overflow-hidden py-24 sm:py-28"
     >
       <div
@@ -30,7 +30,7 @@ export function CatalogIndex() {
           eyebrow="Indeks Katalog Lengkap"
           title={`Indeks ${total} Layanan Perizinan`}
           highlight="— Semua Terbaca Google"
-          description="Daftar lengkap seluruh layanan perizinan yang kami tangani, dikelompokkan dalam 26 bidang: dari NIB & OSS-RBA, pendirian PT/PMA, sertifikasi halal & BPOM, PBG/SLF, AMDAL, KITAS/KITAP, hingga sertifikasi ISO 9001:2015. Klik bidang untuk membuka rinciannya — atau gunakan katalog interaktif untuk mencari & memfilter."
+          description="Daftar lengkap seluruh layanan perizinan yang kami tangani — terlengkap di Asia — dikelompokkan dalam 27 bidang: dari NIB & OSS-RBA, pendirian PT/PMA, sertifikasi halal & BPOM, PBG/SLF, AMDAL, KITAS/KITAP, sertifikasi ISO 9001:2015, hingga pendirian perusahaan di Singapura, Dubai, dan Arab Saudi. Klik bidang untuk membuka rinciannya — atau gunakan katalog interaktif untuk mencari & memfilter."
         />
 
         {/* Link ke katalog interaktif */}
@@ -46,7 +46,7 @@ export function CatalogIndex() {
             Cari & Filter di Katalog Interaktif
           </a>
           <p className="text-xs text-muted-foreground">
-            26 bidang • {total} layanan • 4 fase implementasi • teraudit ISO
+            27 bidang • {total} layanan • 4 fase implementasi • teraudit ISO
             9001:2015
           </p>
         </div>
@@ -119,7 +119,7 @@ export function CatalogIndex() {
         <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-border bg-card/60 p-6 sm:p-8">
           <p className="flex items-center gap-2 text-sm font-extrabold text-foreground">
             <ListTree className="h-4.5 w-4.5 text-primary" aria-hidden="true" />
-            Bagaimana katalog 500 layanan ini diimplementasikan?
+            Bagaimana katalog 600 layanan ini diimplementasikan?
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Seluruh {total} layanan perizinan di atas diimplementasikan secara
@@ -127,19 +127,22 @@ export function CatalogIndex() {
             <a href="#fase" className="font-bold text-primary underline-offset-2 hover:underline">
               4 fase implementasi
             </a>
-            : Fase 1 Legalitas Fondasi (pendirian badan usaha, UMKM, pajak,
-            kekayaan intelektual), Fase 2 Operasional &amp; Industri (OSS-RBA,
-            perdagangan, industri, logistik, ketenagakerjaan, pangan &amp;
-            halal), Fase 3 Sektor Regulasi Kompleks (kesehatan-farmasi,
-            pertambangan-energi, lingkungan, konstruksi, pariwisata), dan Fase
-            4 Enterprise &amp; Global (fintech, telematika, ekspor-impor,
-            pendidikan, media kreatif, sertifikasi ISO). Setiap layanan
+            : Fase 1 Legalitas Fondasi (90 layanan: pendirian badan usaha, UMKM,
+            pajak, kekayaan intelektual), Fase 2 Operasional &amp; Industri
+            (154 layanan: OSS-RBA, perdagangan, industri, logistik,
+            ketenagakerjaan, pangan &amp; halal), Fase 3 Sektor Regulasi Kompleks
+            (180 layanan: kesehatan-farmasi, pertambangan-energi, lingkungan,
+            konstruksi, pariwisata), dan Fase 4 Enterprise &amp; Global
+            (176 layanan: fintech, telematika, ekspor-impor, pendidikan,
+            media kreatif, sertifikasi ISO, serta Perizinan Global &amp;
+            Internasional — Singapura, Malaysia, Arab Saudi, UAE, Tiongkok).
+            Setiap layanan
             ditangani tim bersertifikat ISO 9001:2015 dengan basis hukum yang
             jelas — UU, PP, Perpres, hingga regulasi khusus BPOM, BPJPH,
             OJK, dan Kemenkumham RI.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Tidak menemukan izin yang Anda cari? Tim Gunara Consultant —
+            Tidak menemukan izin yang Anda cari — di Indonesia maupun luar negeri? Tim Gunara Consultant —
             bernaung di standar konsultansi Mic Kinsey sejak 2009, resmi
             berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024) —
             siap menangani kebutuhan perizinan di luar daftar.{" "}

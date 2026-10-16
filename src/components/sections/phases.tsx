@@ -9,7 +9,7 @@ import {
 } from "@/data/services";
 
 /**
- * Section "Fase Implementasi" — peta jalan peluncuran katalog 500 layanan.
+ * Section "Fase Implementasi" — peta jalan peluncuran katalog 600 layanan.
  * Server component; animasi via komponen client Reveal/Stagger.
  */
 
@@ -53,7 +53,7 @@ export function PhasesSection() {
           eyebrow="Peta Jalan Implementasi"
           title="Satu Katalog, Empat Fase,"
           highlight="Nol Kebingungan"
-          description="Kami membangun katalog 500 layanan secara terukur — setiap fase diuji, setiap layanan diaudit mutu ISO 9001:2015 sebelum diluncurkan."
+          description="Kami membangun katalog 600 layanan — terlengkap di Asia — secara terukur: setiap fase diuji, setiap layanan diaudit mutu ISO 9001:2015 sebelum diluncurkan."
         />
 
         {/* Stepper penghubung (desktop) */}

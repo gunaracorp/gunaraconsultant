@@ -117,8 +117,9 @@ export function Hero() {
               naungan <strong className="text-white">Mic Kinsey</strong>, kini resmi
               berbadan hukum 2024 sebagai <strong className="text-white">PT TOP
               KONSULTAN INTERNASIONAL</strong> (AHU Kemenkumham RI). Lebih dari{" "}
-              <span className="text-gold font-semibold">500+ layanan perizinan</span>{" "}
-              dalam satu pintu — bagian dari grup pusatperizinan.com. Cepat, resmi,
+              <span className="text-gold font-semibold">600+ layanan perizinan terlengkap di Asia</span>{" "}
+              dalam satu pintu — dari NIB UMKM hingga pendirian perusahaan
+              internasional — bagian dari grup pusatperizinan.com. Cepat, resmi,
               transparan, bergaransi 100%.
             </motion.p>
 

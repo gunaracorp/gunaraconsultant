@@ -2,6 +2,7 @@
  * Agregator katalog layanan — single source untuk API & UI.
  */
 import { SERVICES as RAW_SERVICES } from "./services-data";
+import { SERVICES_EXTRA } from "./services-extra";
 import {
   CATEGORIES,
   PHASES,
@@ -25,7 +26,7 @@ export {
 
 export type { ServiceItem, CategorySlug, PhaseId };
 
-export const SERVICES: ServiceItem[] = RAW_SERVICES;
+export const SERVICES: ServiceItem[] = [...RAW_SERVICES, ...SERVICES_EXTRA];
 
 export interface ServiceQuery {
   q?: string;

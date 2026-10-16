@@ -8,9 +8,9 @@ export const SITE = {
   legalName: "PT TOP KONSULTAN INTERNASIONAL",
   /** Override via NEXT_PUBLIC_SITE_URL saat deploy ke domain lain */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gunaraconsultant.com",
-  tagline: "Mitra Legalitas Usaha Kelas Dunia",
+  tagline: "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia",
   description:
-    "Konsultan perizinan Indonesia sejak 2009 — bernaung di Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024). Katalog 500+ layanan perizinan teraudit ISO 9001:2015, bagian dari grup pusatperizinan.com.",
+    "Pusat perizinan terlengkap di Asia sejak 2009 — bernaung di Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024). Katalog 600+ layanan perizinan dalam 27 bidang teraudit ISO 9001:2015, dari NIB hingga pendirian perusahaan internasional — bagian dari grup pusatperizinan.com.",
   incorporated: "2024-07-11",
   ahucert: "AHU-038293.AH.01.30.Tahun 2024",
   capital: "Rp5.000.000.000,00",
@@ -41,18 +41,19 @@ export const NAV_LINKS = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
-  { label: "Katalog 500+", href: "#katalog" },
+  { label: "Katalog 600+", href: "#katalog" },
   { label: "Fase", href: "#fase" },
   { label: "Keunggulan", href: "#keunggulan" },
   { label: "Proses", href: "#proses", xlOnly: true },
   { label: "Testimoni", href: "#testimoni", xlOnly: true },
   { label: "FAQ", href: "#faq", xlOnly: true },
+  { label: "Artikel", href: "#artikel", xlOnly: true },
   { label: "Kontak", href: "#kontak" },
 ] as const;
 
 export const HERO_STATS = [
   { value: 16, suffix: "+", label: "Tahun Pengalaman Konsultansi" },
-  { value: 500, suffix: "+", label: "Layanan Perizinan dalam Katalog" },
+  { value: 600, suffix: "+", label: "Layanan Perizinan — Terlengkap di Asia" },
   { value: 34, suffix: "", label: "Provinsi Terjangkau" },
   { value: 98, suffix: "%", label: "Klien Puas & Merekomendasikan" },
 ] as const;
@@ -97,7 +98,7 @@ export const MARQUEE_ITEMS = [
   "Yayasan & Perkumpulan",
   "Izin Konstruksi",
   "Izin Logistik",
-  "500+ Layanan",
+  "600+ Layanan Terlengkap di Asia",
   "Mic Kinsey Standard",
   "AHU Terverifikasi",
   "SMK3",
@@ -339,7 +340,7 @@ export const COMPARISON = {
       "NIB 1 hari, PT 3 hari kerja",
       "Tersertifikasi ISO 9001:2015",
       "Harga transparan, invoice resmi",
-      "34 provinsi + 3 negara internasional",
+      "34 provinsi + 8 negara internasional",
       "Pendampingan seumur hidup usaha",
       "Customer support 24/7 via WA",
     ],
@@ -451,6 +452,11 @@ export const INTERNATIONAL = [
   { country: "Arab Saudi", service: "MISA & Investment License" },
   { country: "Malaysia", service: "Sdn Bhd & Labuan" },
   { country: "Singapura", service: "Pte Ltd & ACRA" },
+  { country: "Uni Emirat Arab", service: "Free Zone & Mainland" },
+  { country: "Tiongkok", service: "WFOE & Hong Kong" },
+  { country: "Qatar", service: "QFC & GCC Expansion" },
+  { country: "Australia", service: "Pty Ltd & ASIC" },
+  { country: "Belanda", service: "BV & KVK Eropa" },
 ] as const;
 
 export const TESTIMONIALS = [
@@ -516,14 +522,24 @@ export const FAQS = [
       "Ya. Gunara Consultant beroperasi melalui PT TOP KONSULTAN INTERNASIONAL, tercatat resmi di Kementerian Hukum dan HAM RI dengan Sertifikat Pendirian Nomor AHU-038293.AH.01.30.Tahun 2024 (terbit 11 Juli 2024), berkedudukan di Kota Tasikmalaya dengan modal usaha Rp5.000.000.000,00. Legalitas kami terbuka untuk diverifikasi kapan pun.",
   },
   {
-    question: "Benarkah tersedia 500 layanan perizinan?",
+    question: "Benarkah tersedia 600 layanan perizinan — terlengkap di Asia?",
     answer:
-      "Ya. Katalog kami memuat 500+ layanan dalam 26 kategori — dari pendirian badan usaha, OSS-RBA/NIB, sertifikasi halal & BPOM, hingga perizinan sektor kompleks dan sertifikasi ISO. Katalog diluncurkan bertahap dalam 4 fase implementasi (2024–2026) dan seluruh alurnya diaudit sesuai Sistem Manajemen Mutu ISO 9001:2015.",
+      "Ya. Katalog kami memuat 600+ layanan dalam 27 bidang — satu-satunya katalog yang mencakup seluruh perizinan Indonesia (NIB, OSS-RBA, pendirian PT/PMA, halal, BPOM, PBG/SLF, ISO) plus Perizinan Global & Internasional: pendirian perusahaan di Singapura, Malaysia, Arab Saudi (MISA), Uni Emirat Arab, Tiongkok, hingga apostille dan pajak lintas negara. Tidak ada konsultan lain dengan cakupan seperti ini. Katalog diluncurkan bertahap dalam 4 fase implementasi (2024–2026) dan seluruh alurnya diaudit sesuai Sistem Manajemen Mutu ISO 9001:2015.",
   },
   {
     question: "Apa itu Gunara Consultant dan apa hubungannya dengan PusatPerizinan.com?",
     answer:
-      "Gunara Consultant adalah perusahaan konsultan legalitas & perizinan usaha yang berakar pada pengalaman konsultansi sejak 2009. PusatPerizinan.com merupakan unit layanan pengurusan perizinan digital di dalam grup kami. Bersama-sama kami melayani lebih dari 12.500 klien di 34 provinsi Indonesia dan 3 negara.",
+      "Gunara Consultant adalah perusahaan konsultan legalitas & perizinan usaha yang berakar pada pengalaman konsultansi sejak 2009. PusatPerizinan.com merupakan unit layanan pengurusan perizinan digital di dalam grup kami. Bersama-sama kami melayani lebih dari 12.500 klien di 34 provinsi Indonesia dan 8 negara — menjadikan kami pusat perizinan terlengkap di Asia.",
+  },
+  {
+    question: "Bisakah mengurus izin untuk bisnis di luar negeri — Singapura, Dubai, atau Arab Saudi?",
+    answer:
+      "Bisa — ini yang membedakan kami dari konsultan lain di Asia. Kategori Perizinan Global & Internasional kami melayani: pendirian Pte Ltd Singapura (ACRA), Sdn Bhd Malaysia & Labuan, Investment License MISA Arab Saudi, free zone Dubai & UAE, WFOE Tiongkok dan Hong Kong, apostille dokumen untuk 120+ negara, struktur holding lintas negara, hingga pajak lintas batas (P3B). Satu tim, satu kontrak, legalitas multi-negara.",
+  },
+  {
+    question: "Apa yang membuat Gunara Consultant disebut pusat perizinan terlengkap di Asia?",
+    answer:
+      "Tiga hal: (1) cakupan — 600+ layanan resmi dalam 27 bidang, tidak ada konsultan Asia Tenggara yang mengkatalogkan perizinan sedetail ini; (2) kedalaman — setiap layanan punya kode unik, dasar hukum eksplisit, dan fase implementasi terukur; (3) jangkauan — dari UMKM kampung hingga korporasi lintas negara di 34 provinsi Indonesia dan 8 negara, semua ditangani dengan SOP teraudit ISO 9001:2015.",
   },
   {
     question: "Apa arti Gunara Consultant bersertifikasi ISO 9001:2015?",
@@ -566,6 +582,7 @@ export const CONTACT_SERVICES = [
   "NIB & OSS-RBA",
   "Pendirian PT / CV / PT Perorangan",
   "PT PMA (Investasi Asing)",
+  "Perizinan Global & Internasional",
   "Sertifikasi Halal",
   "BPOM & PIRT",
   "Sertifikasi SNI",

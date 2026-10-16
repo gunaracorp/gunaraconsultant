@@ -32,10 +32,11 @@ export type CategorySlug =
   | "jasa-profesi"
   | "umkm-daerah"
   | "kesehatan-farmasi"
-  | "khusus-strategis";
+  | "khusus-strategis"
+  | "global-internasional";
 
 export interface ServiceItem {
-  /** ID global 1..500 (urut berdasarkan kategori) */
+  /** ID global 1..600 (urut berdasarkan kategori) */
   id: number;
   /** Kode unik, format GC-<PREFIX>-<NNN>, contoh: GC-BU-001 */
   code: string;
@@ -48,7 +49,7 @@ export interface ServiceItem {
   legalBasis: string;
   /** Fase implementasi katalog (1–4) */
   phase: PhaseId;
-  /** Layanan marquee / paling dicari (±40 item) */
+  /** Layanan marquee / paling dicari (±60 item) */
   popular?: boolean;
 }
 
@@ -99,6 +100,7 @@ export const CATEGORIES: CategoryMeta[] = [
   { slug: "umkm-daerah", name: "UMKM & Perizinan Daerah", short: "UMKM & Daerah", icon: "store", blurb: "IUMK, NIB UMKM, izin pasar, dan perizinan daerah." },
   { slug: "kesehatan-farmasi", name: "Kesehatan & Farmasi", short: "Kesehatan", icon: "heart-pulse", blurb: "BPOM, CPME, CDAKB, izin klinik, apotek, alkes." },
   { slug: "khusus-strategis", name: "Perizinan Khusus & Strategis", short: "Khusus & Strategis", icon: "rocket", blurb: "KEK, kawasan industri, pilot project, dan investasi strategis." },
+  { slug: "global-internasional", name: "Perizinan Global & Internasional", short: "Global", icon: "globe", blurb: "Pendirian perusahaan di Singapura, Malaysia, Saudi (MISA), UAE, Tiongkok — apostille hingga P3B." },
 ];
 
 export const PHASES: PhaseMeta[] = [
@@ -108,7 +110,7 @@ export const PHASES: PhaseMeta[] = [
     window: "Q3–Q4 2024",
     tagline: "Setiap bisnis dimulai dari nama yang sah.",
     description:
-      "78 layanan inti: pendirian seluruh bentuk badan usaha, perizinan UMKM & daerah, administrasi pajak, hingga pengamanan kekayaan intelektual — fondasi legal yang menjadi pintu masuk katalog kami.",
+      "90 layanan inti: pendirian seluruh bentuk badan usaha, perizinan UMKM & daerah, administrasi pajak, hingga pengamanan kekayaan intelektual — fondasi legal yang menjadi pintu masuk katalog kami.",
     categories: ["badan-usaha", "umkm-daerah", "pajak-keuangan", "kekayaan-intelektual"],
     status: "live",
   },
@@ -118,7 +120,7 @@ export const PHASES: PhaseMeta[] = [
     window: "Q1–Q2 2025",
     tagline: "Dari legal itu berdiri, kini ia beroperasi.",
     description:
-      "131 layanan untuk mesin bisnis berputar: perizinan berusaha berbasis risiko (OSS-RBA), perdagangan & distribusi, industri, logistik, tenaga kerja & imigrasi, serta pangan & halal.",
+      "154 layanan untuk mesin bisnis berputar: perizinan berusaha berbasis risiko (OSS-RBA), perdagangan & distribusi, industri, logistik, tenaga kerja & imigrasi, serta pangan & halal.",
     categories: ["oss-rba", "perdagangan", "industri", "transportasi-logistik", "ketenagakerjaan-imigrasi", "pangan-halal"],
     status: "running",
   },
@@ -128,7 +130,7 @@ export const PHASES: PhaseMeta[] = [
     window: "Q3–Q4 2025",
     tagline: "Sektor paling ketat, ditangani paling tenang.",
     description:
-      "156 layanan sektor terregulasi: kesehatan & farmasi (BPOM), pertambangan & energi, lingkungan hidup, konstruksi & properti, pariwisata, pertanian–peternakan–perikanan, kehutanan, hingga event & hiburan.",
+      "180 layanan sektor terregulasi: kesehatan & farmasi (BPOM), pertambangan & energi, lingkungan hidup, konstruksi & properti, pariwisata, pertanian–peternakan–perikanan, kehutanan, hingga event & hiburan.",
     categories: ["kesehatan-farmasi", "pertambangan-energi", "lingkungan", "konstruksi-properti", "pariwisata", "pertanian-peternakan-perikanan", "kehutanan", "event-hiburan"],
     status: "upcoming",
   },
@@ -138,43 +140,44 @@ export const PHASES: PhaseMeta[] = [
     window: "H1 2026",
     tagline: "Menuju korporasi kelas dunia.",
     description:
-      "135 layanan kelas enterprise: keuangan & fintech (OJK), telematika & PSE, ekspor impor & bea cukai, pendidikan, media kreatif, jasa profesi, sertifikasi ISO & mutu, hingga perizinan khusus & strategis.",
-    categories: ["keuangan-fintech", "telematika-it", "ekspor-impor", "pendidikan", "media-kreatif", "jasa-profesi", "sertifikasi-iso", "khusus-strategis"],
+      "176 layanan kelas enterprise: keuangan & fintech (OJK), telematika & PSE, ekspor impor & bea cukai, pendidikan, media kreatif, jasa profesi, sertifikasi ISO & mutu, perizinan khusus & strategis, hingga Perizinan Global & Internasional.",
+    categories: ["keuangan-fintech", "telematika-it", "ekspor-impor", "pendidikan", "media-kreatif", "jasa-profesi", "sertifikasi-iso", "khusus-strategis", "global-internasional"],
     status: "upcoming",
   },
 ];
 
-/** Target jumlah layanan per kategori — total TEPAT 500 */
+/** Target jumlah layanan per kategori — total TEPAT 600 (terlengkap di Asia) */
 export const CATEGORY_TARGETS: Record<CategorySlug, number> = {
-  "badan-usaha": 26,
-  "oss-rba": 24,
-  "pangan-halal": 24,
-  "perdagangan": 24,
-  "industri": 20,
-  "pertambangan-energi": 24,
-  "lingkungan": 20,
-  "konstruksi-properti": 24,
-  "ketenagakerjaan-imigrasi": 20,
-  "pajak-keuangan": 20,
-  "kekayaan-intelektual": 20,
-  "ekspor-impor": 19,
-  "pariwisata": 15,
-  "transportasi-logistik": 19,
-  "pertanian-peternakan-perikanan": 19,
-  "kehutanan": 13,
-  "telematika-it": 19,
-  "keuangan-fintech": 17,
-  "pendidikan": 15,
-  "media-kreatif": 15,
-  "event-hiburan": 13,
-  "sertifikasi-iso": 24,
-  "jasa-profesi": 18,
-  "umkm-daerah": 12,
-  "kesehatan-farmasi": 28,
-  "khusus-strategis": 8,
+  "badan-usaha": 30,
+  "oss-rba": 28,
+  "pangan-halal": 28,
+  "perdagangan": 27,
+  "industri": 24,
+  "pertambangan-energi": 27,
+  "lingkungan": 23,
+  "konstruksi-properti": 27,
+  "ketenagakerjaan-imigrasi": 24,
+  "pajak-keuangan": 23,
+  "kekayaan-intelektual": 23,
+  "ekspor-impor": 24,
+  "pariwisata": 18,
+  "transportasi-logistik": 23,
+  "pertanian-peternakan-perikanan": 22,
+  "kehutanan": 16,
+  "telematika-it": 23,
+  "keuangan-fintech": 20,
+  "pendidikan": 18,
+  "media-kreatif": 18,
+  "event-hiburan": 15,
+  "sertifikasi-iso": 28,
+  "jasa-profesi": 21,
+  "umkm-daerah": 14,
+  "kesehatan-farmasi": 32,
+  "khusus-strategis": 10,
+  "global-internasional": 14,
 };
 
-export const TOTAL_TARGET = 500;
+export const TOTAL_TARGET = 600;
 
 /** Kategori → fase (untuk validasi & filter) */
 export const CATEGORY_TO_PHASE: Record<CategorySlug, PhaseId> = Object.fromEntries(
@@ -209,4 +212,5 @@ export const CATEGORY_CODES: Record<CategorySlug, string> = {
   "umkm-daerah": "UD",
   "kesehatan-farmasi": "KF",
   "khusus-strategis": "KS",
+  "global-internasional": "GI",
 };

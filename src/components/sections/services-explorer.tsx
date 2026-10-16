@@ -204,7 +204,7 @@ export function ServicesExplorer() {
     <section
       id="katalog"
       className="relative overflow-hidden bg-secondary/40 py-24 sm:py-28"
-      aria-label="Katalog 500 layanan perizinan"
+      aria-label="Katalog 600 layanan perizinan terlengkap di Asia"
     >
       <div
         className="absolute right-[-8%] top-32 h-96 w-96 rounded-full bg-primary/10 blur-[130px]"
@@ -214,9 +214,9 @@ export function ServicesExplorer() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Katalog Layanan"
-          title="500+ Layanan Perizinan"
-          highlight="dalam Satu Pintu"
-          description="Telusuri katalog perizinan terlengkap Indonesia — dari pendirian badan usaha, OSS-RBA, sertifikasi halal & BPOM, hingga sektor regulasi kompleks dan sertifikasi ISO. Cari, filter, dan temukan izin yang tepat untuk bisnis Anda dalam hitungan detik."
+          title="600+ Layanan Perizinan"
+          highlight="Terlengkap di Asia"
+          description="Telusuri katalog perizinan terlengkap di Asia — satu-satunya yang mencakup seluruh perizinan Indonesia: pendirian badan usaha, OSS-RBA, halal & BPOM, sektor regulasi kompleks, ISO — plus Perizinan Global & Internasional (Singapura, Dubai, Arab Saudi, Tiongkok). Cari, filter, temukan dalam hitungan detik."
         />
 
         {/* ===== Panel kontrol ===== */}
@@ -381,7 +381,7 @@ export function ServicesExplorer() {
             className="gap-1.5 rounded-full border-gold/40 bg-gold/10 px-3.5 py-1.5 text-xs font-extrabold text-gold-foreground dark:text-gold"
           >
             <Target className="h-3.5 w-3.5" aria-hidden="true" />
-            Target katalog: 500 layanan • 4 fase implementasi
+            Target katalog: 600 layanan • 27 bidang • 4 fase — Terlengkap di Asia
           </Badge>
         </div>
 
@@ -516,7 +516,7 @@ export function ServicesExplorer() {
               className="h-4 w-4 text-primary transition-transform duration-300 group-hover:scale-110"
               aria-hidden="true"
             />
-            Lihat Indeks Lengkap 500 Layanan — Terbaca Google
+            Lihat Indeks Lengkap 600 Layanan — Terbaca Google
           </a>
         </div>
 

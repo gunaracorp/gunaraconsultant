@@ -109,3 +109,25 @@ Work Log:
 Stage Summary:
 - WEBSITE FULL SEO-READY UNTUK GOOGLE INDEXING: (1) meta verification siap via env, (2) robots.txt+sitemap.xml dinamis dengan hreflang, (3) 500 layanan TERSIMPAN DI HTML SSR (indeks-katalog) sehingga Googlebot mengindeks semua nama layanan tanpa eksekusi JS, (4) 6 schema JSON-LD lengkap termasuk Sitelinks SearchBox, (5) favicon/PWA icons PNG+ICO, (6) internal linking katalog↔indeks↔fase↔kontak.
 - Langkah klien setelah deploy: isi GOOGLE_SITE_VERIFICATION di .env → verify di Search Console → submit sitemap.xml. Panduan ada di .env.example.
+
+---
+Task ID: 6
+Agent: Z.ai Code (Main Orchestrator)
+Task: Ekspansi "Pusat Perizinan Terlengkap di Asia — bahkan Dunia": +100 layanan (500→600), copywriting positioning, halaman artikel SEO (permintaan klien)
+
+Work Log:
+- DATA: kategori baru "global-internasional" (GC-GI, ikon globe, 14 layanan) di services-types.ts + CategorySlug/CATEGORIES/CATEGORY_TARGETS/CATEGORY_CODES; TOTAL_TARGET 600.
+- FILE BARU src/data/services-extra.ts: 100 layanan id 501-600 (BU+4, OS+4, PH+4, PD+3, IN+4, PE+3, LH+3, KP+3, TK+4, PK+3, KI+3, EI+5, PW+3, TL+4, PP+3, KH+3, IT+4, FN+3, ED+3, MK+3, EH+2, ISO+4, JP+3, UD+2, KF+4, KS+2, GI+14); services.ts concat [...RAW, ...EXTRA].
+- Bugfix data: 4 artefak kalimat desc (PE-027 kajianCadangan, KH-016 kuota, EI-022 SKEP, ED-017 twinning), gap kode LH (024/025 → 022/023).
+- PHASES: deskripsi 90/154/180/176; Fase 4 categories +global-internasional. Script validasi: TOTAL 600 OK, 0 dup id/code/name, 27 kategori = target, id 1-600 kontinu, popular 59.
+- COPYWRITING "Terlengkap di Asia": data.ts (SITE.tagline "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia", description 600+/27 bidang, HERO_STATS 600, MARQUEE, NAV "Katalog 600+", FAQ #500→600 diperkaya, +2 FAQ baru [bisnis luar negeri & mengapa terlengkap Asia], INTERNATIONAL 3→8 negara [UAE, Tiongkok, Qatar, Australia, Belanda], CONTACT_SERVICES +Global); hero subheadline; about (Visi + TRUST_POINTS); heritage; explorer (title/highlight/description/badge/link); catalog-index (aria/desc/27 bidang/paragraf fase berhitung); phases; footer (+8 negara); layout.tsx (description+OG+twitter+7 keyword baru: pusat perizinan terlengkap di asia, misa arab saudi, pendirian perusahaan singapura, dll); page.tsx JSON-LD knowsAbout+nama katalog+breadcrumb.
+- ARTIKEL SEO: FILE BARU src/data/articles.ts — 6 artikel mendalam (masing-masing 4-5 section + list): cara-mendirikan-pt-2025, panduan-nib-oss-rba, sertifikasi-halal-bpjph, pbg-dan-slf-perbedaan, kitas-investor-asing, amdal-ukl-upl-persetujuan-lingkungan (target long-tail keyword).
+- FILE BARU src/components/sections/insights.tsx (#artikel): server-rendered, <details> native crawlable, meta kategori/readTime/tanggal, CTA ke #kontak & #katalog.
+- page.tsx: +import Insights (urutan Faq→Insights→Contact), +articlesJsonLd ItemList 6 BlogPosting (headline/keywords/datePublished/author Organization/publisher @id), breadcrumb position 7 Artikel.
+- sitemap.ts +#artikel (weekly 0.8); footer nav +link Artikel; NAV_LINKS +Artikel (xlOnly).
+- VERIFIKASI: lint BERSIH; API total=600 kategori=27 global=14 fase 90/154/180/176, search "singapura"=2; HTML: 7 blok JSON-LD, 600 anchor SSR, BlogPosting 6, "Terlengkap di Asia" 19x, sisa "500" hanya data sah (12.500 klien, ISO 45001/50001/55001, Rp500rb); Agent Browser 0 console error — chip Global filter →14 (kartu pertama "Pendirian Perusahaan Singapura — Pte Ltd (ACRA)"), artikel expand OK, FAQ baru OK, hero 600+ OK, footer natural (24653px), mobile 375px tanpa h-scroll; dev.log semua 200. Screenshot: verify-artikel.png, verify-600-mobile.png.
+
+Stage Summary:
+- KATALOG 600 LAYANAN / 27 BIDANG — kategori BARU "Perizinan Global & Internasional" (Singapura ACRA, Malaysia Sdn Bhd/Labuan, MISA Saudi, UAE Free Zone, WFOE Tiongkok, apostille 120+ negara, holding lintas negara, P3B, ASEAN ATIGA, GCC, Australia/Kanada/UK) = diferensiasi "se-Asia bahkan se-dunia".
+- POSITIONING "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia" konsisten di 15+ titik (hero, visi, FAQ, JSON-LD, meta, footer, marquee).
+- SECTION #artikel: 6 panduan SEO mendalam server-rendered + 7 skema JSON-LD total — mesin pencari kini menemukan situs lewat pertanyaan riil calon klien.

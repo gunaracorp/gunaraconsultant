@@ -12,6 +12,7 @@ import { IsoSection } from "@/components/sections/iso";
 import { Coverage } from "@/components/sections/coverage";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
+import { Insights } from "@/components/sections/insights";
 import { Contact } from "@/components/sections/contact";
 import { CatalogIndex } from "@/components/sections/catalog-index";
 import { Footer } from "@/components/sections/footer";
@@ -19,6 +20,7 @@ import { WhatsAppFloat } from "@/components/sections/whatsapp-float";
 import { ScrollProgress, BackToTop } from "@/components/ui-custom/scroll-progress";
 import { SITE, FAQS, TESTIMONIALS } from "@/lib/data";
 import { SERVICES as CATALOG_SERVICES } from "@/data/services";
+import { ARTICLES } from "@/data/articles";
 
 /* ============ JSON-LD Structured Data (FULL SEO) ============ */
 
@@ -69,7 +71,9 @@ const organizationJsonLd = {
     "KITAS dan KITAP",
     "Izin Ekspor Impor",
     "Mic Kinsey",
-    "Katalog 500 Layanan Perizinan",
+    "Katalog 600 Layanan Perizinan Terlengkap di Asia",
+    "Perizinan Global & Internasional",
+    "Pendirian Perusahaan Singapura Dubai Arab Saudi",
     "Perizinan UMKM",
   ],
   knowsLanguage: ["id", "en"],
@@ -201,7 +205,7 @@ const featuredCatalogServices = (() => {
 const catalogJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Katalog 500+ Layanan Perizinan Gunara Consultant",
+  name: "Katalog 600+ Layanan Perizinan Terlengkap di Asia — Gunara Consultant",
   url: `${SITE.url}/#indeks-katalog`,
   inLanguage: "id-ID",
   numberOfItems: featuredCatalogServices.length,
@@ -220,6 +224,38 @@ const catalogJsonLd = {
   })),
 };
 
+/** JSON-LD per artikel (BlogPosting) — rich snippet artikel di Google */
+const articlesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Artikel & Panduan Perizinan Usaha",
+  url: `${SITE.url}/#artikel`,
+  inLanguage: "id-ID",
+  itemListElement: ARTICLES.map((a, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "BlogPosting",
+      headline: a.title,
+      description: a.excerpt,
+      articleSection: a.category,
+      keywords: a.keyword,
+      datePublished: a.date,
+      inLanguage: "id-ID",
+      author: {
+        "@type": "Organization",
+        name: SITE.name,
+        url: SITE.url,
+      },
+      publisher: { "@id": `${SITE.url}/#organization` },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${SITE.url}/#artikel-${a.slug}`,
+      },
+    },
+  })),
+};
+
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -229,13 +265,13 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Katalog 500+ Layanan",
+      name: "Katalog 600+ Layanan",
       item: `${SITE.url}/#katalog`,
     },
     {
       "@type": "ListItem",
       position: 4,
-      name: `Indeks Lengkap 500 Layanan`,
+      name: `Indeks Lengkap 600 Layanan`,
       item: `${SITE.url}/#indeks-katalog`,
     },
     {
@@ -244,8 +280,19 @@ const breadcrumbJsonLd = {
       name: "Fase Implementasi",
       item: `${SITE.url}/#fase`,
     },
-    { "@type": "ListItem", position: 6, name: "Tentang", item: `${SITE.url}/#tentang` },
-    { "@type": "ListItem", position: 7, name: "Kontak", item: `${SITE.url}/#kontak` },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Tentang",
+      item: `${SITE.url}/#tentang`,
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      name: "Artikel & Panduan",
+      item: `${SITE.url}/#artikel`,
+    },
+    { "@type": "ListItem", position: 8, name: "Kontak", item: `${SITE.url}/#kontak` },
   ],
 };
 
@@ -268,6 +315,7 @@ export default function Home() {
       <JsonLd data={faqJsonLd} />
       <JsonLd data={reviewsJsonLd} />
       <JsonLd data={catalogJsonLd} />
+      <JsonLd data={articlesJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
 
       <ScrollProgress />
@@ -288,6 +336,7 @@ export default function Home() {
           <Coverage />
           <Testimonials />
           <Faq />
+          <Insights />
           <Contact />
           <CatalogIndex />
         </main>
