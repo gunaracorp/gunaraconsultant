@@ -11,20 +11,21 @@ import {
   StaggerItem,
 } from "@/components/ui-custom/animated";
 import { DynamicIcon } from "@/components/ui-custom/icon";
-import { SERVICES, SERVICE_CATEGORIES, type ServiceCategory } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
 
 export function Services() {
-  const [filter, setFilter] = useState<ServiceCategory | "semua">("semua");
+  const { t, copy } = useLang();
+  const [filter, setFilter] = useState<string>("semua");
   const visible =
     filter === "semua"
-      ? SERVICES
-      : SERVICES.filter((s) => s.category === filter);
+      ? copy.services
+      : copy.services.filter((s) => s.category === filter);
 
   return (
     <section
       id="layanan"
       className="relative overflow-hidden bg-secondary/50 py-24 sm:py-28"
-      aria-label="Layanan perizinan Gunara Consultant"
+      aria-label={t("svcAria")}
     >
       <div
         className="absolute left-[-8%] top-40 h-80 w-80 rounded-full bg-gold/10 blur-[110px]"
@@ -32,10 +33,10 @@ export function Services() {
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Layanan Kami"
-          title="Satu Pintu untuk"
-          highlight="Semua Perizinan"
-          description="Dari legalitas dasar hingga sertifikasi internasional — 16 layanan utama yang mencakup seluruh kebutuhan perizinan bisnis Anda di Indonesia dan mancanegara."
+          eyebrow={t("svcEyebrow")}
+          title={t("svcTitle")}
+          highlight={t("svcHighlight")}
+          description={t("svcDesc")}
         />
 
         {/* Filter tabs */}
@@ -48,10 +49,10 @@ export function Services() {
         >
           <Tabs
             value={filter}
-            onValueChange={(v) => setFilter(v as ServiceCategory | "semua")}
+            onValueChange={(v) => setFilter(v)}
           >
             <TabsList className="h-auto flex-wrap justify-center gap-1 rounded-full border border-border bg-card p-1.5 shadow-sm">
-              {SERVICE_CATEGORIES.map((cat) => (
+              {copy.serviceCategories.map((cat) => (
                 <TabsTrigger
                   key={cat.value}
                   value={cat.value}
@@ -133,14 +134,14 @@ export function Services() {
           transition={{ delay: 0.4 }}
           className="mt-10 text-center text-sm text-muted-foreground"
         >
-          Tidak menemukan izin yang Anda butuhkan?{" "}
+          {t("svcNotFound")}{" "}
           <a
             href="#kontak"
             className="font-bold text-primary underline decoration-gold decoration-2 underline-offset-4 transition-colors hover:text-gold"
           >
-            Tanyakan pada tim kami
+            {t("svcAsk")}
           </a>{" "}
-          — 18+ jenis perizinan lainnya juga kami urus.
+          {t("svcMore")}
         </motion.p>
       </div>
     </section>

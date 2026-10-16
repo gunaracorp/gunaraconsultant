@@ -7,31 +7,32 @@ import {
   SectionHeading,
   Reveal,
 } from "@/components/ui-custom/animated";
-import { TESTIMONIALS } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
 
 export function Testimonials() {
+  const { t, copy } = useLang();
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused) return;
     const id = setInterval(
-      () => setIndex((i) => (i + 1) % TESTIMONIALS.length),
+      () => setIndex((i) => (i + 1) % copy.testimonials.length),
       5200
     );
     return () => clearInterval(id);
-  }, [paused]);
+  }, [paused, copy.testimonials.length]);
 
-  const current = TESTIMONIALS[index];
-  const next = () => setIndex((i) => (i + 1) % TESTIMONIALS.length);
+  const current = copy.testimonials[index];
+  const next = () => setIndex((i) => (i + 1) % copy.testimonials.length);
   const prev = () =>
-    setIndex((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+    setIndex((i) => (i - 1 + copy.testimonials.length) % copy.testimonials.length);
 
   return (
     <section
       id="testimoni"
       className="relative overflow-hidden bg-secondary/50 py-24 sm:py-28"
-      aria-label="Testimoni klien Gunara Consultant"
+      aria-label={t("testiAria")}
     >
       <div
         className="absolute right-[-10%] top-20 h-80 w-80 rounded-full bg-primary/10 blur-[120px]"
@@ -39,10 +40,10 @@ export function Testimonials() {
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Testimoni"
-          title="Cerita Sukses dari"
-          highlight="12.500+ Klien"
-          description="Dari UMKM hingga korporasi — kepercayaan mereka adalah bukti nyata komitmen mutu kami."
+          eyebrow={t("testiEyebrow")}
+          title={t("testiTitle")}
+          highlight={t("testiHighlight")}
+          description={t("testiDesc")}
         />
 
         <Reveal className="mt-14" y={40}>
@@ -68,7 +69,7 @@ export function Testimonials() {
                 >
                   <div
                     className="flex gap-1"
-                    aria-label={`Rating ${current.rating} dari 5 bintang`}
+                    aria-label={`${t("testiRatingPre")} ${current.rating} ${t("testiRatingMid")} 5 ${t("testiRatingPost")}`}
                   >
                     {Array.from({ length: current.rating }).map((_, i) => (
                       <motion.span
@@ -105,19 +106,19 @@ export function Testimonials() {
               <button
                 type="button"
                 onClick={prev}
-                aria-label="Testimoni sebelumnya"
+                aria-label={t("testiPrev")}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all hover:border-primary hover:text-primary hover:-translate-x-0.5"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
-              <div className="flex gap-2" role="tablist" aria-label="Pilih testimoni">
-                {TESTIMONIALS.map((_, i) => (
+              <div className="flex gap-2" role="tablist" aria-label={t("testiDotsAria")}>
+                {copy.testimonials.map((_, i) => (
                   <button
                     key={i}
                     type="button"
                     role="tab"
                     aria-selected={i === index}
-                    aria-label={`Testimoni ${i + 1}`}
+                    aria-label={`${t("testiDotPre")} ${i + 1}`}
                     onClick={() => setIndex(i)}
                     className={`h-2.5 rounded-full transition-all duration-300 ${
                       i === index
@@ -130,7 +131,7 @@ export function Testimonials() {
               <button
                 type="button"
                 onClick={next}
-                aria-label="Testimoni berikutnya"
+                aria-label={t("testiNext")}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all hover:border-primary hover:text-primary hover:translate-x-0.5"
               >
                 <ChevronRight className="h-5 w-5" />

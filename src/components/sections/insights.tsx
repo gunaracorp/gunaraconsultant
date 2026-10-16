@@ -1,12 +1,53 @@
-import { SectionHeading } from "@/components/ui-custom/animated";
-import { BookOpen, Clock, CalendarDays, ChevronDown, ArrowRight, Newspaper } from "lucide-react";
+import { ChevronDown, Newspaper } from "lucide-react";
 import { ARTICLES, type Article } from "@/data/articles";
+import {
+  InsightsHeading,
+  InsightsEnNote,
+  ArticleMeta,
+  ArticleToggleLabels,
+  ArticleCta,
+  EditionHeader,
+  InsightsFooter,
+} from "@/components/sections/insights-ui";
+
+function NewspaperIcon() {
+  return <Newspaper className="h-5 w-5" aria-hidden="true" />;
+}
 
 /**
- * Section "Artikel & Panduan" — halaman artikel SEO server-rendered.
- * Seluruh konten artikel tersedia sebagai HTML statis (crawlable)
- * dengan <details> native — Google mengindeks seluruh teks panduan.
+ * Section "Perpustakaan Perizinan — Edisi Bulanan" (Task 7-a).
+ * 100% server component — seluruh konten artikel tersedia sebagai HTML
+ * statis (crawlable) dengan <details> native, TANPA filter client-side.
+ * Artikel dikelompokkan per edisi bulanan (editionKey), terbaru dulu.
  */
+
+type EditionGroup = {
+  key: string;
+  label: string;
+  articles: Article[];
+};
+
+/** Kelompokkan artikel berurutan berdasarkan editionKey (array sudah terbaru dulu). */
+function groupByEdition(articles: Article[]): EditionGroup[] {
+  const groups: EditionGroup[] = [];
+  for (const article of articles) {
+    const last = groups[groups.length - 1];
+    if (last && last.key === article.editionKey) {
+      last.articles.push(article);
+    } else {
+      groups.push({
+        key: article.editionKey,
+        label: article.edition,
+        articles: [article],
+      });
+    }
+  }
+  return groups;
+}
+
+const EDITION_GROUPS = groupByEdition(ARTICLES);
+/** Hanya artikel pertama dari edisi TERBARU yang terbuka secara default. */
+const FIRST_OPEN_SLUG = EDITION_GROUPS[0]?.articles[0]?.slug ?? "";
 
 function ArticleCard({ article, isOpen }: { article: Article; isOpen: boolean }) {
   return (
@@ -16,36 +57,17 @@ function ArticleCard({ article, isOpen }: { article: Article; isOpen: boolean })
     >
       <summary className="flex cursor-pointer list-none items-start gap-4 px-5 py-5 [&::-webkit-details-marker]:hidden hover:bg-secondary/40 sm:px-6">
         <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-colors group-open:bg-primary group-open:text-primary-foreground">
-          <Newspaper className="h-5 w-5" aria-hidden="true" />
+          <NewspaperIcon />
         </span>
         <span className="min-w-0 flex-1">
-          <span className="mb-2 inline-flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-secondary px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-primary">
-              {article.category}
-            </span>
-            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-muted-foreground">
-              <Clock className="h-3 w-3" aria-hidden="true" />
-              {article.readTime}
-            </span>
-            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-muted-foreground">
-              <CalendarDays className="h-3 w-3" aria-hidden="true" />
-              {article.date}
-            </span>
-          </span>
+          <ArticleMeta article={article} />
           <h3 className="text-base font-extrabold leading-snug text-foreground sm:text-lg">
             {article.title}
           </h3>
           <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
             {article.excerpt}
           </p>
-          <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-extrabold text-primary group-open:hidden">
-            Baca artikel lengkap
-            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-          </span>
-          <span className="mt-3 hidden items-center gap-1.5 text-xs font-extrabold text-primary group-open:inline-flex">
-            Tutup artikel
-            <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
-          </span>
+          <ArticleToggleLabels />
         </span>
       </summary>
 
@@ -85,17 +107,7 @@ function ArticleCard({ article, isOpen }: { article: Article; isOpen: boolean })
               )}
             </div>
           ))}
-          <p className="mt-6 rounded-2xl border border-gold/30 bg-gold/5 px-4 py-3 text-[13px] leading-relaxed text-foreground/80">
-            Butuh pendampingan langsung?{" "}
-            <a href="#kontak" className="font-extrabold text-primary underline-offset-2 hover:underline">
-              Konsultasi gratis
-            </a>{" "}
-            dengan tim bersertifikat ISO 9001:2015 — atau telusuri{" "}
-            <a href="#katalog" className="font-extrabold text-primary underline-offset-2 hover:underline">
-              katalog 600+ layanan perizinan
-            </a>{" "}
-            untuk menemukan izin yang Anda butuhkan.
-          </p>
+          <ArticleCta />
         </div>
       </div>
     </details>
@@ -115,26 +127,35 @@ export function Insights() {
       />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
-        <SectionHeading
-          eyebrow="Artikel & Panduan"
-          title="Perpustakaan Perizinan"
-          highlight="— Ditulis Ahli, Terbaca Google"
-          description="Panduan mendalam seputar perizinan usaha Indonesia: cara mendirikan PT, NIB & OSS-RBA, sertifikasi halal BPJPH, PBG & SLF, KITAS investor, hingga AMDAL. Gratis, lengkap, dan selalu sesuai regulasi terbaru."
-        />
+        <InsightsHeading />
+        <InsightsEnNote />
 
-        <div className="mt-10 grid gap-4">
-          {ARTICLES.map((a, i) => (
-            <ArticleCard key={a.slug} article={a} isOpen={i === 0} />
+        <div className="mt-10 flex flex-col gap-12">
+          {EDITION_GROUPS.map((group) => (
+            <div key={group.key} aria-label={`Edisi ${group.key}`}>
+              <EditionHeader
+                label={group.label}
+                editionKey={group.key}
+                count={group.articles.length}
+              />
+              <div
+                className="mt-5 h-px w-full bg-gradient-to-r from-border via-border/70 to-transparent"
+                aria-hidden="true"
+              />
+              <div className="mt-5 grid gap-4">
+                {group.articles.map((a) => (
+                  <ArticleCard
+                    key={a.slug}
+                    article={a}
+                    isOpen={a.slug === FIRST_OPEN_SLUG}
+                  />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-2 text-center">
-          <p className="inline-flex items-center gap-2 text-sm font-bold text-foreground/70">
-            <BookOpen className="h-4 w-4 text-primary" aria-hidden="true" />
-            {ARTICLES.length} panduan mendalam — diperbarui berkala oleh tim hukum
-            Gunara Consultant
-          </p>
-        </div>
+        <InsightsFooter count={ARTICLES.length} />
       </div>
     </section>
   );

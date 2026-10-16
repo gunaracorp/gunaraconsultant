@@ -7,26 +7,28 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { SectionHeading, Stagger, StaggerItem } from "@/components/ui-custom/animated";
-import { FAQS } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
 
 export function Faq() {
+  const { t, copy } = useLang();
+
   return (
     <section
       id="faq"
       className="relative overflow-hidden py-24 sm:py-28"
-      aria-label="Pertanyaan yang sering diajukan"
+      aria-label={t("faqAria")}
     >
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="FAQ"
-          title="Pertanyaan yang Sering"
-          highlight="Diajukan"
-          description="Semua yang perlu Anda ketahui sebelum memulai pengurusan bersama kami. Masih penasaran? Tim kami siap menjawab 24/7."
+          eyebrow={t("faqEyebrow")}
+          title={t("faqTitle")}
+          highlight={t("faqHighlight")}
+          description={t("faqDesc")}
         />
 
         <Stagger className="mt-12">
           <Accordion type="single" collapsible className="space-y-3">
-            {FAQS.map((faq, i) => (
+            {copy.faqs.map((faq, i) => (
               <StaggerItem key={faq.question}>
                 <AccordionItem
                   value={`faq-${i}`}

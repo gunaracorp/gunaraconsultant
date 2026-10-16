@@ -2,40 +2,18 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2, Target, Eye, HeartHandshake, ArrowDown } from "lucide-react";
+import { CheckCircle2, ArrowDown, Target, Eye, HeartHandshake } from "lucide-react";
 import { SectionHeading, Reveal, Stagger, StaggerItem } from "@/components/ui-custom/animated";
 import { AnimatedCounter } from "@/components/ui-custom/counter";
+import { useLang } from "@/components/language-provider";
 
-const VALUES = [
-  {
-    icon: Target,
-    title: "Misi",
-    text: "Menyederhanakan legalitas bisnis Indonesia dengan layanan cepat, transparan, dan bergaransi — agar pelaku usaha fokus tumbuh.",
-  },
-  {
-    icon: Eye,
-    title: "Visi",
-    text: "Menjadi pusat perizinan terlengkap di Asia — bahkan dunia — dengan standar mutu internasional ISO 9001:2015 yang paling terpercaya.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Nilai Kami",
-    text: "Integritas tanpa kompromi, kecepatan tanpa mengorbankan ketelitian, dan empati pada setiap cerita bisnis klien.",
-  },
-] as const;
-
-const TRUST_POINTS = [
-  "Berakar sejak 2009 — 15+ tahun pengalaman konsultansi kelas dunia",
-  "Resmi berbadan hukum 2024: PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI)",
-  "Katalog 600+ layanan — terlengkap di Asia, mencakup perizinan lintas negara",
-  "Bagian dari Gunara Consultant Group bersama pusatperizinan.com",
-  "Sistem manajemen mutu ISO 9001:2015 teraudit",
-  "Tim bersertifikasi: hukum, perpajakan & lingkungan",
-] as const;
+const VALUE_ICONS = [Target, Eye, HeartHandshake] as const;
 
 export function About() {
+  const { t, copy } = useLang();
+
   return (
-    <section id="tentang" className="relative overflow-hidden py-24 sm:py-28" aria-label="Tentang Gunara Consultant">
+    <section id="tentang" className="relative overflow-hidden py-24 sm:py-28" aria-label={t("aboutAria")}>
       <div
         className="absolute right-[-10%] top-24 h-96 w-96 rounded-full bg-secondary blur-[120px]"
         aria-hidden="true"
@@ -48,7 +26,7 @@ export function About() {
               <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-2xl shadow-primary/10">
                 <Image
                   src="/images/about-team.png"
-                  alt="Tim konsultan Gunara Consultant sedang meninjau dokumen perizinan di kantor Jakarta"
+                  alt={t("aboutImgAlt")}
                   width={1344}
                   height={768}
                   className="h-auto w-full object-cover transition-transform duration-[2.5s] hover:scale-105"
@@ -72,7 +50,7 @@ export function About() {
                   <AnimatedCounter value={16} suffix="+" />
                 </p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                  Tahun Pengalaman
+                  {t("aboutExpLabel")}
                 </p>
               </div>
             </motion.div>
@@ -86,7 +64,7 @@ export function About() {
             >
               <div className="glass-gold rounded-2xl border border-gold/40 px-5 py-3 shadow-xl animate-floaty-slow">
                 <p className="text-sm font-extrabold text-gold-foreground">
-                  Grup PusatPerizinan.com
+                  {t("aboutGroup")}
                 </p>
               </div>
             </motion.div>
@@ -96,39 +74,39 @@ export function About() {
           <div>
             <SectionHeading
               align="left"
-              eyebrow="Tentang Kami"
-              title="Konsultan Perizinan dengan Standar"
-              highlight="Kelas Dunia"
-              description="Gunara Consultant berakar pada pengalaman konsultansi sejak 2009 dan resmi berbadan hukum pada 2024 sebagai PT TOP KONSULTAN INTERNASIONAL — rumah layanan legalitas bersama pusatperizinan.com. Lebih dari 15 tahun, kami menjadi jembatan antara ambisi bisnis Anda dan kepastian hukum: dari warung kopi hingga korporasi lintas negara."
+              eyebrow={t("aboutEyebrow")}
+              title={t("aboutTitle")}
+              highlight={t("aboutHighlight")}
+              description={t("aboutDesc")}
             />
 
             {/* Paragraf narasi legasi */}
             <Reveal delay={0.15} className="mt-6">
               <p className="rounded-2xl border-l-4 border-gold/60 bg-secondary/60 p-5 text-[15px] leading-relaxed text-foreground/85">
-                Cerita kami dimulai di ruang kelas konsultansi dunia: sejak{" "}
-                <strong className="text-foreground">2009</strong>, para pendiri kami
-                menekuni ilmu konsultansi di bawah naungan{" "}
-                <strong className="text-foreground">Mic Kinsey</strong> — menyerap
-                disiplin mutu dan budaya solusi global. Puncaknya tercapai pada{" "}
-                <strong className="text-foreground">11 Juli 2024</strong>, ketika
-                Gunara Consultant resmi berbadan hukum sebagai{" "}
+                {t("aboutStoryA")}{" "}
+                <strong className="text-foreground">2009</strong>,{" "}
+                {t("aboutStoryB")}{" "}
+                <strong className="text-foreground">Mic Kinsey</strong>
+                {t("aboutStoryC")}{" "}
+                <strong className="text-foreground">11 Juli 2024</strong>
+                {t("aboutStoryD")}{" "}
                 <strong className="text-foreground">PT TOP KONSULTAN INTERNASIONAL</strong>
-                {" "}— dan kini mengelola grup{" "}
-                <strong className="text-foreground">pusatperizinan.com</strong> untuk
-                seluruh Indonesia.
+                {t("aboutStoryE")}{" "}
+                <strong className="text-foreground">pusatperizinan.com</strong>{" "}
+                {t("aboutStoryF")}
               </p>
               <a
                 href="#legasi"
                 className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-secondary px-4 py-2 text-sm font-bold text-primary transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
-                aria-label="Baca perjalanan kami di bagian Warisan dan Legalitas"
+                aria-label={t("aboutJourneyAria")}
               >
-                Baca Perjalanan Kami
+                {t("aboutJourney")}
                 <ArrowDown className="h-4 w-4" aria-hidden="true" />
               </a>
             </Reveal>
 
             <Stagger className="mt-8 space-y-3">
-              {TRUST_POINTS.map((point) => (
+              {copy.trustPoints.map((point) => (
                 <StaggerItem key={point}>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
@@ -139,11 +117,13 @@ export function About() {
             </Stagger>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {VALUES.map((v, i) => (
+              {copy.values.map((v, i) => {
+                const Icon = VALUE_ICONS[i] ?? Target;
+                return (
                 <Reveal key={v.title} delay={0.15 + i * 0.12}>
                   <div className="group h-full rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10">
                     <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                      <v.icon className="h-5 w-5" aria-hidden="true" />
+                      <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <h3 className="mt-3.5 text-base font-extrabold">{v.title}</h3>
                     <p className="mt-1.5 text-[13px] leading-relaxed text-muted-foreground">
@@ -151,7 +131,8 @@ export function About() {
                     </p>
                   </div>
                 </Reveal>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

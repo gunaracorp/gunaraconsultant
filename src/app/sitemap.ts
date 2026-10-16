@@ -100,6 +100,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SITE.url}/#misa`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
       url: `${SITE.url}/#kontak`,
       lastModified,
       changeFrequency: "monthly",

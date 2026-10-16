@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { AnimatedCounter } from "@/components/ui-custom/counter";
 import { DynamicIcon } from "@/components/ui-custom/icon";
 import { EASE } from "@/components/ui-custom/animated";
-import { HERO_STATS, HERO_FLOAT_CARDS, SITE } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
+import { SITE } from "@/lib/data";
 
 /* Posisi partikel deterministik (hindari hydration mismatch) */
 const PARTICLES = [
@@ -24,17 +25,20 @@ const PARTICLES = [
   { left: "30%", top: "78%", size: 3, delay: 3.1, dur: 8.8 },
 ] as const;
 
-const HEADLINE_LINES = [
-  { before: "Segala", gold: "Perizinan", after: "Usaha Anda," },
-  { before: "Kami Yang", gold: "Urus.", after: "" },
+/* Struktur word-reveal dipertahankan — teks per baris via dictionary i18n */
+const HEADLINE_KEYS = [
+  { lead: "heroTitleLead1", gold: "heroTitleGold1", after: "heroTitleAfter1" },
+  { lead: "heroTitleLead2", gold: "heroTitleGold2", after: "heroTitleAfter2" },
 ] as const;
 
 export function Hero() {
+  const { t, copy } = useLang();
+
   return (
     <section
       id="beranda"
       className="relative flex min-h-[100svh] flex-col overflow-hidden bg-deep noise-overlay"
-      aria-label="Beranda Gunara Consultant"
+      aria-label={t("heroAriaLabel")}
     >
       {/* ===== Background animasi ===== */}
       <div className="absolute inset-0 grid-pattern opacity-60" aria-hidden="true" />
@@ -79,18 +83,18 @@ export function Hero() {
               <div className="flex flex-wrap items-center gap-2.5">
                 <span className="inline-flex items-center gap-2.5 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-gold sm:text-[13px]">
                   <Sparkles className="h-4 w-4 animate-glow" aria-hidden="true" />
-                  Bernaung di Mic Kinsey sejak {SITE.founded}
+                  {t("heroBadge")} {SITE.founded}
                 </span>
                 <span className="inline-flex items-center gap-2.5 rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-emerald-300 sm:text-[13px]">
                   <BadgeCheck className="h-4 w-4" aria-hidden="true" />
-                  Berbadan Hukum 2024 • ISO 9001:2015
+                  {t("heroBadge2")}
                 </span>
               </div>
             </motion.div>
 
             {/* Headline dengan word-reveal */}
             <h1 className="mt-7 text-[2.6rem] leading-[1.06] sm:text-6xl lg:text-[4.4rem] font-extrabold tracking-tight text-white">
-              {HEADLINE_LINES.map((line, li) => (
+              {HEADLINE_KEYS.map((line, li) => (
                 <span key={li} className="block overflow-hidden pb-1">
                   <motion.span
                     className="block"
@@ -98,9 +102,9 @@ export function Hero() {
                     animate={{ y: 0 }}
                     transition={{ duration: 0.9, delay: 0.45 + li * 0.18, ease: EASE }}
                   >
-                    {line.before}{" "}
-                    <span className="text-gradient-gold">{line.gold}</span>
-                    {line.after && ` ${line.after}`}
+                    {t(line.lead)}{" "}
+                    <span className="text-gradient-gold">{t(line.gold)}</span>
+                    {t(line.after) && ` ${t(line.after)}`}
                   </motion.span>
                 </span>
               ))}
@@ -112,15 +116,15 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.95, ease: EASE }}
               className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
             >
-              <strong className="text-white">Gunara Consultant</strong> — sejak {" "}
-              {SITE.founded} kami menyerap standar konsultansi kelas dunia di bawah
-              naungan <strong className="text-white">Mic Kinsey</strong>, kini resmi
-              berbadan hukum 2024 sebagai <strong className="text-white">PT TOP
-              KONSULTAN INTERNASIONAL</strong> (AHU Kemenkumham RI). Lebih dari{" "}
-              <span className="text-gold font-semibold">600+ layanan perizinan terlengkap di Asia</span>{" "}
-              dalam satu pintu — dari NIB UMKM hingga pendirian perusahaan
-              internasional — bagian dari grup pusatperizinan.com. Cepat, resmi,
-              transparan, bergaransi 100%.
+              <strong className="text-white">Gunara Consultant</strong> {t("heroSubA")}{" "}
+              {SITE.founded} {t("heroSubB")}{" "}
+              <strong className="text-white">Mic Kinsey</strong>
+              {t("heroSubC")}{" "}
+              <strong className="text-white">PT TOP
+              KONSULTAN INTERNASIONAL</strong>
+              {t("heroSubD")}{" "}
+              <span className="text-gold font-semibold">{t("heroSubGold")}</span>{" "}
+              {t("heroSubE")} {t("heroSubF")}
             </motion.p>
 
             <motion.div
@@ -135,7 +139,7 @@ export function Hero() {
                 className="group h-14 rounded-full bg-gold px-8 text-base font-extrabold text-gold-foreground shadow-xl shadow-gold/25 transition-all hover:shadow-gold/40 hover:-translate-y-0.5"
               >
                 <a href="#kontak">
-                  Konsultasi Gratis Sekarang
+                  {t("heroCtaPrimary")}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </a>
               </Button>
@@ -147,7 +151,7 @@ export function Hero() {
               >
                 <a href="#layanan">
                   <PlayCircle className="mr-2 h-5 w-5 text-gold" />
-                  Jelajahi Layanan
+                  {t("heroCtaSecondary")}
                 </a>
               </Button>
             </motion.div>
@@ -159,7 +163,7 @@ export function Hero() {
               transition={{ duration: 0.9, delay: 1.3, ease: EASE }}
               className="mt-12 grid max-w-xl grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4"
             >
-              {HERO_STATS.map((stat) => (
+              {copy.heroStats.map((stat) => (
                 <div key={stat.label} className="border-l-2 border-gold/40 pl-4">
                   <dt className="sr-only">{stat.label}</dt>
                   <dd className="text-2xl font-extrabold text-white sm:text-[1.7rem]">
@@ -187,8 +191,8 @@ export function Hero() {
                     <DynamicIcon name="zap" className="h-6 w-6 text-gold" />
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-white">NIB Terbit</p>
-                    <p className="text-xl font-extrabold text-gold">1 Hari Kerja</p>
+                    <p className="text-sm font-bold text-white">{copy.floatCards[0].title}</p>
+                    <p className="text-xl font-extrabold text-gold">{copy.floatCards[0].time}</p>
                   </div>
                 </div>
                 <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/10">
@@ -198,7 +202,7 @@ export function Hero() {
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   />
                 </div>
-                <p className="mt-2.5 text-xs text-white/60">via OSS — BKPM RI</p>
+                <p className="mt-2.5 text-xs text-white/60">{t("heroFloatNote1")}</p>
               </div>
             </motion.div>
 
@@ -214,8 +218,8 @@ export function Hero() {
                     <DynamicIcon name="building" className="h-6 w-6 text-gold" />
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-white">Pendirian PT</p>
-                    <p className="text-xl font-extrabold text-gold">3 Hari Kerja</p>
+                    <p className="text-sm font-bold text-white">{copy.floatCards[1].title}</p>
+                    <p className="text-xl font-extrabold text-gold">{copy.floatCards[1].time}</p>
                   </div>
                 </div>
                 <div className="mt-4 flex items-center gap-1.5">
@@ -233,7 +237,7 @@ export function Hero() {
                     />
                   ))}
                   <span className="ml-2 text-xs text-white/60">
-                    Notaris → AHU → OSS
+                    {t("heroFloatNote2")}
                   </span>
                 </div>
               </div>
@@ -251,13 +255,13 @@ export function Hero() {
                 </span>
                 <div className="min-w-0">
                   <p className="text-sm font-extrabold text-white">
-                    Sertifikat AHU
+                    {copy.floatCards[2].title}
                   </p>
                   <p className="truncate font-mono text-xs font-bold text-emerald-300">
-                    {SITE.ahucert}
+                    {copy.floatCards[2].time}
                   </p>
                   <p className="text-[11px] text-white/65">
-                    Kemenkumham RI • 11 Juli 2024
+                    {t("heroFloatCertNote")}
                   </p>
                 </div>
               </div>
@@ -286,7 +290,7 @@ export function Hero() {
       {/* Scroll indicator */}
       <motion.a
         href="#tentang"
-        aria-label="Gulir ke bawah"
+        aria-label={t("heroScrollAria")}
         className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

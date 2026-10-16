@@ -1,7 +1,11 @@
-import { SectionHeading } from "@/components/ui-custom/animated";
-import { DynamicIcon } from "@/components/ui-custom/icon";
-import { ChevronDown, ListTree, Search } from "lucide-react";
+import { ChevronDown, ListTree } from "lucide-react";
 import { SERVICES, CATEGORIES } from "@/data/services";
+import { DynamicIcon } from "@/components/ui-custom/icon";
+import {
+  CatalogHeading,
+  CatalogLinks,
+  CatalogEnNote,
+} from "@/components/sections/catalog-ui";
 
 /**
  * Indeks Katalog Lengkap — dirender 100% di server (SSR HTML).
@@ -26,30 +30,11 @@ export function CatalogIndex() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-        <SectionHeading
-          eyebrow="Indeks Katalog Lengkap"
-          title={`Indeks ${total} Layanan Perizinan`}
-          highlight="— Semua Terbaca Google"
-          description="Daftar lengkap seluruh layanan perizinan yang kami tangani — terlengkap di Asia — dikelompokkan dalam 27 bidang: dari NIB & OSS-RBA, pendirian PT/PMA, sertifikasi halal & BPOM, PBG/SLF, AMDAL, KITAS/KITAP, sertifikasi ISO 9001:2015, hingga pendirian perusahaan di Singapura, Dubai, dan Arab Saudi. Klik bidang untuk membuka rinciannya — atau gunakan katalog interaktif untuk mencari & memfilter."
-        />
+        <CatalogHeading total={total} categories={CATEGORIES.length} />
+        <CatalogEnNote />
 
         {/* Link ke katalog interaktif */}
-        <div className="mt-8 flex flex-col items-center gap-3">
-          <a
-            href="#katalog"
-            className="group inline-flex items-center gap-2 rounded-full border border-primary/40 bg-secondary px-6 py-3 text-sm font-extrabold text-primary shadow-sm transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/25"
-          >
-            <Search
-              className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
-              aria-hidden="true"
-            />
-            Cari & Filter di Katalog Interaktif
-          </a>
-          <p className="text-xs text-muted-foreground">
-            27 bidang • {total} layanan • 4 fase implementasi • teraudit ISO
-            9001:2015
-          </p>
-        </div>
+        <CatalogLinks total={total} categories={CATEGORIES.length} />
 
         {/* 26 kategori — <details> native, crawlable tanpa JS */}
         <div className="mt-10 grid gap-4 lg:grid-cols-2">

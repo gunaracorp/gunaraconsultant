@@ -14,7 +14,8 @@ import {
 } from "lucide-react";
 import { Logo } from "@/components/ui-custom/logo";
 import { Reveal } from "@/components/ui-custom/animated";
-import { SITE, NAV_LINKS, SERVICES } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
+import { SITE, SERVICES } from "@/lib/data";
 
 const SOCIALS = [
   { icon: Linkedin, href: SITE.social.linkedin, label: "LinkedIn Gunara Consultant" },
@@ -24,6 +25,7 @@ const SOCIALS = [
 ] as const;
 
 export function Footer() {
+  const { t, copy } = useLang();
   const year = new Date().getFullYear();
 
   return (
@@ -33,11 +35,11 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-4 py-8 text-center sm:px-6 md:flex-row md:text-left">
           <Reveal>
             <h2 className="text-xl font-extrabold text-white sm:text-2xl">
-              Siap melegalkan bisnis Anda{" "}
-              <span className="text-gradient-gold">hari ini?</span>
+              {t("footerCtaTitle")}{" "}
+              <span className="text-gradient-gold">{t("footerCtaTitleGold")}</span>
             </h2>
             <p className="mt-1 text-sm text-white/60">
-              Konsultasi gratis, respons 15 menit, garansi 100%.
+              {t("footerCtaSub")}
             </p>
           </Reveal>
           <motion.a
@@ -46,7 +48,7 @@ export function Footer() {
             whileTap={{ scale: 0.97 }}
             className="inline-flex h-13 items-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-extrabold text-gold-foreground shadow-xl shadow-gold/25 transition-shadow hover:shadow-gold/40"
           >
-            Konsultasi Gratis
+            {t("footerCtaBtn")}
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </motion.a>
         </div>
@@ -57,8 +59,7 @@ export function Footer() {
         <div>
           <Logo dark />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
-            Konsultan perizinan &amp; legalitas usaha bersertifikasi ISO 9001:2015.
-            Bagian dari Gunara Group bersama{" "}
+            {t("footerAboutA")}{" "}
             <a
               href="https://www.pusatperizinan.com"
               target="_blank"
@@ -67,8 +68,8 @@ export function Footer() {
             >
               PusatPerizinan.com
             </a>
-            . Berdiri sejak {SITE.founded}, dipercaya 12.500+ klien di 34 provinsi
-            Indonesia dan 8 negara — pusat perizinan terlengkap di Asia.
+            {t("footerAboutB")} {SITE.founded}
+            {t("footerAboutC")}
           </p>
           <div className="mt-5 flex gap-2.5">
             {SOCIALS.map((s) => (
@@ -87,12 +88,12 @@ export function Footer() {
           </div>
         </div>
 
-        <nav aria-label="Navigasi footer">
+        <nav aria-label={t("footerNavAriaLabel")}>
           <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">
-            Navigasi
+            {t("footerNavTitle")}
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm">
-            {NAV_LINKS.map((link) => (
+            {copy.nav.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -109,7 +110,7 @@ export function Footer() {
                 className="inline-flex items-center gap-1.5 text-white/60 transition-colors hover:text-gold"
               >
                 <span className="h-px w-3 bg-gold/50" aria-hidden="true" />
-                Indeks Katalog 600 Layanan
+                {t("linkIndeks")}
               </a>
             </li>
             <li>
@@ -118,15 +119,15 @@ export function Footer() {
                 className="inline-flex items-center gap-1.5 text-white/60 transition-colors hover:text-gold"
               >
                 <span className="h-px w-3 bg-gold/50" aria-hidden="true" />
-                Artikel & Panduan Perizinan
+                {t("linkArtikel")}
               </a>
             </li>
           </ul>
         </nav>
 
-        <nav aria-label="Layanan populer">
+        <nav aria-label={t("footerServicesAriaLabel")}>
           <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">
-            Layanan Populer
+            {t("footerServicesTitle")}
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {SERVICES.slice(0, 7).map((s) => (
@@ -145,7 +146,7 @@ export function Footer() {
 
         <div>
           <h3 className="text-sm font-extrabold uppercase tracking-wider text-white">
-            Kontak &amp; Sertifikasi
+            {t("footerContactTitle")}
           </h3>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-start gap-2.5">
@@ -177,11 +178,10 @@ export function Footer() {
           <div className="mt-5 rounded-2xl border border-gold/25 bg-gold/10 p-4">
             <p className="flex items-center gap-2 text-xs font-extrabold text-gold">
               <BadgeCheck className="h-4 w-4" aria-hidden="true" />
-              TERSERTIFIKASI ISO 9001:2015
+              {t("footerIsoTitle")}
             </p>
             <p className="mt-1.5 text-[11px] leading-relaxed text-white/55">
-              Sistem Manajemen Mutu — diaudit tahunan oleh badan sertifikasi
-              berakreditasi IAF.
+              {t("footerIsoDesc")}
             </p>
           </div>
         </div>
@@ -191,22 +191,27 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-center text-xs text-white/45 sm:px-6 md:flex-row">
           <p>
-            © {year} {SITE.legalName}. Seluruh hak cipta dilindungi.
+            © {year} {SITE.legalName}. {t("footerCopyright")}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-            <span>Grup Gunara: {SITE.groupBrands.join(" • ")}</span>
+            <span>
+              {t("footerBrands")} {SITE.groupBrands.join(" • ")}
+            </span>
             <span className="hidden md:inline text-white/25">|</span>
-            <span>Dibuat dengan standar kelas dunia di Indonesia</span>
+            <span>{t("footerMade")}</span>
           </div>
         </div>
         {/* Baris verifikasi legalitas */}
         <div className="border-t border-white/5">
           <p className="mx-auto max-w-7xl px-4 py-4 text-center text-[11px] leading-relaxed text-white/40 sm:px-6">
             <span className="font-bold text-white/60">{SITE.legalName}</span>
-            {" — "}Terverifikasi Kemenkumham RI No.{" "}
+            {" — "}
+            {t("footerVerifyPre")}{" "}
             <span className="font-mono font-bold text-gold/80">{SITE.ahucert}</span>
-            {" • "}Sistem Manajemen Mutu ISO 9001:2015
-            {" • "}Bagian dari Gunara Consultant Group (
+            {" • "}
+            {t("footerVerifyMid")}
+            {" • "}
+            {t("footerVerifyPost")} (
             <a
               href="https://www.pusatperizinan.com"
               target="_blank"

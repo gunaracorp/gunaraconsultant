@@ -1,55 +1,23 @@
+"use client";
+
 import { FileCheck, Landmark, Quote, ScrollText, Building2, Globe2 } from "lucide-react";
 import { SectionHeading, Reveal, Stagger, StaggerItem } from "@/components/ui-custom/animated";
+import { useLang } from "@/components/language-provider";
 import { SITE } from "@/lib/data";
 
 /**
  * Section "Heritage / Legasi" — narasi 2009 (Mic Kinsey) → 2024 (badan hukum).
- * Server component; animasi via komponen client Reveal/Stagger (ui-custom/animated).
+ * FULL BILINGUAL ID ⇄ EN via LanguageProvider (render awal tetap ID untuk SEO).
  */
 
-const TIMELINE = [
-  {
-    year: "2009",
-    icon: "graduation-cap",
-    title: "Berdirinya Visi",
-    text: "Sejak 2009, para pendiri Gunara Consultant menekuni ilmu konsultansi kelas dunia di bawah naungan Mic Kinsey — menyerap metodologi, disiplin mutu, dan budaya solusi global yang kini menjadi DNA layanan kami: presisi, integritas, dan obsesi pada hasil klien.",
-  },
-  {
-    year: "2009–2024",
-    icon: "briefcase",
-    title: "15 Tahun Membekali Ribuan Pelaku Usaha",
-    text: "Lebih dari satu dekade menemani UMKM hingga korporasi menembus kerumitan birokrasi. Pengalaman lintas sektor itu mengkristal menjadi penguasaan 600+ jenis perizinan — terlengkap di Asia — dari izin UMKM kampung hingga pendirian perusahaan di Singapura, Dubai, dan Arab Saudi.",
-  },
-  {
-    year: "11 Juli 2024",
-    icon: "landmark",
-    title: "Kelahiran Badan Hukum",
-    text: "Gunara Consultant resmi berbadan usaha sebagai PT TOP KONSULTAN INTERNASIONAL — Sertifikat Nomor AHU-038293.AH.01.30.Tahun 2024, terbit dari Kementerian Hukum dan HAM RI, berkedudukan di Kota Tasikmalaya, dengan modal usaha Rp5.000.000.000,00.",
-  },
-  {
-    year: "Kini",
-    icon: "globe",
-    title: "Gunara Consultant Group",
-    text: "Mengelola pusatperizinan.com sebagai jendela digital layanan perizinan; satu pintu kepastian hukum untuk seluruh Indonesia — dan terus bertumbuh.",
-  },
-] as const;
-
-const CERT_ROWS = [
-  { label: "Nomor Sertifikat", value: SITE.ahucert, mono: true },
-  { label: "Entitas", value: SITE.legalName },
-  { label: "Diterbitkan Oleh", value: "Kementerian Hukum dan HAM RI" },
-  { label: "Tanggal Terbit", value: "11 Juli 2024" },
-  { label: "Kedudukan", value: "Kota Tasikmalaya, Jawa Barat" },
-  { label: "Modal Usaha", value: SITE.capital },
-  { label: "Pendiri", value: SITE.founder },
-] as const;
-
 export function Heritage() {
+  const { t, copy } = useLang();
+
   return (
     <section
       id="legasi"
       className="relative overflow-hidden py-24 sm:py-28"
-      aria-label="Warisan dan legalitas Gunara Consultant"
+      aria-label={t("herAria")}
     >
       {/* Ornamen latar */}
       <div
@@ -63,9 +31,9 @@ export function Heritage() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Warisan & Legalitas"
-          title="Sejak 2009 di Ruang Kelas Dunia,"
-          highlight="Sejak 2024 Berbadan Hukum Indonesia"
+          eyebrow={t("herEyebrow")}
+          title={t("herTitle")}
+          highlight={t("herHighlight")}
           align="center"
         />
 
@@ -77,15 +45,14 @@ export function Heritage() {
               aria-hidden="true"
             />
             <blockquote className="text-lg font-medium leading-relaxed text-foreground/85 sm:text-xl">
-              “Dari ruang kelas konsultansi dunia, kami membawa pulang satu pelajaran
-              yang tak pernah usang:{" "}
+              {t("herQuotePre")}{" "}
               <span className="font-extrabold text-gradient-gold">
-                kepastian hukum adalah fondasi dari segala pertumbuhan.
+                {t("herQuoteGold")}
               </span>
               ”
             </blockquote>
             <figcaption className="mt-4 text-sm font-bold uppercase tracking-[0.14em] text-muted-foreground">
-              — Prinsip pendiri, {SITE.name}
+              {t("herQuoteCaptionPre")} {SITE.name}
             </figcaption>
           </figure>
         </Reveal>
@@ -111,7 +78,7 @@ export function Heritage() {
             />
 
             <Stagger className="space-y-8">
-              {TIMELINE.map((item) => (
+              {copy.timeline.map((item, i) => (
                 <StaggerItem key={item.title}>
                   <article className="relative flex gap-5 sm:gap-7">
                     {/* Titik timeline */}
@@ -163,23 +130,23 @@ export function Heritage() {
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-600/25 bg-emerald-600/10 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
                     <ScrollText className="h-3.5 w-3.5" aria-hidden="true" />
-                    Dokumen Resmi
+                    {t("herCertBadge")}
                   </span>
                 </div>
 
                 <p className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-muted-foreground">
-                  Republik Indonesia
+                  {t("herCertCountry")}
                 </p>
                 <h3 className="mt-1.5 text-2xl font-extrabold tracking-tight text-foreground">
-                  Sertifikat{" "}
-                  <span className="text-gradient-gold">Pendirian</span>
+                  {t("herCertTitle")}{" "}
+                  <span className="text-gradient-gold">{t("herCertTitleGold")}</span>
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Perseroan Terbatas — Sistem Administrasi Badan Hukum
+                  {t("herCertSub")}
                 </p>
 
                 <dl className="mt-6 divide-y divide-border/70 border-y border-gold/20">
-                  {CERT_ROWS.map((row) => (
+                  {copy.certRows.map((row) => (
                     <div
                       key={row.label}
                       className="flex flex-col gap-0.5 py-2.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
@@ -201,15 +168,15 @@ export function Heritage() {
                 <div className="mt-6 flex flex-wrap items-center gap-2.5">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-3.5 py-1.5 text-xs font-extrabold text-primary">
                     <Building2 className="h-3.5 w-3.5" aria-hidden="true" />
-                    Grup: pusatperizinan.com
+                    {t("herChipGroup")}
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground">
                     <Landmark className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
-                    Legalitas Terverifikasi
+                    {t("herChipVerified")}
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground">
                     <Globe2 className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
-                    Melayani Seluruh Indonesia
+                    {t("herChipServing")}
                   </span>
                 </div>
               </div>

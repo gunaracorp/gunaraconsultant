@@ -48,6 +48,7 @@ export const NAV_LINKS = [
   { label: "Testimoni", href: "#testimoni", xlOnly: true },
   { label: "FAQ", href: "#faq", xlOnly: true },
   { label: "Artikel", href: "#artikel", xlOnly: true },
+  { label: "Saudi Desk", href: "#misa", xlOnly: true },
   { label: "Kontak", href: "#kontak" },
 ] as const;
 

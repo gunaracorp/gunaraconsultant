@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, Phone, Moon, Sun, Mail, BadgeCheck } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Logo } from "@/components/ui-custom/logo";
-import { NAV_LINKS, SITE } from "@/lib/data";
+import { LanguageToggle, useLang } from "@/components/language-provider";
+import { SITE } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -59,6 +60,7 @@ function ThemeToggle() {
 }
 
 export function Navbar() {
+  const { t, copy } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("#beranda");
   const [open, setOpen] = useState(false);
@@ -71,7 +73,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    const ids = NAV_LINKS.map((l) => l.href.replace("#", ""));
+    const ids = copy.nav.map((l) => l.href.replace("#", ""));
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -85,7 +87,7 @@ export function Navbar() {
       if (el) observer.observe(el);
     }
     return () => observer.disconnect();
-  }, []);
+  }, [copy]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -103,7 +105,7 @@ export function Navbar() {
         <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-6 text-xs">
           <p className="flex items-center gap-2 font-semibold">
             <BadgeCheck className="h-4 w-4 text-gold" />
-            Tersertifikasi ISO 9001:2015 — Grup PusatPerizinan.com — Berdiri sejak {SITE.founded}
+            {t("topbarIso")} {t("topbarSince")} {SITE.founded}
           </p>
           <div className="flex items-center gap-5">
             <a
@@ -135,15 +137,15 @@ export function Navbar() {
       >
         <nav
           className="mx-auto flex h-16 md:h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6"
-          aria-label="Navigasi utama"
+          aria-label={t("navAriaLabel")}
         >
           <Logo dark={!scrolled} />
 
           <ul className="hidden lg:flex items-center gap-1">
-            {NAV_LINKS.map((link) => {
+            {copy.nav.map((link) => {
               const isActive = active === link.href;
               // Link sekunder hanya tampil di layar xl+ agar navbar tetap rapi
-              const isXlOnly = "xlOnly" in link && link.xlOnly;
+              const isXlOnly = link.xlOnly === true;
               return (
                 <li
                   key={link.href}
@@ -183,13 +185,14 @@ export function Navbar() {
                   : "[&_button]:bg-white/10 [&_button]:text-white [&_button:hover]:bg-white/20"
               }
             >
+              <LanguageToggle />
               <ThemeToggle />
             </div>
             <Button
               asChild
               className="hidden sm:inline-flex shimmer bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-5 font-bold shadow-lg shadow-primary/25"
             >
-              <a href="#kontak">Konsultasi Gratis</a>
+              <a href="#kontak">{t("navCta")}</a>
             </Button>
 
             {/* Mobile menu */}
@@ -203,7 +206,7 @@ export function Navbar() {
                       ? ""
                       : "border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white"
                   }`}
-                  aria-label="Buka menu navigasi"
+                  aria-label={t("ariaMenu")}
                 >
                   <Menu className="h-5 w-5" />
                 </Button>
@@ -214,7 +217,7 @@ export function Navbar() {
                 className="w-[300px] overflow-y-auto"
               >
                 <SheetHeader className="p-0 border-0">
-                  <SheetTitle className="sr-only">Menu navigasi</SheetTitle>
+                  <SheetTitle className="sr-only">{t("sheetTitle")}</SheetTitle>
                   <div className="pt-2">
                     <Logo />
                   </div>
@@ -228,7 +231,7 @@ export function Navbar() {
                     show: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
                   }}
                 >
-                  {NAV_LINKS.map((link) => (
+                  {copy.nav.map((link) => (
                     <motion.li
                       key={link.href}
                       variants={{
@@ -253,7 +256,7 @@ export function Navbar() {
                     className="w-full rounded-full bg-primary font-bold shadow-lg shadow-primary/25"
                   >
                     <a href="#kontak" onClick={() => setOpen(false)}>
-                      Konsultasi Gratis
+                      {t("navCta")}
                     </a>
                   </Button>
                   <p className="mt-4 text-center text-xs text-muted-foreground">

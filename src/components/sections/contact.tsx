@@ -25,33 +25,35 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { SectionHeading, Stagger, StaggerItem } from "@/components/ui-custom/animated";
-import { SITE, CONTACT_SERVICES } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
+import { SITE } from "@/lib/data";
 
 const CONTACT_CARDS = [
   {
     icon: Phone,
-    title: "Telepon / WhatsApp",
+    titleKey: "contactCardPhone",
     value: SITE.phone,
     href: SITE.phoneHref,
-    note: "Respons < 15 menit (jam kerja)",
+    noteKey: "contactCardPhoneNote",
   },
   {
     icon: Mail,
-    title: "Email",
+    titleKey: "contactCardEmail",
     value: SITE.email,
     href: `mailto:${SITE.email}`,
-    note: "Balasan maksimal 1x24 jam",
+    noteKey: "contactCardEmailNote",
   },
   {
     icon: MapPin,
-    title: "Kantor Pusat",
+    titleKey: "contactCardOffice",
     value: `${SITE.address.street}, ${SITE.address.city}`,
     href: "#kontak",
-    note: "Senin–Sabtu, 08.00–20.00 WIB",
+    noteKey: "contactCardOfficeNote",
   },
 ] as const;
 
 export function Contact() {
+  const { t, copy } = useLang();
   const { toast } = useToast();
   const [sending, setSending] = useState(false);
   const [form, setForm] = useState({
@@ -70,8 +72,8 @@ export function Contact() {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast({
-        title: "Form belum lengkap",
-        description: "Mohon isi nama, email, dan pesan Anda.",
+        title: t("toastIncomplete"),
+        description: t("toastIncompleteDesc"),
         variant: "destructive",
       });
       return;
@@ -84,18 +86,17 @@ export function Contact() {
         body: JSON.stringify(form),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "Gagal mengirim pesan");
+      if (!res.ok) throw new Error(data.error ?? t("errFallback"));
       toast({
-        title: "Pesan terkirim!",
-        description:
-          "Terima kasih! Tim Gunara Consultant akan menghubungi Anda maksimal 15 menit di jam kerja.",
+        title: t("toastSuccess"),
+        description: t("toastSuccessDesc"),
       });
       setForm({ name: "", company: "", email: "", phone: "", service: "", message: "" });
     } catch (err) {
       toast({
-        title: "Gagal mengirim",
+        title: t("toastError"),
         description:
-          err instanceof Error ? err.message : "Silakan coba lagi atau hubungi WhatsApp kami.",
+          err instanceof Error ? err.message : t("toastErrorDesc"),
         variant: "destructive",
       });
     } finally {
@@ -107,7 +108,7 @@ export function Contact() {
     <section
       id="kontak"
       className="relative overflow-hidden bg-deep py-24 sm:py-28 noise-overlay"
-      aria-label="Hubungi Gunara Consultant"
+      aria-label={t("contactAriaLabel")}
     >
       <div
         className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-primary/30 blur-[130px] animate-orb"
@@ -121,10 +122,10 @@ export function Contact() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           dark
-          eyebrow="Hubungi Kami"
-          title="Mulai dengan"
-          highlight="Konsultasi Gratis"
-          description="Ceritakan kebutuhan perizinan Anda — tanpa biaya, tanpa komitmen. Tim ahli kami merespons maksimal 15 menit pada jam kerja."
+          eyebrow={t("contactEyebrow")}
+          title={t("contactTitle")}
+          highlight={t("contactHighlight")}
+          description={t("contactDesc")}
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
@@ -132,7 +133,7 @@ export function Contact() {
           <div>
             <Stagger className="space-y-4">
               {CONTACT_CARDS.map((card) => (
-                <StaggerItem key={card.title}>
+                <StaggerItem key={card.titleKey}>
                   <motion.a
                     href={card.href}
                     whileHover={{ x: 8 }}
@@ -144,12 +145,12 @@ export function Contact() {
                     </span>
                     <div className="min-w-0">
                       <p className="text-xs font-bold uppercase tracking-wider text-white/50">
-                        {card.title}
+                        {t(card.titleKey)}
                       </p>
                       <p className="truncate text-[15px] font-extrabold text-white">
                         {card.value}
                       </p>
-                      <p className="mt-0.5 text-xs text-white/50">{card.note}</p>
+                      <p className="mt-0.5 text-xs text-white/50">{t(card.noteKey)}</p>
                     </div>
                   </motion.a>
                 </StaggerItem>
@@ -171,10 +172,10 @@ export function Contact() {
               </span>
               <div>
                 <p className="text-[15px] font-extrabold text-white">
-                  Chat Langsung via WhatsApp
+                  {t("directWa")}
                 </p>
                 <p className="text-xs text-white/60">
-                  Fast track konsultasi — dibalas dalam hitungan menit
+                  {t("directWaNote")}
                 </p>
               </div>
             </motion.a>
@@ -188,8 +189,7 @@ export function Contact() {
             >
               <ShieldCheck className="h-5 w-5 shrink-0 text-gold" aria-hidden="true" />
               <p className="text-[13px] font-medium leading-snug text-white/80">
-                Data Anda aman &amp; dijaga kerahasiaannya sesuai standar mutu ISO
-                9001:2015 dan UU Perlindungan Data Pribadi.
+                {t("contactPrivacy")}
               </p>
             </motion.div>
           </div>
@@ -204,40 +204,40 @@ export function Contact() {
             className="rounded-[2rem] border border-white/10 bg-white/[0.07] p-6 backdrop-blur-xl sm:p-8"
             noValidate={false}
           >
-            <h3 className="text-xl font-extrabold text-white">Form Konsultasi Gratis</h3>
+            <h3 className="text-xl font-extrabold text-white">{t("contactFormTitle")}</h3>
             <p className="mt-1 text-sm text-white/60">
-              Isi form di bawah — kami yang menghubungi Anda.
+              {t("contactFormSub")}
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-white/80">
-                  Nama Lengkap *
+                  {t("labelNama")}
                 </Label>
                 <Input
                   id="name"
                   required
                   value={form.name}
                   onChange={(e) => set("name")(e.target.value)}
-                  placeholder="Nama Anda"
+                  placeholder={t("placeholderNama")}
                   className="h-11 rounded-xl border-white/15 bg-white/10 text-white placeholder:text-white/40 focus-visible:ring-gold"
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="company" className="text-white/80">
-                  Nama Usaha
+                  {t("labelCompany")}
                 </Label>
                 <Input
                   id="company"
                   value={form.company}
                   onChange={(e) => set("company")(e.target.value)}
-                  placeholder="Opsional"
+                  placeholder={t("placeholderCompany")}
                   className="h-11 rounded-xl border-white/15 bg-white/10 text-white placeholder:text-white/40 focus-visible:ring-gold"
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-white/80">
-                  Email *
+                  {t("labelEmail")}
                 </Label>
                 <Input
                   id="email"
@@ -251,7 +251,7 @@ export function Contact() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="phone" className="text-white/80">
-                  No. WhatsApp / Telepon
+                  {t("labelPhone")}
                 </Label>
                 <Input
                   id="phone"
@@ -264,17 +264,17 @@ export function Contact() {
               </div>
               <div className="space-y-2 sm:col-span-2">
                 <Label htmlFor="service" className="text-white/80">
-                  Layanan yang Dibutuhkan
+                  {t("labelService")}
                 </Label>
                 <Select value={form.service} onValueChange={set("service")}>
                   <SelectTrigger
                     id="service"
                     className="h-11 w-full rounded-xl border-white/15 bg-white/10 text-white data-[placeholder]:text-white/40"
                   >
-                    <SelectValue placeholder="Pilih layanan perizinan" />
+                    <SelectValue placeholder={t("placeholderService")} />
                   </SelectTrigger>
                   <SelectContent className="max-h-72 rounded-xl border-border bg-card">
-                    {CONTACT_SERVICES.map((s) => (
+                    {copy.contactServices.map((s) => (
                       <SelectItem key={s} value={s} className="font-medium">
                         {s}
                       </SelectItem>
@@ -284,7 +284,7 @@ export function Contact() {
               </div>
               <div className="space-y-2 sm:col-span-2">
                 <Label htmlFor="message" className="text-white/80">
-                  Ceritakan Kebutuhan Anda *
+                  {t("labelMessage")}
                 </Label>
                 <Textarea
                   id="message"
@@ -292,7 +292,7 @@ export function Contact() {
                   rows={4}
                   value={form.message}
                   onChange={(e) => set("message")(e.target.value)}
-                  placeholder="Contoh: Saya ingin mendirikan PT bidang kuliner di Bandung dan perlu izin halal untuk 5 produk..."
+                  placeholder={t("placeholderMessage")}
                   className="resize-none rounded-xl border-white/15 bg-white/10 text-white placeholder:text-white/40 focus-visible:ring-gold"
                 />
               </div>
@@ -306,18 +306,18 @@ export function Contact() {
               {sending ? (
                 <>
                   <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Mengirim Pesan...
+                  {t("submitting")}
                 </>
               ) : (
                 <>
-                  Kirim &amp; Dapatkan Konsultasi Gratis
+                  {t("submitBtn")}
                   <Send className="ml-2 h-5 w-5" />
                 </>
               )}
             </Button>
             <p className="mt-3.5 flex items-center justify-center gap-1.5 text-center text-xs text-white/50">
               <Clock className="h-3.5 w-3.5" />
-              Respons maksimal 15 menit (Senin–Sabtu, 08.00–20.00 WIB)
+              {t("contactResponseNote")}
             </p>
           </motion.form>
         </div>

@@ -8,7 +8,7 @@ import {
   StaggerItem,
   Reveal,
 } from "@/components/ui-custom/animated";
-import { ISO_PRINCIPLES } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
 
 function IsoBadge() {
   return (
@@ -66,10 +66,12 @@ function IsoBadge() {
 }
 
 export function IsoSection() {
+  const { t, copy } = useLang();
+
   return (
     <section
       className="relative overflow-hidden bg-secondary/50 py-24 sm:py-28"
-      aria-label="Komitmen mutu ISO 9001:2015"
+      aria-label={t("isoAria")}
     >
       <div
         className="absolute left-[-8%] top-1/3 h-96 w-96 rounded-full bg-gold/10 blur-[120px]"
@@ -77,10 +79,10 @@ export function IsoSection() {
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Akreditasi Mutu"
-          title="Sistem Manajemen Mutu"
-          highlight="ISO 9001:2015"
-          description="Gunara Consultant mengoperasikan seluruh layanannya di bawah Sistem Manajemen Mutu ISO 9001:2015 — standar mutu yang diadopsi perusahaan kelas dunia seperti Toyota, Samsung, dan Siemens. Kini, standar yang sama bekerja untuk perizinan bisnis Anda."
+          eyebrow={t("isoEyebrow")}
+          title={t("isoTitle")}
+          highlight={t("isoHighlight")}
+          description={t("isoDesc")}
         />
 
         <div className="mt-16 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
@@ -92,7 +94,7 @@ export function IsoSection() {
           {/* Prinsip-prinsip */}
           <div>
             <Stagger className="grid gap-4 sm:grid-cols-2">
-              {ISO_PRINCIPLES.map((p, i) => (
+              {copy.isoPrinciples.map((p, i) => (
                 <StaggerItem key={p.title}>
                   <motion.div
                     whileHover={{ y: -5 }}
@@ -116,8 +118,7 @@ export function IsoSection() {
               <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-primary/20 bg-primary/5 p-5">
                 <FileCheck2 className="h-6 w-6 shrink-0 text-primary" aria-hidden="true" />
                 <p className="flex-1 text-sm font-medium text-foreground/85">
-                  Sertifikat mutu kami diaudit setiap tahun oleh badan sertifikasi
-                  independen berakreditasi IAF.
+                  {t("isoAuditNote")}
                 </p>
                 <RefreshCcw className="h-5 w-5 text-gold" aria-hidden="true" />
               </div>
@@ -126,8 +127,7 @@ export function IsoSection() {
               <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-gold/30 bg-gold-soft/40 p-5">
                 <Scale className="h-6 w-6 shrink-0 text-gold-foreground" aria-hidden="true" />
                 <p className="flex-1 text-sm font-medium text-foreground/85">
-                  Kepatuhan penuh pada UU Cipta Kerja, PP 5/2021 (OSS-RBA), dan seluruh
-                  regulasi perizinan terkini.
+                  {t("isoComplianceNote")}
                 </p>
               </div>
             </Reveal>

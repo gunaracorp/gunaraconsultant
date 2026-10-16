@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/select";
 import { SectionHeading, Reveal } from "@/components/ui-custom/animated";
 import { DynamicIcon } from "@/components/ui-custom/icon";
+import { useLang } from "@/components/language-provider";
 import type { ServiceItem, CategoryMeta, PhaseId } from "@/data/services";
 
 /* ===== Kontrak respons API /api/services ===== */
@@ -97,6 +98,8 @@ function ServiceCardSkeleton() {
 }
 
 export function ServicesExplorer() {
+  const { t } = useLang();
+
   /* ===== State filter ===== */
   const [qInput, setQInput] = useState("");
   const [q, setQ] = useState("");
@@ -165,7 +168,7 @@ export function ServicesExplorer() {
       })
       .catch((err: unknown) => {
         if (err instanceof DOMException && err.name === "AbortError") return;
-        setError("Gagal memuat katalog. Periksa koneksi Anda dan coba lagi.");
+        setError(t("expError"));
         setSyncedKey(requestKey);
       });
 
@@ -204,7 +207,7 @@ export function ServicesExplorer() {
     <section
       id="katalog"
       className="relative overflow-hidden bg-secondary/40 py-24 sm:py-28"
-      aria-label="Katalog 600 layanan perizinan terlengkap di Asia"
+      aria-label={t("expAria")}
     >
       <div
         className="absolute right-[-8%] top-32 h-96 w-96 rounded-full bg-primary/10 blur-[130px]"
@@ -213,10 +216,10 @@ export function ServicesExplorer() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Katalog Layanan"
-          title="600+ Layanan Perizinan"
-          highlight="Terlengkap di Asia"
-          description="Telusuri katalog perizinan terlengkap di Asia — satu-satunya yang mencakup seluruh perizinan Indonesia: pendirian badan usaha, OSS-RBA, halal & BPOM, sektor regulasi kompleks, ISO — plus Perizinan Global & Internasional (Singapura, Dubai, Arab Saudi, Tiongkok). Cari, filter, temukan dalam hitungan detik."
+          eyebrow={t("expEyebrow")}
+          title={t("expTitle")}
+          highlight={t("expHighlight")}
+          description={t("expDesc")}
         />
 
         {/* ===== Panel kontrol ===== */}
@@ -233,8 +236,8 @@ export function ServicesExplorer() {
                   type="search"
                   value={qInput}
                   onChange={(e) => setQInput(e.target.value)}
-                  placeholder="Cari layanan — mis. NIB, halal, BPOM, KITAS…"
-                  aria-label="Cari layanan perizinan"
+                  placeholder={t("expPlaceholder")}
+                  aria-label={t("expSearchAria")}
                   className="h-12 rounded-full border-border bg-background pl-11 pr-4 text-sm shadow-none focus-visible:ring-primary/40"
                 />
               </div>
@@ -248,16 +251,16 @@ export function ServicesExplorer() {
                 }}
               >
                 <SelectTrigger
-                  aria-label="Filter berdasarkan fase implementasi"
+                  aria-label={t("expPhaseAria")}
                   className="h-12 w-full rounded-full border-border bg-background px-5 text-sm font-semibold shadow-none focus:ring-primary/40 lg:w-64"
                 >
-                  <SelectValue placeholder="Semua Fase" />
+                  <SelectValue placeholder={t("expPhaseAll")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="semua">Semua Fase</SelectItem>
+                  <SelectItem value="semua">{t("expPhaseAll")}</SelectItem>
                   {data?.phases.map((p) => (
                     <SelectItem key={p.id} value={String(p.id)}>
-                      Fase {p.id} — {p.count} layanan
+                      {t("expPhaseWord")} {p.id} — {p.count} {t("expCountSuffix")}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -269,7 +272,7 @@ export function ServicesExplorer() {
                   htmlFor="filter-popular"
                   className="cursor-pointer text-sm font-semibold text-foreground/80"
                 >
-                  Hanya Layanan Unggulan
+                  {t("expPopularLabel")}
                 </label>
                 <Switch
                   id="filter-popular"
@@ -278,7 +281,7 @@ export function ServicesExplorer() {
                     setPopular(v);
                     setPage(1);
                   }}
-                  aria-label="Hanya tampilkan layanan unggulan"
+                  aria-label={t("expPopularAria")}
                   className="data-[state=checked]:bg-primary"
                 />
               </div>
@@ -287,7 +290,7 @@ export function ServicesExplorer() {
             {/* Chips kategori — horizontal scroll */}
             <div
               role="group"
-              aria-label="Filter kategori layanan"
+              aria-label={t("expChipsAria")}
               className="mt-4 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-primary/25 [&::-webkit-scrollbar-thumb:hover]:bg-primary/45"
             >
               <button
@@ -303,7 +306,7 @@ export function ServicesExplorer() {
                     : "border-border bg-background text-foreground/70 hover:border-primary/40 hover:text-primary"
                 }`}
               >
-                Semua
+                {t("expAll")}
                 {data && (
                   <span
                     className={`rounded-full px-1.5 py-0.5 text-[10px] font-extrabold ${
@@ -371,17 +374,17 @@ export function ServicesExplorer() {
         >
           <p className="text-sm font-semibold text-muted-foreground">
             {loading
-              ? "Memuat katalog layanan…"
+              ? t("expLoading")
               : range
-                ? `Menampilkan ${range.start}–${range.end} dari ${range.total} layanan`
-                : "Tidak ada layanan yang cocok"}
+                ? `${t("expShowingPre")} ${range.start}–${range.end} ${t("expShowingMid")} ${range.total} ${t("expCountSuffix")}`
+                : t("expNoMatch")}
           </p>
           <Badge
             variant="outline"
             className="gap-1.5 rounded-full border-gold/40 bg-gold/10 px-3.5 py-1.5 text-xs font-extrabold text-gold-foreground dark:text-gold"
           >
             <Target className="h-3.5 w-3.5" aria-hidden="true" />
-            Target katalog: 600 layanan • 27 bidang • 4 fase — Terlengkap di Asia
+            {t("expTarget")}
           </Badge>
         </div>
 
@@ -395,14 +398,14 @@ export function ServicesExplorer() {
                 onClick={() => setRetryTick((t) => t + 1)}
                 className="rounded-full bg-primary font-bold text-primary-foreground hover:bg-primary/90"
               >
-                <RotateCcw className="mr-2 h-4 w-4" /> Coba Lagi
+                <RotateCcw className="mr-2 h-4 w-4" /> {t("expRetry")}
               </Button>
             </div>
           ) : loading ? (
             <div
               className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
               role="status"
-              aria-label="Memuat layanan"
+              aria-label={t("expLoadAria")}
             >
               {Array.from({ length: PER_PAGE }).map((_, i) => (
                 <ServiceCardSkeleton key={i} />
@@ -412,12 +415,10 @@ export function ServicesExplorer() {
             <div className="mt-6 flex flex-col items-center gap-4 rounded-3xl border border-dashed border-border bg-card px-6 py-16 text-center">
               <SearchX className="h-10 w-10 text-muted-foreground/60" aria-hidden="true" />
               <p className="text-lg font-extrabold text-foreground">
-                Layanan tidak ditemukan
+                {t("expNoTitle")}
               </p>
               <p className="max-w-md text-sm text-muted-foreground">
-                Coba kata kunci lain atau longgarkan filter — katalog kami
-                terus bertumbuh setiap fase. Tim kami juga siap membantu
-                mencarikan izin yang Anda butuhkan.
+                {t("expNoDesc")}
               </p>
               {hasActiveFilter && (
                 <Button
@@ -425,7 +426,7 @@ export function ServicesExplorer() {
                   onClick={resetFilters}
                   className="rounded-full border-primary/40 font-bold text-primary hover:bg-secondary"
                 >
-                  <RotateCcw className="mr-2 h-4 w-4" /> Reset Semua Filter
+                  <RotateCcw className="mr-2 h-4 w-4" /> {t("expReset")}
                 </Button>
               )}
             </div>
@@ -464,7 +465,7 @@ export function ServicesExplorer() {
                       {s.popular && (
                         <span className="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-gold-foreground dark:text-gold">
                           <Star className="h-3 w-3 fill-current" aria-hidden="true" />
-                          Unggulan
+                          {t("expFeatured")}
                         </span>
                       )}
                     </div>
@@ -493,9 +494,9 @@ export function ServicesExplorer() {
                         <a
                           href="#kontak"
                           className="rounded-full bg-secondary px-3.5 py-2 text-xs font-extrabold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                          aria-label={`Konsultasikan layanan ${s.name}`}
+                          aria-label={`${t("expConsultAriaPre")} ${s.name}`}
                         >
-                          Konsultasikan
+                          {t("expConsult")}
                         </a>
                       </div>
                     </div>
@@ -516,7 +517,7 @@ export function ServicesExplorer() {
               className="h-4 w-4 text-primary transition-transform duration-300 group-hover:scale-110"
               aria-hidden="true"
             />
-            Lihat Indeks Lengkap 600 Layanan — Terbaca Google
+            {t("expIndexLink")}
           </a>
         </div>
 
@@ -524,7 +525,7 @@ export function ServicesExplorer() {
         {data && data.totalPages > 1 && !loading && !showError && (
           <nav
             className="mt-10 flex items-center justify-center gap-3"
-            aria-label="Navigasi halaman katalog"
+            aria-label={t("expPageNavAria")}
           >
             <Button
               variant="outline"
@@ -532,17 +533,17 @@ export function ServicesExplorer() {
               onClick={() => goToPage(data.page - 1)}
               disabled={data.page <= 1}
               aria-disabled={data.page <= 1}
-              aria-label="Halaman sebelumnya"
+              aria-label={t("expPagePrevAria")}
               className="h-11 rounded-full border-border px-5 font-bold disabled:opacity-40"
             >
               <ChevronLeft className="mr-1 h-4 w-4" aria-hidden="true" />
-              Sebelumnya
+              {t("expPagePrev")}
             </Button>
             <span
               className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold text-foreground/80"
               aria-current="page"
             >
-              Halaman {data.page} dari {data.totalPages}
+              {t("expPage")} {data.page} {t("expPageOf")} {data.totalPages}
             </span>
             <Button
               variant="outline"
@@ -550,10 +551,10 @@ export function ServicesExplorer() {
               onClick={() => goToPage(data.page + 1)}
               disabled={data.page >= data.totalPages}
               aria-disabled={data.page >= data.totalPages}
-              aria-label="Halaman berikutnya"
+              aria-label={t("expPageNextAria")}
               className="h-11 rounded-full border-border px-5 font-bold disabled:opacity-40"
             >
-              Berikutnya
+              {t("expPageNext")}
               <ChevronRight className="ml-1 h-4 w-4" aria-hidden="true" />
             </Button>
           </nav>

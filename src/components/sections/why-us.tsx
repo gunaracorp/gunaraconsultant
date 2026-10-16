@@ -9,14 +9,16 @@ import {
   Reveal,
 } from "@/components/ui-custom/animated";
 import { DynamicIcon } from "@/components/ui-custom/icon";
-import { WHY_US, COMPARISON } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
 
 export function WhyUs() {
+  const { t, copy } = useLang();
+
   return (
     <section
       id="keunggulan"
       className="relative overflow-hidden py-24 sm:py-28"
-      aria-label="Keunggulan Gunara Consultant"
+      aria-label={t("whyUsAria")}
     >
       <div
         className="absolute right-[-10%] bottom-20 h-96 w-96 rounded-full bg-secondary blur-[130px]"
@@ -24,15 +26,15 @@ export function WhyUs() {
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Mengapa Gunara"
-          title="Standar yang Membuat Kami"
-          highlight="Melampaui Kompetitor"
-          description="Kami tidak sekadar mengurus izin — kami membangun sistem layanan bersertifikasi internasional yang menjamin hasil untuk setiap klien."
+          eyebrow={t("whyUsEyebrow")}
+          title={t("whyUsTitle")}
+          highlight={t("whyUsHighlight")}
+          description={t("whyUsDesc")}
         />
 
         {/* Grid keunggulan */}
         <Stagger className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {WHY_US.map((item, i) => (
+          {copy.whyUs.map((item, i) => (
             <StaggerItem key={item.title}>
               <motion.div
                 whileHover={{ y: -6 }}
@@ -72,22 +74,22 @@ export function WhyUs() {
                   <Crown className="h-5 w-5 text-gold" aria-hidden="true" />
                 </span>
                 <div>
-                  <p className="text-base sm:text-lg font-extrabold">{COMPARISON.us.name}</p>
+                  <p className="text-base sm:text-lg font-extrabold">{copy.comparison.us.name}</p>
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-gold">
-                    Pilihan Terbaik
+                    {t("whyUsBest")}
                   </p>
                 </div>
               </div>
               <div className="border-l border-white/10 p-5 sm:p-6">
                 <p className="text-base sm:text-lg font-bold text-white/60">
-                  {COMPARISON.others.name}
+                  {copy.comparison.others.name}
                 </p>
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-white/40">
-                  Rata-rata pasar
+                  {t("whyUsAvg")}
                 </p>
               </div>
             </div>
-            {COMPARISON.us.points.map((point, i) => (
+            {copy.comparison.us.points.map((point, i) => (
               <motion.div
                 key={point}
                 initial={{ opacity: 0, x: -24 }}
@@ -109,7 +111,7 @@ export function WhyUs() {
                     <X className="h-4 w-4" aria-hidden="true" />
                   </span>
                   <p className="text-sm text-muted-foreground">
-                    {COMPARISON.others.points[i]}
+                    {copy.comparison.others.points[i]}
                   </p>
                 </div>
               </motion.div>

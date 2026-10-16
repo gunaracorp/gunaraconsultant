@@ -3,24 +3,26 @@
 import { motion } from "framer-motion";
 import { MapPin, Globe2, Plane } from "lucide-react";
 import { SectionHeading, Stagger, StaggerItem } from "@/components/ui-custom/animated";
-import { COVERAGE_REGIONS, INTERNATIONAL } from "@/lib/data";
+import { useLang } from "@/components/language-provider";
 
 export function Coverage() {
+  const { t, copy } = useLang();
+
   return (
     <section
       className="relative overflow-hidden py-24 sm:py-28"
-      aria-label="Cakupan wilayah layanan"
+      aria-label={t("coverageAria")}
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Cakupan Layanan"
-          title="Melayani Seluruh"
-          highlight="Indonesia & Dunia"
-          description="Proses 100% online via OSS, AHU Online, SIMBG, dan SIHALAL. Di mana pun bisnis Anda berada, tim Gunara siap mengurusnya."
+          eyebrow={t("coverageEyebrow")}
+          title={t("coverageTitle")}
+          highlight={t("coverageHighlight")}
+          description={t("coverageDesc")}
         />
 
         <Stagger className="mt-12 flex flex-wrap justify-center gap-2.5">
-          {COVERAGE_REGIONS.map((region) => (
+          {copy.coverageRegions.map((region) => (
             <StaggerItem key={region}>
               <motion.span
                 whileHover={{ scale: 1.08, y: -3 }}
@@ -36,7 +38,7 @@ export function Coverage() {
 
         {/* Internasional */}
         <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
-          {INTERNATIONAL.map((c, i) => (
+          {copy.international.map((c, i) => (
             <StaggerItem key={c.country}>
               <motion.div
                 whileHover={{ y: -6 }}

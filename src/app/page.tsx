@@ -13,14 +13,17 @@ import { Coverage } from "@/components/sections/coverage";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
 import { Insights } from "@/components/sections/insights";
+import { SaudiDesk } from "@/components/sections/saudi-desk";
 import { Contact } from "@/components/sections/contact";
 import { CatalogIndex } from "@/components/sections/catalog-index";
 import { Footer } from "@/components/sections/footer";
 import { WhatsAppFloat } from "@/components/sections/whatsapp-float";
 import { ScrollProgress, BackToTop } from "@/components/ui-custom/scroll-progress";
+import { LanguageProvider } from "@/components/language-provider";
 import { SITE, FAQS, TESTIMONIALS } from "@/lib/data";
 import { SERVICES as CATALOG_SERVICES } from "@/data/services";
 import { ARTICLES } from "@/data/articles";
+import { MISA_FAQ } from "@/data/misa";
 
 /* ============ JSON-LD Structured Data (FULL SEO) ============ */
 
@@ -168,11 +171,19 @@ const websiteJsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-  })),
+  /* FAQ utama + mini FAQ Saudi Desk (MISA) yang tampil di section #misa */
+  mainEntity: [
+    ...FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+    ...MISA_FAQ.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  ],
 };
 
 const reviewsJsonLd = {
@@ -292,7 +303,13 @@ const breadcrumbJsonLd = {
       name: "Artikel & Panduan",
       item: `${SITE.url}/#artikel`,
     },
-    { "@type": "ListItem", position: 8, name: "Kontak", item: `${SITE.url}/#kontak` },
+    {
+      "@type": "ListItem",
+      position: 8,
+      name: "Saudi Desk MISA — Arab Saudi",
+      item: `${SITE.url}/#misa`,
+    },
+    { "@type": "ListItem", position: 9, name: "Kontak", item: `${SITE.url}/#kontak` },
   ],
 };
 
@@ -318,33 +335,36 @@ export default function Home() {
       <JsonLd data={articlesJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
 
-      <ScrollProgress />
+      <LanguageProvider>
+        <ScrollProgress />
 
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main>
-          <Hero />
-          <BrandStrip />
-          <About />
-          <Heritage />
-          <Services />
-          <ServicesExplorer />
-          <PhasesSection />
-          <WhyUs />
-          <Process />
-          <IsoSection />
-          <Coverage />
-          <Testimonials />
-          <Faq />
-          <Insights />
-          <Contact />
-          <CatalogIndex />
-        </main>
-        <Footer />
-      </div>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <main>
+            <Hero />
+            <BrandStrip />
+            <About />
+            <Heritage />
+            <Services />
+            <ServicesExplorer />
+            <PhasesSection />
+            <WhyUs />
+            <Process />
+            <IsoSection />
+            <Coverage />
+            <Testimonials />
+            <Faq />
+            <Insights />
+            <SaudiDesk />
+            <Contact />
+            <CatalogIndex />
+          </main>
+          <Footer />
+        </div>
 
-      <WhatsAppFloat />
-      <BackToTop />
+        <WhatsAppFloat />
+        <BackToTop />
+      </LanguageProvider>
     </>
   );
 }
