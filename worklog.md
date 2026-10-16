@@ -86,3 +86,26 @@ Work Log:
 
 Stage Summary:
 - Website Gunara Consultant SELESAI dengan 3 permintaan klien: (1) narasi legasi 2009 Mic Kinsey → 2024 PT TOP KONSULTAN INTERNASIONAL, (2) katalog 500 layanan perizinan interaktif, (3) 4 fase implementasi. Lint bersih, API sehat, golden path terverifikasi browser end-to-end.
+
+---
+Task ID: 5
+Agent: Z.ai Code (Main Orchestrator)
+Task: FULL Search Engine Optimization — memastikan Google benar-benar mengindeks website (permintaan klien)
+
+Work Log:
+- layout.tsx: +verification Google/Bing(msvalidate.01)/Yandex via env (GOOGLE_SITE_VERIFICATION, BING_SITE_VERIFICATION, YANDEX_VERIFICATION — tag hanya dirender jika env terisi); +alternates.languages id-ID/x-default (hreflang); +appleWebApp meta; geo meta dikoreksi ke Tasikmalaya (ID-JI, ICBM -7.3274,108.2207) konsisten alamat AHU.
+- robots: hapus public/robots.txt statis, buat src/app/robots.ts dinamis — allow semua mesin pencari utama + bot sosial, disallow /api/, Sitemap + Host absolut dari SITE.url. Terverifikasi: GET /robots.txt 200.
+- sitemap.ts: upgrade — beranda daily priority 1 + hreflang alternates; +7 anchor baru (#katalog 0.95, #indeks-katalog 0.9, #fase, #legasi, #iso, #cakupan). GET /sitemap.xml 200.
+- manifest.ts: +id, +scope, icons PNG 192/512 + maskable. GET /manifest.webmanifest 200.
+- Favicon: generate public/favicon.ico (PNG-in-ICO 48px, valid) + icons/icon-{32,192,512}.png + apple-icon-180.png dari favicon.svg via sharp; metadata.icons + manifest icons diperbarui. Semua 200.
+- SRC BARU src/components/sections/catalog-index.tsx (#indeks-katalog): Indeks 500 layanan dirender 100% SSR — 26 <details> native (crawlable tanpa JS), tiap layanan <li id="GC-XX-NNN"> berisi kode+nama+deskripsi (deep-linkable), list max-h-96 overflow, teks kaya kata kunci + link internal ke #katalog/#fase/#kontak. Ditempatkan setelah Contact, sebelum Footer.
+- page.tsx: +import/render CatalogIndex; JSON-LD upgrade — organization +founder (Gugun Gunara) +identifier PropertyValue AHU-038293 +contactPoint +knowsLanguage; WebSite +potentialAction SearchAction (Sitelinks Search Box, urlTemplate /?q={search_term_string}#katalog); catalogJsonLd item.url → anchor #GC-XX-NNN +serviceType +provider +areaServed; breadcrumb +Indeks Lengkap (urutan 1-7).
+- services-explorer.tsx: prefill ?q= dari URL (rAF-safe, mendukung SearchAction) — teruji /?q=halal → input "halal", "Menampilkan 1–12 dari 28 layanan"; +tombol "Lihat Indeks Lengkap" → #indeks-katalog.
+- footer.tsx: +link "Indeks Katalog 500 Layanan" di navigasi footer (internal linking).
+- data.ts: SITE.url override via NEXT_PUBLIC_SITE_URL (default tetap https://www.gunaraconsultant.com).
+- .env.example: panduan lengkap mendapatkan & mengisi token verifikasi Google Search Console/Bing/Yandex + langkah submit sitemap.
+- Verifikasi: bun run lint BERSIH; curl — robots.txt/sitemap.xml/manifest/favicon.ico/icon-192/apple-180 semua 200; HTML — 1 h1, 14 h2, 26 details, 500 li GC-*, 6 blok JSON-LD (22 ListItem, 11 Q&A, 10 Service, 5 Review, SearchAction, founder, identifier), canonical + 2 hreflang, robots max-image-preview:large. Agent Browser — 0 console error, details expand OK ("Pertambangan & Energi"), ?q= prefill OK, deep-link #GC-ISO-003 scroll OK, footer natural push OK (2135>577), mobile 375px tanpa h-scroll OK. Screenshot: verify-indeks.png, verify-indeks-mobile.png.
+
+Stage Summary:
+- WEBSITE FULL SEO-READY UNTUK GOOGLE INDEXING: (1) meta verification siap via env, (2) robots.txt+sitemap.xml dinamis dengan hreflang, (3) 500 layanan TERSIMPAN DI HTML SSR (indeks-katalog) sehingga Googlebot mengindeks semua nama layanan tanpa eksekusi JS, (4) 6 schema JSON-LD lengkap termasuk Sitelinks SearchBox, (5) favicon/PWA icons PNG+ICO, (6) internal linking katalog↔indeks↔fase↔kontak.
+- Langkah klien setelah deploy: isi GOOGLE_SITE_VERIFICATION di .env → verify di Search Console → submit sitemap.xml. Panduan ada di .env.example.

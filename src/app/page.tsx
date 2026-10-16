@@ -13,6 +13,7 @@ import { Coverage } from "@/components/sections/coverage";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
+import { CatalogIndex } from "@/components/sections/catalog-index";
 import { Footer } from "@/components/sections/footer";
 import { WhatsAppFloat } from "@/components/sections/whatsapp-float";
 import { ScrollProgress, BackToTop } from "@/components/ui-custom/scroll-progress";
@@ -71,6 +72,27 @@ const organizationJsonLd = {
     "Katalog 500 Layanan Perizinan",
     "Perizinan UMKM",
   ],
+  knowsLanguage: ["id", "en"],
+  founder: {
+    "@type": "Person",
+    name: SITE.founder,
+    jobTitle: "Founder",
+  },
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      propertyID: "AHU Kemenkumham RI",
+      value: SITE.ahucert,
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: SITE.phone,
+    contactType: "customer service",
+    email: SITE.email,
+    availableLanguage: ["Indonesian", "English"],
+    areaServed: "ID",
+  },
   hasCredential: [
     {
       "@type": "EducationalOccupationalCredential",
@@ -127,6 +149,16 @@ const websiteJsonLd = {
   description: SITE.description,
   publisher: { "@id": `${SITE.url}/#organization` },
   inLanguage: "id-ID",
+  copyrightYear: new Date().getFullYear(),
+  /* Sitelinks Search Box — kotak pencarian langsung di hasil pencarian Google */
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE.url}/?q={search_term_string}#katalog`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 const faqJsonLd = {
@@ -170,7 +202,8 @@ const catalogJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Katalog 500+ Layanan Perizinan Gunara Consultant",
-  url: `${SITE.url}/#katalog`,
+  url: `${SITE.url}/#indeks-katalog`,
+  inLanguage: "id-ID",
   numberOfItems: featuredCatalogServices.length,
   itemListElement: featuredCatalogServices.map((s, i) => ({
     "@type": "ListItem",
@@ -178,8 +211,11 @@ const catalogJsonLd = {
     item: {
       "@type": "Service",
       name: s.name,
-      url: `${SITE.url}/#katalog`,
+      url: `${SITE.url}/#${s.code}`,
+      serviceType: s.category,
       description: s.desc,
+      provider: { "@id": `${SITE.url}/#organization` },
+      areaServed: { "@type": "Country", name: "Indonesia" },
     },
   })),
 };
@@ -199,11 +235,17 @@ const breadcrumbJsonLd = {
     {
       "@type": "ListItem",
       position: 4,
+      name: `Indeks Lengkap 500 Layanan`,
+      item: `${SITE.url}/#indeks-katalog`,
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
       name: "Fase Implementasi",
       item: `${SITE.url}/#fase`,
     },
-    { "@type": "ListItem", position: 5, name: "Tentang", item: `${SITE.url}/#tentang` },
-    { "@type": "ListItem", position: 6, name: "Kontak", item: `${SITE.url}/#kontak` },
+    { "@type": "ListItem", position: 6, name: "Tentang", item: `${SITE.url}/#tentang` },
+    { "@type": "ListItem", position: 7, name: "Kontak", item: `${SITE.url}/#kontak` },
   ],
 };
 
@@ -247,6 +289,7 @@ export default function Home() {
           <Testimonials />
           <Faq />
           <Contact />
+          <CatalogIndex />
         </main>
         <Footer />
       </div>

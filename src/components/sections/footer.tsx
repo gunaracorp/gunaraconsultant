@@ -102,6 +102,15 @@ export function Footer() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="#indeks-katalog"
+                className="inline-flex items-center gap-1.5 text-white/60 transition-colors hover:text-gold"
+              >
+                <span className="h-px w-3 bg-gold/50" aria-hidden="true" />
+                Indeks Katalog 500 Layanan
+              </a>
+            </li>
           </ul>
         </nav>
 

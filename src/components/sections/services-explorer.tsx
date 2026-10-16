@@ -12,6 +12,7 @@ import {
   RotateCcw,
   AlertTriangle,
   Target,
+  ListTree,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -127,6 +128,18 @@ export function ServicesExplorer() {
     }, 300);
     return () => clearTimeout(t);
   }, [qInput]);
+
+  /* Prefill pencarian dari URL ?q= — mendukung Sitelinks Search Box Google */
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      const initial = new URLSearchParams(window.location.search).get("q");
+      if (initial && initial.trim().length > 0) {
+        setQInput(initial.trim());
+        setQ(initial.trim());
+      }
+    });
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   /* Fetch data katalog (relative path, AbortController) */
   useEffect(() => {
@@ -491,6 +504,20 @@ export function ServicesExplorer() {
               })}
             </motion.ul>
           ) : null}
+        </div>
+
+        {/* ===== Tautan ke indeks lengkap (SEO internal linking) ===== */}
+        <div className="mt-10 text-center">
+          <a
+            href="#indeks-katalog"
+            className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-extrabold text-foreground/80 shadow-sm transition-all duration-300 hover:border-primary/40 hover:text-primary hover:shadow-md"
+          >
+            <ListTree
+              className="h-4 w-4 text-primary transition-transform duration-300 group-hover:scale-110"
+              aria-hidden="true"
+            />
+            Lihat Indeks Lengkap 500 Layanan — Terbaca Google
+          </a>
         </div>
 
         {/* ===== Pagination ===== */}

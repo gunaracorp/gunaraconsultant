@@ -6,7 +6,8 @@
 export const SITE = {
   name: "Gunara Consultant",
   legalName: "PT TOP KONSULTAN INTERNASIONAL",
-  url: "https://www.gunaraconsultant.com",
+  /** Override via NEXT_PUBLIC_SITE_URL saat deploy ke domain lain */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gunaraconsultant.com",
   tagline: "Mitra Legalitas Usaha Kelas Dunia",
   description:
     "Konsultan perizinan Indonesia sejak 2009 — bernaung di Mic Kinsey, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024). Katalog 500+ layanan perizinan teraudit ISO 9001:2015, bagian dari grup pusatperizinan.com.",

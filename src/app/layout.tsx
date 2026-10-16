@@ -12,6 +12,13 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+/* ===== Verifikasi Search Engine (isi via .env — lihat .env.example) ===== */
+const verificationOther: Record<string, string> = {};
+if (process.env.BING_SITE_VERIFICATION)
+  verificationOther["msvalidate.01"] = process.env.BING_SITE_VERIFICATION;
+if (process.env.YANDEX_VERIFICATION)
+  verificationOther["yandex-verification"] = process.env.YANDEX_VERIFICATION;
+
 const BASE_KEYWORDS = [
   "Gunara Consultant",
   "konsultan perizinan",
@@ -71,11 +78,26 @@ export const metadata: Metadata = {
   classification: "Konsultan Perizinan & Legalitas Usaha",
   alternates: {
     canonical: "/",
+    languages: {
+      "id-ID": "/",
+      "x-default": "/",
+    },
   },
   formatDetection: {
     telephone: true,
     email: true,
     address: true,
+  },
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : {}),
+    ...(Object.keys(verificationOther).length > 0 ? { other: verificationOther } : {}),
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Gunara Consultant",
+    statusBarStyle: "black-translucent",
   },
   robots: {
     index: true,
@@ -117,15 +139,19 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icons/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: [{ url: "/favicon.svg" }],
+    apple: [{ url: "/icons/apple-icon-180.png" }],
   },
   manifest: "/manifest.webmanifest",
   other: {
-    "geo.region": "ID-JK",
-    "geo.placename": "Jakarta",
-    "ICBM": "-6.2247, 106.8090",
+    referrer: "origin-when-cross-origin",
+    "geo.region": "ID-JI",
+    "geo.placename": "Kota Tasikmalaya",
+    "ICBM": "-7.3274, 108.2207",
   },
 };
 
