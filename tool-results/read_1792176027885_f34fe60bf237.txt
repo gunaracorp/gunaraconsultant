@@ -1,0 +1,1983 @@
+     1→/**
+     2→ * Gunara Consultant — Fondasi i18n (Tahap 1: ID ⇄ EN).
+     3→ *
+     4→ * - Pure data (TANPA "use client") — aman dipakai di server & client.
+     5→ * - COPY_ID dibangun dari src/lib/data.ts (single source of truth) dan
+     6→ *   dibungkus ke interface ketat; COPY_EN adalah terjemahan Inggris
+     7→ *   profesional kelas bisnis dari seluruh konten Tahap 1.
+     8→ * - UI_ID / UI_EN: dictionary string UI dengan PARITY KEY dijamin compiler
+     9→ *   (UI_EN bertipe Record<keyof typeof UI_ID, string>).
+    10→ * - Angka, nama brand, dan regulasi TIDAK diterjemahkan
+    11→ *   (NIB, OSS-RBA, BPOM, AHU-038293, Mic Kinsey, dst. tetap).
+    12→ */
+    13→
+    14→import {
+    15→  NAV_LINKS,
+    16→  HERO_STATS,
+    17→  HERO_FLOAT_CARDS,
+    18→  MARQUEE_ITEMS,
+    19→  CONTACT_SERVICES,
+    20→  WHY_US,
+    21→  COMPARISON,
+    22→  PROCESS_STEPS,
+    23→  ISO_PRINCIPLES,
+    24→  FAQS,
+    25→  TESTIMONIALS,
+    26→  INTERNATIONAL,
+    27→  COVERAGE_REGIONS,
+    28→  SERVICES,
+    29→  SERVICE_CATEGORIES,
+    30→} from "@/lib/data";
+    31→import { PHASES, type PhaseMeta } from "@/data/services-types";
+    32→import { SITE } from "@/lib/data";
+    33→import {
+    34→  MISA_FAQ,
+    35→  MISA_ID_TO_SA,
+    36→  MISA_SA_TO_ID,
+    37→  MISA_STEPS,
+    38→} from "@/data/misa";
+    39→
+    40→/* ============ Types ============ */
+    41→
+    42→export type Lang = "id" | "en";
+    43→
+    44→export interface NavItem {
+    45→  label: string;
+    46→  href: string;
+    47→  xlOnly?: boolean;
+    48→}
+    49→
+    50→export interface StatItem {
+    51→  value: number;
+    52→  suffix: string;
+    53→  label: string;
+    54→}
+    55→
+    56→export interface FloatCard {
+    57→  title: string;
+    58→  time: string;
+    59→  icon: string;
+    60→  accent: string;
+    61→}
+    62→
+    63→export interface MarqueeItem {
+    64→  text: string;
+    65→}
+    66→
+    67→export interface WhyItem {
+    68→  title: string;
+    69→  description: string;
+    70→  icon: string;
+    71→}
+    72→
+    73→export interface ProcessStepItem {
+    74→  step: string;
+    75→  title: string;
+    76→  description: string;
+    77→  icon: string;
+    78→}
+    79→
+    80→export interface FaqItem {
+    81→  question: string;
+    82→  answer: string;
+    83→}
+    84→
+    85→export interface TestimonialItem {
+    86→  name: string;
+    87→  role: string;
+    88→  content: string;
+    89→  rating: number;
+    90→  service: string;
+    91→}
+    92→
+    93→export interface IntlItem {
+    94→  country: string;
+    95→  service: string;
+    96→}
+    97→
+    98→export interface PhaseText {
+    99→  id: number;
+   100→  name: string;
+   101→  tagline: string;
+   102→  description: string;
+   103→}
+   104→
+   105→export interface MisaServiceItem {
+   106→  title: string;
+   107→  desc: string;
+   108→  icon: string;
+   109→}
+   110→
+   111→export interface MisaStepItem {
+   112→  step: string;
+   113→  title: string;
+   114→  desc: string;
+   115→}
+   116→
+   117→export interface MisaQaItem {
+   118→  q: string;
+   119→  a: string;
+   120→}
+   121→
+   122→export interface ComparisonSide {
+   123→  name: string;
+   124→  points: string[];
+   125→}
+   126→
+   127→export interface ComparisonPair {
+   128→  us: ComparisonSide;
+   129→  others: ComparisonSide;
+   130→}
+   131→
+   132→export interface ServiceCard {
+   133→  title: string;
+   134→  category: string;
+   135→  description: string;
+   136→  price: string;
+   137→  time: string;
+   138→  icon: string;
+   139→  features: string[];
+   140→}
+   141→
+   142→export interface ServiceCategoryItem {
+   143→  value: string;
+   144→  label: string;
+   145→}
+   146→
+   147→export interface TimelineItem {
+   148→  year: string;
+   149→  title: string;
+   150→  text: string;
+   151→}
+   152→
+   153→export interface CertRow {
+   154→  label: string;
+   155→  value: string;
+   156→  mono?: boolean;
+   157→}
+   158→
+   159→export interface Copy {
+   160→  nav: NavItem[];
+   161→  heroStats: StatItem[];
+   162→  floatCards: FloatCard[];
+   163→  marquee: string[];
+   164→  contactServices: readonly string[];
+   165→  whyUs: WhyItem[];
+   166→  comparison: ComparisonPair;
+   167→  processSteps: ProcessStepItem[];
+   168→  isoPrinciples: { title: string; description: string }[];
+   169→  faqs: FaqItem[];
+   170→  testimonials: TestimonialItem[];
+   171→  international: IntlItem[];
+   172→  coverageRegions: string[];
+   173→  phases: PhaseText[];
+   174→  trustItems: string[];
+   175→  misaFaq: MisaQaItem[];
+   176→  misaSaToId: MisaServiceItem[];
+   177→  misaIdToSa: MisaServiceItem[];
+   178→  misaSteps: MisaStepItem[];
+   179→  services: ServiceCard[];
+   180→  serviceCategories: ServiceCategoryItem[];
+   181→  values: { title: string; text: string }[];
+   182→  trustPoints: string[];
+   183→  timeline: TimelineItem[];
+   184→  certRows: CertRow[];
+   185→  months: string[];
+   186→}
+   187→
+   188→/* ============ Mappers: bungkus data const (as const) ke interface ketat ============ */
+   189→
+   190→function toNavItems(links: readonly { label: string; href: string; xlOnly?: boolean }[]): NavItem[] {
+   191→  return links.map((l) => {
+   192→    const item: NavItem = { label: l.label, href: l.href };
+   193→    if (l.xlOnly) item.xlOnly = true;
+   194→    return item;
+   195→  });
+   196→}
+   197→
+   198→function toStats(stats: readonly { value: number; suffix: string; label: string }[]): StatItem[] {
+   199→  return stats.map((s) => ({ value: s.value, suffix: s.suffix, label: s.label }));
+   200→}
+   201→
+   202→function toFloatCards(
+   203→  cards: readonly { title: string; time: string; icon: string; accent: string }[]
+   204→): FloatCard[] {
+   205→  return cards.map((c) => ({ title: c.title, time: c.time, icon: c.icon, accent: c.accent }));
+   206→}
+   207→
+   208→function toMarquee(items: readonly string[]): string[] {
+   209→  return items.map((item) => item);
+   210→}
+   211→
+   212→function toWhyItems(
+   213→  rows: readonly { title: string; description: string; icon: string }[]
+   214→): WhyItem[] {
+   215→  return rows.map((r) => ({
+   216→    title: r.title,
+   217→    description: r.description,
+   218→    icon: r.icon,
+   219→  }));
+   220→}
+   221→
+   222→function toProcessSteps(
+   223→  rows: readonly { step: string; title: string; description: string; icon: string }[]
+   224→): ProcessStepItem[] {
+   225→  return rows.map((r) => ({
+   226→    step: r.step,
+   227→    title: r.title,
+   228→    description: r.description,
+   229→    icon: r.icon,
+   230→  }));
+   231→}
+   232→
+   233→function toFaqs(
+   234→  rows: readonly { question: string; answer: string }[]
+   235→): FaqItem[] {
+   236→  return rows.map((r) => ({ question: r.question, answer: r.answer }));
+   237→}
+   238→
+   239→function toTestimonials(
+   240→  rows: readonly {
+   241→    name: string;
+   242→    role: string;
+   243→    content: string;
+   244→    rating: number;
+   245→    service: string;
+   246→  }[]
+   247→): TestimonialItem[] {
+   248→  return rows.map((r) => ({
+   249→    name: r.name,
+   250→    role: r.role,
+   251→    content: r.content,
+   252→    rating: r.rating,
+   253→    service: r.service,
+   254→  }));
+   255→}
+   256→
+   257→function toInternational(
+   258→  rows: readonly { country: string; service: string }[]
+   259→): IntlItem[] {
+   260→  return rows.map((r) => ({ country: r.country, service: r.service }));
+   261→}
+   262→
+   263→function toComparison(c: {
+   264→  us: { name: string; points: readonly string[] };
+   265→  others: { name: string; points: readonly string[] };
+   266→}): ComparisonPair {
+   267→  return {
+   268→    us: { name: c.us.name, points: [...c.us.points] },
+   269→    others: { name: c.others.name, points: [...c.others.points] },
+   270→  };
+   271→}
+   272→
+   273→function toPhaseTexts(rows: readonly PhaseMeta[]): PhaseText[] {
+   274→  return rows.map((p) => ({
+   275→    id: p.id,
+   276→    name: p.name,
+   277→    tagline: p.tagline,
+   278→    description: p.description,
+   279→  }));
+   280→}
+   281→
+   282→const MISA_TRUST_ID = [
+   283→  "ISO 9001:2015",
+   284→  "Warisan Mic Kinsey sejak 2009",
+   285→  "AHU-038293 Kemenkumham 2024",
+   286→  "English-Speaking Desk",
+   287→] as const;
+   288→
+   289→/* ---- Konstanta ID untuk about & heritage (dipindah dari komponen) ---- */
+   290→
+   291→const VALUES_ABOUT = [
+   292→  {
+   293→    title: "Misi",
+   294→    text: "Menyederhanakan legalitas bisnis Indonesia dengan layanan cepat, transparan, dan bergaransi — agar pelaku usaha fokus tumbuh.",
+   295→  },
+   296→  {
+   297→    title: "Visi",
+   298→    text: "Menjadi pusat perizinan terlengkap di Asia — bahkan dunia — dengan standar mutu internasional ISO 9001:2015 yang paling terpercaya.",
+   299→  },
+   300→  {
+   301→    title: "Nilai Kami",
+   302→    text: "Integritas tanpa kompromi, kecepatan tanpa mengorbankan ketelitian, dan empati pada setiap cerita bisnis klien.",
+   303→  },
+   304→] as const;
+   305→
+   306→const TRUST_POINTS_ABOUT = [
+   307→  "Berakar sejak 2009 — 15+ tahun pengalaman konsultansi kelas dunia",
+   308→  "Resmi berbadan hukum 2024: PT TOP KONSULTAN INTERNASIONAL (AHU Kemenkumham RI)",
+   309→  "Katalog 600+ layanan — terlengkap di Asia, mencakup perizinan lintas negara",
+   310→  "Bagian dari Gunara Consultant Group bersama pusatperizinan.com",
+   311→  "Sistem manajemen mutu ISO 9001:2015 teraudit",
+   312→  "Tim bersertifikasi: hukum, perpajakan & lingkungan",
+   313→] as const;
+   314→
+   315→const TIMELINE_HERITAGE = [
+   316→  {
+   317→    year: "2009",
+   318→    title: "Berdirinya Visi",
+   319→    text: "Sejak 2009, para pendiri Gunara Consultant menekuni ilmu konsultansi kelas dunia di bawah naungan Mic Kinsey — menyerap metodologi, disiplin mutu, dan budaya solusi global yang kini menjadi DNA layanan kami: presisi, integritas, dan obsesi pada hasil klien.",
+   320→  },
+   321→  {
+   322→    year: "2009–2024",
+   323→    title: "15 Tahun Membekali Ribuan Pelaku Usaha",
+   324→    text: "Lebih dari satu dekade menemani UMKM hingga korporasi menembus kerumitan birokrasi. Pengalaman lintas sektor itu mengkristal menjadi penguasaan 600+ jenis perizinan — terlengkap di Asia — dari izin UMKM kampung hingga pendirian perusahaan di Singapura, Dubai, dan Arab Saudi.",
+   325→  },
+   326→  {
+   327→    year: "11 Juli 2024",
+   328→    title: "Kelahiran Badan Hukum",
+   329→    text: "Gunara Consultant resmi berbadan usaha sebagai PT TOP KONSULTAN INTERNASIONAL — Sertifikat Nomor AHU-038293.AH.01.30.Tahun 2024, terbit dari Kementerian Hukum dan HAM RI, berkedudukan di Kota Tasikmalaya, dengan modal usaha Rp5.000.000.000,00.",
+   330→  },
+   331→  {
+   332→    year: "Kini",
+   333→    title: "Gunara Consultant Group",
+   334→    text: "Mengelola pusatperizinan.com sebagai jendela digital layanan perizinan; satu pintu kepastian hukum untuk seluruh Indonesia — dan terus bertumbuh.",
+   335→  },
+   336→] as const;
+   337→
+   338→const CERT_ROWS_HERITAGE = [
+   339→  { label: "Nomor Sertifikat", value: SITE.ahucert, mono: true },
+   340→  { label: "Entitas", value: SITE.legalName },
+   341→  { label: "Diterbitkan Oleh", value: "Kementerian Hukum dan HAM RI" },
+   342→  { label: "Tanggal Terbit", value: "11 Juli 2024" },
+   343→  { label: "Kedudukan", value: "Kota Tasikmalaya, Jawa Barat" },
+   344→  { label: "Modal Usaha", value: SITE.capital },
+   345→  { label: "Pendiri", value: SITE.founder },
+   346→] as const;
+   347→
+   348→/* ============ COPY_ID — dari data.ts (Bahasa Indonesia, SSR default) ============ */
+   349→
+   350→const COPY_ID: Copy = {
+   351→  nav: toNavItems(NAV_LINKS),
+   352→  heroStats: toStats(HERO_STATS),
+   353→  floatCards: toFloatCards(HERO_FLOAT_CARDS),
+   354→  marquee: toMarquee(MARQUEE_ITEMS),
+   355→  contactServices: CONTACT_SERVICES,
+   356→  whyUs: toWhyItems(WHY_US),
+   357→  comparison: toComparison(COMPARISON),
+   358→  processSteps: toProcessSteps(PROCESS_STEPS),
+   359→  isoPrinciples: ISO_PRINCIPLES.map((p) => ({
+   360→    title: p.title,
+   361→    description: p.description,
+   362→  })),
+   363→  faqs: toFaqs(FAQS),
+   364→  testimonials: toTestimonials(TESTIMONIALS),
+   365→  international: toInternational(INTERNATIONAL),
+   366→  coverageRegions: toMarquee(COVERAGE_REGIONS),
+   367→  phases: toPhaseTexts(PHASES),
+   368→  trustItems: [...MISA_TRUST_ID],
+   369→  misaFaq: MISA_FAQ.map((f) => ({ q: f.q, a: f.a })),
+   370→  misaSaToId: MISA_SA_TO_ID.map((s) => ({ ...s })),
+   371→  misaIdToSa: MISA_ID_TO_SA.map((s) => ({ ...s })),
+   372→  misaSteps: MISA_STEPS.map((s) => ({ ...s })),
+   373→  services: SERVICES.map((s) => ({
+   374→    title: s.title,
+   375→    category: s.category,
+   376→    description: s.description,
+   377→    price: s.price,
+   378→    time: s.time,
+   379→    icon: s.icon,
+   380→    features: [...s.features],
+   381→  })),
+   382→  serviceCategories: SERVICE_CATEGORIES.map((c) => ({
+   383→    value: c.value,
+   384→    label: c.label,
+   385→  })),
+   386→  values: VALUES_ABOUT.map((v) => ({ title: v.title, text: v.text })),
+   387→  trustPoints: [...TRUST_POINTS_ABOUT],
+   388→  timeline: TIMELINE_HERITAGE.map((t) => ({
+   389→    year: t.year,
+   390→    title: t.title,
+   391→    text: t.text,
+   392→  })),
+   393→  certRows: CERT_ROWS_HERITAGE.map((r) => ({
+   394→    label: r.label,
+   395→    value: r.value,
+   396→    ...(r.mono ? { mono: true } : {}),
+   397→  })),
+   398→  months: [
+   399→    "Januari",
+   400→    "Februari",
+   401→    "Maret",
+   402→    "April",
+   403→    "Mei",
+   404→    "Juni",
+   405→    "Juli",
+   406→    "Agustus",
+   407→    "September",
+   408→    "Oktober",
+   409→    "November",
+   410→    "Desember",
+   411→  ],
+   412→};
+   413→
+   414→/* ============ COPY_EN — terjemahan Inggris profesional ============ */
+   415→
+   416→const COPY_EN: Copy = {
+   417→  nav: [
+   418→    { label: "Home", href: "#beranda" },
+   419→    { label: "About", href: "#tentang" },
+   420→    { label: "Services", href: "#layanan" },
+   421→    { label: "Catalog 600+", href: "#katalog" },
+   422→    { label: "Phases", href: "#fase" },
+   423→    { label: "Why Us", href: "#keunggulan" },
+   424→    { label: "Process", href: "#proses", xlOnly: true },
+   425→    { label: "Testimonials", href: "#testimoni", xlOnly: true },
+   426→    { label: "FAQ", href: "#faq", xlOnly: true },
+   427→    { label: "Articles", href: "#artikel", xlOnly: true },
+   428→    { label: "Saudi Desk", href: "#misa", xlOnly: true },
+   429→    { label: "Contact", href: "#kontak" },
+   430→  ],
+   431→  heroStats: [
+   432→    { value: 16, suffix: "+", label: "Years of Consulting Excellence" },
+   433→    { value: 600, suffix: "+", label: "Licensing Services — The Most Complete in Asia" },
+   434→    { value: 34, suffix: "", label: "Provinces Covered" },
+   435→    { value: 98, suffix: "%", label: "Satisfied Clients Who Recommend Us" },
+   436→  ],
+   437→  floatCards: [
+   438→    { title: "NIB Issued", time: "1 Business Day", icon: "zap", accent: "gold" },
+   439→    { title: "PT Incorporation", time: "3 Business Days", icon: "building", accent: "emerald" },
+   440→    {
+   441→      title: "AHU Certificate",
+   442→      time: "AHU-038293.AH.01.30.Tahun 2024",
+   443→      icon: "file-check",
+   444→      accent: "emerald",
+   445→    },
+   446→  ],
+   447→  marquee: [
+   448→    "NIB & OSS-RBA",
+   449→    "PT Company Formation",
+   450→    "PT PMA",
+   451→    "CV & Cooperatives",
+   452→    "Halal Certification",
+   453→    "BPOM & PIRT",
+   454→    "PBG & SLF",
+   455→    "AMDAL & UKL-UPL",
+   456→    "SNI",
+   457→    "API-U / API-P",
+   458→    "KITAS & KITAP",
+   459→    "NPWP & SKTU",
+   460→    "ISO 9001:2015",
+   461→    "Umrah Permits",
+   462→    "MISA Saudi Arabia",
+   463→    "Foundations & Associations",
+   464→    "Construction Permits",
+   465→    "Logistics Permits",
+   466→    "600+ Services — The Most Complete in Asia",
+   467→    "Mic Kinsey Standard",
+   468→    "AHU Verified",
+   469→    "SMK3",
+   470→    "PSE Kominfo",
+   471→  ],
+   472→  contactServices: [
+   473→    "NIB & OSS-RBA",
+   474→    "PT / CV / Sole Proprietorship Incorporation",
+   475→    "PT PMA (Foreign Investment)",
+   476→    "Global & International Licensing",
+   477→    "Halal Certification",
+   478→    "BPOM & PIRT",
+   479→    "SNI Certification",
+   480→    "ISO 9001:2015 Certification",
+   481→    "PBG & SLF",
+   482→    "Environmental Permits (AMDAL/UKL-UPL)",
+   483→    "Export-Import Permits (API-U/API-P)",
+   484→    "KITAS & KITAP",
+   485→    "Special Sector Permits",
+   486→    "MISA — Saudi Arabia",
+   487→    "Taxation & NPWP",
+   488→    "Other / General Consultation",
+   489→  ],
+   490→  whyUs: [
+   491→    {
+   492→      title: "100% Money-Back Guarantee",
+   493→      description:
+   494→        "The only consultancy with a written guarantee: if your permit is not issued as promised, you get a full refund — no drama.",
+   495→      icon: "shield-check",
+   496→    },
+   497→    {
+   498→      title: "Fastest in Its Class",
+   499→      description:
+   500→        "NIB in 1 business day, PT in 3. Our ISO 9001:2015-automated workflow ensures not a single day is wasted.",
+   501→      icon: "zap",
+   502→    },
+   503→    {
+   504→      title: "Transparent & Best-Value Pricing",
+   505→      description:
+   506→        "Every cost itemized upfront — no hidden fees, no dubious charges. Official invoices for every payment.",
+   507→      icon: "receipt",
+   508→    },
+   509→    {
+   510→      title: "Certified Expert Team",
+   511→      description:
+   512→        "Legal consultants, partner notaries, certified HSE specialists, and tax consultants with 15+ years of experience.",
+   513→      icon: "users",
+   514→    },
+   515→    {
+   516→      title: "ISO 9001:2015 Quality Management",
+   517→      description:
+   518→        "Every service process is audited against the international ISO 9001:2015 quality standard — consistent, measurable, trustworthy.",
+   519→      icon: "badge-check",
+   520→    },
+   521→    {
+   522→      title: "Lifetime Business Support",
+   523→      description:
+   524→        "After your permit is issued, we stay by your side: renewals, periodic reporting, and business expansion consulting.",
+   525→      icon: "infinity",
+   526→    },
+   527→  ],
+   528→  comparison: {
+   529→    us: {
+   530→      name: "Gunara Consultant",
+   531→      points: [
+   532→        "Written 100% money-back guarantee",
+   533→        "NIB in 1 day, PT in 3 business days",
+   534→        "ISO 9001:2015 certified",
+   535→        "Transparent pricing, official invoices",
+   536→        "34 provinces + 8 countries worldwide",
+   537→        "Lifetime business support",
+   538→        "24/7 customer support via WhatsApp",
+   539→      ],
+   540→    },
+   541→    others: {
+   542→      name: "Other Consultants",
+   543→      points: [
+   544→        "No written guarantee",
+   545→        "1–2 weeks slower",
+   546→        "Generally without quality certification",
+   547→        "Hidden fees mid-process",
+   548→        "Coverage limited to 1–2 cities",
+   549→        "Service ends when the permit is issued",
+   550→        "Limited office hours",
+   551→      ],
+   552→    },
+   553→  },
+   554→  processSteps: [
+   555→    {
+   556→      step: "01",
+   557→      title: "Free Consultation",
+   558→      description:
+   559→        "Tell us your business plan via WhatsApp, phone, or our form. Our team responds within 15 minutes during business hours.",
+   560→      icon: "message-circle",
+   561→    },
+   562→    {
+   563→      step: "02",
+   564→      title: "Analysis & Quotation",
+   565→      description:
+   566→        "We map your KBLI codes, mandatory permits, and the best legal structure. You receive a transparent quotation with no hidden fees.",
+   567→      icon: "search",
+   568→    },
+   569→    {
+   570→      step: "03",
+   571→      title: "Documents & Processing",
+   572→      description:
+   573→        "Hand over the documents — we handle the rest. Notaries, government agencies, and signatures are managed by your dedicated officer.",
+   574→      icon: "file-signature",
+   575→    },
+   576→    {
+   577→      step: "04",
+   578→      title: "Real-time Monitoring",
+   579→      description:
+   580→        "Track your application progress anytime through our dashboard and daily WhatsApp updates. No surprises.",
+   581→      icon: "activity",
+   582→    },
+   583→    {
+   584→      step: "05",
+   585→      title: "Issued & Ongoing Support",
+   586→      description:
+   587→        "Receive your official permit, guaranteed. We continue assisting with routine obligations and your business's legal growth.",
+   588→      icon: "rocket",
+   589→    },
+   590→  ],
+   591→  isoPrinciples: [
+   592→    {
+   593→      title: "Customer Focus",
+   594→      description:
+   595→        "Client satisfaction is our highest measure of quality — NPS is monitored monthly.",
+   596→    },
+   597→    {
+   598→      title: "Leadership",
+   599→      description:
+   600→        "Management is directly involved to ensure quality objectives are met in every division.",
+   601→    },
+   602→    {
+   603→      title: "People Engagement",
+   604→      description:
+   605→        "The entire team is internally certified and follows regular quality training.",
+   606→    },
+   607→    {
+   608→      title: "Process Approach",
+   609→      description:
+   610→        "Every application follows ISO-standard SOPs with quality checkpoints.",
+   611→    },
+   612→    {
+   613→      title: "Continual Improvement",
+   614→      description:
+   615→        "Internal audits and corrective actions run continuously every quarter.",
+   616→    },
+   617→    {
+   618→      title: "Evidence-Based Decisions",
+   619→      description:
+   620→        "Permit success rates, speed, and satisfaction are measured and published.",
+   621→    },
+   622→  ],
+   623→  faqs: [
+   624→    {
+   625→      question: "What is Gunara Consultant's relationship with Mic Kinsey?",
+   626→      answer:
+   627→        "Since 2009, the team behind Gunara Consultant has honed its consulting craft under Mic Kinsey, a world-renowned consulting firm. For more than 15 years we absorbed global-class methodology, quality discipline, and solution culture — then applied them to thousands of Indonesian business licensing cases before formally incorporating in 2024.",
+   628→    },
+   629→    {
+   630→      question: "Is Gunara Consultant a legally registered company?",
+   631→      answer:
+   632→        "Yes. Gunara Consultant operates through PT TOP KONSULTAN INTERNASIONAL, officially registered with Indonesia's Ministry of Law and Human Rights under incorporation certificate No. AHU-038293.AH.01.30.Tahun 2024 (issued July 11, 2024), domiciled in Kota Tasikmalaya with business capital of Rp5.000.000.000,00. Our legal standing is open for verification at any time.",
+   633→    },
+   634→    {
+   635→      question:
+   636→        "Are there really 600 licensing services — the most complete in Asia?",
+   637→      answer:
+   638→        "Yes. Our catalog lists 600+ services across 27 sectors — the only catalog covering all of Indonesia's business licensing (NIB, OSS-RBA, PT/PMA incorporation, halal, BPOM, PBG/SLF, ISO) plus Global & International Licensing: company incorporation in Singapore, Malaysia, Saudi Arabia (MISA), the United Arab Emirates, China, down to apostille and cross-border taxation. No other consultancy offers this coverage. The catalog launches in 4 implementation phases (2024–2026) and the entire workflow is audited under the ISO 9001:2015 quality management system.",
+   639→    },
+   640→    {
+   641→      question:
+   642→        "What is Gunara Consultant and how does it relate to PusatPerizinan.com?",
+   643→      answer:
+   644→        "Gunara Consultant is a business licensing & legality consultancy rooted in consulting experience since 2009. PusatPerizinan.com is the digital licensing service unit within our group. Together we have served more than 12,500 clients across 34 Indonesian provinces and 8 countries — making us the most complete licensing hub in Asia.",
+   645→    },
+   646→    {
+   647→      question:
+   648→        "Can you handle permits for businesses abroad — Singapore, Dubai, or Saudi Arabia?",
+   649→      answer:
+   650→        "Yes — this is what sets us apart from other consultants in Asia. Our Global & International Licensing category covers: Singapore Pte Ltd incorporation (ACRA), Malaysian Sdn Bhd & Labuan, Saudi Arabia MISA Investment License, Dubai & UAE free zones, China WFOE and Hong Kong, apostille for 120+ countries, cross-border holding structures, and cross-border taxation (P3B tax treaties). One team, one contract, multi-country legality.",
+   651→    },
+   652→    {
+   653→      question:
+   654→        "What makes Gunara Consultant the most complete licensing hub in Asia?",
+   655→      answer:
+   656→        "Three things: (1) coverage — 600+ official services across 27 sectors; no other Southeast Asian consultant catalogs licensing in this much detail; (2) depth — every service has a unique code, an explicit legal basis, and a measurable implementation phase; (3) reach — from village SMEs to cross-border corporations in 34 Indonesian provinces and 8 countries, all handled with ISO 9001:2015-audited SOPs.",
+   657→    },
+   658→    {
+   659→      question:
+   660→        "What does it mean that Gunara Consultant is ISO 9001:2015 certified?",
+   661→      answer:
+   662→        "ISO 9001:2015 is the international quality management standard. Our entire service process — from initial consultation and document processing to permit handover — follows standardized SOPs, undergoes periodic internal audits, and applies the principle of continual improvement. In short: consistent, measurable, accountable service.",
+   663→    },
+   664→    {
+   665→      question: "How long does the business permit process take?",
+   666→      answer:
+   667→        "NIB via OSS: 1 business day. PT/CV incorporation: 3–7 business days. Halal Certification: 14–30 days. BPOM/PIRT: 14–45 days. PBG & SLF: 7–30 days. A specific estimate is provided during your free consultation, based on the permit type and your document readiness.",
+   668→    },
+   669→    {
+   670→      question: "Is there a guarantee if the permit is not issued?",
+   671→      answer:
+   672→        "Yes. We provide a written 100% money-back guarantee if the permit is not issued as agreed due to factors on our side. This quality commitment is written into the service contract — something almost no other consultant in Indonesia offers.",
+   673→    },
+   674→    {
+   675→      question: "Do your prices include government fees?",
+   676→      answer:
+   677→        "Every quotation itemizes: consultancy fees, notary fees, and government fees (PNBP) transparently. No hidden charges. For NIB & OSS, the government even waives PNBP for micro and small businesses.",
+   678→    },
+   679→    {
+   680→      question: "I'm outside Jakarta — can I still be served?",
+   681→      answer:
+   682→        "Absolutely. The entire process can run 100% online via OSS, AHU Online, SIMBG, and SIHALAL. Our team serves 34 Indonesian provinces. For deed signing, we arrange partner notaries in your city.",
+   683→    },
+   684→    {
+   685→      question: "What documents do I need to prepare?",
+   686→      answer:
+   687→        "Generally: the owner's KTP (ID) & NPWP (tax ID), a photo of your business premises, and your intended business fields (KBLI). For a PT: at least 2 founders/shareholders. Your dedicated officer will guide you through the complete checklist step by step after the free consultation.",
+   688→    },
+   689→    {
+   690→      question: "How do I start a consultation?",
+   691→      answer:
+   692→        "Click the 'Free Consultation' button on this page, fill in the contact form, or message our WhatsApp directly at +62 812-9000-1234. Our team responds within 15 minutes during business hours (Monday–Saturday, 08.00–20.00 WIB).",
+   693→    },
+   694→  ],
+   695→  testimonials: [
+   696→    {
+   697→      name: "Budi Santoso",
+   698→      role: "Founder, Kopi Nusantara Group",
+   699→      content:
+   700→        "From NIB to halal certification for 12 products, Gunara handled everything. Fast process, responsive team, honest pricing. Their guarantee isn't just a slogan — it's genuinely written into the contract.",
+   701→      rating: 5,
+   702→      service: "NIB + Halal Certification",
+   703→    },
+   704→    {
+   705→      name: "Sarah Wijaya",
+   706→      role: "Director, PT Estetika Kosmetik",
+   707→      content:
+   708→        "The BPOM licenses for our 8 cosmetic SKUs finished faster than estimated. The consultants truly understand the regulations — they even helped review our product labels. Their ISO 9001 shows in how tidy the process is.",
+   709→      rating: 5,
+   710→      service: "BPOM License",
+   711→    },
+   712→    {
+   713→      name: "Michael Tan",
+   714→      role: "CEO, Sinar Logistik Internasional",
+   715→      content:
+   716→        "As a foreign investor, I needed certainty. Gunara handled my PT PMA, API-P, and my team's KITAS without drama. Periodic BKPM reporting was also assisted. Worth every rupiah.",
+   717→      rating: 5,
+   718→      service: "PT PMA + KITAS",
+   719→    },
+   720→    {
+   721→      name: "Drs. H. Abdul Rahman",
+   722→      role: "Owner, Pusat Oleh-oleh Makassar",
+   723→      content:
+   724→        "My family business has run for generations, but I only realized the importance of legality when we wanted to enter modern retail. Within 2 weeks, our PIRT, NIB, and trademark were done. Thank you, Gunara!",
+   725→      rating: 5,
+   726→      service: "PIRT + NIB",
+   727→    },
+   728→    {
+   729→      name: "Lintang Pramesti",
+   730→      role: "Owner, Villa Canggu Retreat",
+   731→      content:
+   732→        "Our villa's PBG and SLF in Canggu finally got settled after being stuck for 2 years with another firm. Gunara's team truly understands the SIMBG process and the DPMPTSP consultations. Highly recommended!",
+   733→      rating: 5,
+   734→      service: "PBG & SLF",
+   735→    },
+   736→    {
+   737→      name: "Fajar Nugroho",
+   738→      role: "GM, PT Baja Konstruksi Utama",
+   739→      content:
+   740→        "SBU construction certification + ISO 9001:2015 for a government tender, completed before the tender deadline. Served by a dedicated officer who always kept us updated. This is world-class service.",
+   741→      rating: 5,
+   742→      service: "SBU + ISO Certification",
+   743→    },
+   744→  ],
+   745→  international: [
+   746→    { country: "Saudi Arabia", service: "MISA & Investment License" },
+   747→    { country: "Malaysia", service: "Sdn Bhd & Labuan" },
+   748→    { country: "Singapore", service: "Pte Ltd & ACRA" },
+   749→    { country: "United Arab Emirates", service: "Free Zone & Mainland" },
+   750→    { country: "China", service: "WFOE & Hong Kong" },
+   751→    { country: "Qatar", service: "QFC & GCC Expansion" },
+   752→    { country: "Australia", service: "Pty Ltd & ASIC" },
+   753→    { country: "Netherlands", service: "BV & KVK Europe" },
+   754→  ],
+   755→  coverageRegions: [
+   756→    "DKI Jakarta",
+   757→    "West Java",
+   758→    "Central Java",
+   759→    "East Java",
+   760→    "Banten",
+   761→    "Bali",
+   762→    "North Sumatra",
+   763→    "South Sumatra",
+   764→    "Riau",
+   765→    "Riau Islands",
+   766→    "South Sulawesi",
+   767→    "East Kalimantan",
+   768→    "Yogyakarta",
+   769→    "Semarang",
+   770→    "Surabaya",
+   771→    "Medan",
+   772→    "Makassar",
+   773→    "Batam",
+   774→    "Balikpapan",
+   775→    "Denpasar",
+   776→    "+ 14 More Provinces",
+   777→  ],
+   778→  phases: [
+   779→    {
+   780→      id: 1,
+   781→      name: "Phase 1 — Foundation Legality",
+   782→      tagline: "Every business starts with a lawful name.",
+   783→      description:
+   784→        "90 core services: incorporation of every business entity, SME & regional licensing, tax administration, down to intellectual property protection — the legal foundation that opens our catalog.",
+   785→    },
+   786→    {
+   787→      id: 2,
+   788→      name: "Phase 2 — Operations & Industry",
+   789→      tagline: "Legal at birth, now in full operation.",
+   790→      description:
+   791→        "154 services to keep the business machine turning: risk-based business licensing (OSS-RBA), trade & distribution, manufacturing, logistics, workforce & immigration, plus food & halal.",
+   792→    },
+   793→    {
+   794→      id: 3,
+   795→      name: "Phase 3 — Complex Regulatory Sectors",
+   796→      tagline: "The strictest sectors, handled with total peace of mind.",
+   797→      description:
+   798→        "180 services for regulated sectors: health & pharmaceuticals (BPOM), mining & energy, environment, construction & property, tourism, agriculture–livestock–fisheries, forestry, down to events & entertainment.",
+   799→    },
+   800→    {
+   801→      id: 4,
+   802→      name: "Phase 4 — Enterprise & Global",
+   803→      tagline: "Toward world-class corporations.",
+   804→      description:
+   805→        "176 enterprise-grade services: finance & fintech (OJK), telematics & PSE, export-import & customs, education, creative media, professional services, ISO & quality certification, special & strategic licensing, up to Global & International Licensing.",
+   806→    },
+   807→  ],
+   808→  trustItems: [
+   809→    "ISO 9001:2015",
+   810→    "Mic Kinsey heritage since 2009",
+   811→    "AHU-038293 Ministry of Law & Human Rights 2024",
+   812→    "English-Speaking Desk",
+   813→  ],
+   814→  misaFaq: [
+   815→    {
+   816→      q: "What is MISA and how does it relate to my business plans in Saudi Arabia?",
+   817→      a: "MISA (Ministry of Investment of Saudi Arabia, formerly SAGIA) is the single gateway for foreign investment licensing in Saudi Arabia and the engine of Vision 2030. The MISA license is the first document a foreign company — including from Indonesia — needs in order to trade and operate legally in Saudi Arabia, before the Commercial Registration (CR) and sector licenses are issued.",
+   818→    },
+   819→    {
+   820→      q: "Can foreign investors own 100% of a company in Indonesia?",
+   821→      a: "Yes, for most sectors. Under the Positive Investment List (Presidential Regulation 10/2021 and its amendments), a PT PMA may be up to 100% foreign-owned except for certain restricted KBLI codes. Minimum paid-up capital is Rp10 billion per 5-digit KBLI field. Our team maps the KBLI codes open to foreign ownership from the very start.",
+   822→    },
+   823→    {
+   824→      q: "How long do the MISA license and company incorporation in Saudi Arabia take?",
+   825→      a: "Once official documents (deed, apostille/legalization, power of attorney) are complete, the MISA license is generally issued within business days; CR, office address, and municipal/sector licenses follow — totaling roughly 2–8 weeks depending on the sector and document readiness. We provide a written timeline in every quotation.",
+   826→    },
+   827→  ],
+   828→  misaSaToId: [
+   829→    {
+   830→      title: "100% PT PMA Establishment",
+   831→      desc: "Positive Investment List (Presidential Regulation 10/2021) — up to 100% foreign ownership, Rp10 billion paid-up capital per KBLI, foreign-friendly KBLI mapping from day one.",
+   832→      icon: "building",
+   833→    },
+   834→    {
+   835→      title: "Core Company Legality",
+   836→      desc: "Ministry of Law & Human Rights approval (SK), corporate NPWP, NIB via OSS-RBA, up to Standard Certificates — the legal foundation of your PT PMA in Indonesia.",
+   837→      icon: "file-check",
+   838→    },
+   839→    {
+   840→      title: "Sector-Specific Technical Permits",
+   841→      desc: "BPJPH Halal Certification for F&B, Environmental Approval (UKL-UPL/AMDAL), PBG & SLF building permits — tailored to your business sector.",
+   842→      icon: "layers",
+   843→    },
+   844→    {
+   845→      title: "Investor KITAS & KITAP",
+   846→      desc: "Investor residence permits including family: VITAS, investor KITAS, up to KITAP — including RPTKA and Kemnaker notification.",
+   847→      icon: "id-card",
+   848→    },
+   849→    {
+   850→      title: "Ongoing Compliance",
+   851→      desc: "Regular LKPM reports to BKPM, tax reporting, and periodic permit renewals — keeping your PT PMA always compliant with the regulators.",
+   852→      icon: "receipt",
+   853→    },
+   854→    {
+   855→      title: "SEZ & Special Facilities",
+   856→      desc: "Placement in Special Economic Zones (KEK), tax holidays, and customs facilities for maximum tax & operational efficiency.",
+   857→      icon: "palmtree",
+   858→    },
+   859→  ],
+   860→  misaIdToSa: [
+   861→    {
+   862→      title: "MISA Investment License",
+   863→      desc: "Investment license from the Ministry of Investment of Saudi Arabia — up to 100% foreign ownership in many sectors, your official gateway to the Vision 2030 market.",
+   864→      icon: "globe",
+   865→    },
+   866→    {
+   867→      title: "Commercial Registration & Municipal",
+   868→      desc: "CR with the Ministry of Commerce, registered office address, and municipal license — complete trading legality in Saudi Arabia.",
+   869→      icon: "briefcase",
+   870→    },
+   871→    {
+   872→      title: "Nitaqat & Work Permits",
+   873→      desc: "Saudization (Nitaqat) compliance, GM and expatriate staff visas & work permits via Qiwa/MOLS — a full ratio without penalties.",
+   874→      icon: "users",
+   875→    },
+   876→    {
+   877→      title: "SABER / SASO Product Certification",
+   878→      desc: "Product Certificates and Shipment Certificates of Conformity so your goods clear customs and are accepted by Saudi retailers.",
+   879→      icon: "award",
+   880→    },
+   881→    {
+   882→      title: "SFDA — Food, Supplements & Cosmetics",
+   883→      desc: "SFDA registration for food, health supplements, and cosmetics distributed in the Saudi market.",
+   884→      icon: "flask-conical",
+   885→    },
+   886→    {
+   887→      title: "Business Visas & Apostille",
+   888→      desc: "Multiple-entry business visas and corporate document legalization/apostille — expansion without bureaucratic hurdles.",
+   889→      icon: "file-signature",
+   890→    },
+   891→  ],
+   892→  misaSteps: [
+   893→    {
+   894→      step: "01",
+   895→      title: "Consultation & Market Study",
+   896→      desc: "Free — we map sector opportunities, the optimal entity structure, and the most efficient market-entry strategy.",
+   897→    },
+   898→    {
+   899→      step: "02",
+   900→      title: "Structure & License Mapping",
+   901→      desc: "Entity selection, share structure, KBLI/MISA licensing, and cross-border tax planning — all in writing.",
+   902→    },
+   903→    {
+   904→      step: "03",
+   905→      title: "Document Processing",
+   906→      desc: "Deeds, apostille/legalization, MISA license, CR, up to NIB/OSS for the Indonesia direction — your dedicated officer handles it all.",
+   907→    },
+   908→    {
+   909→      step: "04",
+   910→      title: "Operations & Compliance",
+   911→      desc: "Bank account opening, Nitaqat/LKPM, sector permits, KITAS/GM visa — your business officially operating in full.",
+   912→    },
+   913→    {
+   914→      step: "05",
+   915→      title: "Continued Partnership",
+   916→      desc: "Periodic reporting, license expansion, and growth consulting — your long-term partner in two countries.",
+   917→    },
+   918→  ],
+   919→  services: [
+   920→    {
+   921→      title: "NIB & OSS-RBA",
+   922→      category: "legalitas",
+   923→      description:
+   924→        "Business Identification Number via OSS (Online Single Submission) — the legal foundation of every business in Indonesia.",
+   925→      price: "From IDR 350K",
+   926→      time: "1 business day",
+   927→      icon: "file-check",
+   928→      features: [
+   929→        "Officially issued by Kemeninvest/BKPM",
+   930→        "Valid for the company's lifetime",
+   931→        "Includes KBLI consultation",
+   932→      ],
+   933→    },
+   934→    {
+   935→      title: "PT & CV Incorporation",
+   936→      category: "legalitas",
+   937→      description:
+   938→        "Official incorporation via Notary + Ministry of Law & Human Rights (AHU Online) + OSS — deed ready within days.",
+   939→      price: "From IDR 3.5M",
+   940→      time: "3–7 business days",
+   941→      icon: "building",
+   942→      features: [
+   943→        "Official notarial deed",
+   944→        "Ministry of Law & Human Rights decree (SK)",
+   945→        "NPWP & NIB active immediately",
+   946→      ],
+   947→    },
+   948→    {
+   949→      title: "PT PMA (Foreign Investment)",
+   950→      category: "legalitas",
+   951→      description:
+   952→        "The entity for foreign investors with shareholding of up to 100% under the Positive Investment List.",
+   953→      price: "From IDR 8M",
+   954→      time: "7–14 business days",
+   955→      icon: "globe",
+   956→      features: [
+   957→        "Up to 100% foreign shareholding",
+   958→        "Foreign-friendly KBLI per regulation",
+   959→        "BKPM reporting assistance",
+   960→      ],
+   961→    },
+   962→    {
+   963→      title: "Sole Proprietor PT & SME",
+   964→      category: "legalitas",
+   965→      description:
+   966→        "Micro-small business legality without a notary — the NIB alone serves as your official legal identity.",
+   967→      price: "From IDR 350K",
+   968→      time: "1 business day",
+   969→      icon: "store",
+   970→      features: [
+   971→        "No minimum capital",
+   972→        "Government fees waived",
+   973→        "Perfect for SMEs & online shops",
+   974→      ],
+   975→    },
+   976→    {
+   977→      title: "Foundations & Associations",
+   978→      category: "legalitas",
+   979→      description:
+   980→        "Incorporation of Foundations, Associations, and Cooperatives for social, educational, and religious activities.",
+   981→      price: "From IDR 4M",
+   982→      time: "7–10 business days",
+   983→      icon: "heart-handshake",
+   984→      features: [
+   985→        "Deed & Ministry of Law decree",
+   986→        "Foundation NPWP",
+   987→        "Organizational structure assistance",
+   988→      ],
+   989→    },
+   990→    {
+   991→      title: "Halal Certification",
+   992→      category: "sertifikasi",
+   993→      description:
+   994→        "BPJPH halal certification via SIHALAL — the mandatory halal obligation under Law No. 33/2014.",
+   995→      price: "From IDR 1.5M",
+   996→      time: "14–30 business days",
+   997→      icon: "badge-check",
+   998→      features: [
+   999→        "Halal auditor assistance",
+  1000→        "Complete SJPH documentation",
+  1001→        "Valid 4 years & renewable",
+  1002→      ],
+  1003→    },
+  1004→    {
+  1005→      title: "BPOM & PIRT",
+  1006→      category: "sertifikasi",
+  1007→      description:
+  1008→        "Food & cosmetics distribution licenses: MD for industrial products, PIRT for SME processed foods.",
+  1009→      price: "From IDR 2.5M",
+  1010→      time: "14–45 business days",
+  1011→      icon: "flask-conical",
+  1012→      features: [
+  1013→        "BPOM e-registration filing",
+  1014→        "Accredited laboratory testing",
+  1015→        "Regulation-compliant labeling",
+  1016→      ],
+  1017→    },
+  1018→    {
+  1019→      title: "SNI Certification",
+  1020→      category: "sertifikasi",
+  1021→      description:
+  1022→        "Mandatory SNI product certification via LSPro — the entry ticket to modern retail & government tenders.",
+  1023→      price: "From IDR 6M",
+  1024→      time: "30–90 business days",
+  1025→      icon: "award",
+  1026→      features: [
+  1027→        "Factory audit assistance",
+  1028→        "Product sample testing",
+  1029→        "SNI system consulting",
+  1030→      ],
+  1031→    },
+  1032→    {
+  1033→      title: "ISO Certification",
+  1034→      category: "sertifikasi",
+  1035→      description:
+  1036→        "ISO 9001:2015, 14001, 22000, 27001, and 45001 with internationally accredited registrars.",
+  1037→      price: "From IDR 12M",
+  1038→      time: "30–60 business days",
+  1039→      icon: "shield-check",
+  1040→      features: [
+  1041→        "Internal team training",
+  1042→        "Quality manual documentation",
+  1043→        "IAF-accredited certificate",
+  1044→      ],
+  1045→    },
+  1046→    {
+  1047→      title: "PBG & SLF",
+  1048→      category: "bangunan",
+  1049→      description:
+  1050→        "Building Approval (PBG) & Certificate of Functional Feasibility (SLF) via SIMBG — your building's legality.",
+  1051→      price: "From IDR 2M",
+  1052→      time: "7–30 business days",
+  1053→      icon: "landmark",
+  1054→      features: [
+  1055→        "Drawings by certified experts",
+  1056→        "DPMPTSP consultation",
+  1057→        "SLF for existing & new buildings",
+  1058→      ],
+  1059→    },
+  1060→    {
+  1061→      title: "Environmental Permits",
+  1062→      category: "bangunan",
+  1063→      description:
+  1064→        "AMDAL, UKL-UPL, SPPL, and Environmental Approval under the Job Creation Law & PP 22/2021.",
+  1065→      price: "From IDR 5M",
+  1066→      time: "14–60 business days",
+  1067→      icon: "leaf",
+  1068→      features: [
+  1069→        "Complete UKL-UPL & AMDAL",
+  1070→        "Environmental expert team",
+  1071→        "Matrix assistance",
+  1072→      ],
+  1073→    },
+  1074→    {
+  1075→      title: "Export-Import Permits",
+  1076→      category: "khusus",
+  1077→      description:
+  1078→        "API-U/API-P, NIB as customs access, up to customs licensing for cross-border business.",
+  1079→      price: "From IDR 1.5M",
+  1080→      time: "3–7 business days",
+  1081→      icon: "ship",
+  1082→      features: [
+  1083→        "API-U & API-P",
+  1084→        "Customs registration",
+  1085→        "HS Code & PIB consulting",
+  1086→      ],
+  1087→    },
+  1088→    {
+  1089→      title: "KITAS & KITAP",
+  1090→      category: "khusus",
+  1091→      description:
+  1092→        "Foreigner stay & work permits: IMTA, VITAS, KITAS, up to KITAP for expatriates and families.",
+  1093→      price: "From IDR 3.5M",
+  1094→      time: "5–14 business days",
+  1095→      icon: "id-card",
+  1096→      features: [
+  1097→        "RPTKA & IMTA",
+  1098→        "Manpower notification",
+  1099→        "MERP & multiple exit",
+  1100→      ],
+  1101→    },
+  1102→    {
+  1103→      title: "Special Sector Permits",
+  1104→      category: "khusus",
+  1105→      description:
+  1106→        "Umrah & travel permits, logistics, construction (SBU), education, health, down to fintech.",
+  1107→      price: "From IDR 5M",
+  1108→      time: "14–45 business days",
+  1109→      icon: "layers",
+  1110→      features: [
+  1111→        "Ministry of Religious Affairs permits",
+  1112→        "LPJK construction SBU",
+  1113→        "Vertical-sector licensing",
+  1114→      ],
+  1115→    },
+  1116→    {
+  1117→      title: "MISA — Saudi Arabia Business License",
+  1118→      category: "khusus",
+  1119→      description:
+  1120→        "Company establishment in Saudi Arabia via MISA for your business expansion into the Middle East.",
+  1121→      price: "By consultation",
+  1122→      time: "30–60 business days",
+  1123→      icon: "plane",
+  1124→      features: [
+  1125→        "MISA investment license",
+  1126→        "CR (Commercial Registration)",
+  1127→        "GM visa & work permit",
+  1128→      ],
+  1129→    },
+  1130→    {
+  1131→      title: "Taxation & NPWP",
+  1132→      category: "legalitas",
+  1133→      description:
+  1134→        "Corporate/personal NPWP, SKTU, annual tax returns, up to tax consulting & special facilities.",
+  1135→      price: "From IDR 500K",
+  1136→      time: "1–3 business days",
+  1137→      icon: "receipt",
+  1138→      features: [
+  1139→        "Fast NPWP & SKTU",
+  1140→        "Routine annual returns",
+  1141→        "Tax planning consulting",
+  1142→      ],
+  1143→    },
+  1144→  ],
+  1145→  serviceCategories: [
+  1146→    { value: "semua", label: "All Services" },
+  1147→    { value: "legalitas", label: "Business Legality" },
+  1148→    { value: "sertifikasi", label: "Certification & Products" },
+  1149→    { value: "bangunan", label: "Building & Environment" },
+  1150→    { value: "khusus", label: "Special & International" },
+  1151→  ],
+  1152→  values: [
+  1153→    {
+  1154→      title: "Mission",
+  1155→      text: "Simplifying Indonesian business legality with fast, transparent, guaranteed service — so entrepreneurs can focus on growth.",
+  1156→    },
+  1157→    {
+  1158→      title: "Vision",
+  1159→      text: "To become the most complete licensing hub in Asia — even the world — with the most trusted ISO 9001:2015 international quality standards.",
+  1160→    },
+  1161→    {
+  1162→      title: "Our Values",
+  1163→      text: "Uncompromising integrity, speed without sacrificing precision, and empathy for every client's business story.",
+  1164→    },
+  1165→  ],
+  1166→  trustPoints: [
+  1167→    "Rooted since 2009 — 15+ years of world-class consulting experience",
+  1168→    "Officially incorporated 2024: PT TOP KONSULTAN INTERNASIONAL (Ministry of Law & Human Rights RI)",
+  1169→    "600+ service catalog — the most complete in Asia, covering cross-border licensing",
+  1170→    "Part of Gunara Consultant Group together with pusatperizinan.com",
+  1171→    "Audited ISO 9001:2015 quality management system",
+  1172→    "Certified team: legal, taxation & environmental",
+  1173→  ],
+  1174→  timeline: [
+  1175→    {
+  1176→      year: "2009",
+  1177→      title: "The Birth of a Vision",
+  1178→      text: "Since 2009, Gunara Consultant's founders honed world-class consulting expertise under Mic Kinsey — absorbing the methodology, quality discipline, and global solution culture that now form our service DNA: precision, integrity, and an obsession with client outcomes.",
+  1179→    },
+  1180→    {
+  1181→      year: "2009–2024",
+  1182→      title: "15 Years Equipping Thousands of Entrepreneurs",
+  1183→      text: "More than a decade accompanying SMEs and corporations through bureaucratic complexity. That cross-sector experience crystallized into mastery of 600+ license types — the most complete in Asia — from village SME permits to company incorporation in Singapore, Dubai, and Saudi Arabia.",
+  1184→    },
+  1185→    {
+  1186→      year: "11 July 2024",
+  1187→      title: "The Birth of a Legal Entity",
+  1188→      text: "Gunara Consultant officially became PT TOP KONSULTAN INTERNASIONAL — Certificate No. AHU-038293.AH.01.30.Tahun 2024, issued by the Ministry of Law and Human Rights of the Republic of Indonesia, domiciled in Kota Tasikmalaya, with business capital of Rp5.000.000.000,00.",
+  1189→    },
+  1190→    {
+  1191→      year: "Today",
+  1192→      title: "Gunara Consultant Group",
+  1193→      text: "Operating pusatperizinan.com as the digital gateway of our licensing services — one door to legal certainty for all of Indonesia, and still growing.",
+  1194→    },
+  1195→  ],
+  1196→  certRows: [
+  1197→    { label: "Certificate Number", value: SITE.ahucert, mono: true },
+  1198→    { label: "Entity", value: SITE.legalName },
+  1199→    {
+  1200→      label: "Issued By",
+  1201→      value: "Ministry of Law and Human Rights of the Republic of Indonesia",
+  1202→    },
+  1203→    { label: "Issue Date", value: "July 11, 2024" },
+  1204→    { label: "Domicile", value: "Kota Tasikmalaya, West Java" },
+  1205→    { label: "Business Capital", value: SITE.capital },
+  1206→    { label: "Founder", value: SITE.founder },
+  1207→  ],
+  1208→  months: [
+  1209→    "January",
+  1210→    "February",
+  1211→    "March",
+  1212→    "April",
+  1213→    "May",
+  1214→    "June",
+  1215→    "July",
+  1216→    "August",
+  1217→    "September",
+  1218→    "October",
+  1219→    "November",
+  1220→    "December",
+  1221→  ],
+  1222→};
+  1223→
+  1224→/* ============ UI dictionaries — key parity dijamin compiler ============ */
+  1225→
+  1226→const UI_ID = {
+  1227→  /* ---- Navbar ---- */
+  1228→  topbarIso: "Tersertifikasi ISO 9001:2015 — Grup PusatPerizinan.com —",
+  1229→  topbarSince: "Berdiri sejak",
+  1230→  navAriaLabel: "Navigasi utama",
+  1231→  navCta: "Konsultasi Gratis",
+  1232→  ariaMenu: "Buka menu navigasi",
+  1233→  sheetTitle: "Menu navigasi",
+  1234→
+  1235→  /* ---- Hero ---- */
+  1236→  heroAriaLabel: "Beranda Gunara Consultant",
+  1237→  heroBadge: "Bernaung di Mic Kinsey sejak",
+  1238→  heroBadge2: "Berbadan Hukum 2024 • ISO 9001:2015",
+  1239→  heroTitleLead1: "Segala",
+  1240→  heroTitleGold1: "Perizinan",
+  1241→  heroTitleAfter1: "Usaha Anda,",
+  1242→  heroTitleLead2: "Kami Yang",
+  1243→  heroTitleGold2: "Urus.",
+  1244→  heroTitleAfter2: "",
+  1245→  heroSubA: "— sejak",
+  1246→  heroSubB: "kami menyerap standar konsultansi kelas dunia di bawah naungan",
+  1247→  heroSubC: ", kini resmi berbadan hukum 2024 sebagai",
+  1248→  heroSubD: " (AHU Kemenkumham RI). Lebih dari",
+  1249→  heroSubGold: "600+ layanan perizinan terlengkap di Asia",
+  1250→  heroSubE:
+  1251→    "dalam satu pintu — dari NIB UMKM hingga pendirian perusahaan internasional — bagian dari grup pusatperizinan.com.",
+  1252→  heroSubF: "Cepat, resmi, transparan, bergaransi 100%.",
+  1253→  heroCtaPrimary: "Konsultasi Gratis Sekarang",
+  1254→  heroCtaSecondary: "Jelajahi Layanan",
+  1255→  heroFloatNote1: "via OSS — BKPM RI",
+  1256→  heroFloatNote2: "Notaris → AHU → OSS",
+  1257→  heroFloatCertNote: "Kemenkumham RI • 11 Juli 2024",
+  1258→  heroScrollAria: "Gulir ke bawah",
+  1259→
+  1260→  /* ---- Brand strip ---- */
+  1261→  brandAriaLabel: "Layanan andalan kami",
+  1262→  brandCaption: "Dipercaya mengurus 18+ jenis perizinan — semua terbit resmi dari instansi",
+  1263→
+  1264→  /* ---- Contact ---- */
+  1265→  contactAriaLabel: "Hubungi Gunara Consultant",
+  1266→  contactEyebrow: "Hubungi Kami",
+  1267→  contactTitle: "Mulai dengan",
+  1268→  contactHighlight: "Konsultasi Gratis",
+  1269→  contactDesc:
+  1270→    "Ceritakan kebutuhan perizinan Anda — tanpa biaya, tanpa komitmen. Tim ahli kami merespons maksimal 15 menit pada jam kerja.",
+  1271→  contactCardPhone: "Telepon / WhatsApp",
+  1272→  contactCardPhoneNote: "Respons < 15 menit (jam kerja)",
+  1273→  contactCardEmail: "Email",
+  1274→  contactCardEmailNote: "Balasan maksimal 1x24 jam",
+  1275→  contactCardOffice: "Kantor Pusat",
+  1276→  contactCardOfficeNote: "Senin–Sabtu, 08.00–20.00 WIB",
+  1277→  directWa: "Chat Langsung via WhatsApp",
+  1278→  directWaNote: "Fast track konsultasi — dibalas dalam hitungan menit",
+  1279→  contactPrivacy:
+  1280→    "Data Anda aman & dijaga kerahasiaannya sesuai standar mutu ISO 9001:2015 dan UU Perlindungan Data Pribadi.",
+  1281→  contactFormTitle: "Form Konsultasi Gratis",
+  1282→  contactFormSub: "Isi form di bawah — kami yang menghubungi Anda.",
+  1283→  labelNama: "Nama Lengkap *",
+  1284→  placeholderNama: "Nama Anda",
+  1285→  labelCompany: "Nama Usaha",
+  1286→  placeholderCompany: "Opsional",
+  1287→  labelEmail: "Email *",
+  1288→  labelPhone: "No. WhatsApp / Telepon",
+  1289→  labelService: "Layanan yang Dibutuhkan",
+  1290→  placeholderService: "Pilih layanan perizinan",
+  1291→  labelMessage: "Ceritakan Kebutuhan Anda *",
+  1292→  placeholderMessage:
+  1293→    "Contoh: Saya ingin mendirikan PT bidang kuliner di Bandung dan perlu izin halal untuk 5 produk...",
+  1294→  submitBtn: "Kirim & Dapatkan Konsultasi Gratis",
+  1295→  submitting: "Mengirim Pesan...",
+  1296→  toastIncomplete: "Form belum lengkap",
+  1297→  toastIncompleteDesc: "Mohon isi nama, email, dan pesan Anda.",
+  1298→  toastSuccess: "Pesan terkirim!",
+  1299→  toastSuccessDesc:
+  1300→    "Terima kasih! Tim Gunara Consultant akan menghubungi Anda maksimal 15 menit di jam kerja.",
+  1301→  toastError: "Gagal mengirim",
+  1302→  toastErrorDesc: "Silakan coba lagi atau hubungi WhatsApp kami.",
+  1303→  errFallback: "Gagal mengirim pesan",
+  1304→  contactResponseNote: "Respons maksimal 15 menit (Senin–Sabtu, 08.00–20.00 WIB)",
+  1305→
+  1306→  /* ---- Footer ---- */
+  1307→  footerCtaTitle: "Siap melegalkan bisnis Anda",
+  1308→  footerCtaTitleGold: "hari ini?",
+  1309→  footerCtaSub: "Konsultasi gratis, respons 15 menit, garansi 100%.",
+  1310→  footerCtaBtn: "Konsultasi Gratis",
+  1311→  footerAboutA:
+  1312→    "Konsultan perizinan & legalitas usaha bersertifikasi ISO 9001:2015. Bagian dari Gunara Group bersama",
+  1313→  footerAboutB: ". Berdiri sejak",
+  1314→  footerAboutC:
+  1315→    ", dipercaya 12.500+ klien di 34 provinsi Indonesia dan 8 negara — pusat perizinan terlengkap di Asia.",
+  1316→  footerNavTitle: "Navigasi",
+  1317→  footerNavAriaLabel: "Navigasi footer",
+  1318→  footerServicesTitle: "Layanan Populer",
+  1319→  footerServicesAriaLabel: "Layanan populer",
+  1320→  footerContactTitle: "Kontak & Sertifikasi",
+  1321→  footerIsoTitle: "TERSERTIFIKASI ISO 9001:2015",
+  1322→  footerIsoDesc: "Sistem Manajemen Mutu — diaudit tahunan oleh badan sertifikasi berakreditasi IAF.",
+  1323→  footerCopyright: "Seluruh hak cipta dilindungi.",
+  1324→  footerBrands: "Grup Gunara:",
+  1325→  footerMade: "Dibuat dengan standar kelas dunia di Indonesia",
+  1326→  footerVerifyPre: "Terverifikasi Kemenkumham RI No.",
+  1327→  footerVerifyMid: "Sistem Manajemen Mutu ISO 9001:2015",
+  1328→  footerVerifyPost: "Bagian dari Gunara Consultant Group",
+  1329→  linkIndeks: "Indeks Katalog 600 Layanan",
+  1330→  linkArtikel: "Artikel & Panduan Perizinan",
+  1331→
+  1332→  /* ---- FAQ ---- */
+  1333→  faqAria: "Pertanyaan yang sering diajukan",
+  1334→  faqEyebrow: "FAQ",
+  1335→  faqTitle: "Pertanyaan yang Sering",
+  1336→  faqHighlight: "Diajukan",
+  1337→  faqDesc:
+  1338→    "Semua yang perlu Anda ketahui sebelum memulai pengurusan bersama kami. Masih penasaran? Tim kami siap menjawab 24/7.",
+  1339→
+  1340→  /* ---- Testimoni ---- */
+  1341→  testiAria: "Testimoni klien Gunara Consultant",
+  1342→  testiEyebrow: "Testimoni",
+  1343→  testiTitle: "Cerita Sukses dari",
+  1344→  testiHighlight: "12.500+ Klien",
+  1345→  testiDesc:
+  1346→    "Dari UMKM hingga korporasi — kepercayaan mereka adalah bukti nyata komitmen mutu kami.",
+  1347→  testiRatingPre: "Rating",
+  1348→  testiRatingMid: "dari",
+  1349→  testiRatingPost: "bintang",
+  1350→  testiPrev: "Testimoni sebelumnya",
+  1351→  testiNext: "Testimoni berikutnya",
+  1352→  testiDotsAria: "Pilih testimoni",
+  1353→  testiDotPre: "Testimoni",
+  1354→
+  1355→  /* ---- Why Us ---- */
+  1356→  whyUsAria: "Keunggulan Gunara Consultant",
+  1357→  whyUsEyebrow: "Mengapa Gunara",
+  1358→  whyUsTitle: "Standar yang Membuat Kami",
+  1359→  whyUsHighlight: "Melampaui Kompetitor",
+  1360→  whyUsDesc:
+  1361→    "Kami tidak sekadar mengurus izin — kami membangun sistem layanan bersertifikasi internasional yang menjamin hasil untuk setiap klien.",
+  1362→  whyUsBest: "Pilihan Terbaik",
+  1363→  whyUsAvg: "Rata-rata pasar",
+  1364→
+  1365→  /* ---- Proses ---- */
+  1366→  processAria: "Proses kerja Gunara Consultant",
+  1367→  processEyebrow: "Proses Kerja",
+  1368→  processTitle: "5 Langkah Menuju",
+  1369→  processHighlight: "Izin Terbit",
+  1370→  processDesc:
+  1371→    "Alur kerja terstandar ISO 9001:2015 — setiap tahap punya checkpoint mutu dan pelaporan yang jelas, sehingga Anda selalu tahu posisi pengurusan Anda.",
+  1372→
+  1373→  /* ---- ISO ---- */
+  1374→  isoAria: "Komitmen mutu ISO 9001:2015",
+  1375→  isoEyebrow: "Akreditasi Mutu",
+  1376→  isoTitle: "Sistem Manajemen Mutu",
+  1377→  isoHighlight: "ISO 9001:2015",
+  1378→  isoDesc:
+  1379→    "Gunara Consultant mengoperasikan seluruh layanannya di bawah Sistem Manajemen Mutu ISO 9001:2015 — standar mutu yang diadopsi perusahaan kelas dunia seperti Toyota, Samsung, dan Siemens. Kini, standar yang sama bekerja untuk perizinan bisnis Anda.",
+  1380→  isoAuditNote:
+  1381→    "Sertifikat mutu kami diaudit setiap tahun oleh badan sertifikasi independen berakreditasi IAF.",
+  1382→  isoComplianceNote:
+  1383→    "Kepatuhan penuh pada UU Cipta Kerja, PP 5/2021 (OSS-RBA), dan seluruh regulasi perizinan terkini.",
+  1384→
+  1385→  /* ---- Coverage ---- */
+  1386→  coverageAria: "Cakupan wilayah layanan",
+  1387→  coverageEyebrow: "Cakupan Layanan",
+  1388→  coverageTitle: "Melayani Seluruh",
+  1389→  coverageHighlight: "Indonesia & Dunia",
+  1390→  coverageDesc:
+  1391→    "Proses 100% online via OSS, AHU Online, SIMBG, dan SIHALAL. Di mana pun bisnis Anda berada, tim Gunara siap mengurusnya.",
+  1392→
+  1393→  /* ---- Fase ---- */
+  1394→  phaseAria: "Fase implementasi katalog layanan",
+  1395→  phaseEyebrow: "Peta Jalan Implementasi",
+  1396→  phaseTitle: "Satu Katalog, Empat Fase,",
+  1397→  phaseHighlight: "Nol Kebingungan",
+  1398→  phaseDesc:
+  1399→    "Kami membangun katalog 600 layanan — terlengkap di Asia — secara terukur: setiap fase diuji, setiap layanan diaudit mutu ISO 9001:2015 sebelum diluncurkan.",
+  1400→  phaseStatusLive: "Aktif",
+  1401→  phaseStatusRunning: "Sedang Berjalan",
+  1402→  phaseStatusUpcoming: "Segera",
+  1403→  phaseCountSuffix: "layanan",
+  1404→  phasePctMid: "dari",
+  1405→  phaseCatAriaPre: "Kategori pada",
+  1406→  phaseFootPre: "Total target katalog",
+  1407→  phaseFootMid: "dalam",
+  1408→  phaseCountWord: "kategori",
+  1409→  phaseFootPost:
+  1410→    "— diluncurkan bertahap 2024–2026 dengan audit mutu ISO 9001:2015 di setiap fase.",
+  1411→
+  1412→  /* ---- Saudi Desk (MISA) ---- */
+  1413→  misaAria: "Saudi Desk — Layanan Investasi MISA Arab Saudi",
+  1414→  misaChip: "Saudi Desk • Jembatan Investasi",
+  1415→  misaTitle: "MISA Arab Saudi",
+  1416→  misaTitleGold: "⇄ Indonesia",
+  1417→  misaSub:
+  1418→    "Gerbang tunggal investasi Vision 2030 — lisensi MISA, PT PMA, dan segala legalitas di antaranya, diurus satu tim dedicated.",
+  1419→  misaCta: "Konsultasi Saudi Desk",
+  1420→  misaCtaWa: "Chat WhatsApp",
+  1421→  misaBannerAlt: "Jembatan investasi Jakarta dan Riyadh — Saudi Desk Gunara Consultant",
+  1422→  misaIntroStrong: "MISA (Ministry of Investment of Saudi Arabia",
+  1423→  misaIntroA:
+  1424→    " — dahulu SAGIA) adalah gerbang tunggal perizinan investasi asing dan motor inisiatif",
+  1425→  misaIntroB: ". Sebagai",
+  1426→  misaIntroC:
+  1427→    " Gunara Consultant, satu tim menangani dua arah sekaligus: investor Saudi yang mendirikan PT PMA di Indonesia, dan pelaku usaha Indonesia yang merebut peluang Vision 2030 di Riyadh — komunikasi bahasa Inggris, SOP teraudit",
+  1428→  misaIntroD: ".",
+  1429→  misaDirEyebrow: "Dua Arah, Satu Tim",
+  1430→  misaDirTitle: "Layanan Saudi Desk",
+  1431→  misaDirHighlight: "Tanpa Batas Negara",
+  1432→  misaDirDesc:
+  1433→    "Dari pendirian PT PMA di Indonesia hingga MISA Investment License di Arab Saudi — katalog layanan lengkap kedua jurusan.",
+  1434→  misaCardATitle: "Investor Arab Saudi → Indonesia",
+  1435→  misaCardATagline: "MISA → PT PMA • KITAS • Kepatuhan RI",
+  1436→  misaCardBTitle: "Pelaku Usaha Indonesia → Arab Saudi",
+  1437→  misaCardBTagline: "Indonesia → MISA • CR • SABER/SFDA",
+  1438→  misaStepsEyebrow: "Alur Kerja Saudi Desk",
+  1439→  misaStepsTitle: "5 Langkah Menuju Operasional",
+  1440→  misaStepsSub:
+  1441→    "Timeline tertulis di penawaran — dari kajian pasar gratis hingga pendampingan berkelanjutan di dua negara.",
+  1442→  misaFaqEyebrow: "FAQ Saudi Desk",
+  1443→  misaFaqTitle: "Pertanyaan Umum tentang MISA",
+  1444→  misaFaqOutroPre: "Pertanyaan lain tentang investasi Saudi–Indonesia?",
+  1445→  misaFaqLink: "Konsultasi gratis dengan Saudi Desk kami",
+  1446→
+  1447→  /* ---- About ---- */
+  1448→  aboutAria: "Tentang Gunara Consultant",
+  1449→  aboutEyebrow: "Tentang Kami",
+  1450→  aboutTitle: "Konsultan Perizinan dengan Standar",
+  1451→  aboutHighlight: "Kelas Dunia",
+  1452→  aboutDesc:
+  1453→    "Gunara Consultant berakar pada pengalaman konsultansi sejak 2009 dan resmi berbadan hukum pada 2024 sebagai PT TOP KONSULTAN INTERNASIONAL — rumah layanan legalitas bersama pusatperizinan.com. Lebih dari 15 tahun, kami menjadi jembatan antara ambisi bisnis Anda dan kepastian hukum: dari warung kopi hingga korporasi lintas negara.",
+  1454→  aboutStoryA: "Cerita kami dimulai di ruang kelas konsultansi dunia: sejak",
+  1455→  aboutStoryB: "menekuni ilmu konsultansi di bawah naungan",
+  1456→  aboutStoryC:
+  1457→    " — menyerap disiplin mutu dan budaya solusi global. Puncaknya tercapai pada",
+  1458→  aboutStoryD: ", ketika Gunara Consultant resmi berbadan hukum sebagai",
+  1459→  aboutStoryE: " — dan kini mengelola grup",
+  1460→  aboutStoryF: "untuk seluruh Indonesia.",
+  1461→  aboutJourney: "Baca Perjalanan Kami",
+  1462→  aboutJourneyAria: "Baca perjalanan kami di bagian Warisan dan Legalitas",
+  1463→  aboutExpLabel: "Tahun Pengalaman",
+  1464→  aboutGroup: "Grup PusatPerizinan.com",
+  1465→  aboutImgAlt: "Tim konsultan Gunara Consultant sedang meninjau dokumen perizinan di kantor Jakarta",
+  1466→
+  1467→  /* ---- Heritage ---- */
+  1468→  herAria: "Warisan dan legalitas Gunara Consultant",
+  1469→  herEyebrow: "Warisan & Legalitas",
+  1470→  herTitle: "Sejak 2009 di Ruang Kelas Dunia,",
+  1471→  herHighlight: "Sejak 2024 Berbadan Hukum Indonesia",
+  1472→  herQuotePre:
+  1473→    "“Dari ruang kelas konsultansi dunia, kami membawa pulang satu pelajaran yang tak pernah usang:",
+  1474→  herQuoteGold: "kepastian hukum adalah fondasi dari segala pertumbuhan.",
+  1475→  herQuoteCaptionPre: "— Prinsip pendiri,",
+  1476→  herCertBadge: "Dokumen Resmi",
+  1477→  herCertCountry: "Republik Indonesia",
+  1478→  herCertTitle: "Sertifikat",
+  1479→  herCertTitleGold: "Pendirian",
+  1480→  herCertSub: "Perseroan Terbatas — Sistem Administrasi Badan Hukum",
+  1481→  herChipGroup: "Grup: pusatperizinan.com",
+  1482→  herChipVerified: "Legalitas Terverifikasi",
+  1483→  herChipServing: "Melayani Seluruh Indonesia",
+  1484→
+  1485→  /* ---- Brand / Filosofi Logo ---- */
+  1486→  brandEyebrow: "Identitas Merek",
+  1487→  brandTitle: "Filosofi Logo",
+  1488→  brandHighlight: "The Sovereign G",
+  1489→  brandDesc:
+  1490→    "Setiap elemen emblem Gunara Consultant dirancang dengan presisi heraldika korporat — menceritakan siapa kami: konsultan yang menjaga struktur hukum, melindungi bisnis, dan membuka era baru bagi klien.",
+  1491→  brandIconAlt: "Emblem logo Gunara Consultant — monogram G dengan pilar klasik di dalam perisai",
+  1492→  brandTileAlt: "Emblem logo Gunara Consultant versi gelap dengan matahari terbit emas",
+  1493→  brandLockAlt: "Logo lengkap Gunara Consultant — emblem perisai dengan wordmark GUNARA CONSULTANT",
+  1494→  brandMean1Title: "Pilar Klasik",
+  1495→  brandMean1Text: "Batang monogram G dibangun dari pilar Ionic — simbol struktur hukum yang kokoh sejak 2009.",
+  1496→  brandMean2Title: "Perisai",
+  1497→  brandMean2Text: "Bentuk perisai melambangkan perlindungan penuh atas legalitas dan kepentingan bisnis klien.",
+  1498→  brandMean3Title: "Matahari Terbit",
+  1499→  brandMean3Text: "Sinar matahari menandai era baru 2024 dan jangkauan Asia yang terus naik kelas.",
+  1500→  brandMean4Title: "Emerald & Gold",
+  1501→  brandMean4Text: "Hijau zamrud kemewahan dan emas standar kelas dunia — warna otoritas, bukan sekadar gaya.",
+  1502→  brandBadge: "Identitas resmi — selaras ISO 9001:2015",
+  1503→
+  1504→  /* ---- Services (16) ---- */
+  1505→  svcAria: "Layanan perizinan Gunara Consultant",
+  1506→  svcEyebrow: "Layanan Kami",
+  1507→  svcTitle: "Satu Pintu untuk",
+  1508→  svcHighlight: "Semua Perizinan",
+  1509→  svcDesc:
+  1510→    "Dari legalitas dasar hingga sertifikasi internasional — 16 layanan utama yang mencakup seluruh kebutuhan perizinan bisnis Anda di Indonesia dan mancanegara.",
+  1511→  svcNotFound: "Tidak menemukan izin yang Anda butuhkan?",
+  1512→  svcAsk: "Tanyakan pada tim kami",
+  1513→  svcMore: " — 18+ jenis perizinan lainnya juga kami urus.",
+  1514→
+  1515→  /* ---- Explorer (katalog 600) ---- */
+  1516→  expAria: "Katalog 600 layanan perizinan terlengkap di Asia",
+  1517→  expEyebrow: "Katalog Layanan",
+  1518→  expTitle: "600+ Layanan Perizinan",
+  1519→  expHighlight: "Terlengkap di Asia",
+  1520→  expDesc:
+  1521→    "Telusuri katalog perizinan terlengkap di Asia — satu-satunya yang mencakup seluruh perizinan Indonesia: pendirian badan usaha, OSS-RBA, halal & BPOM, sektor regulasi kompleks, ISO — plus Perizinan Global & Internasional (Singapura, Dubai, Arab Saudi, Tiongkok). Cari, filter, temukan dalam hitungan detik.",
+  1522→  expPlaceholder: "Cari layanan — mis. NIB, halal, BPOM, KITAS…",
+  1523→  expSearchAria: "Cari layanan perizinan",
+  1524→  expPhaseAria: "Filter berdasarkan fase implementasi",
+  1525→  expPhaseAll: "Semua Fase",
+  1526→  expPhaseWord: "Fase",
+  1527→  expCountSuffix: "layanan",
+  1528→  expPopularLabel: "Hanya Layanan Unggulan",
+  1529→  expPopularAria: "Hanya tampilkan layanan unggulan",
+  1530→  expChipsAria: "Filter kategori layanan",
+  1531→  expAll: "Semua",
+  1532→  expLoading: "Memuat katalog layanan…",
+  1533→  expShowingPre: "Menampilkan",
+  1534→  expShowingMid: "dari",
+  1535→  expNoMatch: "Tidak ada layanan yang cocok",
+  1536→  expTarget:
+  1537→    "Target katalog: 600 layanan • 27 bidang • 4 fase — Terlengkap di Asia",
+  1538→  expError: "Gagal memuat katalog. Periksa koneksi Anda dan coba lagi.",
+  1539→  expRetry: "Coba Lagi",
+  1540→  expNoTitle: "Layanan tidak ditemukan",
+  1541→  expNoDesc:
+  1542→    "Coba kata kunci lain atau longgarkan filter — katalog kami terus bertumbuh setiap fase. Tim kami juga siap membantu mencarikan izin yang Anda butuhkan.",
+  1543→  expReset: "Reset Semua Filter",
+  1544→  expFeatured: "Unggulan",
+  1545→  expConsult: "Konsultasikan",
+  1546→  expConsultAriaPre: "Konsultasikan layanan",
+  1547→  expIndexLink: "Lihat Indeks Lengkap 600 Layanan — Terbaca Google",
+  1548→  expLoadAria: "Memuat layanan",
+  1549→  expPagePrev: "Sebelumnya",
+  1550→  expPageNext: "Berikutnya",
+  1551→  expPage: "Halaman",
+  1552→  expPageOf: "dari",
+  1553→  expPagePrevAria: "Halaman sebelumnya",
+  1554→  expPageNextAria: "Halaman berikutnya",
+  1555→  expPageNavAria: "Navigasi halaman katalog",
+  1556→
+  1557→  /* ---- Insights (artikel bulanan) ---- */
+  1558→  insAria: "Artikel dan panduan perizinan usaha",
+  1559→  insEyebrow: "Artikel & Panduan — Edisi Bulanan",
+  1560→  insTitle: "Perpustakaan Perizinan",
+  1561→  insHighlight: "— Diperbarui Setiap Bulan",
+  1562→  insDesc:
+  1563→    "12 panduan mendalam seputar perizinan usaha Indonesia — artikel baru terbit setiap bulan oleh tim hukum Gunara Consultant: dari PT & PT PMA, KBLI, OSS-RBA, sertifikasi halal ekspor, hingga MISA Arab Saudi.",
+  1564→  insOpen: "Baca artikel lengkap",
+  1565→  insClose: "Tutup artikel",
+  1566→  insEditionPre: "Edisi",
+  1567→  insEditionCount: "artikel",
+  1568→  insFooterPre: "panduan mendalam — edisi baru setiap bulan oleh tim hukum",
+  1569→  insFooterPost: "Gunara Consultant",
+  1570→  insEnNote:
+  1571→    "Artikel ditulis dalam Bahasa Indonesia — konsultan kami siap memberi briefing berbahasa Inggris untuk Anda.",
+  1572→  insCtaConsult: "Butuh pendampingan langsung?",
+  1573→  insCtaConsultLink: "Konsultasi gratis",
+  1574→  insCtaCatalogPre: "— atau telusuri",
+  1575→  insCtaCatalogLink: "katalog 600+ layanan perizinan",
+  1576→  insCtaCatalogPost: "untuk menemukan izin yang Anda butuhkan.",
+  1577→  insCtaMisa: "Ekspansi ke Arab Saudi? Lihat Saudi Desk MISA →",
+  1578→
+  1579→  /* ---- Catalog Index (indeks SSR) ---- */
+  1580→  catAria: "Indeks lengkap 600 layanan perizinan terlengkap di Asia Gunara Consultant",
+  1581→  catEyebrow: "Indeks Katalog Lengkap",
+  1582→  catTitlePre: "Indeks",
+  1583→  catTitlePost: "Layanan Perizinan",
+  1584→  catHighlight: "— Semua Terbaca Google",
+  1585→  catDesc:
+  1586→    "Daftar lengkap seluruh layanan perizinan yang kami tangani — terlengkap di Asia — dikelompokkan dalam 27 bidang: dari NIB & OSS-RBA, pendirian PT/PMA, sertifikasi halal & BPOM, PBG/SLF, AMDAL, KITAS/KITAP, sertifikasi ISO 9001:2015, hingga pendirian perusahaan di Singapura, Dubai, dan Arab Saudi. Klik bidang untuk membuka rinciannya — atau gunakan katalog interaktif untuk mencari & memfilter.",
+  1587→  catSearch: "Cari & Filter di Katalog Interaktif",
+  1588→  catMetaA: "bidang •",
+  1589→  catMetaB: "layanan •",
+  1590→  catMetaC: "fase implementasi •",
+  1591→  catMetaD: "teraudit ISO 9001:2015",
+  1592→  catCountSuffix: "layanan",
+  1593→  catEnNote:
+  1594→    "Entri layanan dicantumkan dalam Bahasa Indonesia (istilah regulasi resmi) — tim kami menjelaskan semuanya dalam Bahasa Inggris untuk Anda.",
+  1595→};
+  1596→
+  1597→type UIKey = keyof typeof UI_ID;
+  1598→
+  1599→const UI_EN: Record<UIKey, string> = {
+  1600→  /* ---- Navbar ---- */
+  1601→  topbarIso: "ISO 9001:2015 Certified — PusatPerizinan.com Group —",
+  1602→  topbarSince: "Established since",
+  1603→  navAriaLabel: "Main navigation",
+  1604→  navCta: "Free Consultation",
+  1605→  ariaMenu: "Open navigation menu",
+  1606→  sheetTitle: "Navigation menu",
+  1607→
+  1608→  /* ---- Hero ---- */
+  1609→  heroAriaLabel: "Gunara Consultant Home",
+  1610→  heroBadge: "Backed by Mic Kinsey heritage since",
+  1611→  heroBadge2: "Legally Incorporated 2024 • ISO 9001:2015",
+  1612→  heroTitleLead1: "Every",
+  1613→  heroTitleGold1: "License",
+  1614→  heroTitleAfter1: "Your Business Needs,",
+  1615→  heroTitleLead2: "We Handle",
+  1616→  heroTitleGold2: "It All.",
+  1617→  heroTitleAfter2: "",
+  1618→  heroSubA: "— since",
+  1619→  heroSubB: "we have absorbed world-class consulting standards under the banner of",
+  1620→  heroSubC: ", and in 2024 we were formally incorporated as",
+  1621→  heroSubD: " (Ministry of Law and Human Rights of the Republic of Indonesia). More than",
+  1622→  heroSubGold: "600+ licensing services — the most complete in Asia",
+  1623→  heroSubE:
+  1624→    "under one roof — from SME NIB registration to international company incorporation — as part of the pusatperizinan.com group.",
+  1625→  heroSubF: "Fast, official, transparent, and backed by a 100% guarantee.",
+  1626→  heroCtaPrimary: "Get Your Free Consultation",
+  1627→  heroCtaSecondary: "Explore Our Services",
+  1628→  heroFloatNote1: "via OSS — BKPM RI",
+  1629→  heroFloatNote2: "Notary → AHU → OSS",
+  1630→  heroFloatCertNote: "Ministry of Law & Human Rights RI • July 11, 2024",
+  1631→  heroScrollAria: "Scroll down",
+  1632→
+  1633→  /* ---- Brand strip ---- */
+  1634→  brandAriaLabel: "Our flagship licensing services",
+  1635→  brandCaption:
+  1636→    "Trusted to handle 18+ types of business permits — all officially issued by government agencies",
+  1637→
+  1638→  /* ---- Contact ---- */
+  1639→  contactAriaLabel: "Contact Gunara Consultant",
+  1640→  contactEyebrow: "Contact Us",
+  1641→  contactTitle: "Start with a",
+  1642→  contactHighlight: "Free Consultation",
+  1643→  contactDesc:
+  1644→    "Tell us about your licensing needs — no fees, no commitment. Our expert team responds within 15 minutes during business hours.",
+  1645→  contactCardPhone: "Phone / WhatsApp",
+  1646→  contactCardPhoneNote: "Response < 15 minutes (business hours)",
+  1647→  contactCardEmail: "Email",
+  1648→  contactCardEmailNote: "Replies within 24 hours",
+  1649→  contactCardOffice: "Head Office",
+  1650→  contactCardOfficeNote: "Monday–Saturday, 08.00–20.00 WIB (GMT+7)",
+  1651→  directWa: "Chat Directly via WhatsApp",
+  1652→  directWaNote: "Fast-track consultation — replies within minutes",
+  1653→  contactPrivacy:
+  1654→    "Your data is safe and treated as confidential in accordance with our ISO 9001:2015 quality standards and the Indonesian Personal Data Protection Law.",
+  1655→  contactFormTitle: "Free Consultation Form",
+  1656→  contactFormSub: "Fill in the form below — we will be the one reaching out to you.",
+  1657→  labelNama: "Full Name *",
+  1658→  placeholderNama: "Your name",
+  1659→  labelCompany: "Business Name",
+  1660→  placeholderCompany: "Optional",
+  1661→  labelEmail: "Email *",
+  1662→  labelPhone: "WhatsApp / Phone Number",
+  1663→  labelService: "Service You Need",
+  1664→  placeholderService: "Select a licensing service",
+  1665→  labelMessage: "Tell Us What You Need *",
+  1666→  placeholderMessage:
+  1667→    "Example: I want to establish a culinary PT in Bandung and need halal certification for 5 products...",
+  1668→  submitBtn: "Send & Get Your Free Consultation",
+  1669→  submitting: "Sending Your Message...",
+  1670→  toastIncomplete: "Form incomplete",
+  1671→  toastIncompleteDesc: "Please fill in your name, email, and message.",
+  1672→  toastSuccess: "Message sent!",
+  1673→  toastSuccessDesc:
+  1674→    "Thank you! The Gunara Consultant team will contact you within 15 minutes during business hours.",
+  1675→  toastError: "Failed to send",
+  1676→  toastErrorDesc: "Please try again or reach us on WhatsApp.",
+  1677→  errFallback: "Failed to send your message",
+  1678→  contactResponseNote: "Response within 15 minutes (Monday–Saturday, 08.00–20.00 WIB)",
+  1679→
+  1680→  /* ---- Footer ---- */
+  1681→  footerCtaTitle: "Ready to legalize your business",
+  1682→  footerCtaTitleGold: "today?",
+  1683→  footerCtaSub: "Free consultation, 15-minute response, 100% guarantee.",
+  1684→  footerCtaBtn: "Free Consultation",
+  1685→  footerAboutA:
+  1686→    "An ISO 9001:2015-certified business licensing & legality consultancy. Part of Gunara Group together with",
+  1687→  footerAboutB: ". Established in",
+  1688→  footerAboutC:
+  1689→    ", trusted by 12,500+ clients across 34 Indonesian provinces and 8 countries — the most complete licensing hub in Asia.",
+  1690→  footerNavTitle: "Navigation",
+  1691→  footerNavAriaLabel: "Footer navigation",
+  1692→  footerServicesTitle: "Popular Services",
+  1693→  footerServicesAriaLabel: "Popular services",
+  1694→  footerContactTitle: "Contact & Certification",
+  1695→  footerIsoTitle: "ISO 9001:2015 CERTIFIED",
+  1696→  footerIsoDesc:
+  1697→    "Quality Management System — audited annually by an IAF-accredited certification body.",
+  1698→  footerCopyright: "All rights reserved.",
+  1699→  footerBrands: "Gunara Group:",
+  1700→  footerMade: "Built to world-class standards in Indonesia",
+  1701→  footerVerifyPre:
+  1702→    "Verified by the Ministry of Law and Human Rights of the Republic of Indonesia (Kemenkumham) No.",
+  1703→  footerVerifyMid: "ISO 9001:2015 Quality Management System",
+  1704→  footerVerifyPost: "Part of Gunara Consultant Group",
+  1705→  linkIndeks: "600-Service Catalog Index",
+  1706→  linkArtikel: "Articles & Licensing Guides",
+  1707→
+  1708→  /* ---- FAQ ---- */
+  1709→  faqAria: "Frequently asked questions",
+  1710→  faqEyebrow: "FAQ",
+  1711→  faqTitle: "Frequently",
+  1712→  faqHighlight: "Asked Questions",
+  1713→  faqDesc:
+  1714→    "Everything you need to know before starting your application with us. Still curious? Our team is ready to answer 24/7.",
+  1715→
+  1716→  /* ---- Testimonials ---- */
+  1717→  testiAria: "Gunara Consultant client testimonials",
+  1718→  testiEyebrow: "Testimonials",
+  1719→  testiTitle: "Success Stories from",
+  1720→  testiHighlight: "12,500+ Clients",
+  1721→  testiDesc:
+  1722→    "From SMEs to corporations — their trust is living proof of our quality commitment.",
+  1723→  testiRatingPre: "Rated",
+  1724→  testiRatingMid: "out of",
+  1725→  testiRatingPost: "stars",
+  1726→  testiPrev: "Previous testimonial",
+  1727→  testiNext: "Next testimonial",
+  1728→  testiDotsAria: "Choose a testimonial",
+  1729→  testiDotPre: "Testimonial",
+  1730→
+  1731→  /* ---- Why Us ---- */
+  1732→  whyUsAria: "Why choose Gunara Consultant",
+  1733→  whyUsEyebrow: "Why Gunara",
+  1734→  whyUsTitle: "The Standards That Put Us",
+  1735→  whyUsHighlight: "Ahead of Competitors",
+  1736→  whyUsDesc:
+  1737→    "We don't just process permits — we build an internationally certified service system that guarantees results for every client.",
+  1738→  whyUsBest: "The Best Choice",
+  1739→  whyUsAvg: "Market average",
+  1740→
+  1741→  /* ---- Process ---- */
+  1742→  processAria: "Gunara Consultant work process",
+  1743→  processEyebrow: "Our Process",
+  1744→  processTitle: "5 Steps to Your",
+  1745→  processHighlight: "Permit Issued",
+  1746→  processDesc:
+  1747→    "An ISO 9001:2015-standardized workflow — every stage has quality checkpoints and clear reporting, so you always know where your application stands.",
+  1748→
+  1749→  /* ---- ISO ---- */
+  1750→  isoAria: "ISO 9001:2015 quality commitment",
+  1751→  isoEyebrow: "Quality Accreditation",
+  1752→  isoTitle: "Quality Management System",
+  1753→  isoHighlight: "ISO 9001:2015",
+  1754→  isoDesc:
+  1755→    "Gunara Consultant runs its entire operation under the ISO 9001:2015 Quality Management System — the quality standard adopted by world-class companies like Toyota, Samsung, and Siemens. Now, that same standard works for your business licensing.",
+  1756→  isoAuditNote:
+  1757→    "Our quality certificate is audited annually by an independent IAF-accredited certification body.",
+  1758→  isoComplianceNote:
+  1759→    "Full compliance with the Job Creation Law, PP 5/2021 (OSS-RBA), and all current licensing regulations.",
+  1760→
+  1761→  /* ---- Coverage ---- */
+  1762→  coverageAria: "Service coverage areas",
+  1763→  coverageEyebrow: "Service Coverage",
+  1764→  coverageTitle: "Serving All of",
+  1765→  coverageHighlight: "Indonesia & the World",
+  1766→  coverageDesc:
+  1767→    "A 100% online process via OSS, AHU Online, SIMBG, and SIHALAL. Wherever your business is, the Gunara team is ready to handle it.",
+  1768→
+  1769→  /* ---- Phases ---- */
+  1770→  phaseAria: "Catalog implementation phases",
+  1771→  phaseEyebrow: "Implementation Roadmap",
+  1772→  phaseTitle: "One Catalog, Four Phases,",
+  1773→  phaseHighlight: "Zero Confusion",
+  1774→  phaseDesc:
+  1775→    "We build the 600-service catalog — the most complete in Asia — measurably: every phase is tested and every service passes ISO 9001:2015 quality audits before launch.",
+  1776→  phaseStatusLive: "Live",
+  1777→  phaseStatusRunning: "In Progress",
+  1778→  phaseStatusUpcoming: "Upcoming",
+  1779→  phaseCountSuffix: "services",
+  1780→  phasePctMid: "of",
+  1781→  phaseCatAriaPre: "Categories in",
+  1782→  phaseFootPre: "Total catalog target",
+  1783→  phaseFootMid: "across",
+  1784→  phaseCountWord: "categories",
+  1785→  phaseFootPost:
+  1786→    "— rolled out in phases across 2024–2026 with ISO 9001:2015 quality audits at every phase.",
+  1787→
+  1788→  /* ---- Saudi Desk (MISA) ---- */
+  1789→  misaAria: "Saudi Desk — MISA Saudi Arabia Investment Services",
+  1790→  misaChip: "Saudi Desk • Investment Bridge",
+  1791→  misaTitle: "Saudi MISA",
+  1792→  misaTitleGold: "⇄ Indonesia",
+  1793→  misaSub:
+  1794→    "Vision 2030's single investment gateway — MISA license, PT PMA, and every legality in between, handled by one dedicated team.",
+  1795→  misaCta: "Consult the Saudi Desk",
+  1796→  misaCtaWa: "WhatsApp Chat",
+  1797→  misaBannerAlt: "Jakarta–Riyadh investment bridge — Gunara Consultant Saudi Desk",
+  1798→  misaIntroStrong: "MISA (Ministry of Investment of Saudi Arabia",
+  1799→  misaIntroA: " — formerly SAGIA) is the single gateway for foreign investment licensing and the driving force behind",
+  1800→  misaIntroB: ". As",
+  1801→  misaIntroC:
+  1802→    " of Gunara Consultant, one dedicated team handles both directions at once: Saudi investors establishing a PT PMA in Indonesia, and Indonesian businesses seizing Vision 2030 opportunities in Riyadh — English communication, SOPs audited under",
+  1803→  misaIntroD: ".",
+  1804→  misaDirEyebrow: "Two Directions, One Team",
+  1805→  misaDirTitle: "Saudi Desk Services",
+  1806→  misaDirHighlight: "Without Country Limits",
+  1807→  misaDirDesc:
+  1808→    "From PT PMA incorporation in Indonesia to the MISA Investment License in Saudi Arabia — a complete service catalog for both directions.",
+  1809→  misaCardATitle: "Saudi Investors → Indonesia",
+  1810→  misaCardATagline: "MISA → PT PMA • KITAS • RI Compliance",
+  1811→  misaCardBTitle: "Indonesian Businesses → Saudi Arabia",
+  1812→  misaCardBTagline: "Indonesia → MISA • CR • SABER/SFDA",
+  1813→  misaStepsEyebrow: "Saudi Desk Workflow",
+  1814→  misaStepsTitle: "5 Steps to Full Operation",
+  1815→  misaStepsSub:
+  1816→    "A written timeline in every quotation — from a free market study to continued partnership in two countries.",
+  1817→  misaFaqEyebrow: "Saudi Desk FAQ",
+  1818→  misaFaqTitle: "Common Questions about MISA",
+  1819→  misaFaqOutroPre: "More questions about Saudi–Indonesia investment?",
+  1820→  misaFaqLink: "Free consultation with our Saudi Desk",
+  1821→
+  1822→  /* ---- About ---- */
+  1823→  aboutAria: "About Gunara Consultant",
+  1824→  aboutEyebrow: "About Us",
+  1825→  aboutTitle: "A Licensing Consultant with",
+  1826→  aboutHighlight: "World-Class Standards",
+  1827→  aboutDesc:
+  1828→    "Gunara Consultant is rooted in consulting experience since 2009 and was formally incorporated in 2024 as PT TOP KONSULTAN INTERNASIONAL — a legality services home together with pusatperizinan.com. For more than 15 years, we have been the bridge between your business ambitions and legal certainty: from coffee stalls to cross-border corporations.",
+  1829→  aboutStoryA: "Our story began in the classrooms of world consulting: since",
+  1830→  aboutStoryB: "our founders honed the craft of consulting under",
+  1831→  aboutStoryC:
+  1832→    " — absorbing quality discipline and a global solution culture. The milestone came on",
+  1833→  aboutStoryD: ", when Gunara Consultant was formally incorporated as",
+  1834→  aboutStoryE: " — and now operates the",
+  1835→  aboutStoryF: "group for all of Indonesia.",
+  1836→  aboutJourney: "Read Our Journey",
+  1837→  aboutJourneyAria: "Read our journey in the Heritage and Legality section",
+  1838→  aboutExpLabel: "Years of Experience",
+  1839→  aboutGroup: "PusatPerizinan.com Group",
+  1840→  aboutImgAlt: "The Gunara Consultant team reviewing licensing documents at the Jakarta office",
+  1841→
+  1842→  /* ---- Heritage ---- */
+  1843→  herAria: "Heritage and legality of Gunara Consultant",
+  1844→  herEyebrow: "Heritage & Legality",
+  1845→  herTitle: "World-Class Classrooms Since 2009,",
+  1846→  herHighlight: "An Indonesian Legal Entity Since 2024",
+  1847→  herQuotePre:
+  1848→    "“From the classrooms of world consulting, we brought home one lesson that never ages:",
+  1849→  herQuoteGold: "legal certainty is the foundation of all growth.",
+  1850→  herQuoteCaptionPre: "— The founder's principle,",
+  1851→  herCertBadge: "Official Document",
+  1852→  herCertCountry: "Republic of Indonesia",
+  1853→  herCertTitle: "Certificate",
+  1854→  herCertTitleGold: "of Incorporation",
+  1855→  herCertSub: "Limited Liability Company — Legal Entity Administration System",
+  1856→  herChipGroup: "Group: pusatperizinan.com",
+  1857→  herChipVerified: "Verified Legality",
+  1858→  herChipServing: "Serving All of Indonesia",
+  1859→
+  1860→  /* ---- Brand / Logo Philosophy ---- */
+  1861→  brandEyebrow: "Brand Identity",
+  1862→  brandTitle: "Logo Philosophy",
+  1863→  brandHighlight: "The Sovereign G",
+  1864→  brandDesc:
+  1865→    "Every element of the Gunara Consultant emblem is crafted with corporate heraldic precision — telling who we are: consultants who uphold legal structure, protect businesses, and open a new era for clients.",
+  1866→  brandIconAlt: "Gunara Consultant logo emblem — monogram G with classical pillars inside a shield",
+  1867→  brandTileAlt: "Gunara Consultant dark logo emblem with a golden rising sun",
+  1868→  brandLockAlt: "Full Gunara Consultant logo — shield emblem with the GUNARA CONSULTANT wordmark",
+  1869→  brandMean1Title: "Classical Pillar",
+  1870→  brandMean1Text: "The G monogram is built from an Ionic column — a symbol of solid legal structure since 2009.",
+  1871→  brandMean2Title: "Shield",
+  1872→  brandMean2Text: "The shield shape represents full protection of clients' legality and business interests.",
+  1873→  brandMean3Title: "Rising Sun",
+  1874→  brandMean3Text: "Sun rays mark the new era of 2024 and a rising reach across Asia.",
+  1875→  brandMean4Title: "Emerald & Gold",
+  1876→  brandMean4Text: "Luxurious emerald green and world-class gold — colors of authority, not mere style.",
+  1877→  brandBadge: "Official identity — aligned with ISO 9001:2015",
+  1878→
+  1879→  /* ---- Services (16) ---- */
+  1880→  svcAria: "Gunara Consultant licensing services",
+  1881→  svcEyebrow: "Our Services",
+  1882→  svcTitle: "One Gateway for",
+  1883→  svcHighlight: "Every License",
+  1884→  svcDesc:
+  1885→    "From basic legality to international certification — 16 flagship services covering every licensing need of your business in Indonesia and abroad.",
+  1886→  svcNotFound: "Can't find the permit you need?",
+  1887→  svcAsk: "Ask our team",
+  1888→  svcMore: " — we also handle 18+ other types of permits.",
+  1889→
+  1890→  /* ---- Explorer (600 catalog) ---- */
+  1891→  expAria: "The 600 most complete licensing services catalog in Asia",
+  1892→  expEyebrow: "Service Catalog",
+  1893→  expTitle: "600+ Licensing Services",
+  1894→  expHighlight: "The Most Complete in Asia",
+  1895→  expDesc:
+  1896→    "Explore the most complete licensing catalog in Asia — the only one covering all of Indonesia's licensing: company incorporation, OSS-RBA, halal & BPOM, complex regulatory sectors, ISO — plus Global & International Licensing (Singapore, Dubai, Saudi Arabia, China). Search, filter, and find within seconds.",
+  1897→  expPlaceholder: "Search services — e.g. NIB, halal, BPOM, KITAS…",
+  1898→  expSearchAria: "Search licensing services",
+  1899→  expPhaseAria: "Filter by implementation phase",
+  1900→  expPhaseAll: "All Phases",
+  1901→  expPhaseWord: "Phase",
+  1902→  expCountSuffix: "services",
+  1903→  expPopularLabel: "Featured Services Only",
+  1904→  expPopularAria: "Show featured services only",
+  1905→  expChipsAria: "Filter service categories",
+  1906→  expAll: "All",
+  1907→  expLoading: "Loading the service catalog…",
+  1908→  expShowingPre: "Showing",
+  1909→  expShowingMid: "of",
+  1910→  expNoMatch: "No matching services",
+  1911→  expTarget:
+  1912→    "Catalog target: 600 services • 27 sectors • 4 phases — The Most Complete in Asia",
+  1913→  expError: "Failed to load the catalog. Check your connection and try again.",
+  1914→  expRetry: "Try Again",
+  1915→  expNoTitle: "Services not found",
+  1916→  expNoDesc:
+  1917→    "Try another keyword or loosen the filters — our catalog keeps growing every phase. Our team is also ready to help find the permit you need.",
+  1918→  expReset: "Reset All Filters",
+  1919→  expFeatured: "Featured",
+  1920→  expConsult: "Ask About This",
+  1921→  expConsultAriaPre: "Ask about the service",
+  1922→  expIndexLink: "View the Full 600-Service Index — Read by Google",
+  1923→  expLoadAria: "Loading services",
+  1924→  expPagePrev: "Previous",
+  1925→  expPageNext: "Next",
+  1926→  expPage: "Page",
+  1927→  expPageOf: "of",
+  1928→  expPagePrevAria: "Previous page",
+  1929→  expPageNextAria: "Next page",
+  1930→  expPageNavAria: "Catalog pagination",
+  1931→
+  1932→  /* ---- Insights (monthly articles) ---- */
+  1933→  insAria: "Business licensing articles and guides",
+  1934→  insEyebrow: "Articles & Guides — Monthly Editions",
+  1935→  insTitle: "The Licensing Library",
+  1936→  insHighlight: "— Updated Every Month",
+  1937→  insDesc:
+  1938→    "12 in-depth guides on Indonesian business licensing — a new article is published every month by the Gunara Consultant legal team: from PT & PT PMA, KBLI, OSS-RBA, export halal certification, to MISA Saudi Arabia.",
+  1939→  insOpen: "Read the full article",
+  1940→  insClose: "Close article",
+  1941→  insEditionPre: "Edition",
+  1942→  insEditionCount: "articles",
+  1943→  insFooterPre: "in-depth guides — a new edition every month by the",
+  1944→  insFooterPost: "Gunara Consultant legal team",
+  1945→  insEnNote:
+  1946→    "Guides are written in Bahasa Indonesia — our consultants are ready to brief you in English.",
+  1947→  insCtaConsult: "Need hands-on assistance?",
+  1948→  insCtaConsultLink: "Free consultation",
+  1949→  insCtaCatalogPre: "— or browse the",
+  1950→  insCtaCatalogLink: "600+ licensing services catalog",
+  1951→  insCtaCatalogPost: "to find the permit you need.",
+  1952→  insCtaMisa: "Expanding to Saudi Arabia? See our Saudi Desk MISA →",
+  1953→
+  1954→  /* ---- Catalog Index (SSR index) ---- */
+  1955→  catAria: "The full index of 600 most complete licensing services in Asia — Gunara Consultant",
+  1956→  catEyebrow: "Complete Catalog Index",
+  1957→  catTitlePre: "Index of",
+  1958→  catTitlePost: "Licensing Services",
+  1959→  catHighlight: "— All Read by Google",
+  1960→  catDesc:
+  1961→    "The complete list of every licensing service we handle — the most complete in Asia — grouped into 27 sectors: from NIB & OSS-RBA, PT/PMA incorporation, halal & BPOM certification, PBG/SLF, AMDAL, KITAS/KITAP, ISO 9001:2015 certification, down to company incorporation in Singapore, Dubai, and Saudi Arabia. Click a sector to open its details — or use the interactive catalog to search & filter.",
+  1962→  catSearch: "Search & Filter in the Interactive Catalog",
+  1963→  catMetaA: "sectors •",
+  1964→  catMetaB: "services •",
+  1965→  catMetaC: "implementation phases •",
+  1966→  catMetaD: "audited under ISO 9001:2015",
+  1967→  catCountSuffix: "services",
+  1968→  catEnNote:
+  1969→    "Service entries are listed in Bahasa Indonesia (official regulatory terms) — our team explains everything in English for you.",
+  1970→};
+  1971→
+  1972→/* ============ Public API ============ */
+  1973→
+  1974→/** Konten terstruktur (nav, stats, float cards, marquee, opsi layanan kontak). */
+  1975→export function getCopy(lang: Lang): Copy {
+  1976→  return lang === "en" ? COPY_EN : COPY_ID;
+  1977→}
+  1978→
+  1979→/** Dictionary string UI; fallback ke UI_ID bila key tidak ditemukan. */
+  1980→export function getUi(lang: Lang): Record<string, string> {
+  1981→  return lang === "en" ? { ...UI_EN } : { ...UI_ID };
+  1982→}
+  1983→

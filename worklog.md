@@ -213,3 +213,42 @@ Stage Summary:
 - Identitas visual Gunara Consultant kini konsisten: "The Sovereign G" (pilar hukum + perisai perlindungan + matahari terbit era 2024) menghiasi navbar, footer, favicon, dan blok filosofi brand bilingual di section #legasi.
 - Aset siap pakai untuk cetak/media sosial tersimpan di public/images/logo-{icon,icon-dark,lockup}.png + varian web.
 - Website tetap: SSR Indonesia penuh (SEO aman), lint bersih, tanpa error runtime.
+
+---
+Task ID: 7-d-2
+Agent: full-stack-developer
+Task: i18n EN untuk 4 section sisa (insights, catalog-index, phases, whatsapp-float)
+
+Work Log:
+- Baca worklog.md (Task 1–8) + 4 file target + konteks i18n (i18n.ts, language-provider.tsx, insights-ui.tsx, catalog-ui.tsx, phases-view.tsx) untuk mengikuti pattern section yang sudah selesai.
+- i18n.ts: tambah 21 key BARU simetris UI_ID ⇄ UI_EN (parity dijamin tipe Record<UIKey,string>): blok "Catalog Index: catatan fase & CTA" (catFeatured, catPhaseQPre/Post, catPhaseIntroPre/Post, catPhaseLink, catPhase1–4Name, catPhase1–4Detail, catPhaseAnd, catPhaseLegal, catPhaseAsk, catPhaseCta, catPhaseCtaPost) + blok "WhatsApp Float" (waAria, waTooltip). Istilah tak diterjemahkan dipertahankan: Mic Kinsey, PT TOP KONSULTAN INTERNASIONAL, AHU-038293, ISO 9001:2015, NIB, OSS-RBA, BPOM, BPJPH, OJK, Kemenkumham RI. Key ins* (insAria/insEyebrow/insTitle/insHighlight/insDesc/insEditionPre/insCtaMisa "Ekspansi ke Arab Saudi?…") & cat* (catAria, catCountSuffix) SUDAH ada — dipakai, tidak diduplikasi.
+- insights-ui.tsx (+2 helper client, pattern RSC children): InsightsSection (wrapper <section id="artikel"> dengan aria-label=t("insAria") + orb + container; isi artikel dikirim sebagai children server) & EditionGroupShell (aria-label grup edisi bilingual: "Edisi Oktober 2026" ⇄ "Edition October 2026" via insEditionPre + monthLabel(editionKey, copy.months) — upgrade dari aria "Edisi 2026-10" lama).
+- insights.tsx:section wrapper & grup edisi diganti helper baru; hapus import ChevronDown tak terpakai; TAMBAH komentar keputusan strategis: judul/ringkasan/isi artikel dari src/data/articles.ts SENGAJA tetap Bahasa Indonesia di semua bahasa (aset SEO long-tail keyword regulasi pasar Indonesia) — hanya UI chrome diterjemahkan; JANGAN terjemahkan articles.ts.
+- catalog-ui.tsx (+4 helper client): CatalogSection (wrapper <section id="indeks-katalog"> aria catAria), CatalogCountBadge (chip "{count} layanan/services" via catCountSuffix), CatalogFeaturedBadge (chip Unggulan/Featured via catFeatured — sebelumnya hardcode), CatalogPhaseNote (seluruh blok catatan SEO fase: pertanyaan katalog, intro + link "4 fase implementasi", 4 segmen fase NAMA+DETAIL dengan hitungan per fase dari props, kalimat legal ISO, paragraf Mic Kinsey/PT TOP + CTA #kontak; ikon via CatalogListTreeIcon yang sebelumnya menganggur). Hitungan fase (90/154/180/176) kini DINAMIS: phaseCounts() dihitung di server, dikirim sebagai props (bukan angka hardcode di teks).
+- catalog-index.tsx: section wrapper, chip hitungan 27 kategori, chip Unggulan, dan blok catatan fase diganti helper baru; komentar stale "26 kategori" → "27 kategori"; TAMBAH komentar keputusan strategis: nama & deskripsi 600 layanan (services-data.ts) + 27 nama kategori (services-types.ts) SENGAJA tetap Bahasa Indonesia (istilah resmi KBLI 2020/OSS-RBA/BPOM/BPJPH — kata kunci Google pasar Indonesia); JANGAN terjemahkan data layanan.
+- whatsapp-float.tsx: +useLang; aria-label → t("waAria"); TAMBAH tooltip hover desktop (span md:block opacity-0 group-hover:opacity-100, aria-hidden karena nama aksesibel sudah dari aria-label) → t("waTooltip"); file ini sebelumnya TIDAK punya tooltip — ditambahkan sesuai spesifikasi task.
+- phases.tsx: DIVERIFIKASI tanpa perubahan — wrapper server murni (hitung phaseCounts → props), seluruh string UI sudah bilingual di phases-view.tsx (phaseAria, phaseEyebrow, phaseTitle/Highlight/Desc, phaseStatus*, phaseCountSuffix, phaseCatAriaPre, phaseFoot*, copy.phases).
+- VERIFIKASI: (1) bun run lint = 0 error. (2) curl SSR — grep 'Free Consultation|Logo Philosophy|January 2026' = 0 (SSR tetap 100% Indonesia), 'Filosofi Logo' = 1; teks baru SSR Indonesia lengkap (aria insAria/catAria, "Bagaimana katalog 600 layanan ini diimplementasikan?", 4 segmen Fase 1–4, "Konsultasikan sekarang", waAria, tooltip ID, 6 aria edisi "Edisi …2026", badge "30 layanan", 59× "Unggulan"); struktur utuh: 42 details, 600 anchor GC-*, 12 JSON-LD BlogPosting. (3) grep 4 file target: tidak ada string Indonesia user-facing tersisa (hanya komentar). (4) Agent Browser E2E: toggle EN → html.lang=en, localStorage="en", aria WhatsApp → "Chat with Gunara Consultant on WhatsApp", #indeks-katalog & #artikel aria EN, "Edition October 2026", phase note EN utuh + hitungan dinamis "(90 services: …)", badge "Featured"/"30 services", CTA "Consult with us now — free of charge, with no commitment.", tooltip EN "Free consultation — fast reply", insCtaMisa EN; toggle balik ID → semua kembali Indonesia, 0 console error, 0 page error. dev.log: semua GET 200, tanpa error compile.
+
+Stage Summary:
+- i18n ID ⇄ EN kini 100% lengkap di seluruh section website — 4 file terakhir (insights, catalog-index, phases, whatsapp-float) selesai. 21 key baru ditambah simetris ke UI_ID & UI_EN (19 catPhase*/catFeatured + 2 wa*); key ins*/cat* yang sudah ada dipakai ulang.
+- 2 keputusan strategis terdokumentasi sebagai komentar kode: (1) isi src/data/articles.ts tetap Bahasa Indonesia (aset SEO pasar Indonesia), (2) 600 nama layanan + 27 kategori tetap Bahasa Indonesia (istilah KBLI/regulasi resmi). Pembaca EN diberi catatan bilingual (insEnNote/catEnNote) bahwa konten dijelaskan dalam Bahasa Inggris oleh tim.
+- SEO tidak terganggu: 600 entri layanan & 12 artikel tetap 100% SSR crawlable (pattern client-helper + children server); hitungan fase justru lebih akurat karena kini dinamis dari phaseCounts(). SSR default tetap Bahasa Indonesia penuh (0 leak EN), lint bersih, 0 error runtime.
+
+---
+Task ID: 9 (a+b+c)
+Agent: Z.ai Code (Main Orchestrator)
+Task: Variasi logo (monokrom/watermark), mockup brand (kartu nama, stempel, spanduk), OG Image baru
+
+Work Log:
+- Generate 3 varian monokrom via z-ai CLI: logo-mono-gold.png (line-art emas, siap gold-foil), logo-mono-emerald.png (solid emerald), logo-white-dark.png (putih di emerald gelap). QA visual: lolos semua.
+- sharp pixel-level alpha extraction: logo-watermark.png (emerald, putih→transparan via luminance) + logo-watermark-white.png (putih, bg→transparan) — 1024px, siap watermark dokumen/foto.
+- Mockup: mockup-stamp.png lolos QA round 1 (ejaan GUNARA CONSULTANT + ISO 9001:2015 benar; tinta merah khas cap resmi RI). mockup-business-card.png & mockup-banner-office.png GAGAL QA round 1 (typo CONSULITANT / CONSULTTANT) → regenerate dengan strategi anti-typo (spelling eksplisit) → round 2 lolos sempurna.
+- OG Image: regenerate og-image.png 1344x768 (sesuai deklarasi metadata layout.tsx — nol perubahan kode): emblem perisai emas + GUNARA CONSULTANT + PUSAT PERIZINAN TERLENGKAP DI ASIA + ISO 9001:2015 (titik dua benar setelah 1x regenerate). WhatsApp/LinkedIn/Facebook share kini pakai identitas baru.
+- Paralel: Task 7-d-2 (subagent full-stack-developer) selesai — 4 section terakhir bilingual (insights, catalog-index, whatsapp-float; phases ternyata sudah via phases-view.tsx), +21 key simetris, bonus tooltip WhatsApp & catatan fase dinamis; lint 0; SSR tetap 100% Indonesia.
+- Verifikasi E2E final: lint 0 error; SSR EN-leak 0 (false alarm "Featured" = nama komponen di chunk manifest); Agent Browser EN mode: lang=en, "Edition October 2026", "The Licensing Library", tooltip WA, 0 console error; toggle balik ID OK; og-image 200.
+
+Stage Summary:
+- Brand kit Gunara Consultant lengkap: 3 emblem utama + 3 monokrom + 2 watermark transparan + lockup + favicon/apple-icon + 3 mockup (kartu nama, stempel, spanduk) + og-image baru.
+- Website kini FULL BILINGUAL (23/23 section) — SSR Indonesia untuk SEO, switch EN untuk pasar internasional/MISA.
+- Keputusan strategis terdokumentasi di kode: konten artikel & istilah KBLI tetap Bahasa Indonesia (aset SEO pasar ID), dengan catatan EN yang elegan bagi pengunjung internasional.

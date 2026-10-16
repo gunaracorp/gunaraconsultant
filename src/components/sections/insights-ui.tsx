@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import {
   BookOpen,
   Clock,
@@ -15,6 +16,10 @@ import type { Article } from "@/data/articles";
 /**
  * Client helpers i18n untuk Insights (section artikel tetap SERVER component).
  * Isi artikel tetap Bahasa Indonesia (istilah regulasi resmi); label UI bilingual.
+ *
+ * Pattern komposisi RSC: komponen client menerima children hasil render server
+ * (ArticleCard & isi artikel tetap 100% SSR/crawlable), hanya lapisan UI chrome
+ * (aria-label, heading, label edisi, CTA) yang reaktif terhadap bahasa aktif.
  */
 
 export function InsightsHeading() {
@@ -123,6 +128,48 @@ export function EditionHeader({
         {count} {t("insEditionCount")}
       </span>
       <span className="sr-only">{label}</span>
+    </div>
+  );
+}
+
+/**
+ * Wrapper <section> #artikel — memindahkan aria-label section ke lapisan client
+ * agar bilingual (key insAria) tanpa menjadikan isi artikel client component.
+ */
+export function InsightsSection({ children }: { children: ReactNode }) {
+  const { t } = useLang();
+  return (
+    <section
+      id="artikel"
+      aria-label={t("insAria")}
+      className="relative overflow-hidden bg-secondary/40 py-24 sm:py-28"
+    >
+      <div
+        className="absolute right-[-8%] top-24 h-80 w-80 rounded-full bg-primary/10 blur-[120px]"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6">{children}</div>
+    </section>
+  );
+}
+
+/**
+ * Pembungkus tiap grup edisi bulanan — aria-label grup mengikuti bahasa aktif
+ * ("Edisi Oktober 2026" ⇄ "Edition October 2026") via key insEditionPre.
+ */
+export function EditionGroupShell({
+  editionKey,
+  children,
+}: {
+  editionKey: string;
+  children: ReactNode;
+}) {
+  const { t, copy } = useLang();
+  return (
+    <div
+      aria-label={`${t("insEditionPre")} ${monthLabel(editionKey, copy.months)}`}
+    >
+      {children}
     </div>
   );
 }

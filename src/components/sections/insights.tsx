@@ -1,14 +1,26 @@
-import { ChevronDown, Newspaper } from "lucide-react";
+import { Newspaper } from "lucide-react";
 import { ARTICLES, type Article } from "@/data/articles";
 import {
+  InsightsSection,
   InsightsHeading,
   InsightsEnNote,
   ArticleMeta,
   ArticleToggleLabels,
   ArticleCta,
   EditionHeader,
+  EditionGroupShell,
   InsightsFooter,
 } from "@/components/sections/insights-ui";
+
+/* KEPUTUSAN STRATEGIS i18n (Task 7-d-2):
+ * Judul, ringkasan, dan isi artikel dari src/data/articles.ts SENGAJA TETAP
+ * Bahasa Indonesia pada semua bahasa. Konten artikel adalah aset SEO untuk
+ * pasar Indonesia — kaya long-tail keyword regulasi (PT & PMA, KBLI 2020,
+ * OSS-RBA, BPJPH, MISA, dsb.) yang dicari pengguna berbahasa Indonesia di
+ * Google. Yang diterjemahkan HANYA UI chrome (aria-label, heading, label
+ * edisi, toggle baca/tutup, CTA footer) via client helpers di insights-ui.tsx;
+ * pembaca berbahasa Inggris diberi catatan singkat (insEnNote).
+ * JANGAN menerjemahkan isi src/data/articles.ts. */
 
 function NewspaperIcon() {
   return <Newspaper className="h-5 w-5" aria-hidden="true" />;
@@ -19,6 +31,10 @@ function NewspaperIcon() {
  * 100% server component — seluruh konten artikel tersedia sebagai HTML
  * statis (crawlable) dengan <details> native, TANPA filter client-side.
  * Artikel dikelompokkan per edisi bulanan (editionKey), terbaru dulu.
+ *
+ * i18n (Task 7-d-2): wrapper <section> & tiap grup edisi memakai client
+ * helper (InsightsSection / EditionGroupShell) agar aria-label mengikuti
+ * bahasa aktif, sementara kartu artikel tetap dirender server.
  */
 
 type EditionGroup = {
@@ -116,47 +132,36 @@ function ArticleCard({ article, isOpen }: { article: Article; isOpen: boolean })
 
 export function Insights() {
   return (
-    <section
-      id="artikel"
-      aria-label="Artikel dan panduan perizinan usaha"
-      className="relative overflow-hidden bg-secondary/40 py-24 sm:py-28"
-    >
-      <div
-        className="absolute right-[-8%] top-24 h-80 w-80 rounded-full bg-primary/10 blur-[120px]"
-        aria-hidden="true"
-      />
+    <InsightsSection>
+      <InsightsHeading />
+      <InsightsEnNote />
 
-      <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
-        <InsightsHeading />
-        <InsightsEnNote />
-
-        <div className="mt-10 flex flex-col gap-12">
-          {EDITION_GROUPS.map((group) => (
-            <div key={group.key} aria-label={`Edisi ${group.key}`}>
-              <EditionHeader
-                label={group.label}
-                editionKey={group.key}
-                count={group.articles.length}
-              />
-              <div
-                className="mt-5 h-px w-full bg-gradient-to-r from-border via-border/70 to-transparent"
-                aria-hidden="true"
-              />
-              <div className="mt-5 grid gap-4">
-                {group.articles.map((a) => (
-                  <ArticleCard
-                    key={a.slug}
-                    article={a}
-                    isOpen={a.slug === FIRST_OPEN_SLUG}
-                  />
-                ))}
-              </div>
+      <div className="mt-10 flex flex-col gap-12">
+        {EDITION_GROUPS.map((group) => (
+          <EditionGroupShell key={group.key} editionKey={group.key}>
+            <EditionHeader
+              label={group.label}
+              editionKey={group.key}
+              count={group.articles.length}
+            />
+            <div
+              className="mt-5 h-px w-full bg-gradient-to-r from-border via-border/70 to-transparent"
+              aria-hidden="true"
+            />
+            <div className="mt-5 grid gap-4">
+              {group.articles.map((a) => (
+                <ArticleCard
+                  key={a.slug}
+                  article={a}
+                  isOpen={a.slug === FIRST_OPEN_SLUG}
+                />
+              ))}
             </div>
-          ))}
-        </div>
-
-        <InsightsFooter count={ARTICLES.length} />
+          </EditionGroupShell>
+        ))}
       </div>
-    </section>
+
+      <InsightsFooter count={ARTICLES.length} />
+    </InsightsSection>
   );
 }

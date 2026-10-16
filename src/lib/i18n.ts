@@ -1592,6 +1592,35 @@ const UI_ID = {
   catCountSuffix: "layanan",
   catEnNote:
     "Entri layanan dicantumkan dalam Bahasa Indonesia (istilah regulasi resmi) — tim kami menjelaskan semuanya dalam Bahasa Inggris untuk Anda.",
+  catFeatured: "Unggulan",
+  catPhaseQPre: "Bagaimana katalog",
+  catPhaseQPost: "layanan ini diimplementasikan?",
+  catPhaseIntroPre: "Seluruh",
+  catPhaseIntroPost:
+    "layanan perizinan di atas diimplementasikan secara bertahap dalam",
+  catPhaseLink: "4 fase implementasi",
+  catPhase1Name: "Fase 1 Legalitas Fondasi",
+  catPhase1Detail: "pendirian badan usaha, UMKM, pajak, kekayaan intelektual",
+  catPhase2Name: "Fase 2 Operasional & Industri",
+  catPhase2Detail:
+    "OSS-RBA, perdagangan, industri, logistik, ketenagakerjaan, pangan & halal",
+  catPhase3Name: "Fase 3 Sektor Regulasi Kompleks",
+  catPhase3Detail:
+    "kesehatan-farmasi, pertambangan-energi, lingkungan, konstruksi, pariwisata",
+  catPhaseAnd: "dan",
+  catPhase4Name: "Fase 4 Enterprise & Global",
+  catPhase4Detail:
+    "fintech, telematika, ekspor-impor, pendidikan, media kreatif, sertifikasi ISO, serta Perizinan Global & Internasional — Singapura, Malaysia, Arab Saudi, UAE, Tiongkok",
+  catPhaseLegal:
+    "Setiap layanan ditangani tim bersertifikat ISO 9001:2015 dengan basis hukum yang jelas — UU, PP, Perpres, hingga regulasi khusus BPOM, BPJPH, OJK, dan Kemenkumham RI.",
+  catPhaseAsk:
+    "Tidak menemukan izin yang Anda cari — di Indonesia maupun luar negeri? Tim Gunara Consultant — bernaung di standar konsultansi Mic Kinsey sejak 2009, resmi berbadan hukum 2024 sebagai PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024) — siap menangani kebutuhan perizinan di luar daftar.",
+  catPhaseCta: "Konsultasikan sekarang",
+  catPhaseCtaPost: "— gratis, tanpa komitmen.",
+
+  /* ---- WhatsApp Float ---- */
+  waAria: "Chat WhatsApp Gunara Consultant",
+  waTooltip: "Konsultasi gratis — balasan cepat",
 };
 
 type UIKey = keyof typeof UI_ID;
@@ -1967,6 +1996,36 @@ const UI_EN: Record<UIKey, string> = {
   catCountSuffix: "services",
   catEnNote:
     "Service entries are listed in Bahasa Indonesia (official regulatory terms) — our team explains everything in English for you.",
+  catFeatured: "Featured",
+  catPhaseQPre: "How is this catalog of",
+  catPhaseQPost: "services implemented?",
+  catPhaseIntroPre: "All",
+  catPhaseIntroPost:
+    "licensing services above are implemented progressively across",
+  catPhaseLink: "4 implementation phases",
+  catPhase1Name: "Phase 1 — Legal Foundations",
+  catPhase1Detail:
+    "business entity establishment, MSMEs, taxation, intellectual property",
+  catPhase2Name: "Phase 2 — Operations & Industry",
+  catPhase2Detail:
+    "OSS-RBA, trade, manufacturing, logistics, manpower, food & halal",
+  catPhase3Name: "Phase 3 — Complex Regulatory Sectors",
+  catPhase3Detail:
+    "health & pharmaceuticals, mining & energy, environment, construction, tourism",
+  catPhaseAnd: "and",
+  catPhase4Name: "Phase 4 — Enterprise & Global",
+  catPhase4Detail:
+    "fintech, telematics, import-export, education, creative media, ISO certification, plus Global & International Licensing — Singapore, Malaysia, Saudi Arabia, UAE, China",
+  catPhaseLegal:
+    "Every service is handled by an ISO 9001:2015-certified team with a clear legal basis — from national statutes (UU), government regulations (PP), and presidential regulations (Perpres) to sector-specific rules issued by BPOM, BPJPH, OJK, and Indonesia's Ministry of Law and Human Rights (Kemenkumham RI).",
+  catPhaseAsk:
+    "Can't find the license you are looking for — in Indonesia or abroad? The Gunara Consultant team — operating under Mic Kinsey consulting standards since 2009 and formally incorporated in 2024 as PT TOP KONSULTAN INTERNASIONAL (AHU-038293.AH.01.30.Tahun 2024) — is ready to handle licensing needs beyond this list.",
+  catPhaseCta: "Consult with us now",
+  catPhaseCtaPost: "— free of charge, with no commitment.",
+
+  /* ---- WhatsApp Float ---- */
+  waAria: "Chat with Gunara Consultant on WhatsApp",
+  waTooltip: "Free consultation — fast reply",
 };
 
 /* ============ Public API ============ */
