@@ -1,0 +1,66 @@
+import {
+  FileCheck,
+  Building2,
+  Globe,
+  Store,
+  HeartHandshake,
+  BadgeCheck,
+  FlaskConical,
+  Award,
+  ShieldCheck,
+  Landmark,
+  Leaf,
+  Ship,
+  IdCard,
+  Layers,
+  Plane,
+  Receipt,
+  Zap,
+  MessageCircle,
+  Search,
+  FileSignature,
+  Activity,
+  Rocket,
+  Users,
+  Infinity as InfinityIcon,
+  type LucideIcon,
+} from "lucide-react";
+
+const ICONS: Record<string, LucideIcon> = {
+  "file-check": FileCheck,
+  building: Building2,
+  globe: Globe,
+  store: Store,
+  "heart-handshake": HeartHandshake,
+  "badge-check": BadgeCheck,
+  "flask-conical": FlaskConical,
+  award: Award,
+  "shield-check": ShieldCheck,
+  landmark: Landmark,
+  leaf: Leaf,
+  ship: Ship,
+  "id-card": IdCard,
+  layers: Layers,
+  plane: Plane,
+  receipt: Receipt,
+  zap: Zap,
+  "message-circle": MessageCircle,
+  search: Search,
+  "file-signature": FileSignature,
+  activity: Activity,
+  rocket: Rocket,
+  users: Users,
+  infinity: InfinityIcon,
+  shield: ShieldCheck,
+};
+
+export function DynamicIcon({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) {
+  const Icon = ICONS[name] ?? BadgeCheck;
+  return <Icon className={className} aria-hidden="true" />;
+}
