@@ -44,3 +44,45 @@ Stage Summary:
 - Batasan: services-data.ts hanya boleh disentuh Task 2-a; komponen/section & data.ts lib hanya oleh Task 3.
 
 ---
+Task ID: 2-a
+Agent: Z.ai Code (Main Orchestrator — setelah subagent 2x timeout, dikerjakan langsung)
+Task: Generate katalog TEPAT 500 layanan perizinan di 26 kategori dengan fase implementasi
+
+Work Log:
+- Menulis src/data/services-data.ts secara bertahap (6 chunk heredoc) hingga TEPAT 500 entri.
+- Struktur: id 1-500 global, kode GC-<PREFIX>-NNN, 26 kategori sesuai CATEGORY_TARGETS, phase 1-4 (78+131+156+135), 53 layanan popular, legalBasis regulasi riil (UU/PP/Perpres/POJK/BPOM).
+- Bugfix saat penulisan: hapus 1 entri placeholder (GC-PP-013b), renumber id 314-368 → 313-367, perbaiki typo nama duplikat ("Izin Edar Suplemen Kesehatan BPOM" → diganti "Registrasi Suplemen Kesehatan untuk Produk Kita"), typo "Usaga"→"Usaha", "Legalisaasi"→"Legalisasi", leading space desc BU-012.
+- Script verifikasi (bun): TOTAL 500 OK, 0 duplikat id/code/name, semua kategori = target, fase konsisten, prefix kode benar. Script dihapus setelah lulus.
+
+Stage Summary:
+- KATALOG 500 LAYANAN LENGKAP & TERVERIFIKASI: 26 kategori (badan-usaha 26, oss-rba 24, pangan-halal 24, perdagangan 24, industri 20, pertambangan-energi 24, lingkungan 20, konstruksi-properti 24, ketenagakerjaan-imigrasi 20, pajak-keuangan 20, kekayaan-intelektual 20, ekspor-impor 19, pariwisata 15, transportasi-logistik 19, pertanian 19, kehutanan 13, telematika-it 19, keuangan-fintech 17, pendidikan 15, media-kreatif 15, event-hiburan 13, sertifikasi-iso 24, jasa-profesi 18, umkm-daerah 12, kesehatan-farmasi 28, khusus-strategis 8). API /api/services teruji (search/filter/pagination).
+
+---
+Task ID: 3
+Agent: Z.ai Code (Main Orchestrator, melanjutkan pekerjaan full-stack-developer yang timeout)
+Task: UI Heritage (Mic Kinsey → PT TOP KONSULTAN INTERNASIONAL), Services Explorer 500 layanan, Fase Implementasi + copy persuasif & SEO penuh
+
+Work Log:
+- CATATAN: full-stack-developer agent sempat bekerja sebelum timeout — heritage.tsx, services-explorer.tsx, phases.tsx, integrasi page.tsx, update data.ts (SITE legalName/founded/ahucert/capital, NAV_LINKS, HERO_STATS 500+, FAQS +3), layout.tsx keywords/description, hero (badge Mic Kinsey, subheadline 500+, floating card Sertifikat AHU), about (narasi legasi + link #legasi), footer (bar verifikasi AHU + group pusatperizinan.com) — SEMUA sudah terpasang dan diperiksa ulang oleh orchestrator.
+- Orchestator memverifikasi kelengkapan konten & integrasi via grep + browser.
+
+Stage Summary:
+- 3 section baru live: #legasi (timeline 2009 Mic Kinsey → 11 Juli 2024 AHU-038293.AH.01.30.Tahun 2024 → grup pusatperizinan.com + kartu sertifikat dokumen resmi), #katalog (explorer 500 layanan: search debounce, 26 chip kategori+count, filter fase, toggle unggulan, pagination 12/hal), #fase (4 kartu roadmap dengan status chip & progress).
+- SEO: JSON-LD hasCredential jadi array [ISO 9001:2015, AHU Kemenkumham], knowsAbout + parentOrganization + ItemList layanan, breadcrumb +2, keywords +8 (Mic Kinsey, PT Top Konsultan Internasional, AHU-038293, katalog 500 layanan perizinan, dsb).
+
+---
+Task ID: 4
+Agent: Z.ai Code (Main Orchestrator)
+Task: Verifikasi end-to-end lint + API + Agent Browser golden path
+
+Work Log:
+- bun run lint: BERSIH (0 error/warning).
+- API tests: filter kategori kesehatan-farmasi=28, phase1=78 (totalPages 2), popular=53, search "ISO"=25, "halal"=28, "bpom"=3 — semua 200 OK.
+- Agent Browser: title OK, 0 console errors; #legasi berisi Mic Kinsey+AHU-038293.AH.01.30.Tahun 2024+Rp5.000.000.000,00 ✓; #fase 4 kartu ✓; #katalog "Menampilkan 1–12 dari 500" ✓.
+- Interaksi katalog: search "halal"→28, kategori ISO→24, reset Semua→500, pagination Halaman 2 dari 42, toggle Unggulan→53, filter Fase 3→156 ✓ (catatan: CLI fill "" tidak memicu event — batas automation, bukan bug UI).
+- Form kontak golden path: ketikan keyboard nyata → klik submit → POST /api/contact 201 → data "Golden Path Browser" tersimpan di SQLite (terverifikasi via Prisma) ✓.
+- Footer: terdorong natural di bawah konten (desktop 1269>577, mobile 17730>812), tanpa floating gap ✓. Menu mobile: hamburger + sheet berisi Katalog 500+ & Fase ✓.
+- Screenshot verifikasi tersimpan: public/images/verify-{desktop-hero,katalog,legasi,fase,mobile-hero}.png.
+
+Stage Summary:
+- Website Gunara Consultant SELESAI dengan 3 permintaan klien: (1) narasi legasi 2009 Mic Kinsey → 2024 PT TOP KONSULTAN INTERNASIONAL, (2) katalog 500 layanan perizinan interaktif, (3) 4 fase implementasi. Lint bersih, API sehat, golden path terverifikasi browser end-to-end.
