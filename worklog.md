@@ -151,3 +151,27 @@ Stage Summary:
 - Website kini 54 URL terindeks penuh: beranda + 7 halaman mandiri + 46 halaman layanan — struktur silang SEO lengkap
 - Semua halaman baru = canonical + hreflang + OG + Twitter + JSON-LD khusus + breadcrumb visual
 - FASE 1 selesai; Fase 2 (blog, tentang-kami, rekening-resmi, katalog PDF) diusulkan berikutnya
+
+---
+Task ID: 20
+Agent: Main Agent (Z.ai Code)
+Task: Fase 2 — Blog + Tentang Kami (halaman mandiri dengan metadata terlengkap)
+
+Work Log:
+- 6 artikel blog bilingual (ID+EN simetris) ditulis di src/data/blog.ts (modul murni): NIB OSS RBA, PT/CV/Perorangan, PT PMA, Izin Edar BPOM, ISO 9001, 5 Kesalahan UMKM — masing-masing 700-900 kata, blok p/h2/list/quote, tag, tanggal publikasi & modifikasi, validasi slug unik
+- 6 cover blog digenerate via image-generation skill CLI (1344x768, palet emerald-gold brand) ke public/images/blog/ — batch background pertama mati saat sesi shell berakhir, diulang sinkron 1-per-1 (37s/gambar)
+- i18n: +62 key baru simetris ID+EN (navAbout, navBlog, pgAbout*/about* 34 key, pgBlog*/blog/art* 28 key)
+- Halaman /tentang-kami: PageHero + cerita 3 paragraf + kutipan + kartu "Data Resmi Perusahaan" (Mic Kinsey 2009, AHU, ISO, modal Rp5 M, kantor Tasikmalaya + IDX Jakarta) + Visi/Misi + 4 nilai + timeline 4 milestone (2009/2024/2025/Hari Ini) + CouncilBand + crosslink pendiri & blog; JSON-LD AboutPage (mainEntity Organization + 2 PostalAddress) + BreadcrumbList
+- Halaman /blog: PageHero + filter 7 kategori chip + featured card + grid 3 kolom; JSON-LD Blog dengan 6 BlogPosting ringkas + Breadcrumb
+- Halaman /blog/[slug]: generateStaticParams + generateMetadata (canonical, hreflang id-ID/en, OG type article + publishedTime/modifiedTime/authors/tags, Twitter card, og:image = cover per-artikel) + JSON-LD BlogPosting penuh (wordCount, timeRequired, author Person worksFor org, isPartOf #blog) + breadcrumb visual + blok isi + tag + share (WA + copy link) + kotak penulis (foto founder.jpg, bio) + CTA artikel khusus + 3 artikel terkait + tombol kembali
+- Navbar: 9 link — Pendiri disembunyikan di 1280-1535px (hidden 2xl:list-item) agar tidak overflow; px-3→px-2.5, gap-1→gap-0.5; semua 9 link tampil di mobile menu & viewport ≥1536px
+- Footer: tautan cepat +8 (navAbout, navBlog menambah baris)
+- Sitemap: 62 URL (beranda + 9 halaman statis + 6 blog + 46 layanan); blog lastModified = dateModified artikel
+- BUG FIX ditemukan di E2E: section cerita/nilai/tautan-silang about.tsx + BlogIndex + body artikel awalnya TANPA section-deep → teks cream di atas bg putih (unreadable). Diperbaiki: section-deep + pattern-lines konsisten; artikel = section-deep di root <article>; container max-w-7xl terrestaui setelah edit
+- Verifikasi: lint 0 error; SSR ID 100% (curl grep); JSON-LD AboutPage/Blog/BlogPosting/Breadcrumb terverifikasi; og:image per-artikel + article:published_time/tag; hreflang ada (hrefLang casing React valid); agent-browser E2E: /tentang-kami desktop+mobile, /blog desktop+filter UMKM interaktif (aria-pressed, 1 kartu), artikel desktop+mobile, EN switch berfungsi (H1 jadi EN), navbar klik Tentang Kami dari beranda OK, 9 link tampil di 1536px, console 0 error, dev.log semua 200
+
+Stage Summary:
+- Website kini 62 URL: Fase 2 selesai — blog edukasi 6 artikel bilingual + profil perusahaan lengkap, semua dengan metadata paling lengkap + JSON-LD khusus
+- Struktur navigasi final: 9 halaman mandiri + 46 halaman layanan; silang-link beranda↔tentang-kami↔blog↔pendiri↔layanan
+- Usulan Fase 3: katalog PDF download-gate, halaman rekening-resmi/anti-penipuan mandiri, Testimoni halaman, alamat schema kebutuhan WP Rocket? → disampaikan ke user pada laporan
+- Usulan Fase 4: PWA offline, rate API blog dari CMS, multi-bahasa URL /en/, Search Console + analytics wiring

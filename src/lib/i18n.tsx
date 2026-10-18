@@ -21,6 +21,8 @@ const UI_ID = {
   navFounder: "Pendiri",
   navFaq: "FAQ",
   navContact: "Kontak",
+  navAbout: "Tentang Kami",
+  navBlog: "Blog",
   navCta: "Konsultasi Gratis",
   navTagline: "Standar Kelas Dunia",
   // Hero
@@ -260,6 +262,86 @@ const UI_ID = {
   pgContactTitle: "Konsultasi Gratis — Balasan Cepat",
   pgContactSub:
     "Kantor pusat Tasikmalaya & perwakilan Jakarta (Indonesia Stock Exchange Tower). WhatsApp resmi aktif Senin–Sabtu, 08.00–17.00 WIB.",
+  // Tentang Kami
+  pgAboutKicker: "Profil Perusahaan",
+  pgAboutTitle: "Tentang Gunara Consultant",
+  pgAboutSub:
+    "Perusahaan konsultan perizinan Indonesia dengan akar praktik konsultan ternama dunia sejak 2009 — kini melayani 38 provinsi dengan 500+ jenis perizinan dan sistem mutu ISO 9001:2015.",
+  aboutStoryKicker: "Cerita Kami",
+  aboutStoryTitle: "Dari Meja Konsultan Dunia Menuju 38 Provinsi Indonesia",
+  aboutP1:
+    "Gunara Consultant lahir dari pengalaman panjang di Mic Kinsey — perusahaan konsultan ternama dunia — yang dimulai pada tahun 2009. Lebih dari satu dekade, standar riset, disiplin metodologi, dan budaya layanan kelas internasional itu dipelajari langsung dari sumbernya, hingga menjadi fondasi DNA perusahaan.",
+  aboutP2:
+    "Pada 11 Juli 2024, visi itu dilembagakan menjadi badan usaha resmi: Gunara Consultant berdiri di Kota Tasikmalaya dengan modal dasar Rp5.000.000.000 dan pengesahan Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024). Sistem manajemen mutu kami tersertifikasi ISO 9001:2015 — konsistensi mutu pada setiap berkas klien.",
+  aboutP3:
+    "Hari ini, dengan dukungan 46 Dewan Pakar lintas bidang yang mewarisi praktik terbaik 150 tahun per bidang, kami menjadi satu pintu bagi pelaku usaha — dari UMKM hingga PMA — untuk melegalkan bisnis dengan tenang, cepat, dan 100% resmi.",
+  aboutVisionKicker: "Visi",
+  aboutVisionD:
+    "Menjadi pusat perizinan terlengkap di Asia — rumah pertama yang terpikir oleh setiap pelaku usaha ketika berbicara tentang legalitas bisnis.",
+  aboutMissionKicker: "Misi",
+  aboutMission1:
+    "Menyediakan 500+ jenis perizinan dalam satu pintu layanan dengan standar mutu internasional.",
+  aboutMission2:
+    "Menjaga integritas 100%: seluruh proses melalui jalur resmi pemerintah, tanpa jalan pintas.",
+  aboutMission3:
+    "Mendidik pasar melalui konten dan konsultasi agar Indonesia makin taat regulasi.",
+  aboutMission4:
+    "Membangun jaringan ahli daerah di seluruh 38 provinsi, termasuk provinsi pemekaran baru.",
+  aboutValuesKicker: "Nilai Perusahaan",
+  aboutValuesTitle: "Empat Nilai yang Kami Pegang",
+  aboutVal1: "Legalitas Tanpa Kompromi",
+  aboutVal1d:
+    "Kami hanya menempuh jalur resmi. Tidak ada dokumen abal-abal, tidak ada jalan pintas berisiko.",
+  aboutVal2: "Presisi Kelas Dunia",
+  aboutVal2d:
+    "Setiap berkas diperiksa dua kali sebelum masuk ke instansi — warisan disiplin Mic Kinsey.",
+  aboutVal3: "Transparansi Radikal",
+  aboutVal3d:
+    "Biaya jelas di depan, progres dilaporkan rutin, dan kontrak bergaransi tertulis.",
+  aboutVal4: "Edukasi untuk Indonesia",
+  aboutVal4d:
+    "Kami berbagi pengetahuan lewat blog, konsultasi gratis, dan edukasi publik.",
+  aboutTimelineKicker: "Perjalanan Kami",
+  aboutTimelineTitle: "Milestone yang Membentuk Hari Ini",
+  aboutM1T: "Pengalaman konsultansi dimulai di Mic Kinsey — perusahaan konsultan ternama dunia.",
+  aboutM2T: "Gunara Consultant resmi berbadan usaha: AHU-038293.AH.01.30.Tahun 2024, modal dasar Rp5 M.",
+  aboutM3T: "Kantor Perwakilan Jakarta dibuka di Indonesia Stock Exchange Tower 1, Sudirman — pusat bisnis nasional.",
+  aboutM4T: "46 layanan halaman detail penuh, 38 provinsi terjangkau, dan sistem mutu ISO 9001:2015 berjalan penuh.",
+  aboutLegalKicker: "Legalitas",
+  aboutLegalTitle: "Data Resmi Perusahaan",
+  aboutLegalHeritage: "Warisan Praktik",
+  aboutLegalFounded: "Berbadan Usaha Sejak",
+  aboutLegalAhu: "Pengesahan Kemenkumham",
+  aboutLegalCapital: "Modal Dasar",
+  aboutLegalIso: "Sistem Manajemen Mutu",
+  aboutLegalHq: "Kantor Pusat",
+  aboutLegalJkt: "Kantor Perwakilan",
+  aboutQuote:
+    "Kami tidak menjual izin — kami membangun fondasi legal di mana keberanian berbisnis tumbuh.",
+  aboutFounderLink: "Lihat Profil Pendiri",
+  aboutBlogLink: "Baca Insight Terbaru",
+  // Blog
+  pgBlogKicker: "Insight & Wawasan",
+  pgBlogTitle: "Blog Perizinan & Legalitas Bisnis",
+  pgBlogSub:
+    "Panduan praktis dari praktisi: perizinan, badan usaha, PMA, BPOM, ISO, dan strategi legalitas UMKM — ditulis oleh tim yang mengurusnya setiap hari.",
+  blogAll: "Semua",
+  blogFeatured: "Artikel Utama",
+  blogReadMore: "Baca Artikel",
+  blogMinRead: "menit baca",
+  blogArticles: "artikel",
+  blogEmpty: "Tidak ada artikel dalam kategori ini.",
+  blogRelated: "Artikel Terkait",
+  blogBack: "Kembali ke Blog",
+  artPublished: "Diterbitkan",
+  artUpdated: "Diperbarui",
+  artBy: "oleh",
+  artShare: "Bagikan",
+  artAuthorBio:
+    "Pendiri Gunara Consultant dengan pengalaman konsultansi berakar dari Mic Kinsey sejak 2009. Memimpin 46 Dewan Pakar lintas bidang untuk melegalkan bisnis di seluruh 38 provinsi Indonesia.",
+  artCtaTitle: "Butuh Bantuan Mengurus Legalitas Ini?",
+  artCtaSub:
+    "Konsultasi gratis 100% — tim kami memetakan kebutuhan perizinan Anda dan memberi estimasi biaya-waktu yang jujur.",
 };
 
 export type UIKey = keyof typeof UI_ID;
@@ -273,6 +355,8 @@ const UI_EN: Record<UIKey, string> = {
   navFounder: "Founder",
   navFaq: "FAQ",
   navContact: "Contact",
+  navAbout: "About Us",
+  navBlog: "Blog",
   navCta: "Free Consultation",
   navTagline: "World-Class Standards",
   heroBadge: "Rooted in Mic Kinsey since 2009",
@@ -498,6 +582,86 @@ const UI_EN: Record<UIKey, string> = {
   pgContactTitle: "Free Consultation — Fast Response",
   pgContactSub:
     "Tasikmalaya headquarters & Jakarta representative office (Indonesia Stock Exchange Tower). Official WhatsApp active Monday–Saturday, 08.00–17.00 WIB.",
+  // About Us
+  pgAboutKicker: "Company Profile",
+  pgAboutTitle: "About Gunara Consultant",
+  pgAboutSub:
+    "An Indonesian licensing consultancy rooted in world-renowned consulting practice since 2009 — now serving 38 provinces with 500+ license types and an ISO 9001:2015 quality system.",
+  aboutStoryKicker: "Our Story",
+  aboutStoryTitle: "From the Desks of a World-Class Consultancy to All 38 Provinces",
+  aboutP1:
+    "Gunara Consultant was born from a long journey at Mic Kinsey — a world-renowned consulting firm — that began in 2009. For over a decade, international-grade research standards, methodological discipline, and service culture were learned directly from the source, becoming the company's DNA foundation.",
+  aboutP2:
+    "On 11 July 2024, that vision was institutionalized into a legal entity: Gunara Consultant was founded in Kota Tasikmalaya with Rp5,000,000,000 authorized capital and approval from the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024). Our quality management system is ISO 9001:2015 certified — consistent quality on every client file.",
+  aboutP3:
+    "Today, backed by 46 cross-disciplinary Expert Councils inheriting 150 years of best practice per field, we are the one door for every entrepreneur — from SMEs to PMA — to legalize their business calmly, quickly, and 100% officially.",
+  aboutVisionKicker: "Vision",
+  aboutVisionD:
+    "To become the most complete licensing center in Asia — the first home every entrepreneur thinks of when it comes to business legality.",
+  aboutMissionKicker: "Mission",
+  aboutMission1:
+    "Provide 500+ license types in one service door with international quality standards.",
+  aboutMission2:
+    "Maintain 100% integrity: every process through official government channels, no shortcuts.",
+  aboutMission3:
+    "Educate the market through content and consultations so Indonesia grows more compliant.",
+  aboutMission4:
+    "Build a local expert network across all 38 provinces, including the newest split provinces.",
+  aboutValuesKicker: "Company Values",
+  aboutValuesTitle: "The Four Values We Hold",
+  aboutVal1: "Legality Without Compromise",
+  aboutVal1d:
+    "We only take official channels. No questionable documents, no risky shortcuts.",
+  aboutVal2: "World-Class Precision",
+  aboutVal2d:
+    "Every file is double-checked before entering government offices — a Mic Kinsey discipline heritage.",
+  aboutVal3: "Radical Transparency",
+  aboutVal3d:
+    "Costs clear upfront, progress reported regularly, and contracts with written guarantees.",
+  aboutVal4: "Education for Indonesia",
+  aboutVal4d:
+    "We share knowledge through our blog, free consultations, and public education.",
+  aboutTimelineKicker: "Our Journey",
+  aboutTimelineTitle: "Milestones That Shaped Today",
+  aboutM1T: "Consulting experience began at Mic Kinsey — a world-renowned consulting firm.",
+  aboutM2T: "Gunara Consultant officially became a legal entity: AHU-038293.AH.01.30.Tahun 2024, Rp5B authorized capital.",
+  aboutM3T: "Jakarta Representative Office opened at Indonesia Stock Exchange Tower 1, Sudirman — the nation's business heart.",
+  aboutM4T: "46 services with full detail pages, all 38 provinces covered, and ISO 9001:2015 quality system fully running.",
+  aboutLegalKicker: "Legality",
+  aboutLegalTitle: "Official Company Data",
+  aboutLegalHeritage: "Practice Heritage",
+  aboutLegalFounded: "Legal Entity Since",
+  aboutLegalAhu: "Ministry of Law Approval",
+  aboutLegalCapital: "Authorized Capital",
+  aboutLegalIso: "Quality Management System",
+  aboutLegalHq: "Head Office",
+  aboutLegalJkt: "Representative Office",
+  aboutQuote:
+    "We don't sell licenses — we build the legal foundation where business courage grows.",
+  aboutFounderLink: "View Founder Profile",
+  aboutBlogLink: "Read Latest Insights",
+  // Blog
+  pgBlogKicker: "Insights & Knowledge",
+  pgBlogTitle: "Licensing & Business Legality Blog",
+  pgBlogSub:
+    "Practical guides from practitioners: licensing, business entities, PMA, BPOM, ISO, and SME legality strategy — written by the team that handles them every day.",
+  blogAll: "All",
+  blogFeatured: "Featured Article",
+  blogReadMore: "Read Article",
+  blogMinRead: "min read",
+  blogArticles: "articles",
+  blogEmpty: "No articles in this category.",
+  blogRelated: "Related Articles",
+  blogBack: "Back to Blog",
+  artPublished: "Published",
+  artUpdated: "Updated",
+  artBy: "by",
+  artShare: "Share",
+  artAuthorBio:
+    "Founder of Gunara Consultant with consulting experience rooted in Mic Kinsey since 2009. Leads 46 cross-disciplinary Expert Councils to legalize businesses across all 38 provinces of Indonesia.",
+  artCtaTitle: "Need Help With This Legality Process?",
+  artCtaSub:
+    "100% free consultation — our team maps your licensing needs and gives honest cost–time estimates.",
 };
 
 const DICT: Record<Lang, Record<UIKey, string>> = { id: UI_ID, en: UI_EN };

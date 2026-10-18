@@ -54,6 +54,8 @@ export function Footer() {
             <nav aria-label="Tautan cepat" className="mt-6">
               <ul className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold">
                 {[
+                  { k: "navAbout" as const, h: "/tentang-kami" },
+                  { k: "navBlog" as const, h: "/blog" },
                   { k: "navWhy" as const, h: "/keunggulan" },
                   { k: "navProcess" as const, h: "/proses" },
                   { k: "navProvinces" as const, h: "/provinsi" },

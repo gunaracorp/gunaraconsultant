@@ -11,10 +11,12 @@ import { BRAND, waLink } from "@/lib/brand";
 
 const LINKS = [
   { key: "navServices" as const, href: "/layanan" },
+  { key: "navAbout" as const, href: "/tentang-kami" },
+  { key: "navBlog" as const, href: "/blog" },
   { key: "navWhy" as const, href: "/keunggulan" },
   { key: "navProcess" as const, href: "/proses" },
   { key: "navProvinces" as const, href: "/provinsi" },
-  { key: "navFounder" as const, href: "/pendiri" },
+  { key: "navFounder" as const, href: "/pendiri", wideOnly: true },
   { key: "navFaq" as const, href: "/faq" },
   { key: "navContact" as const, href: "/kontak" },
 ];
@@ -62,12 +64,15 @@ export function Navbar() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-1 xl:flex">
+        <ul className="hidden items-center gap-0.5 xl:flex">
           {LINKS.map((l) => (
-            <li key={l.key}>
+            <li
+              key={l.key}
+              className={"wideOnly" in l && l.wideOnly ? "hidden 2xl:list-item" : undefined}
+            >
               <a
                 href={l.href}
-                className="rounded-md px-3 py-2 text-[13px] font-semibold text-cream/85 transition-colors hover:bg-gold/10 hover:text-gold-soft"
+                className="rounded-md px-2.5 py-2 text-[13px] font-semibold whitespace-nowrap text-cream/85 transition-colors hover:bg-gold/10 hover:text-gold-soft"
               >
                 {t(l.key)}
               </a>
