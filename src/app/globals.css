@@ -273,6 +273,65 @@
   animation: spin-slow 22s linear infinite;
 }
 
+/* ---------- Floating WhatsApp ---------- */
+@keyframes wa-enter {
+  from {
+    transform: translateY(28px) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.wa-enter {
+  animation: wa-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-enter {
+    animation: none;
+  }
+}
+@keyframes wa-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+.wa-ring {
+  animation: wa-ring 2.2s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-ring {
+    animation: none;
+    opacity: 0;
+  }
+}
+.dot-wa {
+  position: relative;
+}
+.dot-wa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #25d366;
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot-wa::before {
+    animation: none;
+  }
+}
+
 /* ---------- Decorative backgrounds ---------- */
 .section-deep {
   background:

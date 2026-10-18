@@ -208,6 +208,10 @@ const UI_ID = {
   spGuarantee: "Garansi proses ulang",
   spOfficial: "Jalur 100% resmi",
   spSupport: "Progres dilaporkan rutin",
+  // Floating WhatsApp
+  waFloatAria: "Chat WhatsApp resmi Gunara Consultant",
+  waFloatLabel: "Chat WhatsApp",
+  waFloatSub: "Respon Cepat • Resmi",
   // Language
   langLabel: "Bahasa",
 };
@@ -397,6 +401,10 @@ const UI_EN: Record<UIKey, string> = {
   spGuarantee: "Reprocess guarantee",
   spOfficial: "100% official channel",
   spSupport: "Progress reported regularly",
+  // Floating WhatsApp
+  waFloatAria: "Official Gunara Consultant WhatsApp chat",
+  waFloatLabel: "Chat on WhatsApp",
+  waFloatSub: "Fast Response • Official",
   langLabel: "Language",
 };
 

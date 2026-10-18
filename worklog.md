@@ -20,3 +20,22 @@ Work Log:
 Stage Summary:
 - Website Gunara Consultant bangun ulang total dan lebih lengkap dari sebelumnya: 46 halaman layanan dinamis full-SEO, 38 provinsi (revisi terbaru), brand murni "Gunara Consultant" tanpa PT Top Konsultan Internasional, rekening resmi BCA 0860742187 a.n. Gugun Gunara tampil menonjol + anti-fraud, foto pendiri terpasang, i18n ID/EN, tema Emerald Royal + Gold, animasi penuh, lint 0 error, E2E browser bersih.
 - Catatan: nomor WA +62 812-8607-4218 adalah placeholder yang mudah diganti di src/lib/brand.ts (satu tempat). Katalog PDF (Task 13-b) belum dibuat — menunggu konfirmasi karena kini datanya bisa diekspor dari 46 layanan.
+---
+Task ID: 14
+Agent: Main Agent (Z.ai Code)
+Task: Pasang nomor WhatsApp resmi owner (081316516524 / +6281316516524) ke seluruh website Gunara Consultant + Floating WhatsApp Button
+
+Work Log:
+- Update src/lib/brand.ts: waNumber "6281286074218" → "6281316516524", waDisplay "+62 812-8607-4218" → "+62 813-1651-6524" (sumber tunggal, mengalir otomatis ke contact.tsx, footer.tsx, official-account.tsx, navbar, JSON-LD)
+- Tambah 3 key i18n simetris UI_ID/UI_EN: waFloatAria, waFloatLabel, waFloatSub
+- Buat src/components/floating-whatsapp.tsx: tombol bulat hijau WhatsApp resmi (#25d366 gradient) + SVG logo WA inline, pulse ring, kartu label "Chat WhatsApp +62 813-1651-6524" dengan dot online (desktop md+), icon-only di mobile, target sentuh 56px, print:hidden
+- Tambah animasi globals.css: wa-enter (entrance slide-up 0.7s delay), wa-ring (pulse ring 2.2s), dot-wa, semua dengan prefers-reduced-motion fallback
+- Mount <FloatingWhatsApp /> di src/app/layout.tsx dalam LanguageProvider → muncul di / dan semua /layanan/[slug]
+- Verifikasi: bun run lint 0 error; SSR curl = nomor baru ada, nomor lama 0, JSON-LD telephone "+6281316516524" (Organization + ProfessionalService); halaman layanan juga membawa floating button
+- E2E agent-browser: desktop 1280px (hero, kontak, official account, testimoni) + mobile 375px (hero, halaman Pendirian PT) — floating button terlihat konsisten, href wa.me/6281316516524?text=... benar, 0 console error, SSR 100% bahasa Indonesia (0 English string)
+
+Stage Summary:
+- Nomor WhatsApp resmi tunggal website: +62 813-1651-6524 (081316516524) — terpasang di seluruh halaman via brand.ts terpusat
+- Floating WhatsApp CTA premium tampil di semua halaman dengan brand styling + aksesibilitas penuh
+- BCA 0860742187 a.n. Gugun Gunara tidak tersentuh (tetap akun resmi tunggal)
+- Tidak ada perubahan route baru; tidak perlu db:push

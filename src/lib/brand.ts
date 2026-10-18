@@ -12,8 +12,8 @@ export const BRAND = {
   address:
     "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II, Kota Tasikmalaya, Jawa Barat 46115",
   email: "halo@gunaraconsultant.com",
-  waNumber: "6281286074218",
-  waDisplay: "+62 812-8607-4218",
+  waNumber: "6281316516524",
+  waDisplay: "+62 813-1651-6524",
   ahu: "AHU-038293.AH.01.30.Tahun 2024",
   capital: "Rp5.000.000.000",
   bank: {
