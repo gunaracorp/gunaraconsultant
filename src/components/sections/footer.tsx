@@ -50,6 +50,28 @@ export function Footer() {
                 {BRAND.heritage} • Since {BRAND.since}
               </span>
             </div>
+            {/* Tautan cepat halaman mandiri */}
+            <nav aria-label="Tautan cepat" className="mt-6">
+              <ul className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold">
+                {[
+                  { k: "navWhy" as const, h: "/keunggulan" },
+                  { k: "navProcess" as const, h: "/proses" },
+                  { k: "navProvinces" as const, h: "/provinsi" },
+                  { k: "navFounder" as const, h: "/pendiri" },
+                  { k: "navFaq" as const, h: "/faq" },
+                  { k: "navContact" as const, h: "/kontak" },
+                ].map((l) => (
+                  <li key={l.k}>
+                    <Link
+                      href={l.h}
+                      className="text-cream/60 transition-colors hover:text-gold-soft"
+                    >
+                      {t(l.k)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
           {/* Popular services */}
@@ -84,7 +106,7 @@ export function Footer() {
               {CATEGORIES.map((c) => (
                 <li key={c.id}>
                   <a
-                    href="/#layanan"
+                    href="/layanan"
                     className="text-sm text-cream/70 transition-colors hover:text-gold-soft"
                   >
                     {c.nameId}

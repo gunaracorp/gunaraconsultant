@@ -123,3 +123,31 @@ Stage Summary:
 - Logo header/footer kini INLINE SVG (bukan file gambar) — mustahil lagi muncul Z dari cache manapun pada SEMUA reload berikutnya
 - Tersisa satu langkah di sisi user: reload tab preview (Ctrl+Shift+R) karena tab-nya memegang HTML era lama sejak sebelum logo dipasang
 - Arsitektur identitas final: favicon.ico multi-size seal + icon.svg + apple-icon + manifest PWA + inline SVG header/footer + logo.svg/horizontal/mono untuk dokumen & crawler
+
+---
+Task ID: 19
+Agent: Main Agent (Z.ai Code)
+Task: Semua section beranda diangkat jadi halaman mandiri dengan metadata terlengkap + roadmap Fase 1-4
+
+Work Log:
+- Mesin SEO baru src/lib/seo.ts: pageMetadata() (title+desc+keywords+canonical+hreflang id-ID/en+OG penuh+Twitter card+robots googleBot), breadcrumbJsonLd(), webPageJsonLd() — satu panggilan = metadata maksimal
+- Komponen baru: page-hero.tsx (breadcrumb visual + kicker + H1 + sub + gold-divider, props UIKey) — semua halaman baru memakainya
+- i18n: 21 key baru pgLayanan*/pgWhy*/pgProc*/pgProv*/pgFounder*/pgFaq*/pgContact* simetris ID+EN
+- 7 halaman mandiri dibuat (semua 200 OK):
+  • /layanan (priority 0.9) — CollectionPage + ItemList 46 layanan + breadcrumb
+  • /keunggulan — WhyUs + CouncilBand + Testimonials, WebPage + breadcrumb
+  • /proses — HowTo 5 langkah (HowToStep lengkap) + WebPage + breadcrumb
+  • /provinsi — ItemList 38 provinsi (AdministrativeArea) + WebPage + breadcrumb
+  • /pendiri — ProfilePage + Person (Gugun Gunara, image, worksFor, knowsAbout) + breadcrumb
+  • /faq — FAQPage 8 Question (dari src/data/faqs.ts) + breadcrumb
+  • /kontak — ContactPage + OfficialAccount (rekening resmi) + breadcrumb
+- Refactor: FAQS dipindah ke src/data/faqs.ts (modul murni) — mengatasi 500 (client-reference tidak bisa .map() di server component)
+- Navbar LINKS: 7 anchor /#x → halaman nyata /layanan /keunggulan /proses /provinsi /pendiri /faq /kontak
+- Footer: kategori → /layanan; kolom brand + 6 tautan cepat halaman baru
+- Sitemap: 54 URL (1 beranda + 7 halaman + 46 layanan), /layanan priority 0.9
+- Verifikasi: lint 0 error; 7/7 halaman 200 + title unik; /faq 8 Question JSON-LD; breadcrumb visual ada; sitemap 54 loc; E2E agent-browser /layanan /pendiri /kontak — hero premium konsisten, Golden Seal navbar, floating WA, href navbar 7 halaman benar, 0 console error
+
+Stage Summary:
+- Website kini 54 URL terindeks penuh: beranda + 7 halaman mandiri + 46 halaman layanan — struktur silang SEO lengkap
+- Semua halaman baru = canonical + hreflang + OG + Twitter + JSON-LD khusus + breadcrumb visual
+- FASE 1 selesai; Fase 2 (blog, tentang-kami, rekening-resmi, katalog PDF) diusulkan berikutnya

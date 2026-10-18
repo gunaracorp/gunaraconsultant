@@ -10,13 +10,13 @@ import { useLang } from "@/lib/i18n";
 import { BRAND, waLink } from "@/lib/brand";
 
 const LINKS = [
-  { key: "navServices" as const, href: "/#layanan" },
-  { key: "navWhy" as const, href: "/#keunggulan" },
-  { key: "navProcess" as const, href: "/#proses" },
-  { key: "navProvinces" as const, href: "/#provinsi" },
-  { key: "navFounder" as const, href: "/#pendiri" },
-  { key: "navFaq" as const, href: "/#faq" },
-  { key: "navContact" as const, href: "/#kontak" },
+  { key: "navServices" as const, href: "/layanan" },
+  { key: "navWhy" as const, href: "/keunggulan" },
+  { key: "navProcess" as const, href: "/proses" },
+  { key: "navProvinces" as const, href: "/provinsi" },
+  { key: "navFounder" as const, href: "/pendiri" },
+  { key: "navFaq" as const, href: "/faq" },
+  { key: "navContact" as const, href: "/kontak" },
 ];
 
 export function Navbar() {

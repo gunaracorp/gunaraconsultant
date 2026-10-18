@@ -231,6 +231,35 @@ const UI_ID = {
   cnl4L: "Standar Mutu Terjamin",
   // Language
   langLabel: "Bahasa",
+  // Halaman mandiri (PageHero)
+  pgLayananKicker: "Pusat Perizinan Terlengkap",
+  pgLayananTitle: "46 Layanan Perizinan & Legalitas Usaha",
+  pgLayananSub:
+    "Dari NIB hingga AMDAL — seluruh kebutuhan legalitas bisnis Indonesia ditangani satu pintu, tersertifikasi ISO 9001:2015, dengan estimasi biaya & waktu yang transparan.",
+  pgWhyKicker: "Keunggulan Kompetitif",
+  pgWhyTitle: "Mengapa Bisnis Memilih Gunara Consultant",
+  pgWhySub:
+    "Warisan praktik terbaik konsultan kelas dunia sejak 2009, 46 Dewan Pakar lintas bidang, dan garansi tertulis di setiap kontrak.",
+  pgProcKicker: "Alur Kerja Baku",
+  pgProcTitle: "5 Langkah Menuju Legalitas Usaha Anda",
+  pgProcSub:
+    "Proses baku tersertifikasi ISO 9001:2015 — transparan dari konsultasi pertama sampai dokumen di tangan Anda.",
+  pgProvKicker: "Cakupan Nasional",
+  pgProvTitle: "Jangkauan Layanan 38 Provinsi Indonesia",
+  pgProvSub:
+    "Dari Sabang sampai Jayapura — tim ahli lokal kami memahami regulasi khusus setiap daerah, online maupun pendampingan fisik.",
+  pgFounderKicker: "Profil Pemimpin",
+  pgFounderTitle: "Gugun Gunara — Founder & CEO",
+  pgFounderSub:
+    "Di balik Gunara Consultant: pengalaman 15+ tahun berakar dari praktik konsultan ternama dunia, dengan visi pusat perizinan terlengkap di Asia.",
+  pgFaqKicker: "Pusat Bantuan",
+  pgFaqTitle: "Pertanyaan yang Sering Diajukan",
+  pgFaqSub:
+    "Jawaban jujur atas 8 pertanyaan terpenting tentang legalitas, pembayaran, garansi, dan cakupan layanan kami.",
+  pgContactKicker: "Hubungi Kami",
+  pgContactTitle: "Konsultasi Gratis — Balasan Cepat",
+  pgContactSub:
+    "Kantor pusat Tasikmalaya & perwakilan Jakarta (Indonesia Stock Exchange Tower). WhatsApp resmi aktif Senin–Sabtu, 08.00–17.00 WIB.",
 };
 
 export type UIKey = keyof typeof UI_ID;
@@ -440,6 +469,35 @@ const UI_EN: Record<UIKey, string> = {
   cnl4V: "ISO 9001",
   cnl4L: "Certified Quality Standard",
   langLabel: "Language",
+  // Dedicated pages (PageHero)
+  pgLayananKicker: "The Most Complete Licensing Center",
+  pgLayananTitle: "46 Business Licensing & Legality Services",
+  pgLayananSub:
+    "From NIB to AMDAL — every Indonesian business legality need handled through one door, ISO 9001:2015 certified, with transparent cost & time estimates.",
+  pgWhyKicker: "Competitive Edge",
+  pgWhyTitle: "Why Businesses Choose Gunara Consultant",
+  pgWhySub:
+    "World-class consulting best practice heritage since 2009, 46 cross-disciplinary Expert Councils, and written guarantees in every contract.",
+  pgProcKicker: "Standard Workflow",
+  pgProcTitle: "5 Steps to Your Business Legality",
+  pgProcSub:
+    "ISO 9001:2015 certified process — transparent from first consultation until documents are in your hands.",
+  pgProvKicker: "National Coverage",
+  pgProvTitle: "Serving All 38 Provinces of Indonesia",
+  pgProvSub:
+    "From Sabang to Jayapura — our local expert teams understand each region's specific regulations, online or with on-site assistance.",
+  pgFounderKicker: "Leadership Profile",
+  pgFounderTitle: "Gugun Gunara — Founder & CEO",
+  pgFounderSub:
+    "Behind Gunara Consultant: 15+ years of experience rooted in world-renowned consulting practice, with the vision of Asia's most complete licensing center.",
+  pgFaqKicker: "Help Center",
+  pgFaqTitle: "Frequently Asked Questions",
+  pgFaqSub:
+    "Honest answers to the 8 most important questions about legality, payment, guarantees, and our service coverage.",
+  pgContactKicker: "Contact Us",
+  pgContactTitle: "Free Consultation — Fast Response",
+  pgContactSub:
+    "Tasikmalaya headquarters & Jakarta representative office (Indonesia Stock Exchange Tower). Official WhatsApp active Monday–Saturday, 08.00–17.00 WIB.",
 };
 
 const DICT: Record<Lang, Record<UIKey, string>> = { id: UI_ID, en: UI_EN };
