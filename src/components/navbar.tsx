@@ -46,7 +46,7 @@ export function Navbar() {
         <Link href="/" className="group flex items-center gap-3" aria-label="Gunara Consultant — Beranda">
           <span className="relative h-11 w-11 shrink-0 transition-transform duration-500 group-hover:rotate-[8deg]">
             <Image
-              src="/logo.svg"
+              src="/logo.svg?v=seal2"
               alt="Logo Gunara Consultant"
               width={44}
               height={44}

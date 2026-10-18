@@ -4,8 +4,8 @@ import { useState } from "react";
 import {
   Building2,
   Globe2,
+  Landmark,
   Mail,
-  MapPin,
   MessageCircle,
   PhoneCall,
   Send,
@@ -54,16 +54,37 @@ export function Contact() {
           {/* Info cards */}
           <div className="space-y-5">
             <Reveal>
-              <div className="card-lux rounded-3xl p-6">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-gold-soft">
-                  <MapPin className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <h3 className="mt-4 font-display text-lg font-bold text-ink">
-                  {t("conAddress")}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {BRAND.address}
-                </p>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="card-lux rounded-3xl p-6">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-gold-soft">
+                    <Building2 className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-4 font-display text-base font-bold text-ink">
+                    {t("conAddrHq")}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {BRAND.address}
+                  </p>
+                </div>
+                <div className="card-lux relative overflow-hidden rounded-3xl border-gold/50 p-6">
+                  <div
+                    className="pattern-dots pointer-events-none absolute inset-0 opacity-60"
+                    aria-hidden="true"
+                  />
+                  <span className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gold text-deep shadow-lg shadow-gold/30">
+                    <Landmark className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <h3 className="relative mt-4 font-display text-base font-bold text-ink">
+                    {t("conAddrJkt")}
+                  </h3>
+                  <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {BRAND.addressJkt}
+                  </p>
+                  <span className="relative mt-3 inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase">
+                    <Landmark className="h-3 w-3" aria-hidden="true" />
+                    Indonesia Stock Exchange
+                  </span>
+                </div>
               </div>
             </Reveal>
 

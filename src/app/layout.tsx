@@ -128,14 +128,26 @@ const orgJsonLd = {
     name: "Gugun Gunara",
     jobTitle: "Founder & CEO",
   },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II",
-    addressLocality: "Kota Tasikmalaya",
-    addressRegion: "Jawa Barat",
-    postalCode: "46115",
-    addressCountry: "ID",
-  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      name: "Kantor Pusat Tasikmalaya",
+      streetAddress: "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II",
+      addressLocality: "Kota Tasikmalaya",
+      addressRegion: "Jawa Barat",
+      postalCode: "46115",
+      addressCountry: "ID",
+    },
+    {
+      "@type": "PostalAddress",
+      name: "Kantor Perwakilan Jakarta",
+      streetAddress:
+        "Indonesia Stock Exchange Tower 1 Level 3, Unit 304, Jl. Jendral Sudirman Kav 52-53, Senayan, Kebayoran Baru",
+      addressLocality: "Jakarta Selatan",
+      addressRegion: "DKI Jakarta",
+      addressCountry: "ID",
+    },
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: `+${BRAND.waNumber}`,
@@ -190,14 +202,26 @@ const localBusinessJsonLd = {
   url: BRAND.siteUrl,
   telephone: `+${BRAND.waNumber}`,
   priceRange: "Rp500.000 - Rp150.000.000",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II",
-    addressLocality: "Kota Tasikmalaya",
-    addressRegion: "Jawa Barat",
-    postalCode: "46115",
-    addressCountry: "ID",
-  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      name: "Kantor Pusat Tasikmalaya",
+      streetAddress: "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II",
+      addressLocality: "Kota Tasikmalaya",
+      addressRegion: "Jawa Barat",
+      postalCode: "46115",
+      addressCountry: "ID",
+    },
+    {
+      "@type": "PostalAddress",
+      name: "Kantor Perwakilan Jakarta",
+      streetAddress:
+        "Indonesia Stock Exchange Tower 1 Level 3, Unit 304, Jl. Jendral Sudirman Kav 52-53, Senayan, Kebayoran Baru",
+      addressLocality: "Jakarta Selatan",
+      addressRegion: "DKI Jakarta",
+      addressCountry: "ID",
+    },
+  ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

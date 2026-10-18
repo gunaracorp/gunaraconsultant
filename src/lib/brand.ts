@@ -11,6 +11,8 @@ export const BRAND = {
   groupSite: "pusatperizinan.com",
   address:
     "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II, Kota Tasikmalaya, Jawa Barat 46115",
+  addressJkt:
+    "Indonesia Stock Exchange Tower 1 Level 3, Unit 304, Jl. Jendral Sudirman Kav 52-53, Desa/Kelurahan Senayan, Kec. Kebayoran Baru, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta",
   email: "halo@gunaraconsultant.com",
   waNumber: "6281316516524",
   waDisplay: "+62 813-1651-6524",

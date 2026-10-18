@@ -63,3 +63,24 @@ Stage Summary:
 - Identitas visual baru kelas dunia "The Golden Seal of Gunara" konsisten di navbar/favicon/PWA/dokumen/cetak
 - SEO technical premium: 4 JSON-LD node (Organization, Brand, WebSite, ProfessionalService+OfferCatalog 46 layanan), manifest PWA, robots diperkaya
 - Narasi brand "46 Dewan Pakar Lintas Bidang • 6.900 Tahun Pengalaman Gabungan" hidup di marquee + CouncilBand section (i18n ID/EN simetris)
+---
+Task ID: 16
+Agent: Main Agent (Z.ai Code)
+Task: Tambah alamat Kantor Perwakilan Jakarta (IDX Tower) + eliminasi logo lama//favicon resmi
+
+Work Log:
+- Diagnosa "logo Z": tidak ada file Z di repo — sumbernya cache browser template lama + dev badge Next.js
+- Generate favicon.ico asli multi-size (48/32/16) via png-to-ico dari seal baru → src/app/favicon.ico (Next serve 200 image/x-icon — menimpa cache Z di semua browser)
+- next.config.ts: devIndicators: false → dev server restart otomatis, badge dev hilang
+- brand.ts: tambah addressJkt (teks lengkap sesuai input user: Indonesia Stock Exchange Tower 1 Level 3, Unit 304, Jl. Jendral Sudirman Kav 52-53, Senayan, Kebayoran Baru, Jakarta Selatan, DKI Jakarta)
+- i18n: 2 key baru simetris conAddrHq/conAddrJkt (ID+EN)
+- contact.tsx: kartu alamat tunggal → grid 2 kartu (Kantor Pusat Tasikmalaya + Kantor Perwakilan Jakarta dengan ikon Landmark emas + badge "Indonesia Stock Exchange" + pattern-dots); hapus MapPin unused import
+- footer.tsx: dua entri alamat berlabel + logo cache-bust ?v=seal2
+- navbar.tsx: logo cache-bust ?v=seal2
+- layout.tsx JSON-LD: address Organization & ProfessionalService → array 2 PostalAddress (Tasikmalaya + Jakarta)
+- Verifikasi: lint 0 error; SSR = Jakarta tampil, "Kantor Perwakilan Jakarta" 2x di JSON-LD, favicon.ico 200 image/x-icon, logo.svg?v=seal2 terefereksi; agent-browser desktop+mobile — kartu Jakarta, footer 2 alamat, badge dev hilang; 0 console error
+
+Stage Summary:
+- Dua kantor resmi tampil di contact + footer + JSON-LD (SEO lokal Jakarta Selatan!)
+- favicon.ico resmi seal baru menimpa semua cache Z; dev badge dimatikan
+- Cache-busting ?v=seal2 memastikan semua browser memuat seal terbaru

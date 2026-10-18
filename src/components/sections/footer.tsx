@@ -30,11 +30,12 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3" aria-label="Gunara Consultant">
               <Image
-                src="/logo.svg"
+                src="/logo.svg?v=seal2"
                 alt="Logo Gunara Consultant"
                 width={48}
                 height={48}
                 className="h-12 w-12"
+                priority
               />
               <span className="font-display text-lg font-bold tracking-[0.12em]">
                 GUNARA <span className="text-gradient-gold">CONSULTANT</span>
@@ -104,7 +105,21 @@ export function Footer() {
             <ul className="mt-5 space-y-4 text-sm text-cream/70">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold" aria-hidden="true" />
-                <span>{BRAND.address}</span>
+                <span>
+                  <strong className="block text-[10px] font-bold tracking-[0.18em] text-gold-soft/90 uppercase">
+                    {t("conAddrHq")}
+                  </strong>
+                  <span className="mt-1 block">{BRAND.address}</span>
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <Landmark className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold" aria-hidden="true" />
+                <span>
+                  <strong className="block text-[10px] font-bold tracking-[0.18em] text-gold-soft/90 uppercase">
+                    {t("conAddrJkt")}
+                  </strong>
+                  <span className="mt-1 block">{BRAND.addressJkt}</span>
+                </span>
               </li>
               <li className="flex gap-3">
                 <PhoneCall className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold" aria-hidden="true" />
