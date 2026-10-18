@@ -1,0 +1,22 @@
+# Gunara Consultant — Worklog
+
+---
+Task ID: 14 (rebuild-full)
+Agent: Z.ai Code (main)
+Task: Pemulihan total website Gunara Consultant setelah project reset ke scaffold + implementasi seluruh instruksi user terbaru (38 provinsi, halaman per-layanan full SEO, hapus PT Top Konsultan Internasional, rekening resmi BCA, foto pendiri, professional polish)
+
+Work Log:
+- Deteksi: seluruh kode sebelumnya hilang (project reset ke scaffold Z.ai; git hanya "Initial commit"; worklog lama ikut terhapus). Aset selamat: upload/gugun-gunara-boss-darling.jpeg, sertifikat AHU PDF, pernyataan pendirian PDF.
+- Pemulihan aset: foto pendiri → public/images/founder.jpg; generate hero-bg.png & og-bg.png via z-ai CLI (1344x768, emerald-gold); komposisi og-image.jpg 1200x630 via sharp + SVG overlay teks brand.
+- Design system baru (globals.css): token Emerald Royal #0a4f38 / Deep #04231a / Gold #d4af37, utilities (text-gradient-gold, card-lux, btn-shine, section-deep, pattern-dots/lines, ornament-frame), animasi (glow-pulse, float-y, marquee-x, shimmer, pulse-ring, spin-slow), scrollbar custom. Font: Plus Jakarta Sans + Playfair Display via next/font.
+- lib/brand.ts: konstanta brand (BCA 0860742187 a.n. Gugun Gunara, WA, alamat, AHU-038293.AH.01.30.Tahun 2024 TANPA nama PT, tagline "Pusat Perizinan Terlengkap di Asia", heritage Mic Kinsey sejak 2009).
+- lib/i18n.tsx: LanguageProvider + useLang, kamus UI_ID/UI_EN ~150 key simetris, persist localStorage "gunara-lang" via useSyncExternalStore (SSR 100% Indonesia, hydration-safe).
+- Data: provinces.ts 38 provinsi (termasuk 4 pemekaran Papua: Papua Selatan, Papua Tengah, Papua Pegunungan, Papua Barat Daya; grup per pulau 10+6+3+5+6+8=38). services: 11 kategori × total 46 layanan lengkap (name/short/desc/benefits/req/steps ID+EN, duration, priceFrom, keywords SEO, FAQ 2 per layanan) di services-types.ts + services-a.ts (22) + services-b.ts (24) + aggregator services.ts dengan validator.
+- Komponen: animations (Reveal/Stagger/StaggerItem/CountUp/SectionHeading via framer-motion), language-switcher, navbar (sticky + scroll effect + menu mobile custom tanpa Radix), sections: hero, trust-marquee, why-us, services-catalog (filter kategori + search live), process, provinces, founder (foto asli + 4 prinsip + kutipan), official-account (BCA besar + copy button + peringatan anti-penipuan), testimonials (6), faq (8, details/summary native), cta-banner, contact (form → wa.me, select native), footer (kolom layanan/kategori/kontak + strip 38 provinsi + legal).
+- SEO: layout.tsx metadata penuh (metadataBase gunaraconsultant.com, title template, keywords, canonical, OG/Twitter og-image.jpg, robots), JSON-LD Organization + WebSite(SearchAction) + ProfessionalService (rating 4.9). Halaman /layanan/[slug]: generateStaticParams 46 slug, generateMetadata per layanan (title/desc/keywords/canonical/OG/Twitter), 4 JSON-LD (Service + areaServed 38 provinsi, BreadcrumbList, FAQPage, HowTo). sitemap.ts 47 URL. robots.txt. icon.svg = logo.
+- BUG FIX: (1) ikon `Cart` tidak ada di lucide-react → ShoppingCart; (2) cache CSS Turbopack basi → rm -rf .next + restart dev; (3) .pattern-* menimpa background-image .section-deep → overlay div terpisah; (4) hydration mismatch aria-controls radix ID (Sheet/Accordion/Select) → ganti ke menu mobile custom + details/summary native + select native; (5) i18n setState-in-effect lint error → useSyncExternalStore.
+- Verifikasi: bun run lint 0 error; SSR grep: BCA 0860742187 ×7, Gugun Gunara ×14, 38 Provinsi ×9, 4 provinsi Papua ✓, "Top Konsultan Internasional" = 0, kebocoran EN = 0; sitemap 47 loc; halaman layanan 200 + 4 JSON-LD; slug tak dikenal 404; agent-browser E2E desktop (1280) & mobile (375): hero, marquee, katalog + filter + salin rekening (Tersalin!), toggle EN/ID + localStorage, halaman detail layanan, foto pendiri, menu mobile, footer; console bersih, error page kosong, badge issue Next.js CLEAN.
+
+Stage Summary:
+- Website Gunara Consultant bangun ulang total dan lebih lengkap dari sebelumnya: 46 halaman layanan dinamis full-SEO, 38 provinsi (revisi terbaru), brand murni "Gunara Consultant" tanpa PT Top Konsultan Internasional, rekening resmi BCA 0860742187 a.n. Gugun Gunara tampil menonjol + anti-fraud, foto pendiri terpasang, i18n ID/EN, tema Emerald Royal + Gold, animasi penuh, lint 0 error, E2E browser bersih.
+- Catatan: nomor WA +62 812-8607-4218 adalah placeholder yang mudah diganti di src/lib/brand.ts (satu tempat). Katalog PDF (Task 13-b) belum dibuat — menunggu konfirmasi karena kini datanya bisa diekspor dari 46 layanan.
