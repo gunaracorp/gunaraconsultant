@@ -84,3 +84,24 @@ Stage Summary:
 - Dua kantor resmi tampil di contact + footer + JSON-LD (SEO lokal Jakarta Selatan!)
 - favicon.ico resmi seal baru menimpa semua cache Z; dev badge dimatikan
 - Cache-busting ?v=seal2 memastikan semua browser memuat seal terbaru
+
+---
+Task ID: 17
+Agent: Main Agent (Z.ai Code)
+Task: Forensik & eliminasi final "logo chat.z.ai" — replace total dengan Golden Seal logo G Consultant + pavicon resmi (keluhan user berulang)
+
+Work Log:
+- Forensik: worklog Task 16 mengklaim favicon.ico sudah seal — TIDAK BENAR. Bukti: parser ICO manual menunjukkan entri lama berformat BMP-lawas (bukan PNG), hash URL served `favicon.ad736ee8` tidak pernah berubah → src/app/favicon.ico masih ICO bawaan template Z.ai (itulah "logo chat.z.ai" yang dilihat user di tab browser)
+- Rebuild total src/app/favicon.ico dari nol: assembler ICO buatan sendiri (header + 4 direktori + payload PNG), sumber src/app/icon.svg (Golden Seal) di-render sharp density 300 pada 16/24/32/48px → 7.574 byte, 4 entri PNG-valid
+- Verifikasi round-trip: parse ulang file disk (4× PNG-OK), fetch http://localhost:3000/favicon.ico → 200, 7.574B, byte-identical dengan disk, ekstrak entri 48px → render 128px → visual = Golden Seal G shield emerald-gold
+- Cache-busting otomatis terbukti: hash URL di <head> berubah `favicon.ad736ee8` → `favicon.d6f2661d` (browser memaksa ambil file baru, cache Z lama mati)
+- Audit menyeluruh referensi logo: navbar.tsx & footer.tsx = /logo.svg?v=seal2 (seal), JSON-LD = /logo.svg + /icons/icon-512.png, manifest = icon-192/512, apple-icon.png (visual OK) — grep z.ai|zai|ZLogo|z-logo = 0 kemunculan di src
+- Visual aset via render sharp + Read: public/logo.svg & src/app/icon.svg = Golden Seal terkonfirmasi
+- E2E agent-browser: desktop 1280 (header seal + wordmark GUNARA CONSULTANT, floating WA +62 813-1651-6524) & mobile 375 (seal tampil, layout rapi) — DOM link icon: favicon.d6f2661d / icon.svg / apple-icon; console hanya [HMR] + React DevTools info, 0 error
+- bun run lint: 0 error
+
+Stage Summary:
+- "Logo chat.z.ai" akhirnya benar-benar mati: favicon.ico kini Golden Seal G Consultant asli multi-size (16/24/32/48), disajikan server byte-identical, hash baru mematahkan semua cache browser
+- 100% aset identitas = The Golden Seal of Gunara (favicon.ico, icon.svg, apple-icon, logo.svg, logo-horizontal, logo-mono, PWA 192/512, JSON-LD) — nol jejak Z
+- Alamat Kantor Perwakilan Jakarta (IDX Tower) terverifikasi live di SSR: 2× JSON-LD PostalAddress + kartu kontak + 4× "Kantor Perwakilan Jakarta"
+- Catatan user: jika masih tampak huruf Z setelah ini, itu UI chrome platform preview (di luar kode website) ATAU cache tab browser lama — cukup tutup-buka tab
