@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { BrandSeal } from "@/components/brand-seal";
 import { BadgeCheck, Landmark, Mail, MapPin, PhoneCall } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { BRAND, waLink } from "@/lib/brand";
@@ -29,13 +29,10 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-3" aria-label="Gunara Consultant">
-              <Image
-                src="/logo.svg?v=seal2"
-                alt="Logo Gunara Consultant"
-                width={48}
-                height={48}
+              <BrandSeal
+                idPrefix="gs-foot"
+                title="Logo Gunara Consultant"
                 className="h-12 w-12"
-                priority
               />
               <span className="font-display text-lg font-bold tracking-[0.12em]">
                 GUNARA <span className="text-gradient-gold">CONSULTANT</span>

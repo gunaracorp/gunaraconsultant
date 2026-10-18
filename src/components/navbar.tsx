@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { BrandSeal } from "@/components/brand-seal";
 import { Menu, PhoneCall, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -45,13 +45,10 @@ export function Navbar() {
       >
         <Link href="/" className="group flex items-center gap-3" aria-label="Gunara Consultant — Beranda">
           <span className="relative h-11 w-11 shrink-0 transition-transform duration-500 group-hover:rotate-[8deg]">
-            <Image
-              src="/logo.svg?v=seal2"
-              alt="Logo Gunara Consultant"
-              width={44}
-              height={44}
+            <BrandSeal
+              idPrefix="gs-nav"
+              title="Logo Gunara Consultant"
               className="h-11 w-11 drop-shadow-[0_0_10px_rgba(212,175,55,0.35)]"
-              priority
             />
           </span>
           <span className="leading-tight">

@@ -105,3 +105,21 @@ Stage Summary:
 - 100% aset identitas = The Golden Seal of Gunara (favicon.ico, icon.svg, apple-icon, logo.svg, logo-horizontal, logo-mono, PWA 192/512, JSON-LD) — nol jejak Z
 - Alamat Kantor Perwakilan Jakarta (IDX Tower) terverifikasi live di SSR: 2× JSON-LD PostalAddress + kartu kontak + 4× "Kantor Perwakilan Jakarta"
 - Catatan user: jika masih tampak huruf Z setelah ini, itu UI chrome platform preview (di luar kode website) ATAU cache tab browser lama — cukup tutup-buka tab
+
+---
+Task ID: 18
+Agent: Main Agent (Z.ai Code)
+Task: User melaporkan (dengan screenshot) logo Z MASIH tampil di header — forensik lanjutan + fix pamungkas inline SVG
+
+Work Log:
+- Analisis screenshot user (15:46 WIB, setelah fix favicon 07:41 UTC): navbar menampilkan tile Z khas scaffold — halaman yang dilihat user = HTML lama era pra-Task-16 yang masih memegang logo.svg versi lama dari cache browser tab preview yang tidak pernah di-reload
+- Forensik server: .next/cache/images kosong; /_next/image?url=%2Flogo.svg → 400 "image type is not allowed" (Next 16 menolak SVG optimizer — membuktikan <Image> SVG selalu dirender unoptimized pakai URL mentah, dan TIDAK ADA jalur optimizer yang bisa menyimpan Z); body 400 seal2 = "url parameter is not allowed"
+- FIX PAMUNGKAS: komponen baru src/components/brand-seal.tsx — The Golden Seal of Gunara sebagai INLINE SVG pure-path (identik public/logo.svg; idPrefix param untuk mencegah bentrok gradient ID; aria-label; class configurable)
+- navbar.tsx & footer.tsx: <Image src="/logo.svg?v=seal2"> diganti <BrandSeal idPrefix="gs-nav"/"gs-foot">; import next/image dibersihkan — logo kini bagian dari HTML itu sendiri: TIDAK ADA URL gambar yang bisa basi/dicache selamanya
+- Verifikasi: lint 0 error; SSR = monogram "M76.1 45.7" 2× (navbar+footer), gs-nav & gs-foot 13× masing-masing (5 gradient + 8 url-ref), sisa referensi logo.svg hanya teks JSON-LD (2, untuk crawler — file aslinya seal); favicon hash tetap d6f2661d
+- E2E agent-browser fresh (1280 & 375): headerHasInlineSvg=true, anyImgWithLogo=false, sealVisible=true; screenshot desktop+mobile = Golden Seal tampil sempurna; 0 page error
+
+Stage Summary:
+- Logo header/footer kini INLINE SVG (bukan file gambar) — mustahil lagi muncul Z dari cache manapun pada SEMUA reload berikutnya
+- Tersisa satu langkah di sisi user: reload tab preview (Ctrl+Shift+R) karena tab-nya memegang HTML era lama sejak sebelum logo dipasang
+- Arsitektur identitas final: favicon.ico multi-size seal + icon.svg + apple-icon + manifest PWA + inline SVG header/footer + logo.svg/horizontal/mono untuk dokumen & crawler
