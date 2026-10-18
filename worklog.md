@@ -39,3 +39,27 @@ Stage Summary:
 - Floating WhatsApp CTA premium tampil di semua halaman dengan brand styling + aksesibilitas penuh
 - BCA 0860742187 a.n. Gugun Gunara tidak tersentuh (tetap akun resmi tunggal)
 - Tidak ada perubahan route baru; tidak perlu db:push
+---
+Task ID: 15
+Agent: Main Agent (Z.ai Code)
+Task: Branding Gunara Consultant berstandard internasional — logo system baru, favicon/PWA set, JSON-LD SEO upgrade, brand story Dewan Pakar 46
+
+Work Log:
+- Audit: PT Top Konsultan Internasional = 0 kemunculan (bersih); sitemap sudah 46 halaman layanan; SEO per-layanan sudah full (metadata dinamis + keywords + FAQ + JSON-LD Service/Breadcrumb)
+- Logo system v2.0 "The Golden Seal of Gunara" (pure path, bebas font):
+  • public/logo.svg — master mark: emerald 3-stop gradient + radial glow, double gold keyline ala sertifikat, perisai kaca, segel intan, monogram G geometris stroke-built, sheen premium
+  • src/app/icon.svg — favicon optimized (stroke tebal, legible 16-32px)
+  • public/logo-horizontal.svg — lockup penuh + wordmark + tagline EST. 2009
+  • public/logo-mono.svg — versi satu warna tinta untuk cetak/stempel
+- PNG set via sharp: src/app/apple-icon.png (180), public/icons/icon-192.png, icon-512.png
+- src/app/manifest.ts — PWA manifest (theme #04231a, icons svg+192+512)
+- robots.txt diperkaya (Disallow /api/, Host, komentar)
+- JSON-LD upgrade layout.tsx: Organization +slogan/identifier AHU/foundingLocation/knowsLanguage; node Brand baru; ProfessionalService +hasOfferCatalog berisi 46 Service+Offer (verifikasi SSR: 46 Service, 46 Offer, Brand, OfferCatalog semua muncul)
+- Brand story Dewan Pakar 46: 12 key i18n baru simetris (marquee11-12 + cnl* 10 key); trust-marquee 12 item; komponen baru council-band.tsx (4 pilar: 46 Dewan Pakar, 150 Tahun Warisan per Bidang, 6.900 Tahun Gabungan, ISO 9001) dimount di page.tsx antara TrustMarquee dan WhyUs
+- Fix visual: pattern-lines menimpa background section-deep (konflik cascade) → pola dipindah ke overlay absolute; kartu dari card-lux putih → bg-deep/70 gelap agar kontras
+- Verifikasi: lint 0 error; semua aset 200 OK (icon.svg, manifest.webmanifest, apple-icon.png, logo-horizontal.svg, logo-mono.png, icons/icon-512.png); agent-browser desktop 1280 + mobile 375 — logo baru, marquee, CouncilBand, floating WA tampil sempurna; 0 console error
+
+Stage Summary:
+- Identitas visual baru kelas dunia "The Golden Seal of Gunara" konsisten di navbar/favicon/PWA/dokumen/cetak
+- SEO technical premium: 4 JSON-LD node (Organization, Brand, WebSite, ProfessionalService+OfferCatalog 46 layanan), manifest PWA, robots diperkaya
+- Narasi brand "46 Dewan Pakar Lintas Bidang • 6.900 Tahun Pengalaman Gabungan" hidup di marquee + CouncilBand section (i18n ID/EN simetris)

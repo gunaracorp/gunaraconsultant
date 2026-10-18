@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider } from "@/lib/i18n";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { BRAND } from "@/lib/brand";
+import { SERVICES } from "@/data/services";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -115,6 +116,13 @@ const orgJsonLd = {
   description:
     "Pusat perizinan terlengkap di Asia — 500+ jenis perizinan, 38 provinsi Indonesia, ISO 9001:2015, berakar dari Mic Kinsey sejak 2009.",
   foundingDate: "2024",
+  slogan: "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia",
+  identifier: BRAND.ahu,
+  foundingLocation: {
+    "@type": "Place",
+    name: "Kota Tasikmalaya, Jawa Barat, Indonesia",
+  },
+  knowsLanguage: ["id-ID", "en"],
   founder: {
     "@type": "Person",
     name: "Gugun Gunara",
@@ -139,6 +147,19 @@ const orgJsonLd = {
     name: "Indonesia",
   },
   sameAs: [`https://${BRAND.groupSite}`],
+};
+
+const brandJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "@id": `${BRAND.siteUrl}/#brand`,
+  name: BRAND.name,
+  alternateName: "Gunara",
+  slogan: "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia",
+  logo: `${BRAND.siteUrl}/logo.svg`,
+  image: `${BRAND.siteUrl}/icons/icon-512.png`,
+  url: BRAND.siteUrl,
+  parentOrganization: { "@id": `${BRAND.siteUrl}/#organization` },
 };
 
 const websiteJsonLd = {
@@ -189,6 +210,22 @@ const localBusinessJsonLd = {
     bestRating: "5",
     ratingCount: "312",
   },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Katalog Layanan Perizinan Gunara Consultant",
+    numberOfItems: SERVICES.length,
+    itemListElement: SERVICES.map((s) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: s.nameId,
+        alternateName: s.nameEn,
+        url: `${BRAND.siteUrl}/layanan/${s.slug}`,
+        areaServed: "Indonesia",
+        provider: { "@id": `${BRAND.siteUrl}/#organization` },
+      },
+    })),
+  },
 };
 
 export default function RootLayout({
@@ -204,6 +241,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(brandJsonLd) }}
         />
         <script
           type="application/ld+json"

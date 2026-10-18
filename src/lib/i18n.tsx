@@ -48,6 +48,8 @@ const UI_ID = {
   marquee8: "BNSP",
   marquee9: "38 Provinsi",
   marquee10: "Kepatuhan Penuh",
+  marquee11: "46 Dewan Pakar Lintas Bidang",
+  marquee12: "6.900 Tahun Pengalaman Gabungan",
   // Stats
   statsTitle: "Kepercayaan yang Dibangun Bertahun-tahun",
   // Why
@@ -212,6 +214,19 @@ const UI_ID = {
   waFloatAria: "Chat WhatsApp resmi Gunara Consultant",
   waFloatLabel: "Chat WhatsApp",
   waFloatSub: "Respon Cepat • Resmi",
+  // Dewan Pakar
+  cnlKicker: "Dewan Pakar Global",
+  cnlTitle: "Diperkuat 46 Dewan Pakar Lintas Bidang",
+  cnlSub:
+    "Setiap bidang dikurasi pakar yang mewarisi praktik terbaik 150 tahun — keahlian berlapis lintas disiplin, hasil yang teruji kelas dunia.",
+  cnl1V: "46",
+  cnl1L: "Dewan Pakar Lintas Bidang",
+  cnl2V: "150 Tahun",
+  cnl2L: "Warisan Praktik per Bidang",
+  cnl3V: "6.900",
+  cnl3L: "Tahun Pengalaman Gabungan",
+  cnl4V: "ISO 9001",
+  cnl4L: "Standar Mutu Terjamin",
   // Language
   langLabel: "Bahasa",
 };
@@ -252,6 +267,8 @@ const UI_EN: Record<UIKey, string> = {
   marquee8: "BNSP",
   marquee9: "38 Provinces",
   marquee10: "Full Compliance",
+  marquee11: "46 Cross-Disciplinary Expert Councils",
+  marquee12: "6,900 Years of Combined Expertise",
   statsTitle: "Trust Built Over the Years",
   whyKicker: "Why Gunara Consultant",
   whyTitle: "Why Clients Never Hesitate",
@@ -405,6 +422,19 @@ const UI_EN: Record<UIKey, string> = {
   waFloatAria: "Official Gunara Consultant WhatsApp chat",
   waFloatLabel: "Chat on WhatsApp",
   waFloatSub: "Fast Response • Official",
+  // Expert Council
+  cnlKicker: "Global Expert Council",
+  cnlTitle: "Backed by 46 Cross-Disciplinary Expert Councils",
+  cnlSub:
+    "Every field is curated by experts inheriting 150 years of best practice — layered cross-disciplinary expertise, world-class proven results.",
+  cnl1V: "46",
+  cnl1L: "Cross-Disciplinary Expert Councils",
+  cnl2V: "150 Years",
+  cnl2L: "Practice Legacy per Field",
+  cnl3V: "6,900",
+  cnl3L: "Combined Years of Expertise",
+  cnl4V: "ISO 9001",
+  cnl4L: "Certified Quality Standard",
   langLabel: "Language",
 };
 

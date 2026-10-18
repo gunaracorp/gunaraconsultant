@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+
+# Gunara Consultant — Pusat Perizinan Terlengkap di Asia
+# 46 halaman layanan terindeks penuh via sitemap
 
 Sitemap: https://gunaraconsultant.com/sitemap.xml
+Host: gunaraconsultant.com

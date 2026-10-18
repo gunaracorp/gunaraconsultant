@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/sections/hero";
 import { TrustMarquee } from "@/components/sections/trust-marquee";
+import { CouncilBand } from "@/components/sections/council-band";
 import { WhyUs } from "@/components/sections/why-us";
 import { ServicesCatalog } from "@/components/sections/services-catalog";
 import { Process } from "@/components/sections/process";
@@ -83,6 +84,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <TrustMarquee />
+        <CouncilBand />
         <WhyUs />
         <ServicesCatalog />
         <Process />

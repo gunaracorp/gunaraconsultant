@@ -16,6 +16,8 @@ export function TrustMarquee() {
     t("marquee8"),
     t("marquee9"),
     t("marquee10"),
+    t("marquee11"),
+    t("marquee12"),
   ];
   const doubled = [...items, ...items];
 
