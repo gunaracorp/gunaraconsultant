@@ -12,9 +12,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "The mandatory basic legality for every business. NIB doubles as SIUP, import license, and access to government facilities.",
     descId:
-      "Nomor Induk Berusaha (NIB) adalah identitas resmi pelaku usaha yang diterbitkan melalui sistem OSS-RBA (Online Single Submission Risk-Based Approach). Sejak UU Cipta Kerja, NIB berlaku sekaligus sebagai SIUP, API untuk impor tertentu, dan identitas berusaha di seluruh instansi. Tanpa NIB, usaha Anda tidak bisa membuka rekening korporat, mengikuti tender, atau mengakses fasilitas kredit KUR. Tim Gunara Consultant menyiapkan seluruh data, KBLI yang tepat, dan memantau penerbitan hingga selesai.",
+      "Nomor Induk Berusaha (NIB) adalah identitas resmi pelaku usaha yang diterbitkan melalui sistem OSS-RBA (Online Single Submission Risk-Based Approach). Sejak UU Cipta Kerja, NIB berlaku sekaligus sebagai SIUP, API untuk impor tertentu, dan identitas berusaha di seluruh instansi. Tanpa NIB, usaha Anda tidak bisa membuka rekening korporat, mengikuti tender, atau mengakses fasilitas kredit KUR. Tim GConsultant menyiapkan seluruh data, KBLI yang tepat, dan memantau penerbitan hingga selesai.",
     descEn:
-      "The Business Identification Number (NIB) is the official business identity issued through the OSS-RBA (Online Single Submission Risk-Based Approach) system. Since the Omnibus Law, NIB also serves as SIUP, API for certain imports, and business identity across all agencies. Without NIB, your business cannot open corporate bank accounts, join tenders, or access KUR credit facilities. Gunara Consultant prepares all data, correct KBLI codes, and monitors issuance until completion.",
+      "The Business Identification Number (NIB) is the official business identity issued through the OSS-RBA (Online Single Submission Risk-Based Approach) system. Since the Omnibus Law, NIB also serves as SIUP, API for certain imports, and business identity across all agencies. Without NIB, your business cannot open corporate bank accounts, join tenders, or access KUR credit facilities. GConsultant prepares all data, correct KBLI codes, and monitors issuance until completion.",
     benefitsId: [
       "Legalitas dasar yang diakui seluruh instansi pemerintah",
       "Sekali urus: berlaku sebagai SIUP dan akses impor",
@@ -89,9 +89,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "The most credible entity to attract investors and join large projects. Includes notarial deed, Kemenkumham approval, and corporate NPWP.",
     descId:
-      "Perseroan Terbatas (PT) adalah badan hukum dengan tanggung jawab terbatas atas saham — pilihan utama untuk bisnis yang menuntut kredibilitas tinggi, partisipasi tender, dan penggalangan modal. Gunara Consultant mengurus seluruh rantai pendirian: pendapatuan nama, akta notaris, pengesahan Kemenkumham RI, NPWP korporat, hingga NIB dan perizinan kegiatan usaha di OSS. Anda cukup siapkan dokumen identitas dan rencana usaha.",
+      "Perseroan Terbatas (PT) adalah badan hukum dengan tanggung jawab terbatas atas saham — pilihan utama untuk bisnis yang menuntut kredibilitas tinggi, partisipasi tender, dan penggalangan modal. GConsultant mengurus seluruh rantai pendirian: pendapatuan nama, akta notaris, pengesahan Kemenkumham RI, NPWP korporat, hingga NIB dan perizinan kegiatan usaha di OSS. Anda cukup siapkan dokumen identitas dan rencana usaha.",
     descEn:
-      "A Limited Liability Company (PT) is a legal entity with limited shareholder liability — the top choice for businesses demanding high credibility, tender participation, and capital raising. Gunara Consultant manages the entire establishment chain: name clearance, notarial deed, Ministry of Law approval, corporate NPWP, up to NIB and OSS business licensing. You only prepare identity documents and a business plan.",
+      "A Limited Liability Company (PT) is a legal entity with limited shareholder liability — the top choice for businesses demanding high credibility, tender participation, and capital raising. GConsultant manages the entire establishment chain: name clearance, notarial deed, Ministry of Law approval, corporate NPWP, up to NIB and OSS business licensing. You only prepare identity documents and a business plan.",
     benefitsId: [
       "Tanggung jawab pemilik terbatas pada modal disetor",
       "Kredibilitas tinggi untuk tender, bank, dan investor",
@@ -243,9 +243,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "Official legality for self-managed businesses — no notary needed, fast, granting legal entity status for individual SMEs.",
     descId:
-      "Badan Usaha Perseorangan berdasarkan UU Cipta Kerja memberikan status badan hukum bagi usaha yang dijalankan individu — tanpa perlu notaris dan tanpa modal minimum. Ini game-changer bagi UMKM: rekening korporat, kemudahan kredit, dan kredibilitas kontrak. Gunara Consultant menyiapkan pernyataan pendirian, pendaftaran Kemenkumham, NIB, dan NPWP secara terpadu.",
+      "Badan Usaha Perseorangan berdasarkan UU Cipta Kerja memberikan status badan hukum bagi usaha yang dijalankan individu — tanpa perlu notaris dan tanpa modal minimum. Ini game-changer bagi UMKM: rekening korporat, kemudahan kredit, dan kredibilitas kontrak. GConsultant menyiapkan pernyataan pendirian, pendaftaran Kemenkumham, NIB, dan NPWP secara terpadu.",
     descEn:
-      "An Individual Business Entity under the Omnibus Law grants legal entity status to individually-run businesses — no notary and no minimum capital. A game-changer for SMEs: corporate accounts, easier credit, and contract credibility. Gunara Consultant prepares the establishment statement, Kemenkumham registration, NIB, and NPWP in an integrated package.",
+      "An Individual Business Entity under the Omnibus Law grants legal entity status to individually-run businesses — no notary and no minimum capital. A game-changer for SMEs: corporate accounts, easier credit, and contract credibility. GConsultant prepares the establishment statement, Kemenkumham registration, NIB, and NPWP in an integrated package.",
     benefitsId: [
       "Status badan hukum tanpa notaris & tanpa modal minimum",
       "Rekening korporat & fasilitas kredit lebih mudah",
@@ -320,9 +320,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "Change name, address, management, shareholders, capital, to KBLI — we handle deed amendments through OSS updates.",
     descId:
-      "Bisnis berkembang, dokumen legalitas harus mengikuti. Perubahan nama, alamat, komposisi pengurus/pemegang saham, modal dasar, hingga tambahan KBLI sering diabaikan hingga menimbulkan masalah saat audit, tender, atau kredit. Gunara Consultant menangani amandemen akta notaris, pengesahan Kemenkumham, pembaruan NPWP, dan sinkronisasi OSS-RBA dalam satu paket rapi.",
+      "Bisnis berkembang, dokumen legalitas harus mengikuti. Perubahan nama, alamat, komposisi pengurus/pemegang saham, modal dasar, hingga tambahan KBLI sering diabaikan hingga menimbulkan masalah saat audit, tender, atau kredit. GConsultant menangani amandemen akta notaris, pengesahan Kemenkumham, pembaruan NPWP, dan sinkronisasi OSS-RBA dalam satu paket rapi.",
     descEn:
-      "As businesses grow, legality documents must follow. Name, address, management/shareholder composition, authorized capital, and added KBLI changes are often neglected until audits, tenders, or credit issues arise. Gunara Consultant handles notarial deed amendments, Kemenkumham approval, NPWP updates, and OSS-RBA synchronization in one tidy package.",
+      "As businesses grow, legality documents must follow. Name, address, management/shareholder composition, authorized capital, and added KBLI changes are often neglected until audits, tenders, or credit issues arise. GConsultant handles notarial deed amendments, Kemenkumham approval, NPWP updates, and OSS-RBA synchronization in one tidy package.",
     benefitsId: [
       "Data legalitas selalu sinkron dengan realita bisnis",
       "Aman saat audit pajak, tender, dan pengajuan kredit",
@@ -393,9 +393,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "Mandatory for high-risk business activities. We arrange from feasibility studies to environmental approval issuance.",
     descId:
-      "AMDAL adalah kajian mendalam atas dampak lingkungan untuk kegiatan usaha berisiko tinggi (pabrik besar, pertambangan, infrastruktur). Prosesnya kompleks: kerangka acuan (KA-ANDAL), ANDAL-RKL-RPL, penyampaian informasi publik, hingga penilaian Tim Penilai di Ditjen PPKL/daerah. Gunara Consultant memiliki jaringan penyusun bersertifikat dan konsultan ahli teknis agar AMDAL Anda lolos penilaian tanpa revisi berlarut.",
+      "AMDAL adalah kajian mendalam atas dampak lingkungan untuk kegiatan usaha berisiko tinggi (pabrik besar, pertambangan, infrastruktur). Prosesnya kompleks: kerangka acuan (KA-ANDAL), ANDAL-RKL-RPL, penyampaian informasi publik, hingga penilaian Tim Penilai di Ditjen PPKL/daerah. GConsultant memiliki jaringan penyusun bersertifikat dan konsultan ahli teknis agar AMDAL Anda lolos penilaian tanpa revisi berlarut.",
     descEn:
-      "AMDAL is an in-depth environmental impact study for high-risk activities (large factories, mining, infrastructure). The process is complex: terms of reference (KA-ANDAL), ANDAL-RKL-RPL, public information disclosure, to Assessment Team review at Ditjen PPKL/regional level. Gunara Consultant has certified preparers and technical expert networks so your AMDAL passes review without prolonged revisions.",
+      "AMDAL is an in-depth environmental impact study for high-risk activities (large factories, mining, infrastructure). The process is complex: terms of reference (KA-ANDAL), ANDAL-RKL-RPL, public information disclosure, to Assessment Team review at Ditjen PPKL/regional level. GConsultant has certified preparers and technical expert networks so your AMDAL passes review without prolonged revisions.",
     benefitsId: [
       "Memenuhi syarat utama izin operasional proyek besar",
       "Risiko demo & keberatan masyarakat lebih terkendali",
@@ -1251,9 +1251,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "The key to modern retail & marketplaces: official BPOM MD number for your processed food products.",
     descId:
-      "Nomor MD dari BPOM adalah bukti bahwa pangan olahan Anda telah lolos evaluasi keamanan dan kelayakan — syarat wajib untuk masuk supermarket, minimarket, dan sebagian besar marketplace besar. Prosesnya menuntut pabrikasi yang memenuhi CPPOB, uji laboratorium, label sesuai, dan standar produk. Gunara Consultant mendampingi dari audit pra-registrasi pabrik, pengaturan resep & label, uji lab mitra terakreditasi, hingga nomor MD terbit.",
+      "Nomor MD dari BPOM adalah bukti bahwa pangan olahan Anda telah lolos evaluasi keamanan dan kelayakan — syarat wajib untuk masuk supermarket, minimarket, dan sebagian besar marketplace besar. Prosesnya menuntut pabrikasi yang memenuhi CPPOB, uji laboratorium, label sesuai, dan standar produk. GConsultant mendampingi dari audit pra-registrasi pabrik, pengaturan resep & label, uji lab mitra terakreditasi, hingga nomor MD terbit.",
     descEn:
-      "The MD number from BPOM proves your processed food has passed safety and feasibility evaluation — mandatory for supermarkets, minimarkets, and most major marketplaces. The process demands CPPOB-compliant manufacturing, laboratory testing, proper labeling, and product standards. Gunara Consultant assists from pre-registration factory audits, recipe & label setup, accredited lab testing, until the MD number is issued.",
+      "The MD number from BPOM proves your processed food has passed safety and feasibility evaluation — mandatory for supermarkets, minimarkets, and most major marketplaces. The process demands CPPOB-compliant manufacturing, laboratory testing, proper labeling, and product standards. GConsultant assists from pre-registration factory audits, recipe & label setup, accredited lab testing, until the MD number is issued.",
     benefitsId: [
       "Produk sah dipasarkan nasional & ekspor",
       "Masuk ritel modern, HORECA, dan marketplace",
@@ -1328,9 +1328,9 @@ export const SERVICES_A: Service[] = [
     shortEn:
       "Legally mandatory for food, beverage, and services. We handle from PPH to official halal labels.",
     descId:
-      "Berdasarkan UU 33/2014 dan penetapan pemerintah, produk pangan-minuman serta jasa tertentu WAJIB bersertifikat halal dengan tenggat yang terus berjalan. Sertifikasi halal melibatkan SIHALAL, pendamping PPH, pemeriksa (LPH), dan fatwa MUI/BPJPH. Gunara Consultant menyiapkan dokumen produk, bahan baku, proses produksi, mengoordinasikan audit LPH, hingga sertifikat dan label halal resmi terbit — termasuk jalur bersubsidi UMKM bila memenuhi syarat.",
+      "Berdasarkan UU 33/2014 dan penetapan pemerintah, produk pangan-minuman serta jasa tertentu WAJIB bersertifikat halal dengan tenggat yang terus berjalan. Sertifikasi halal melibatkan SIHALAL, pendamping PPH, pemeriksa (LPH), dan fatwa MUI/BPJPH. GConsultant menyiapkan dokumen produk, bahan baku, proses produksi, mengoordinasikan audit LPH, hingga sertifikat dan label halal resmi terbit — termasuk jalur bersubsidi UMKM bila memenuhi syarat.",
     descEn:
-      "Under Law 33/2014 and government deadlines, food-beverage products and certain services MUST be halal certified. Halal certification involves SIHALAL, PPH assistants, inspectors (LPH), and MUI/BPJPH fatwa. Gunara Consultant prepares product documents, raw materials, production processes, coordinates LPH audits, until certificates and official halal labels are issued — including subsidized SME routes when eligible.",
+      "Under Law 33/2014 and government deadlines, food-beverage products and certain services MUST be halal certified. Halal certification involves SIHALAL, PPH assistants, inspectors (LPH), and MUI/BPJPH fatwa. GConsultant prepares product documents, raw materials, production processes, coordinates LPH audits, until certificates and official halal labels are issued — including subsidized SME routes when eligible.",
     benefitsId: [
       "Memenuhi kewajiban hukum halal Indonesia",
       "Pasaran muslim global terbuka lebih lebar",

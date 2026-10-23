@@ -262,7 +262,7 @@ export function BlogArticle({ slug }: { slug: string }) {
             </p>
             <a
               href={waLink(
-                `Halo Gunara Consultant, saya membaca artikel "${title}" dan ingin konsultasi gratis.`
+                `Halo GConsultant, saya membaca artikel "${title}" dan ingin konsultasi gratis.`
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -289,7 +289,7 @@ export function BlogArticle({ slug }: { slug: string }) {
                 href={`/blog/${p.slug}`}
                 className="group flex flex-col overflow-hidden rounded-xl border border-gold/20 bg-white/[0.04] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50"
               >
-                <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#0e6144] to-[#04231a]">
+                <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#143528] to-[#0F241D]">
                   <Image
                     src={p.image}
                     alt={lang === "en" ? p.titleEn : p.titleId}

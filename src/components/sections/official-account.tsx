@@ -104,7 +104,7 @@ export function OfficialAccount() {
                   <p className="max-w-xs text-[11px] leading-relaxed text-cream/50 sm:text-right">
                     {t("bcaVerify")}{" "}
                     <a
-                      href={waLink("Halo, saya ingin verifikasi rekening resmi Gunara Consultant.")}
+                      href={waLink("Halo, saya ingin verifikasi rekening resmi GConsultant.")}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-bold text-gold-soft underline decoration-gold/40 underline-offset-4 hover:text-gold"

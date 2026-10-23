@@ -13,7 +13,7 @@ export async function GET() {
   return NextResponse.json(
     {
       status: "ok",
-      service: "gunara-consultant",
+      service: "gconsultant",
       version: VERSI,
       release: NAMA_RILIS,
       releasedAt: TANGGAL_RILIS,

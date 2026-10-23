@@ -1,18 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="GConsultant">
+  <!-- GCONSULTANT app icon / favicon — tile Deep Forest + Geometric G -->
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0e6144"/>
-      <stop offset=".5" stop-color="#07382a"/>
-      <stop offset="1" stop-color="#04231a"/>
-    </linearGradient>
-    <linearGradient id="au" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f7e39c"/>
-      <stop offset=".45" stop-color="#d4af37"/>
-      <stop offset="1" stop-color="#9a7410"/>
+    <radialGradient id="gc-tile" cx=".5" cy=".3" r=".9">
+      <stop offset="0" stop-color="#12352B"/>
+      <stop offset="1" stop-color="#0F241D"/>
+    </radialGradient>
+    <linearGradient id="gc-gold" gradientUnits="userSpaceOnUse" x1="101" y1="60" x2="58" y2="60">
+      <stop offset="0" stop-color="#E5C97A"/>
+      <stop offset="1" stop-color="#C6A15B"/>
     </linearGradient>
   </defs>
-  <rect width="120" height="120" rx="28" fill="url(#bg)"/>
-  <rect x="5" y="5" width="110" height="110" rx="24" fill="none" stroke="url(#au)" stroke-width="2.4"/>
-  <path d="M60 21 L89 32.5 V60 C89 79 76.5 92.5 60 99.5 C43.5 92.5 31 79 31 60 V32.5 Z" fill="none" stroke="url(#au)" stroke-width="4.5"/>
-  <path d="M77.5 44 A24.5 24.5 0 1 0 77.5 82.5 L77.5 63.5 L59.5 63.5" fill="none" stroke="url(#au)" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0" y="0" width="120" height="120" rx="27" fill="url(#gc-tile)"/>
+  <g fill="none" stroke="#F6F1E4" stroke-width="8.2" stroke-linecap="round">
+    <path d="M 91.4 33.6 A 41 41 0 1 0 91.4 86.4"/>
+    <path d="M 80.7 42.6 A 27 27 0 1 0 80.7 77.4" opacity=".5"/>
+  </g>
+  <path d="M 101 60 L 58 60" fill="none" stroke="url(#gc-gold)" stroke-width="8.2" stroke-linecap="round"/>
 </svg>

@@ -584,9 +584,9 @@ export const SERVICES_B: Service[] = [
     shortEn:
       "The primary exploration/production mining license for minerals & coal from regional/provincial government.",
     descId:
-      "Izin Usaha Pertambangan (IUP) diberikan pemerintah daerah/provinsi untuk eksplorasi atau operasi produksi mineral dan batubara. Prosesnya menuntut wilayah izin yang tersedia (dari peta kawasan), dokumen kelayakan, perizinan lingkungan, dan kesanggupan rencana kerja. Gunara Consultant memetakan ketersediaan wilayah, menyusun dokumen kelayakan lengkap, dan mendampingi negosiasi hingga IUP terbit.",
+      "Izin Usaha Pertambangan (IUP) diberikan pemerintah daerah/provinsi untuk eksplorasi atau operasi produksi mineral dan batubara. Prosesnya menuntut wilayah izin yang tersedia (dari peta kawasan), dokumen kelayakan, perizinan lingkungan, dan kesanggupan rencana kerja. GConsultant memetakan ketersediaan wilayah, menyusun dokumen kelayakan lengkap, dan mendampingi negosiasi hingga IUP terbit.",
     descEn:
-      "Mining Business Licenses (IUP) are granted by regional/provincial governments for mineral and coal exploration or production. The process demands available permit areas (from regional maps), feasibility documents, environmental licensing, and work plan commitments. Gunara Consultant maps area availability, prepares complete feasibility documents, and assists negotiations until IUP is issued.",
+      "Mining Business Licenses (IUP) are granted by regional/provincial governments for mineral and coal exploration or production. The process demands available permit areas (from regional maps), feasibility documents, environmental licensing, and work plan commitments. GConsultant maps area availability, prepares complete feasibility documents, and assists negotiations until IUP is issued.",
     benefitsId: [
       "Hak mengelola sumber daya mineral secara sah",
       "Kepatuhan penuh regulasi ESDM & daerah",
@@ -870,9 +870,9 @@ export const SERVICES_B: Service[] = [
     shortEn:
       "The official legal entity for foreign investors to operate in Indonesia — from deed to OSS business licensing.",
     descId:
-      "PT PMA (Perseroan Terbatas Penanaman Modal Asing) adalah satu-satunya bentuk legal bagi investor asing untuk berbisnis sungguhan di Indonesia. Ketentuannya khusus: investasi di atas Rp10 miliar per KBLI 5-digit, saham asing mengikuti Daftar Negatif Investasi/positif, dan persetujuan BKPM. Gunara Consultant menangani seluruhnya: struktur saham, akta notaris, SK Kemenkumham, NIB, perizinan berusaha berbasis risiko, sampai LKPM bulanan pertama.",
+      "PT PMA (Perseroan Terbatas Penanaman Modal Asing) adalah satu-satunya bentuk legal bagi investor asing untuk berbisnis sungguhan di Indonesia. Ketentuannya khusus: investasi di atas Rp10 miliar per KBLI 5-digit, saham asing mengikuti Daftar Negatif Investasi/positif, dan persetujuan BKPM. GConsultant menangani seluruhnya: struktur saham, akta notaris, SK Kemenkumham, NIB, perizinan berusaha berbasis risiko, sampai LKPM bulanan pertama.",
     descEn:
-      "PT PMA (Foreign Investment Limited Company) is the only legal form for foreign investors to seriously do business in Indonesia. Special rules apply: investment above Rp10 billion per 5-digit KBLI, foreign shareholding per the investment lists, and BKPM approval. Gunara Consultant handles everything: share structure, notarial deed, Kemenkumham decree, NIB, risk-based business licensing, to the first monthly LKPM report.",
+      "PT PMA (Foreign Investment Limited Company) is the only legal form for foreign investors to seriously do business in Indonesia. Special rules apply: investment above Rp10 billion per 5-digit KBLI, foreign shareholding per the investment lists, and BKPM approval. GConsultant handles everything: share structure, notarial deed, Kemenkumham decree, NIB, risk-based business licensing, to the first monthly LKPM report.",
     benefitsId: [
       "Hak penuh beroperasi & menguntungkan di Indonesia",
       "Bisa mengurus KITAS pekerja asing & repatriasi laba",
@@ -1448,9 +1448,9 @@ export const SERVICES_B: Service[] = [
     shortEn:
       "The global quality management standard — raises credibility, tender requirements, and internal efficiency.",
     descId:
-      "ISO 9001:2015 adalah sertifikasi sistem manajemen mutu yang diakui dunia. Bagi perusahaan Indonesia, ISO 9001 membuka pintu tender (terutama BUMN/pemerintah), meningkatkan kepercayaan mitra asing, dan menyistemkan proses internal. Gunara Consultant sendiri bersertifikasi ISO 9001:2015 — kami mengajar dari pengalaman nyata: gap analysis, penyusunan dokumen (manual, prosedur, SOP), internal audit, hingga audit sertifikasi oleh badan sertifikasi terakreditasi.",
+      "ISO 9001:2015 adalah sertifikasi sistem manajemen mutu yang diakui dunia. Bagi perusahaan Indonesia, ISO 9001 membuka pintu tender (terutama BUMN/pemerintah), meningkatkan kepercayaan mitra asing, dan menyistemkan proses internal. GConsultant sendiri bersertifikasi ISO 9001:2015 — kami mengajar dari pengalaman nyata: gap analysis, penyusunan dokumen (manual, prosedur, SOP), internal audit, hingga audit sertifikasi oleh badan sertifikasi terakreditasi.",
     descEn:
-      "ISO 9001:2015 is the globally recognized quality management system certification. For Indonesian companies, ISO 9001 opens tender doors (especially SOE/government), raises foreign partner trust, and systematizes internal processes. Gunara Consultant itself is ISO 9001:2015 certified — we teach from real experience: gap analysis, document preparation (manuals, procedures, SOPs), internal audits, to certification audits by accredited certification bodies.",
+      "ISO 9001:2015 is the globally recognized quality management system certification. For Indonesian companies, ISO 9001 opens tender doors (especially SOE/government), raises foreign partner trust, and systematizes internal processes. GConsultant itself is ISO 9001:2015 certified — we teach from real experience: gap analysis, document preparation (manuals, procedures, SOPs), internal audits, to certification audits by accredited certification bodies.",
     benefitsId: [
       "Lolos syarat tender & kontrak besar",
       "Proses internal lebih efisien & terukur",

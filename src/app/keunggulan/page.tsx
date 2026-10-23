@@ -10,9 +10,9 @@ import { pageMetadata, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Keunggulan Gunara Consultant — Garansi Tertulis & ISO 9001",
+  title: "Keunggulan GConsultant — Garansi Tertulis & ISO 9001",
   description:
-    "Mengapa bisnis memilih Gunara Consultant: warisan praktik konsultan kelas dunia sejak 2009, 46 Dewan Pakar lintas bidang, garansi tertulis, proses transparan ISO 9001:2015.",
+    "Mengapa bisnis memilih GConsultant: warisan praktik konsultan kelas dunia sejak 2009, 46 Dewan Pakar lintas bidang, garansi tertulis, proses transparan ISO 9001:2015.",
   keywords: [
     "keunggulan gunara consultant",
     "konsultan perizinan terbaik",
@@ -26,9 +26,9 @@ export const metadata: Metadata = pageMetadata({
   path: "/keunggulan",
 });
 
-const name = "Keunggulan Gunara Consultant — Standar Kelas Dunia";
+const name = "Keunggulan GConsultant — Standar Kelas Dunia";
 const description =
-  "Keunggulan kompetitif Gunara Consultant: garansi tertulis, 46 Dewan Pakar, transparansi penuh, ISO 9001:2015.";
+  "Keunggulan kompetitif GConsultant: garansi tertulis, 46 Dewan Pakar, transparansi penuh, ISO 9001:2015.";
 
 export default function KeunggulanPage() {
   return (

@@ -3,16 +3,16 @@ import { BRAND } from "@/lib/brand";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${BRAND.name} — ${BRAND.taglineId}`,
-    short_name: "Gunara",
+    name: `${BRAND.name} — ${BRAND.tagline}`,
+    short_name: "GConsultant",
     description:
-      "Gunara Consultant — pusat perizinan terlengkap di Asia. 500+ jenis perizinan usaha, 38 provinsi Indonesia, diperkuat 46 Dewan Pakar Lintas Bidang, tersertifikasi ISO 9001:2015.",
+      "GConsultant — The Polymathic Problem Solver. Menyatukan ilmu, menata kompleksitas, mewujudkan solusi: 500+ perizinan & legalitas usaha, arsitektur sistem bisnis UMEA™, 38 provinsi Indonesia, ISO 9001:2015.",
     start_url: "/",
     scope: "/",
     display: "standalone",
     orientation: "portrait",
-    background_color: "#04231a",
-    theme_color: "#04231a",
+    background_color: "#0f241d",
+    theme_color: "#0f241d",
     lang: "id",
     categories: ["business", "legal", "government"],
     icons: [

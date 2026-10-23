@@ -10,7 +10,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "Proses Pengurusan Perizinan — 5 Langkah ISO 9001:2015",
   description:
-    "Alur baku pengurusan perizinan Gunara Consultant: konsultasi gratis, analisis & penawaran transparan, kontrak & dokumen, pengurusan penuh ke instansi, penyerahan dengan garansi proses ulang.",
+    "Alur baku pengurusan perizinan GConsultant: konsultasi gratis, analisis & penawaran transparan, kontrak & dokumen, pengurusan penuh ke instansi, penyerahan dengan garansi proses ulang.",
   keywords: [
     "proses pengurusan perizinan",
     "alur jasa perizinan",
@@ -25,12 +25,12 @@ export const metadata: Metadata = pageMetadata({
 
 const name = "Proses Pengurusan Perizinan — 5 Langkah Tersertifikasi";
 const description =
-  "Proses baku ISO 9001:2015 Gunara Consultant: dari konsultasi gratis hingga dokumen legal di tangan Anda dengan garansi tertulis.";
+  "Proses baku ISO 9001:2015 GConsultant: dari konsultasi gratis hingga dokumen legal di tangan Anda dengan garansi tertulis.";
 
 const howToJsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "Alur Pengurusan Perizinan oleh Gunara Consultant",
+  name: "Alur Pengurusan Perizinan oleh GConsultant",
   description:
     "Lima langkah baku tersertifikasi ISO 9001:2015 — dari konsultasi gratis sampai penyerahan dokumen legal dengan garansi.",
   totalTime: "P14D",

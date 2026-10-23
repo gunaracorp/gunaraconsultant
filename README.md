@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="public/logo-horizontal.svg" alt="Gunara Consultant" width="420"/>
+<img src="public/logo-horizontal.svg" alt="GConsultant" width="420"/>
 
-# Gunara Consultant — Pusat Perizinan Terlengkap di Asia
+# GConsultant — Pusat Perizinan Terlengkap di Asia
 
 **Official website production** • Next.js 16 • TypeScript • 66 URL full-SEO
 

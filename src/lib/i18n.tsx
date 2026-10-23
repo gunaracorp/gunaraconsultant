@@ -24,15 +24,22 @@ const UI_ID = {
   navAbout: "Tentang Kami",
   navBlog: "Blog",
   navCta: "Konsultasi Gratis",
-  navTagline: "Standar Kelas Dunia",
+  navTagline: "The Polymathic Problem Solver",
   // Hero
-  heroBadge: "Berakar dari Mic Kinsey sejak 2009",
-  heroTitle1: "Melegalkan Bisnis Anda dengan",
-  heroTitleGold: "Standar Kelas Dunia",
+  heroTitle1: "Kompleksitas memiliki struktur.",
+  heroTitleGold: "Solusi memiliki jalur.",
   heroSub:
-    "Gunara Consultant adalah pusat perizinan terlengkap di Asia — 500+ jenis perizinan, 38 provinsi, dikelola tim bersertifikasi ISO 9001:2015 dengan akar konsultan ternama dunia Mic Kinsey sejak 2009.",
-  heroCta1: "Konsultasi Gratis Sekarang",
-  heroCta2: "Jelajahi 500+ Layanan",
+    "GConsultant menyatukan strategi, sistem bisnis, dan teknologi untuk mengubah tantangan kompleks menjadi solusi yang jelas, praktis, dan terukur — dari 500+ perizinan & legalitas usaha hingga arsitektur sistem bisnis UMEA™ di 38 provinsi Indonesia.",
+  heroCta1: "Jelajahi Pendekatan Kami",
+  heroCta2: "Konsultasi Gratis via WhatsApp",
+  // Approach strip (DIAGNOSE / ARCHITECT / EXECUTE)
+  appSectionLabel: "Pendekatan Kami",
+  app1Title: "Temukan masalah sejatinya.",
+  app1Desc: "Pisahkan gejala dari penyebab, asumsi, dan kendala.",
+  app2Title: "Satukan sistemnya.",
+  app2Desc: "Petakan strategi, orang, proses, teknologi, dan risiko.",
+  app3Title: "Buat kemajuan terlihat.",
+  app3Desc: "Ubah rancangan menjadi pekerjaan terprioritas dan hasil yang terukur.",
   heroStat1: "Jenis Perizinan",
   heroStat2: "Provinsi Terjangkau",
   heroStat3: "Tahun Pengalaman",
@@ -55,7 +62,7 @@ const UI_ID = {
   // Stats
   statsTitle: "Kepercayaan yang Dibangun Bertahun-tahun",
   // Why
-  whyKicker: "Mengapa Gunara Consultant",
+  whyKicker: "Mengapa GConsultant",
   whyTitle: "Alasan Klien Tidak Pernah Ragu",
   whySub:
     "Kami membangun kepercayaan lewat legalitas yang benar, proses yang transparan, dan standar mutu internasional.",
@@ -119,11 +126,11 @@ const UI_ID = {
   fouTitle: "Gugun Gunara",
   fouRole: "Pendiri & Direktur Utama",
   fouP1:
-    "Perjalanan Gugun Gunara di dunia konsultansi dimulai pada tahun 2009 di Mic Kinsey — perusahaan konsultan ternama dunia. Selama lebih dari satu dekade, ia mendalami standar penelitian, metodologi, dan disiplin layanan kelas internasional yang menjadi fondasi DNA Gunara Consultant.",
+    "Perjalanan Gugun Gunara di dunia konsultansi dimulai pada tahun 2009 di Mic Kinsey — perusahaan konsultan ternama dunia. Selama lebih dari satu dekade, ia mendalami standar penelitian, metodologi, dan disiplin layanan kelas internasional yang menjadi fondasi DNA GConsultant.",
   fouP2:
-    "Pada tahun 2024, visi tersebut dilembagakan: Gunara Consultant resmi berbadan usaha di Kota Tasikmalaya dengan modal dasar Rp5.000.000.000, terdaftar di Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024). Dengan sistem mutu tersertifikasi ISO 9001:2015, kami membawa standar konsultan global ke seluruh 38 provinsi Indonesia.",
+    "Pada tahun 2024, visi tersebut dilembagakan: GConsultant resmi berbadan usaha di Kota Tasikmalaya dengan modal dasar Rp5.000.000.000, terdaftar di Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024). Dengan sistem mutu tersertifikasi ISO 9001:2015, kami membawa standar konsultan global ke seluruh 38 provinsi Indonesia.",
   fouP3:
-    "Misi kami sederhana namun ambisius: menjadikan Gunara Consultant pusat perizinan terlengkap di Asia, tempat setiap pelaku usaha — dari UMKM hingga PMA — melegalkan bisnisnya dengan tenang, cepat, dan 100% resmi.",
+    "Misi kami sederhana namun ambisius: menjadikan GConsultant pusat perizinan terlengkap di Asia, tempat setiap pelaku usaha — dari UMKM hingga PMA — melegalkan bisnisnya dengan tenang, cepat, dan 100% resmi.",
   fouChip1: "Dekade Pengalaman",
   fouChip2: "Modal Dasar Rp5 M",
   fouChip3: "ISO 9001:2015",
@@ -139,12 +146,12 @@ const UI_ID = {
   fouPrin4d: "Kami berbagi pengetahuan agar Indonesia makin taat regulasi.",
   fouQuote:
     "“Legalitas bukan biaya, melainkan fondasi keberanian berbisnis besar.”",
-  fouPhotoAlt: "Foto Gugun Gunara — Pendiri & Direktur Utama Gunara Consultant",
+  fouPhotoAlt: "Foto Gugun Gunara — Pendiri & Direktur Utama GConsultant",
   // BCA / Official account
   bcaKicker: "Pembayaran Resmi",
   bcaTitle: "Satu-satunya Rekening Resmi",
   bcaSub:
-    "Seluruh pembayaran layanan Gunara Consultant HANYA ke rekening di bawah ini. Kami tidak pernah memakai rekening pribadi lain, rekening perantara, atau rekening atas nama siapa pun selain pendiri kami.",
+    "Seluruh pembayaran layanan GConsultant HANYA ke rekening di bawah ini. Kami tidak pernah memakai rekening pribadi lain, rekening perantara, atau rekening atas nama siapa pun selain pendiri kami.",
   bcaBank: "BANK BCA",
   bcaNumber: "Nomor Rekening",
   bcaHolder: "Atas Nama",
@@ -152,7 +159,7 @@ const UI_ID = {
   bcaCopied: "Tersalin!",
   bcaWarningTitle: "Waspadai Penipuan!",
   bcaWarning:
-    "Gunara Consultant TIDAK memiliki rekening lain selain BCA 0860742187 a.n. Gugun Gunara. Bila ada pihak yang meminta transfer ke rekening berbeda dengan mengatasnamakan kami, tolak dan laporkan segera ke kontak resmi kami.",
+    "GConsultant TIDAK memiliki rekening lain selain BCA 0860742187 a.n. Gugun Gunara. Bila ada pihak yang meminta transfer ke rekening berbeda dengan mengatasnamakan kami, tolak dan laporkan segera ke kontak resmi kami.",
   bcaVerify: "Verifikasi langsung via WhatsApp resmi:",
   // Testimonials
   tesKicker: "Testimoni",
@@ -188,15 +195,15 @@ const UI_ID = {
   conGroupSite: "Portal Grup",
   // Footer
   footDesc:
-    "Pusat perizinan terlengkap di Asia. Berakar dari Mic Kinsey sejak 2009, tersertifikasi ISO 9001:2015, melayani 38 provinsi Indonesia dengan 500+ jenis perizinan.",
+    "GConsultant — The Polymathic Problem Solver. Menyatukan ilmu, menata kompleksitas, mewujudkan solusi: 500+ perizinan & legalitas usaha, arsitektur sistem bisnis UMEA™, ISO 9001:2015, melayani 38 provinsi Indonesia.",
   footServices: "Layanan Populer",
   footCategories: "Kategori",
   footContact: "Kontak",
   footLegal:
     "Berbadan usaha resmi terdaftar Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024)",
-  footRights: "© 2025 Gunara Consultant. Seluruh hak cipta dilindungi.",
+  footRights: "© 2026 GConsultant. Seluruh hak cipta dilindungi.",
   footDisclaimer:
-    "Website resmi Gunara Consultant. Pembayaran hanya ke rekening BCA 0860742187 a.n. Gugun Gunara.",
+    "Website resmi GConsultant. Pembayaran hanya ke rekening BCA 0860742187 a.n. Gugun Gunara.",
   // Service page
   spBenefits: "Manfaat untuk Anda",
   spReq: "Persyaratan Umum",
@@ -215,7 +222,7 @@ const UI_ID = {
   spOfficial: "Jalur 100% resmi",
   spSupport: "Progres dilaporkan rutin",
   // Floating WhatsApp
-  waFloatAria: "Chat WhatsApp resmi Gunara Consultant",
+  waFloatAria: "Chat WhatsApp resmi GConsultant",
   waFloatLabel: "Chat WhatsApp",
   waFloatSub: "Respon Cepat • Resmi",
   // Dewan Pakar
@@ -239,7 +246,7 @@ const UI_ID = {
   pgLayananSub:
     "Dari NIB hingga AMDAL — seluruh kebutuhan legalitas bisnis Indonesia ditangani satu pintu, tersertifikasi ISO 9001:2015, dengan estimasi biaya & waktu yang transparan.",
   pgWhyKicker: "Keunggulan Kompetitif",
-  pgWhyTitle: "Mengapa Bisnis Memilih Gunara Consultant",
+  pgWhyTitle: "Mengapa Bisnis Memilih GConsultant",
   pgWhySub:
     "Warisan praktik terbaik konsultan kelas dunia sejak 2009, 46 Dewan Pakar lintas bidang, dan garansi tertulis di setiap kontrak.",
   pgProcKicker: "Alur Kerja Baku",
@@ -253,7 +260,7 @@ const UI_ID = {
   pgFounderKicker: "Profil Pemimpin",
   pgFounderTitle: "Gugun Gunara — Founder & CEO",
   pgFounderSub:
-    "Di balik Gunara Consultant: pengalaman 15+ tahun berakar dari praktik konsultan ternama dunia, dengan visi pusat perizinan terlengkap di Asia.",
+    "Di balik GConsultant: pengalaman 15+ tahun berakar dari praktik konsultan ternama dunia, dengan visi pusat perizinan terlengkap di Asia.",
   pgFaqKicker: "Pusat Bantuan",
   pgFaqTitle: "Pertanyaan yang Sering Diajukan",
   pgFaqSub:
@@ -264,15 +271,15 @@ const UI_ID = {
     "Kantor pusat Tasikmalaya & perwakilan Jakarta (Indonesia Stock Exchange Tower). WhatsApp resmi aktif Senin–Sabtu, 08.00–17.00 WIB.",
   // Tentang Kami
   pgAboutKicker: "Profil Perusahaan",
-  pgAboutTitle: "Tentang Gunara Consultant",
+  pgAboutTitle: "Tentang GConsultant",
   pgAboutSub:
     "Perusahaan konsultan perizinan Indonesia dengan akar praktik konsultan ternama dunia sejak 2009 — kini melayani 38 provinsi dengan 500+ jenis perizinan dan sistem mutu ISO 9001:2015.",
   aboutStoryKicker: "Cerita Kami",
   aboutStoryTitle: "Dari Meja Konsultan Dunia Menuju 38 Provinsi Indonesia",
   aboutP1:
-    "Gunara Consultant lahir dari pengalaman panjang di Mic Kinsey — perusahaan konsultan ternama dunia — yang dimulai pada tahun 2009. Lebih dari satu dekade, standar riset, disiplin metodologi, dan budaya layanan kelas internasional itu dipelajari langsung dari sumbernya, hingga menjadi fondasi DNA perusahaan.",
+    "GConsultant lahir dari pengalaman panjang di Mic Kinsey — perusahaan konsultan ternama dunia — yang dimulai pada tahun 2009. Lebih dari satu dekade, standar riset, disiplin metodologi, dan budaya layanan kelas internasional itu dipelajari langsung dari sumbernya, hingga menjadi fondasi DNA perusahaan.",
   aboutP2:
-    "Pada 11 Juli 2024, visi itu dilembagakan menjadi badan usaha resmi: Gunara Consultant berdiri di Kota Tasikmalaya dengan modal dasar Rp5.000.000.000 dan pengesahan Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024). Sistem manajemen mutu kami tersertifikasi ISO 9001:2015 — konsistensi mutu pada setiap berkas klien.",
+    "Pada 11 Juli 2024, visi itu dilembagakan menjadi badan usaha resmi: GConsultant berdiri di Kota Tasikmalaya dengan modal dasar Rp5.000.000.000 dan pengesahan Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024). Sistem manajemen mutu kami tersertifikasi ISO 9001:2015 — konsistensi mutu pada setiap berkas klien.",
   aboutP3:
     "Hari ini, dengan dukungan 46 Dewan Pakar lintas bidang yang mewarisi praktik terbaik 150 tahun per bidang, kami menjadi satu pintu bagi pelaku usaha — dari UMKM hingga PMA — untuk melegalkan bisnis dengan tenang, cepat, dan 100% resmi.",
   aboutVisionKicker: "Visi",
@@ -304,7 +311,7 @@ const UI_ID = {
   aboutTimelineKicker: "Perjalanan Kami",
   aboutTimelineTitle: "Milestone yang Membentuk Hari Ini",
   aboutM1T: "Pengalaman konsultansi dimulai di Mic Kinsey — perusahaan konsultan ternama dunia.",
-  aboutM2T: "Gunara Consultant resmi berbadan usaha: AHU-038293.AH.01.30.Tahun 2024, modal dasar Rp5 M.",
+  aboutM2T: "GConsultant resmi berbadan usaha: AHU-038293.AH.01.30.Tahun 2024, modal dasar Rp5 M.",
   aboutM3T: "Kantor Perwakilan Jakarta dibuka di Indonesia Stock Exchange Tower 1, Sudirman — pusat bisnis nasional.",
   aboutM4T: "46 layanan halaman detail penuh, 38 provinsi terjangkau, dan sistem mutu ISO 9001:2015 berjalan penuh.",
   aboutLegalKicker: "Legalitas",
@@ -338,7 +345,7 @@ const UI_ID = {
   artBy: "oleh",
   artShare: "Bagikan",
   artAuthorBio:
-    "Pendiri Gunara Consultant dengan pengalaman konsultansi berakar dari Mic Kinsey sejak 2009. Memimpin 46 Dewan Pakar lintas bidang untuk melegalkan bisnis di seluruh 38 provinsi Indonesia.",
+    "Pendiri GConsultant dengan pengalaman konsultansi berakar dari Mic Kinsey sejak 2009. Memimpin 46 Dewan Pakar lintas bidang untuk melegalkan bisnis di seluruh 38 provinsi Indonesia.",
   artCtaTitle: "Butuh Bantuan Mengurus Legalitas Ini?",
   artCtaSub:
     "Konsultasi gratis 100% — tim kami memetakan kebutuhan perizinan Anda dan memberi estimasi biaya-waktu yang jujur.",
@@ -352,7 +359,7 @@ const UI_ID = {
   pgMetoKicker: "Hukum Minimum Usaha™",
   pgMetoTitle: "UMEA™ — Universal Minimum Enterprise Architecture",
   pgMetoSub:
-    "Metodologi milik Gunara Consultant yang menjawab satu pertanyaan: berapa fungsi kritis yang harus selalu hidup agar usaha Anda tidak runtuh — berapa orang, berapa dokumen, dan tingkat mana yang wajib Anda capai.",
+    "Metodologi milik GConsultant yang menjawab satu pertanyaan: berapa fungsi kritis yang harus selalu hidup agar usaha Anda tidak runtuh — berapa orang, berapa dokumen, dan tingkat mana yang wajib Anda capai.",
   metoLawKicker: "3 Hukum Besar",
   metoLawTitle: "Fondasi yang Tidak Bisa Ditawar",
   metoLawSub:
@@ -387,7 +394,7 @@ const UI_ID = {
     "Lakukan asesmen mandiri 2 menit — mesin kami menghitung Maturity Index Anda dan merekomendasikan tingkat organisasi serta paket dokumen yang tepat.",
   metoCtaBtn: "Mulai Asesmen Gratis",
   metoDisclaimer:
-    "UMEA™, Hukum Minimum Usaha™, UMEA Master Matrix™, dan UMEA Maturity Index™ adalah metodologi milik Gunara Consultant — dilindungi sebagai merek, hak cipta, dan rahasia dagang. Pemakaian tanpa izin tertulis akan ditindak hukum.",
+    "UMEA™, Hukum Minimum Usaha™, UMEA Master Matrix™, dan UMEA Maturity Index™ adalah metodologi milik GConsultant — dilindungi sebagai merek, hak cipta, dan rahasia dagang. Pemakaian tanpa izin tertulis akan ditindak hukum.",
   // Halaman Asesmen
   pgAsmKicker: "UMEA Maturity Index™",
   pgAsmTitle: "Asesmen Kematangan Usaha",
@@ -412,7 +419,7 @@ const UI_ID = {
   asmDocsLabel: "Paket dokumen yang direkomendasikan",
   asmWaTitle: "Konsultasikan Hasil Ini Gratis",
   asmWaSub:
-    "Kirim hasil asesmen Anda ke tim Gunara Consultant via WhatsApp — kami bantu susun rencana naik tingkat + daftar dokumen yang wajib disiapkan.",
+    "Kirim hasil asesmen Anda ke tim GConsultant via WhatsApp — kami bantu susun rencana naik tingkat + daftar dokumen yang wajib disiapkan.",
   asmWaBtn: "Kirim Hasil via WhatsApp",
   asmRestart: "Ulangi Asesmen",
   asmPrivacyNote:
@@ -429,7 +436,7 @@ const UI_ID = {
     "Bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda — selaras UU PDP No. 27 Tahun 2022 dan siap GDPR.",
   pgTermsTitle: "Syarat & Ketentuan",
   pgTermsSub:
-    "Aturan penggunaan website dan layanan Gunara Consultant — baca sebelum menggunakan layanan kami.",
+    "Aturan penggunaan website dan layanan GConsultant — baca sebelum menggunakan layanan kami.",
   legalUpdated: "Terakhir diperbarui",
   // Piagam 2125
   chartKicker: "Piagam 2125",
@@ -450,14 +457,21 @@ const UI_EN: Record<UIKey, string> = {
   navAbout: "About Us",
   navBlog: "Blog",
   navCta: "Free Consultation",
-  navTagline: "World-Class Standards",
-  heroBadge: "Rooted in Mic Kinsey since 2009",
-  heroTitle1: "Legalize Your Business with",
-  heroTitleGold: "World-Class Standards",
+  navTagline: "The Polymathic Problem Solver",
+  heroTitle1: "Complexity has a structure.",
+  heroTitleGold: "Solutions have a path.",
   heroSub:
-    "Gunara Consultant is the most complete licensing center in Asia — 500+ license types across 38 provinces, managed by an ISO 9001:2015 certified team rooted in the world-renowned consultancy Mic Kinsey since 2009.",
-  heroCta1: "Free Consultation Now",
-  heroCta2: "Explore 500+ Services",
+    "GConsultant connects strategy, business systems and technology to turn complex challenges into clear, practical and measurable solutions — from 500+ licensing & legalization services to UMEA™ business systems architecture across 38 provinces of Indonesia.",
+  heroCta1: "Explore Our Approach",
+  heroCta2: "Free Consultation via WhatsApp",
+  // Approach strip (DIAGNOSE / ARCHITECT / EXECUTE)
+  appSectionLabel: "Our Approach",
+  app1Title: "Find the real problem.",
+  app1Desc: "Separate symptoms from causes, assumptions and constraints.",
+  app2Title: "Connect the system.",
+  app2Desc: "Map strategy, people, process, technology and risk.",
+  app3Title: "Make progress visible.",
+  app3Desc: "Turn the design into prioritized work and measurable outcomes.",
   heroStat1: "License Types",
   heroStat2: "Provinces Covered",
   heroStat3: "Years of Experience",
@@ -477,7 +491,7 @@ const UI_EN: Record<UIKey, string> = {
   marquee11: "46 Cross-Disciplinary Expert Councils",
   marquee12: "6,900 Years of Combined Expertise",
   statsTitle: "Trust Built Over the Years",
-  whyKicker: "Why Gunara Consultant",
+  whyKicker: "Why GConsultant",
   whyTitle: "Why Clients Never Hesitate",
   whySub:
     "We build trust through genuine legality, transparent processes, and international quality standards.",
@@ -538,11 +552,11 @@ const UI_EN: Record<UIKey, string> = {
   fouTitle: "Gugun Gunara",
   fouRole: "Founder & Chief Executive Officer",
   fouP1:
-    "Gugun Gunara's journey in consulting began in 2009 at Mic Kinsey — a world-renowned consulting firm. For over a decade he mastered international-grade research standards, methodology, and service discipline that became the DNA foundation of Gunara Consultant.",
+    "Gugun Gunara's journey in consulting began in 2009 at Mic Kinsey — a world-renowned consulting firm. For over a decade he mastered international-grade research standards, methodology, and service discipline that became the DNA foundation of GConsultant.",
   fouP2:
-    "In 2024, that vision was institutionalized: Gunara Consultant officially became a legal entity in Kota Tasikmalaya with Rp5,000,000,000 authorized capital, registered with the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024). With an ISO 9001:2015 certified quality system, we bring global consulting standards to all 38 provinces of Indonesia.",
+    "In 2024, that vision was institutionalized: GConsultant officially became a legal entity in Kota Tasikmalaya with Rp5,000,000,000 authorized capital, registered with the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024). With an ISO 9001:2015 certified quality system, we bring global consulting standards to all 38 provinces of Indonesia.",
   fouP3:
-    "Our mission is simple yet ambitious: to make Gunara Consultant the most complete licensing center in Asia — where every entrepreneur, from SMEs to foreign investors, legalizes their business calmly, quickly, and 100% officially.",
+    "Our mission is simple yet ambitious: to make GConsultant the most complete licensing center in Asia — where every entrepreneur, from SMEs to foreign investors, legalizes their business calmly, quickly, and 100% officially.",
   fouChip1: "Decade of Experience",
   fouChip2: "Rp5B Authorized Capital",
   fouChip3: "ISO 9001:2015",
@@ -558,11 +572,11 @@ const UI_EN: Record<UIKey, string> = {
   fouPrin4d: "We share knowledge so Indonesia grows more compliant.",
   fouQuote:
     "“Legality is not a cost — it is the foundation of courage to build a big business.”",
-  fouPhotoAlt: "Photo of Gugun Gunara — Founder & CEO of Gunara Consultant",
+  fouPhotoAlt: "Photo of Gugun Gunara — Founder & CEO of GConsultant",
   bcaKicker: "Official Payment",
   bcaTitle: "The Only Official Bank Account",
   bcaSub:
-    "All payments for Gunara Consultant services go ONLY to the account below. We never use other personal accounts, intermediary accounts, or accounts under any name other than our founder.",
+    "All payments for GConsultant services go ONLY to the account below. We never use other personal accounts, intermediary accounts, or accounts under any name other than our founder.",
   bcaBank: "BANK BCA",
   bcaNumber: "Account Number",
   bcaHolder: "Account Holder",
@@ -570,7 +584,7 @@ const UI_EN: Record<UIKey, string> = {
   bcaCopied: "Copied!",
   bcaWarningTitle: "Beware of Fraud!",
   bcaWarning:
-    "Gunara Consultant does NOT have any other bank account besides BCA 0860742187 under the name Gugun Gunara. If anyone asks you to transfer to a different account claiming to be us, refuse and report immediately to our official contact.",
+    "GConsultant does NOT have any other bank account besides BCA 0860742187 under the name Gugun Gunara. If anyone asks you to transfer to a different account claiming to be us, refuse and report immediately to our official contact.",
   bcaVerify: "Verify directly via our official WhatsApp:",
   tesKicker: "Testimonials",
   tesTitle: "What Our Legalized Clients Say",
@@ -601,15 +615,15 @@ const UI_EN: Record<UIKey, string> = {
   conSending: "Preparing WhatsApp…",
   conGroupSite: "Group Portal",
   footDesc:
-    "The most complete licensing center in Asia. Rooted in Mic Kinsey since 2009, ISO 9001:2015 certified, serving 38 provinces of Indonesia with 500+ license types.",
+    "GConsultant — The Polymathic Problem Solver. Uniting knowledge, structuring complexity, delivering solutions: 500+ licensing & legalization services, UMEA™ business systems architecture, ISO 9001:2015, serving 38 provinces of Indonesia.",
   footServices: "Popular Services",
   footCategories: "Categories",
   footContact: "Contact",
   footLegal:
     "Officially registered entity at the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024)",
-  footRights: "© 2025 Gunara Consultant. All rights reserved.",
+  footRights: "© 2026 GConsultant. All rights reserved.",
   footDisclaimer:
-    "Official website of Gunara Consultant. Payments only to BCA account 0860742187 under the name Gugun Gunara.",
+    "Official website of GConsultant. Payments only to BCA account 0860742187 under the name Gugun Gunara.",
   spBenefits: "Benefits for You",
   spReq: "General Requirements",
   spSteps: "Processing Steps",
@@ -628,7 +642,7 @@ const UI_EN: Record<UIKey, string> = {
   spOfficial: "100% official channel",
   spSupport: "Progress reported regularly",
   // Floating WhatsApp
-  waFloatAria: "Official Gunara Consultant WhatsApp chat",
+  waFloatAria: "Official GConsultant WhatsApp chat",
   waFloatLabel: "Chat on WhatsApp",
   waFloatSub: "Fast Response • Official",
   // Expert Council
@@ -651,7 +665,7 @@ const UI_EN: Record<UIKey, string> = {
   pgLayananSub:
     "From NIB to AMDAL — every Indonesian business legality need handled through one door, ISO 9001:2015 certified, with transparent cost & time estimates.",
   pgWhyKicker: "Competitive Edge",
-  pgWhyTitle: "Why Businesses Choose Gunara Consultant",
+  pgWhyTitle: "Why Businesses Choose GConsultant",
   pgWhySub:
     "World-class consulting best practice heritage since 2009, 46 cross-disciplinary Expert Councils, and written guarantees in every contract.",
   pgProcKicker: "Standard Workflow",
@@ -665,7 +679,7 @@ const UI_EN: Record<UIKey, string> = {
   pgFounderKicker: "Leadership Profile",
   pgFounderTitle: "Gugun Gunara — Founder & CEO",
   pgFounderSub:
-    "Behind Gunara Consultant: 15+ years of experience rooted in world-renowned consulting practice, with the vision of Asia's most complete licensing center.",
+    "Behind GConsultant: 15+ years of experience rooted in world-renowned consulting practice, with the vision of Asia's most complete licensing center.",
   pgFaqKicker: "Help Center",
   pgFaqTitle: "Frequently Asked Questions",
   pgFaqSub:
@@ -676,15 +690,15 @@ const UI_EN: Record<UIKey, string> = {
     "Tasikmalaya headquarters & Jakarta representative office (Indonesia Stock Exchange Tower). Official WhatsApp active Monday–Saturday, 08.00–17.00 WIB.",
   // About Us
   pgAboutKicker: "Company Profile",
-  pgAboutTitle: "About Gunara Consultant",
+  pgAboutTitle: "About GConsultant",
   pgAboutSub:
     "An Indonesian licensing consultancy rooted in world-renowned consulting practice since 2009 — now serving 38 provinces with 500+ license types and an ISO 9001:2015 quality system.",
   aboutStoryKicker: "Our Story",
   aboutStoryTitle: "From the Desks of a World-Class Consultancy to All 38 Provinces",
   aboutP1:
-    "Gunara Consultant was born from a long journey at Mic Kinsey — a world-renowned consulting firm — that began in 2009. For over a decade, international-grade research standards, methodological discipline, and service culture were learned directly from the source, becoming the company's DNA foundation.",
+    "GConsultant was born from a long journey at Mic Kinsey — a world-renowned consulting firm — that began in 2009. For over a decade, international-grade research standards, methodological discipline, and service culture were learned directly from the source, becoming the company's DNA foundation.",
   aboutP2:
-    "On 11 July 2024, that vision was institutionalized into a legal entity: Gunara Consultant was founded in Kota Tasikmalaya with Rp5,000,000,000 authorized capital and approval from the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024). Our quality management system is ISO 9001:2015 certified — consistent quality on every client file.",
+    "On 11 July 2024, that vision was institutionalized into a legal entity: GConsultant was founded in Kota Tasikmalaya with Rp5,000,000,000 authorized capital and approval from the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024). Our quality management system is ISO 9001:2015 certified — consistent quality on every client file.",
   aboutP3:
     "Today, backed by 46 cross-disciplinary Expert Councils inheriting 150 years of best practice per field, we are the one door for every entrepreneur — from SMEs to PMA — to legalize their business calmly, quickly, and 100% officially.",
   aboutVisionKicker: "Vision",
@@ -716,7 +730,7 @@ const UI_EN: Record<UIKey, string> = {
   aboutTimelineKicker: "Our Journey",
   aboutTimelineTitle: "Milestones That Shaped Today",
   aboutM1T: "Consulting experience began at Mic Kinsey — a world-renowned consulting firm.",
-  aboutM2T: "Gunara Consultant officially became a legal entity: AHU-038293.AH.01.30.Tahun 2024, Rp5B authorized capital.",
+  aboutM2T: "GConsultant officially became a legal entity: AHU-038293.AH.01.30.Tahun 2024, Rp5B authorized capital.",
   aboutM3T: "Jakarta Representative Office opened at Indonesia Stock Exchange Tower 1, Sudirman — the nation's business heart.",
   aboutM4T: "46 services with full detail pages, all 38 provinces covered, and ISO 9001:2015 quality system fully running.",
   aboutLegalKicker: "Legality",
@@ -750,7 +764,7 @@ const UI_EN: Record<UIKey, string> = {
   artBy: "by",
   artShare: "Share",
   artAuthorBio:
-    "Founder of Gunara Consultant with consulting experience rooted in Mic Kinsey since 2009. Leads 46 cross-disciplinary Expert Councils to legalize businesses across all 38 provinces of Indonesia.",
+    "Founder of GConsultant with consulting experience rooted in Mic Kinsey since 2009. Leads 46 cross-disciplinary Expert Councils to legalize businesses across all 38 provinces of Indonesia.",
   artCtaTitle: "Need Help With This Legality Process?",
   artCtaSub:
     "100% free consultation — our team maps your licensing needs and gives honest cost–time estimates.",
@@ -764,7 +778,7 @@ const UI_EN: Record<UIKey, string> = {
   pgMetoKicker: "Minimum Business Law™",
   pgMetoTitle: "UMEA™ — Universal Minimum Enterprise Architecture",
   pgMetoSub:
-    "Gunara Consultant's proprietary methodology answering one question: how many critical functions must stay alive so your business never collapses — how many people, how many documents, and which level you must reach.",
+    "GConsultant's proprietary methodology answering one question: how many critical functions must stay alive so your business never collapses — how many people, how many documents, and which level you must reach.",
   metoLawKicker: "3 Great Laws",
   metoLawTitle: "The Non-Negotiable Foundation",
   metoLawSub:
@@ -799,7 +813,7 @@ const UI_EN: Record<UIKey, string> = {
     "Take the 2-minute self-assessment — our engine computes your Maturity Index and recommends the right organization level and document package.",
   metoCtaBtn: "Start Free Assessment",
   metoDisclaimer:
-    "UMEA™, Minimum Business Law™, UMEA Master Matrix™, and UMEA Maturity Index™ are proprietary methodologies of Gunara Consultant — protected as trademarks, copyrights, and trade secrets. Unauthorized use will be prosecuted.",
+    "UMEA™, Minimum Business Law™, UMEA Master Matrix™, and UMEA Maturity Index™ are proprietary methodologies of GConsultant — protected as trademarks, copyrights, and trade secrets. Unauthorized use will be prosecuted.",
   // Assessment page
   pgAsmKicker: "UMEA Maturity Index™",
   pgAsmTitle: "Business Maturity Assessment",
@@ -824,7 +838,7 @@ const UI_EN: Record<UIKey, string> = {
   asmDocsLabel: "Recommended document package",
   asmWaTitle: "Discuss This Result for Free",
   asmWaSub:
-    "Send your assessment result to the Gunara Consultant team via WhatsApp — we help you build the level-up plan plus the mandatory document list.",
+    "Send your assessment result to the GConsultant team via WhatsApp — we help you build the level-up plan plus the mandatory document list.",
   asmWaBtn: "Send Result via WhatsApp",
   asmRestart: "Retake Assessment",
   asmPrivacyNote:
@@ -841,7 +855,7 @@ const UI_EN: Record<UIKey, string> = {
     "How we collect, use, and protect your personal data — aligned with Indonesia's PDP Law No. 27/2022 and GDPR-ready.",
   pgTermsTitle: "Terms & Conditions",
   pgTermsSub:
-    "Rules for using the Gunara Consultant website and services — please read before using our services.",
+    "Rules for using the GConsultant website and services — please read before using our services.",
   legalUpdated: "Last updated",
   // 2125 Charter
   chartKicker: "The 2125 Charter",

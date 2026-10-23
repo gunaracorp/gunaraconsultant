@@ -23,7 +23,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Apakah konsultasi awal Gunara Consultant gratis?",
+      name: "Apakah konsultasi awal GConsultant gratis?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Ya, konsultasi awal 100% gratis tanpa komitmen melalui WhatsApp resmi. Tim kami memetakan perizinan yang dibutuhkan beserta estimasi biaya dan waktu.",
@@ -31,10 +31,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Apakah Gunara Consultant legal dan tepercaya?",
+      name: "Apakah GConsultant legal dan tepercaya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: `Gunara Consultant berbadan usaha resmi terdaftar di Kemenkumham RI (${BRAND.ahu}) dengan sistem mutu tersertifikasi ISO 9001:2015 dan berakar dari Mic Kinsey sejak 2009.`,
+        text: `GConsultant berbadan usaha resmi terdaftar di Kemenkumham RI (${BRAND.ahu}) dengan sistem mutu tersertifikasi ISO 9001:2015 dan berakar dari Mic Kinsey sejak 2009.`,
       },
     },
     {
@@ -42,7 +42,7 @@ const faqJsonLd = {
       name: "Ke rekening mana pembayaran layanan harus ditransfer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: `Pembayaran hanya ke rekening resmi satu-satunya: ${BRAND.bank.name} ${BRAND.bank.account} a.n. ${BRAND.bank.holder}. Gunara Consultant tidak memiliki rekening lain.`,
+        text: `Pembayaran hanya ke rekening resmi satu-satunya: ${BRAND.bank.name} ${BRAND.bank.account} a.n. ${BRAND.bank.holder}. GConsultant tidak memiliki rekening lain.`,
       },
     },
     {
@@ -55,7 +55,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Apakah Gunara Consultant melayani seluruh Indonesia?",
+      name: "Apakah GConsultant melayani seluruh Indonesia?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Ya, melayani seluruh 38 provinsi Indonesia — dari Aceh sampai Papua Pegunungan — baik proses online maupun pendampingan fisik oleh tim ahli daerah.",
@@ -67,7 +67,7 @@ const faqJsonLd = {
 const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Katalog Layanan Perizinan Gunara Consultant",
+  name: "Katalog Layanan Perizinan GConsultant",
   numberOfItems: SERVICES.length,
   itemListElement: SERVICES.map((s, i) => ({
     "@type": "ListItem",
@@ -104,7 +104,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
         />
         <span className="sr-only">
-          Gunara Consultant melayani {PROVINCES.length} provinsi dan {SERVICES.length}{" "}
+          GConsultant melayani {PROVINCES.length} provinsi dan {SERVICES.length}{" "}
           kategori layanan perizinan dengan halaman detail SEO penuh.
         </span>
       </main>

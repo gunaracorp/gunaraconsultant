@@ -1,0 +1,11 @@
+| Perintah | Efek |
+|---|---|
+| `GOD MODE: LANJUT` | Kerjakan fase/P0 berikutnya tanpa bertanya |
+| `GOD MODE: UANG` | Mode maksimalkan monetisasi (CTA, funnel, bundle) |
+| `GOD MODE: SEO SERANG` | Halaman baru, interlink, schema, submit sitemap |
+| `GOD MODE: RATAKAN` | Ratakan semua halaman ke Design System |
+| `GOD MODE: VERIFIKASI` | Tes ulang semua klaim + bukti E2E |
+| `GOD MODE: PIAGAM` | Tulis/perbarui Piagam 2125 |
+| `GOD MODE: ARSIP` | Rapikan worklog tanpa menghapus riwayat |
+| `GOD MODE: LAPOR` | Keluarkan Laporan Abadi lengkap |
+

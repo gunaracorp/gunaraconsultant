@@ -46,21 +46,20 @@ export function Navbar() {
         className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
         aria-label="Navigasi utama"
       >
-        <Link href="/" className="group flex items-center gap-3" aria-label="Gunara Consultant — Beranda">
+        <Link href="/" className="group flex items-center gap-3" aria-label="GConsultant — Beranda">
           <span className="relative h-11 w-11 shrink-0 transition-transform duration-500 group-hover:rotate-[8deg]">
             <BrandSeal
               idPrefix="gs-nav"
-              title="Logo Gunara Consultant"
-              className="h-11 w-11 drop-shadow-[0_0_10px_rgba(212,175,55,0.35)]"
+              title="Logo GConsultant"
+              className="h-11 w-11 drop-shadow-[0_0_10px_rgba(198,161,91,0.35)]"
             />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-[15px] font-bold tracking-[0.14em] text-cream">
-              GUNARA
-              <span className="text-gradient-gold"> CONSULTANT</span>
+            <span className="block font-display text-lg font-bold tracking-[0.16em] text-cream">
+              G<span className="text-gradient-gold">CONSULTANT</span>
             </span>
-            <span className="block text-[10px] font-semibold tracking-[0.3em] text-gold-soft/90">
-              {t("navTagline").toUpperCase()}
+            <span className="block text-[9px] font-semibold tracking-[0.3em] text-gold-soft/90 uppercase">
+              {t("navTagline")}
             </span>
           </span>
         </Link>
@@ -89,7 +88,7 @@ export function Navbar() {
           >
             <a
               href={waLink(
-                "Halo Gunara Consultant, saya ingin konsultasi perizinan bisnis."
+                "Halo GConsultant, saya ingin konsultasi perizinan bisnis."
               )}
               target="_blank"
               rel="noopener noreferrer"

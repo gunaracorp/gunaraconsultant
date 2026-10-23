@@ -98,7 +98,7 @@ export function Contact() {
                     {t("conWa")}
                   </h3>
                   <a
-                    href={waLink("Halo Gunara Consultant!")}
+                    href={waLink("Halo GConsultant!")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 block text-sm font-bold text-primary underline decoration-gold/40 underline-offset-4 hover:text-gold"

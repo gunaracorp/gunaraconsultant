@@ -33,7 +33,7 @@ function Card({ post, priority = false }: { post: BlogPost; priority?: boolean }
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gold/20 bg-white/[0.04] transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-xl hover:shadow-gold/5"
       aria-label={title}
     >
-      <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#0e6144] to-[#04231a]">
+      <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#143528] to-[#0F241D]">
         <Image
           src={post.image}
           alt={title}
@@ -128,7 +128,7 @@ export function BlogIndex() {
               className="group grid overflow-hidden rounded-2xl border border-gold/30 bg-white/[0.04] transition-all duration-300 hover:border-gold/60 hover:shadow-2xl hover:shadow-gold/10 lg:grid-cols-2"
               aria-label={lang === "en" ? featured.titleEn : featured.titleId}
             >
-              <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#0e6144] to-[#04231a] lg:aspect-auto lg:min-h-[340px]">
+              <span className="relative block aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#143528] to-[#0F241D] lg:aspect-auto lg:min-h-[340px]">
                 <Image
                   src={featured.image}
                   alt={lang === "en" ? featured.titleEn : featured.titleId}

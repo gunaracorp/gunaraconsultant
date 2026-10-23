@@ -9,7 +9,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "Metodologi UMEA™ — Hukum Minimum Usaha & Master Matrix",
   description:
-    "UMEA™ (Universal Minimum Enterprise Architecture) — metodologi milik Gunara Consultant: 6 tingkat organisasi (UMEA-03 s.d. UMEA-21), 21 fungsi kritis, 5 tingkat dokumen (D-10 s.d. D-165), dan UMEA Maturity Index™ 0-100. Hukum Minimum Usaha™ yang melampaui standar konsultasi biasa.",
+    "UMEA™ (Universal Minimum Enterprise Architecture) — metodologi milik GConsultant: 6 tingkat organisasi (UMEA-03 s.d. UMEA-21), 21 fungsi kritis, 5 tingkat dokumen (D-10 s.d. D-165), dan UMEA Maturity Index™ 0-100. Hukum Minimum Usaha™ yang melampaui standar konsultasi biasa.",
   keywords: [
     "hukum minimum usaha",
     "UMEA",
@@ -39,7 +39,7 @@ const webPage = {
   ...webPageJsonLd(
     "/metodologi",
     "Metodologi UMEA™ — Hukum Minimum Usaha & Master Matrix",
-    "Metodologi milik Gunara Consultant: 6 tingkat organisasi, 21 fungsi kritis, 5 tingkat dokumen, dan UMEA Maturity Index™."
+    "Metodologi milik GConsultant: 6 tingkat organisasi, 21 fungsi kritis, 5 tingkat dokumen, dan UMEA Maturity Index™."
   ),
   "@type": "Article",
   headline: "UMEA™ — Universal Minimum Enterprise Architecture: Hukum Minimum Usaha",
@@ -66,7 +66,7 @@ const faqJsonLd = {
       name: "Apa itu Hukum Minimum Usaha™?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Hukum Minimum Usaha™ adalah metodologi milik Gunara Consultant yang menyatakan: jumlah orang boleh kecil, tetapi jumlah fungsi kritis tidak boleh hilang. Setiap fungsi kritis wajib memiliki penanggung jawab, fungsi yang saling bertentangan wajib dipisah, dan tidak ada fungsi kritis yang boleh bergantung permanen pada satu orang.",
+        text: "Hukum Minimum Usaha™ adalah metodologi milik GConsultant yang menyatakan: jumlah orang boleh kecil, tetapi jumlah fungsi kritis tidak boleh hilang. Setiap fungsi kritis wajib memiliki penanggung jawab, fungsi yang saling bertentangan wajib dipisah, dan tidak ada fungsi kritis yang boleh bergantung permanen pada satu orang.",
       },
     },
     {

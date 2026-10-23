@@ -70,11 +70,11 @@ export const TERMS_BLOCKS: LegalBlock[] = [
     h: "1. Penerimaan dan Ruang Lingkup",
     hEn: "1. Acceptance and Scope",
     p: [
-      "Dengan mengakses website gunaraconsultant.com (\"Situs\") dan/atau menggunakan layanan Gunara Consultant, Anda menyatakan telah membaca, memahami, dan menyetujui Syarat & Ketentuan ini. Jika Anda tidak menyetujui salah satu ketentuan, mohon hentikan penggunaan Situs. Layanan kami adalah jasa konsultansi dan pengurusan perizinan usaha di wilayah Republik Indonesia, termasuk metodologi UMEA™ (Universal Minimum Enterprise Architecture) yang bersifat milik eksklusif Gunara Consultant.",
+      "Dengan mengakses website gunara.web.id (\"Situs\") dan/atau menggunakan layanan GConsultant, Anda menyatakan telah membaca, memahami, dan menyetujui Syarat & Ketentuan ini. Jika Anda tidak menyetujui salah satu ketentuan, mohon hentikan penggunaan Situs. Layanan kami adalah jasa konsultansi dan pengurusan perizinan usaha di wilayah Republik Indonesia, termasuk metodologi UMEA™ (Universal Minimum Enterprise Architecture) yang bersifat milik eksklusif GConsultant.",
       "Informasi di Situs — termasuk estimasi biaya (priceFrom), estimasi waktu proses, dan artikel — bersifat informatif umum dan bukan nasihat hukum final untuk kasus spesifik Anda. Rekomendasi mengikat hanya diberikan melalui kanal konsultasi resmi setelah pemeriksaan kondisi nyata usaha Anda.",
     ],
     pEn: [
-      "By accessing gunaraconsultant.com (the \"Site\") and/or using Gunara Consultant services, you declare that you have read, understood, and agreed to these Terms & Conditions. If you disagree with any provision, please stop using the Site. Our services are consulting and business-licensing processing services within the Republic of Indonesia, including the UMEA™ (Universal Minimum Enterprise Architecture) methodology exclusively owned by Gunara Consultant.",
+      "By accessing gunara.web.id (the \"Site\") and/or using GConsultant services, you declare that you have read, understood, and agreed to these Terms & Conditions. If you disagree with any provision, please stop using the Site. Our services are consulting and business-licensing processing services within the Republic of Indonesia, including the UMEA™ (Universal Minimum Enterprise Architecture) methodology exclusively owned by GConsultant.",
       "Information on the Site — including cost estimates (priceFrom), processing-time estimates, and articles — is general information, not final legal advice for your specific case. Binding recommendations are given only through official consultation channels after examining your business's actual condition.",
     ],
   },
@@ -82,23 +82,23 @@ export const TERMS_BLOCKS: LegalBlock[] = [
     h: "2. Hak Kekayaan Intelektual",
     hEn: "2. Intellectual Property",
     p: [
-      "Seluruh konten Situs — logo \"The Golden Seal of Gunara\", nama Gunara Consultant, istilah UMEA™, Hukum Minimum Usaha™, UMEA Master Matrix™, UMEA Maturity Index™, D-10/D-21/D-39/D-75/D-165, teks, grafik, struktur metodologi, dan tata letak — dilindungi undang-undang hak cipta, merek, dan rahasia dagang Republik Indonesia.",
-      "Dilarang menyalin, mereproduksi, memodifikasi, mendistribusikan, atau mengklaim kepemilikan atas metodologi dan materi tersebut tanpa izin tertulis dari Gunara Consultant. Pelanggaran akan ditindak sesuai ketentuan hukum yang berlaku, termasuk UU No. 28 Tahun 2014 tentang Hak Cipta dan UU No. 20 Tahun 2016 tentang Merek dan Indikasi Geografis.",
+      "Seluruh konten Situs — logo \"The Geometric G of GConsultant\", nama GConsultant, istilah UMEA™, Hukum Minimum Usaha™, UMEA Master Matrix™, UMEA Maturity Index™, D-10/D-21/D-39/D-75/D-165, teks, grafik, struktur metodologi, dan tata letak — dilindungi undang-undang hak cipta, merek, dan rahasia dagang Republik Indonesia.",
+      "Dilarang menyalin, mereproduksi, memodifikasi, mendistribusikan, atau mengklaim kepemilikan atas metodologi dan materi tersebut tanpa izin tertulis dari GConsultant. Pelanggaran akan ditindak sesuai ketentuan hukum yang berlaku, termasuk UU No. 28 Tahun 2014 tentang Hak Cipta dan UU No. 20 Tahun 2016 tentang Merek dan Indikasi Geografis.",
     ],
     pEn: [
-      "All Site content — the \"Golden Seal of Gunara\" logo, the Gunara Consultant name, the terms UMEA™, Minimum Business Law™, UMEA Master Matrix™, UMEA Maturity Index™, D-10/D-21/D-39/D-75/D-165, texts, graphics, methodology structure, and layout — is protected under Indonesia's copyright, trademark, and trade secret laws.",
-      "Copying, reproducing, modifying, distributing, or claiming ownership of the methodology and materials without Gunara Consultant's written permission is prohibited. Violations will be prosecuted under applicable law, including Law No. 28/2014 on Copyright and Law No. 20/2016 on Trademarks and Geographical Indications.",
+      "All Site content — the \"Geometric G of GConsultant\" logo, the GConsultant name, the terms UMEA™, Minimum Business Law™, UMEA Master Matrix™, UMEA Maturity Index™, D-10/D-21/D-39/D-75/D-165, texts, graphics, methodology structure, and layout — is protected under Indonesia's copyright, trademark, and trade secret laws.",
+      "Copying, reproducing, modifying, distributing, or claiming ownership of the methodology and materials without GConsultant's written permission is prohibited. Violations will be prosecuted under applicable law, including Law No. 28/2014 on Copyright and Law No. 20/2016 on Trademarks and Geographical Indications.",
     ],
   },
   {
     h: "3. Pembayaran Resmi dan Peringatan Penipuan",
     hEn: "3. Official Payment and Fraud Warning",
     p: [
-      "Pembayaran hanya sah jika dilakukan ke rekening resmi: BCA 0860742187 a.n. Gugun Gunara. Kami TIDAK pernah meminta pembayaran ke rekening pribadi lain, dompet digital yang tidak tercantum resmi, atau akun atas nama pihak ketiga. Gunara Consultant tidak bertanggung jawab atas kerugian akibat pembayaran ke kanal non-resmi.",
+      "Pembayaran hanya sah jika dilakukan ke rekening resmi: BCA 0860742187 a.n. Gugun Gunara. Kami TIDAK pernah meminta pembayaran ke rekening pribadi lain, dompet digital yang tidak tercantum resmi, atau akun atas nama pihak ketiga. GConsultant tidak bertanggung jawab atas kerugian akibat pembayaran ke kanal non-resmi.",
       "Waspadai penipuan yang mengatasnamakan kami. Verifikasi setiap penawaran melalui nomor WhatsApp resmi +62 813-1651-6524 atau kontak di halaman Kontak sebelum melakukan transfer apa pun.",
     ],
     pEn: [
-      "Payment is only valid when made to the official account: BCA 0860742187 under the name Gugun Gunara. We NEVER request payment to other personal accounts, unlisted digital wallets, or third-party accounts. Gunara Consultant is not liable for losses from payments via unofficial channels.",
+      "Payment is only valid when made to the official account: BCA 0860742187 under the name Gugun Gunara. We NEVER request payment to other personal accounts, unlisted digital wallets, or third-party accounts. GConsultant is not liable for losses from payments via unofficial channels.",
       "Beware of fraud impersonating us. Verify every offer through the official WhatsApp number +62 813-1651-6524 or the contacts on the Contact page before transferring any funds.",
     ],
   },
@@ -106,11 +106,11 @@ export const TERMS_BLOCKS: LegalBlock[] = [
     h: "4. Tanggung Jawab, Batasan, dan Hukum yang Berlaku",
     hEn: "4. Liability, Limitations, and Governing Law",
     p: [
-      "Gunara Consultant bekerja dengan itikad baik dan standar profesional tinggi; namun hasil akhir perizinan bergantung pula pada kelengkapan dokumen klien, kebijakan instansi pemerintah, dan proses regulasi di luar kendali kami. Estimasi waktu dapat berubah mengikuti antrean dan regulasi instansi. Kami tidak menjamin persetujuan perizinan yang oleh hukum memang tidak dapat dipenuhi oleh usaha Anda.",
+      "GConsultant bekerja dengan itikad baik dan standar profesional tinggi; namun hasil akhir perizinan bergantung pula pada kelengkapan dokumen klien, kebijakan instansi pemerintah, dan proses regulasi di luar kendali kami. Estimasi waktu dapat berubah mengikuti antrean dan regulasi instansi. Kami tidak menjamin persetujuan perizinan yang oleh hukum memang tidak dapat dipenuhi oleh usaha Anda.",
       "Sejauh diizinkan hukum, tanggung jawab kami atas kerugian langsung dari penggunaan Situs dibatasi maksimal sebesar nilai layanan yang telah dibayar untuk transaksi terkait. Syarat & Ketentuan ini tunduk pada hukum Republik Indonesia; sengketa diselesaikan secara musyawarah dan, bila gagal, melalui Pengadilan Negeri yang wilayah hukumnya mencakup Kota Tasikmalaya.",
     ],
     pEn: [
-      "Gunara Consultant works in good faith with high professional standards; however, licensing outcomes also depend on client document completeness, government agency policies, and regulatory processes beyond our control. Time estimates may change according to agency queues and regulations. We do not guarantee approvals that the law itself makes impossible for your business.",
+      "GConsultant works in good faith with high professional standards; however, licensing outcomes also depend on client document completeness, government agency policies, and regulatory processes beyond our control. Time estimates may change according to agency queues and regulations. We do not guarantee approvals that the law itself makes impossible for your business.",
       "To the extent permitted by law, our liability for direct losses from Site use is capped at the service value paid for the related transaction. These Terms are governed by the laws of the Republic of Indonesia; disputes are resolved amicably and, failing that, through the District Court whose jurisdiction covers Tasikmalaya City.",
     ],
   },

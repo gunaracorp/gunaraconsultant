@@ -1,5 +1,5 @@
 /**
- * Data artikel blog Gunara Consultant — modul murni (tanpa "use client")
+ * Data artikel blog GConsultant — modul murni (tanpa "use client")
  * agar dapat dipakai oleh server component (metadata + JSON-LD) maupun
  * client component (render i18n). Semua konten simetris ID + EN.
  */
@@ -57,11 +57,11 @@ export interface BlogPost {
 
 const CTA_ID: BlogBlock = {
   type: "p",
-  text: "Tidak ingin repot mengurus sendiri? Tim Dewan Pakar Gunara Consultant siap menangani seluruh proses dari awal hingga dokumen di tangan Anda — transparan, bergaransi tertulis, dan 100% jalur resmi. Hubungi WhatsApp resmi kami di 0813-1651-6524 untuk konsultasi gratis, atau lihat katalog 46 layanan kami di halaman Layanan.",
+  text: "Tidak ingin repot mengurus sendiri? Tim Dewan Pakar GConsultant siap menangani seluruh proses dari awal hingga dokumen di tangan Anda — transparan, bergaransi tertulis, dan 100% jalur resmi. Hubungi WhatsApp resmi kami di 0813-1651-6524 untuk konsultasi gratis, atau lihat katalog 46 layanan kami di halaman Layanan.",
 };
 const CTA_EN: BlogBlock = {
   type: "p",
-  text: "Don't want to handle it yourself? The Expert Council team at Gunara Consultant is ready to manage the entire process from start to finished documents — transparent, with a written guarantee, and 100% through official channels. Contact our official WhatsApp at 0813-1651-6524 for a free consultation, or browse our catalog of 46 services on the Services page.",
+  text: "Don't want to handle it yourself? The Expert Council team at GConsultant is ready to manage the entire process from start to finished documents — transparent, with a written guarantee, and 100% through official channels. Contact our official WhatsApp at 0813-1651-6524 for a free consultation, or browse our catalog of 46 services on the Services page.",
 };
 
 export const POSTS: BlogPost[] = [

@@ -35,7 +35,7 @@ const collectionJsonLd = {
   url: `${BRAND.siteUrl}/layanan`,
   name: "Katalog 46 Layanan Perizinan & Legalitas Usaha",
   description:
-    "Daftar lengkap layanan perizinan dan legalitas usaha Gunara Consultant untuk seluruh Indonesia.",
+    "Daftar lengkap layanan perizinan dan legalitas usaha GConsultant untuk seluruh Indonesia.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },

@@ -50,7 +50,7 @@ export async function GET(request: Request) {
   return NextResponse.json(
     {
       status: "ok",
-      message: `Gunara Consultant API — v${VERSI} "${NAMA_RILIS}". Status endpoint: /api/status`,
+      message: `GConsultant API — v${VERSI} "${NAMA_RILIS}". Status endpoint: /api/status`,
       version: VERSI,
     },
     { headers: { "X-RateLimit-Remaining": String(remaining) } }

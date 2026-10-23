@@ -222,3 +222,23 @@ Work Log:
 
 Stage Summary:
 - Website Gunara Consultant v2.0.0 kembali 100% dapat diakses; user cukup reload tab preview (Ctrl+Shift+R bila perlu)
+
+---
+Task ID: 23 (rebrand-gconsultant)
+Agent: Main Agent (Z.ai Code) — GOD MODE TIER MAX v3.0
+Task: Rebrand total Gunara Consultant → GCONSULTANT sesuai GConsultant Brand System v1.0 user (logo Geometric G baru, palet Sovereign Green/Legacy Cream, font Cormorant Garamond + Inter, hero preview resmi, domain gunara.web.id)
+
+Work Log:
+- Analisis 3 aset user: GConsultant_Brand_Tokens.json (token resmi), GConsultant_Website_Hero_Preview.png (desain hero target), GConsultant_Brand_Guideline_v1.0.pdf (aturan logo/typo/kontras)
+- LOGO BARU "The Geometric G": mark G geometris kontinu (2 cincin konsentris + palang menembus ke inti — TANPA perisai/segel sesuai guideline). 5 file SVG: logo.svg (master), logo-horizontal.svg, logo-stacked.svg (baru), logo-mono.svg, icon.svg (tile Deep Forest + G cream + bar gold)
+- brand-seal.tsx ditulis ulang (inline SVG pure-path, idPrefix, gradient userSpaceOnUse)
+- BUG KRITIS ditemukan & diperbaiki: gradient SVG objectBoundingBox pada garis horizontal (bbox tinggi-0) TIDAK DIRENDER → palang G tak terlihat di OG/favicon/browser. Fix: gradientUnits="userSpaceOnUse" (brand-seal + icon.svg) / warna solid (OG)
+- Design tokens globals.css: palet resmi (Sovereign Green #073B2E, Deep Forest #0F241D, Antique Gold #C6A15B, Illuminated Gold #E5C97A, Legacy Cream #F6F1E4, Ink, Charcoal, Clarity Green) + utility .pattern-rings (cincin G raksasa) + semua hex utilitas lama diganti
+- Font: Cormorant Garamond 500/600/700 (display) + Inter (UI) via next/font — pengganti Playfair + Plus Jakarta Sans
+- brand.ts (SSOT): name GConsultant, wordmark GCONSULTANT, tagline THE POLYMATHIC PROBLEM SOLVER, descriptor, promise ID/EN, siteUrl https://gunara.web.id, email halo@gunara.web.id — BCA/WA/AHU/alamat tidak tersentuh
+- Hero dibangun ulang persis preview: kicker descriptor bertracked, H1 serif "Kompleksitas memiliki struktur. Solusi memiliki jalur." (EN: "Complexity has a structure. Solutions have a path."), sub, CTA emas /metodologi + outline WA, trust line; strip krem DIAGNOSE/ARCHITECT/EXECUTE + band statistik CountUp; hero kini CSS-only (hero-bg.png dihapus — LCP naik)
+- i18n: navTagline, heroTitle1/heroTitleGold/heroSub/heroCta1/heroCta2, 8 key baru app*, footDesc, footRights ©2026 — simetris ID/EN
+- Global replace "Gunara Consultant"→"GConsultant" di 30+ file (nama pribadi Gugun Gunara & rekening BCA dipertahankan); domain lama 0 sisa; robots.txt, manifest.ts, legal.ts (logo IP), testimonials dibersihkan
+- Aset biner via sharp (scripts/rebrand-assets-v3.js): favicon.ico rebuild assembler 4 entri PNG (hash URL berubah d6f2661d→ebfdc62a — cache browser mati), apple-icon 180, PWA 192/512, og-image.jpg 1200x630 komposisi baru (verifikasi visual via scripts/verify-brand.js)
+- layout.tsx: metadataBase gunara.web.id, title "GConsultant — THE POLYMATHIC PROBLEM SOLVER", keywords baru, JSON-LD (slogan, alternateName ["Gunara Consultant","GCONSULTANT"], knowsAbout); sitemap 66 URL domain baru; /api/status service gconsultant; package.json 3.0.0; CHANGELOG v3.0.0
+- Verifikasi: lint 0 error; 19 route 200; SSR: GCONSULTANT ×4, POLYMATHIC ×13, headline ×5, DIAGNOSE/ARCHITECT/EXECUTE ✓, gunara.web.id ×330, sisa "Gunara Consultant"/GUNARA/Golden Seal = 0; E2E agent-browser desktop 1280 (hero+approach+footer) & mobile 375 & EN-switch — semua sesuai preview; 0 console error

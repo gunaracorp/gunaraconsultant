@@ -29,14 +29,14 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-3" aria-label="Gunara Consultant">
+            <Link href="/" className="flex items-center gap-3" aria-label="GConsultant">
               <BrandSeal
                 idPrefix="gs-foot"
-                title="Logo Gunara Consultant"
+                title="Logo GConsultant"
                 className="h-12 w-12"
               />
-              <span className="font-display text-lg font-bold tracking-[0.12em]">
-                GUNARA <span className="text-gradient-gold">CONSULTANT</span>
+              <span className="font-display text-lg font-bold tracking-[0.16em]">
+                G<span className="text-gradient-gold">CONSULTANT</span>
               </span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream/70">
@@ -150,7 +150,7 @@ export function Footer() {
               <li className="flex gap-3">
                 <PhoneCall className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold" aria-hidden="true" />
                 <a
-                  href={waLink("Halo Gunara Consultant!")}
+                  href={waLink("Halo GConsultant!")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-gold-soft"

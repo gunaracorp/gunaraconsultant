@@ -3,7 +3,7 @@
  * UMEA™ — Universal Minimum Enterprise Architecture
  * Master Dataset (Single Source of Truth)
  * ------------------------------------------------------------
- * Hukum Minimum Usaha™ — metodologi milik Gunara Consultant.
+ * Hukum Minimum Usaha™ — metodologi milik GConsultant.
  * Prinsip Z2 (Content Outlives Code): data murni, tanpa UI.
  * Prinsip Z1 (Modular Eternity): dipakai /metodologi, /asesmen,
  * JSON-LD, dan funnel konsultasi — bisa diganti tanpa merobohkan
@@ -421,13 +421,13 @@ export const PIAGAM_2125 = {
   titleId: "Piagam 2125",
   titleEn: "The 2125 Charter",
   bodyId: [
-    "Dilihat dari seratus tahun ke depan, Gunara Consultant berdiri bukan sebagai penjual jasa, melainkan sebagai arsitek ketahanan organisasi Indonesia.",
+    "Dilihat dari seratus tahun ke depan, GConsultant berdiri bukan sebagai penjual jasa, melainkan sebagai arsitek ketahanan organisasi Indonesia.",
     "Kami percaya usaha, asosiasi, koperasi, dan negara tidak runtuh karena kehilangan orang — mereka runtuh karena kehilangan fungsi kritis tanpa pengganti. Karena itu setiap karya kami diuji dengan satu pertanyaan: masihkah ini bernilai di tahun 2125?",
     "Kami mewariskan metodologi, bukan tren; arsitektur, bukan sekadar nasihat; dan keberanian moral untuk menolak jalan pintas yang mengkhianati amanah.",
     "Kepada pengguna tahun 2125: semoga sistem yang kami bangun hari ini membuat Anda lebih mudah membangun hari esok Anda.",
   ],
   bodyEn: [
-    "Seen from a hundred years ahead, Gunara Consultant stands not as a service vendor but as the architect of organizational resilience for Indonesia.",
+    "Seen from a hundred years ahead, GConsultant stands not as a service vendor but as the architect of organizational resilience for Indonesia.",
     "We believe businesses, associations, cooperatives, and nations do not collapse from losing people — they collapse from losing critical functions without successors. Therefore every work of ours is tested with one question: will this still be valuable in 2125?",
     "We bequeath methodology, not trends; architecture, not mere advice; and the moral courage to refuse shortcuts that betray trust.",
     "To our users in 2125: may the systems we build today make it easier for you to build your tomorrow.",

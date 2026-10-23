@@ -7,6 +7,6 @@
  *   4. worklog.md
  * Badge footer & endpoint /api/status mengikuti file ini secara otomatis.
  */
-export const VERSI = "2.0.0";
-export const NAMA_RILIS = "GOD MODE TIER MAX — UMEA Edition";
+export const VERSI = "3.0.0";
+export const NAMA_RILIS = "GCONSULTANT REBRAND — Polymathic Edition";
 export const TANGGAL_RILIS = "2026-10-23";

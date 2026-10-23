@@ -32,9 +32,9 @@ const blogJsonLd = {
   "@type": "Blog",
   "@id": `${BRAND.siteUrl}/blog#blog`,
   url: `${BRAND.siteUrl}/blog`,
-  name: "Blog Perizinan & Legalitas Bisnis Gunara Consultant",
+  name: "Blog Perizinan & Legalitas Bisnis GConsultant",
   description:
-    "Panduan praktis perizinan dan legalitas bisnis Indonesia dari praktisi Gunara Consultant.",
+    "Panduan praktis perizinan dan legalitas bisnis Indonesia dari praktisi GConsultant.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   publisher: { "@id": `${BRAND.siteUrl}/#organization` },

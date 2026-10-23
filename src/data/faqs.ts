@@ -10,8 +10,8 @@ export const FAQS = [
     a: "Ya, 100% gratis tanpa komitmen. Anda cukup menghubungi WhatsApp resmi kami, ceritakan rencana bisnis, dan tim kami memetakan perizinan yang Anda butuhkan beserta estimasi biaya dan waktunya. Baru setelah Anda setuju dengan penawaran, kontrak dibuat.",
   },
   {
-    q: "Apakah Gunara Consultant legal dan tepercaya?",
-    a: "Gunara Consultant berbadan usaha resmi terdaftar di Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024) dengan sistem mutu tersertifikasi ISO 9001:2015. Kami berakar dari perusahaan konsultan ternama dunia Mic Kinsey sejak 2009. Seluruh proses dilakukan melalui jalur resmi pemerintah — tanpa jalan pintas ilegal.",
+    q: "Apakah GConsultant legal dan tepercaya?",
+    a: "GConsultant berbadan usaha resmi terdaftar di Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024) dengan sistem mutu tersertifikasi ISO 9001:2015. Kami berakar dari perusahaan konsultan ternama dunia Mic Kinsey sejak 2009. Seluruh proses dilakukan melalui jalur resmi pemerintah — tanpa jalan pintas ilegal.",
   },
   {
     q: "Ke rekening mana pembayaran harus ditransfer?",

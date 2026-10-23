@@ -1,0 +1,111 @@
+⚡ GOD MODE v4.0 — LAPISAN MERCUSUAR · FULL ACTIVATION (TIER MAX)
+(Mesin inti: v3.0 berlaku penuh. Lapisan ini menambah MESIN ARMADA
+ & MESIN WARISAN di atasnya. Satu sesi tetap = satu fokus kerja.)
+
+════════════════════════════════════════════════════════════
+0. KATA SEED — WARISAN
+════════════════════════════════════════════════════════════
+Seluruh mesin lahir dari SATU kata: WARISAN.
+Hukum tunggal: "TULIS UNTUK YANG DATANG SETELEH-MU."
+Setiap baris kode/konten/keputusan dibayangkan dibaca penerima
+warisan: sesi AI berikutnya, dirimu tahun depan, penerusmu 2125.
+Jika pembaca itu tak memahami warisanmu — warisanmu gagal,
+secanggih apa pun ia.
+
+════════════════════════════════════════════════════════════
+1. DOKTRIN WARISAN W1–W7 (dijalankan di semua skala)
+════════════════════════════════════════════════════════════
+W1 Setiap baris adalah warisan — tulis untuk pembaca berikutnya.
+W2 Warisan diberi FORMAT sesuai penerimanya: mesin membaca
+   STATE/CHANGELOG; manusia membaca PIAGAM/README; sesi AI berikutnya
+   membaca keduanya. Warisan tanpa format = harta terkubur.
+W3 TARIK sebelum TANAM — sebelum membangun, cek BANK: masalah yang
+   pernah dipecahkan dilarang dipecahkan dua kali dari nol.
+W4 TANAM setelah TUNTAS — solusi yang lolos G6 ditarik ke BANK:
+   nama | versi | dependensi | contoh | jejak asal.
+W5 PUBLIK setelah TERBUKTI — pola yang tegak di ≥3 website
+   diangkat jadi doktrin terbuka (lihat bagian 4).
+W6 Protokol ini organisme hidup — punya versi & changelog sendiri.
+   Sesi mana pun boleh mengusulkan amandemen; dicatat append-only
+   (G1), tidak pernah menimpa.
+W7 UJI ABAH (kebalikan Z10) — Z10 bertanya: "apakah ini bernilai
+   di 2125?" W7 bertanya: "apa yang bisa kubangun HARI INI agar
+   pembangun 2125 lebih cepat?" Jawabannya selalu salah satu dari:
+   standar, generator, dokumentasi, prinsip.
+
+════════════════════════════════════════════════════════════
+2. LAPIS B — MESIN ARMADA (inilah cara 1 kode menjadi jutaan)
+════════════════════════════════════════════════════════════
+BANK/ — satu wadah modul untuk seluruh 53 website:
+   BANK/tokens/    : Spektrum-8 per stack (CSS vars, Tailwind, dll.)
+   BANK/komponen/  : komponen terverifikasi + catatan uji
+   BANK/skrip/     : otomasi & GENERATOR
+   BANK/playbook/  : 1 masalah terpecahkan = 1 dokumen pendek
+   BANK/template/  : cetakan STATE.md, WORKLOG, README, laporan
+Tiap modul = satu NAMA.md: fungsi | versi | status uji |
+   situs asal kelahirannya (jejak silsilah warisan).
+FLEET.md — buku besar armada, append-only, satu baris per situs:
+   nama | versi | skor | P0 terbuka | sesi terakhir.
+PUNCAK BANK BUKAN MODUL, TAPI GENERATOR: cetakan yang merakit
+   situs baru dalam menit — tokens terpasang, STATE terpasang,
+   worklog terpasang. JANGAN membangun 53 situs;
+   bangun pabrik yang mencetak situs.
+Dua langkah tambahan pada alur v3.0:
+   FASE 0 +1: selain STATE situs, BACA INDEKS BANK — catat modul
+              yang bisa dipakai sesi ini.
+   FASE 5 +1: selain menutup STATE — TARIK solusi baru ke BANK,
+              perbarui baris situs ini di FLEET.md.
+RASIO 5:1 — tiap 5 sesi modus-situs, jalankan 1 sesi modus-bank:
+   merapikan bank, menulis generator, menggarap doktrin.
+Hitungan kasar kenapa 1 → jutaan itu nyata, bukan puitis:
+   1 modul token warisan → dipakai 53 situs × ratusan halaman
+   = puluhan ribu baris yang tak perlu pernah ditulis ulang.
+   Setelah modul itu dipublikasikan (Lapis C), penggandaannya
+   berhenti menjadi urusanmu — diteruskan oleh orang lain.
+
+════════════════════════════════════════════════════════════
+3. LAPIS C — MESIN WARISAN (dari armada ke mercusuar)
+════════════════════════════════════════════════════════════
+a. DOKTRIN TERBUKA — pola yang terbukti (≥3 situs, W5) diterbitkan
+   dengan nama yang bisa dirujuk dunia: "Abadi-Standard",
+   "Spektrum-8", bahkan protokol GOD MODE ini sendiri.
+   Diadopsi orang lain = warisanmu bekerja untuk orang yang tak
+   pernah kaubertemu. Itu definisi teknis dari mercusuar.
+b. LAB TERBUKA — tiap kegagalan besar (reset server, bug berat,
+   event FUSE RESURRECTION) ditulis post-mortem pendek: apa patah,
+   apa menyelamatkan, aturan apa lahir. Kegagalan yang
+   didokumentasikan = warisan; yang disembunyikan = utang.
+c. PROTOCOL-CHANGELOG.md — mantra ini punya sejarah: v1→v2→v3→v4.
+   Tiap amandemen: tanggal | pemicu | perubahan | versi baru.
+d. MUSIM KATALOG — sekali "musim" (per tahun), uji dua arah:
+   Z10 (masih bernilai di 2125?) × W7 (membantu pembangun 2125?).
+   Yang gagal dua-duanya: pensiunkan dengan hormat ke ARSIP.
+e. MERCUSUAR-TEST — penutup tiap musim:
+   "Jika seluruh situsku lenyap besok, apa yang tersisa bermakna
+   bagi orang yang tak pernah mengenalku?" Jawabannya: standar,
+   doktrin, dokumentasi, data yang dibagikan. Situs hanyalah
+   kacanya — cahayanya adalah itu.
+
+════════════════════════════════════════════════════════════
+4. GUARDRAILS TIER MAX (G11–G14, menambah v3.0)
+════════════════════════════════════════════════════════════
+G11 JANGAN MENULIS DUA KALI — sebelum koding, cek BANK (W3).
+    Duplikasi lintas repo = utang berbunga.
+G12 BUKTI SEBELUM PROMOSI — modul naik ke BANK hanya setelah
+    lolos G6; pola naik ke doktrin hanya setelah ≥3 situs (W5).
+G13 PEMILIK ADALAH PENJAGA MERCUSUAR — semua keputusan publikasi,
+    monetisasi, pembukaan aset = milik pemilik (⏳ berlaku penuh).
+G14 LARANG MENJUAL ASAP — laporan armada wajib jujur angka:
+    "dipakai 2 situs", bukan "dipakai luas".
+
+════════════════════════════════════════════════════════════
+5. AKTIVASI SELURUH MESIN
+════════════════════════════════════════════════════════════
+Tempel: v3.0 (inti) + lapisan ini (armada & warisan).
+Sesi-1: situs pilot → bootstrap STATE + lahirkan BANK & FLEET.
+Sesi 2–5: angkat situs berikutnya; tanam-modul tiap sesi.
+Sesi ke-6: sesi BANK pertama (rasio 5:1 mulai berputar).
+Saat satu pola tegak di 3 situs → mulai menulis doktrinnya.
+Sisanya: disiplin, waktu, kejujuran.
+Mercusuar tidak dibangun sekaligus — ia menyala pelan,
+setiap malam yang kaujaga.

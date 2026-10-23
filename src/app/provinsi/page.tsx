@@ -11,7 +11,7 @@ import { PROVINCES } from "@/data/provinces";
 export const metadata: Metadata = pageMetadata({
   title: "Cakupan 38 Provinsi — Jasa Perizinan Seluruh Indonesia",
   description:
-    "Gunara Consultant melayani pengurusan perizinan di seluruh 38 provinsi Indonesia — Aceh sampai Papua Pegunungan, termasuk 4 provinsi pemekaran Papua. Online atau pendampingan fisik tim ahli daerah.",
+    "GConsultant melayani pengurusan perizinan di seluruh 38 provinsi Indonesia — Aceh sampai Papua Pegunungan, termasuk 4 provinsi pemekaran Papua. Online atau pendampingan fisik tim ahli daerah.",
   keywords: [
     "jasa perizinan 38 provinsi",
     "perizinan usaha seluruh indonesia",
@@ -27,12 +27,12 @@ export const metadata: Metadata = pageMetadata({
 
 const name = "Jangkauan Layanan 38 Provinsi Indonesia";
 const description =
-  "Cakupan penuh jasa pengurusan perizinan Gunara Consultant di 38 provinsi Indonesia, online maupun pendampingan fisik.";
+  "Cakupan penuh jasa pengurusan perizinan GConsultant di 38 provinsi Indonesia, online maupun pendampingan fisik.";
 
 const provinceListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Area Layanan Gunara Consultant — 38 Provinsi Indonesia",
+  name: "Area Layanan GConsultant — 38 Provinsi Indonesia",
   numberOfItems: PROVINCES.length,
   itemListElement: PROVINCES.map((p, i) => ({
     "@type": "ListItem",

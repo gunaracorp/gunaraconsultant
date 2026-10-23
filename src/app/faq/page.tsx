@@ -11,7 +11,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "FAQ Perizinan Usaha — Jawaban Lengkap & Jujur",
   description:
-    "Jawaban 8 pertanyaan terpenting: apakah konsultasi gratis, legalitas Gunara Consultant, rekening resmi BCA, lama pengurusan, keamanan dokumen, garansi jika ditolak, cakupan 38 provinsi, dan paket UMKM.",
+    "Jawaban 8 pertanyaan terpenting: apakah konsultasi gratis, legalitas GConsultant, rekening resmi BCA, lama pengurusan, keamanan dokumen, garansi jika ditolak, cakupan 38 provinsi, dan paket UMKM.",
   keywords: [
     "faq perizinan usaha",
     "pertanyaan jasa perizinan",
@@ -29,9 +29,9 @@ const faqJsonLd = {
   "@type": "FAQPage",
   "@id": `${BRAND.siteUrl}/faq#webpage`,
   url: `${BRAND.siteUrl}/faq`,
-  name: "Pertanyaan yang Sering Diajukan — Gunara Consultant",
+  name: "Pertanyaan yang Sering Diajukan — GConsultant",
   description:
-    "Kumpulan jawaban atas pertanyaan paling sering diajukan tentang jasa perizinan Gunara Consultant.",
+    "Kumpulan jawaban atas pertanyaan paling sering diajukan tentang jasa perizinan GConsultant.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },

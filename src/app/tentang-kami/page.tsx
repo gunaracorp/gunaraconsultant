@@ -9,9 +9,9 @@ import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Tentang Kami — Profil Resmi Gunara Consultant",
+  title: "Tentang Kami — Profil Resmi GConsultant",
   description:
-    "Profil resmi Gunara Consultant: berakar dari Mic Kinsey sejak 2009, berbadan usaha 2024 (AHU-038293.AH.01.30.Tahun 2024), modal dasar Rp5 M, ISO 9001:2015, kantor Tasikmalaya & Jakarta, melayani 38 provinsi.",
+    "Profil resmi GConsultant: berakar dari Mic Kinsey sejak 2009, berbadan usaha 2024 (AHU-038293.AH.01.30.Tahun 2024), modal dasar Rp5 M, ISO 9001:2015, kantor Tasikmalaya & Jakarta, melayani 38 provinsi.",
   keywords: [
     "tentang gunara consultant",
     "profil gunara consultant",
@@ -32,9 +32,9 @@ const aboutJsonLd = {
   "@type": "AboutPage",
   "@id": `${BRAND.siteUrl}/tentang-kami#webpage`,
   url: `${BRAND.siteUrl}/tentang-kami`,
-  name: "Tentang Gunara Consultant — Profil Resmi Perusahaan",
+  name: "Tentang GConsultant — Profil Resmi Perusahaan",
   description:
-    "Profil resmi Gunara Consultant: akar Mic Kinsey sejak 2009, badan usaha resmi Kemenkumham RI 2024, ISO 9001:2015, melayani 38 provinsi Indonesia.",
+    "Profil resmi GConsultant: akar Mic Kinsey sejak 2009, badan usaha resmi Kemenkumham RI 2024, ISO 9001:2015, melayani 38 provinsi Indonesia.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },

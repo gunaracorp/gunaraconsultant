@@ -8,7 +8,7 @@ import { pageMetadata, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Syarat & Ketentuan Penggunaan Layanan",
   description:
-    "Syarat & Ketentuan Gunara Consultant: aturan penggunaan website dan layanan konsultansi perizinan, hak kekayaan intelektual metodologi UMEA™, kanal pembayaran resmi BCA, serta batasan tanggung jawab sesuai hukum Republik Indonesia.",
+    "Syarat & Ketentuan GConsultant: aturan penggunaan website dan layanan konsultansi perizinan, hak kekayaan intelektual metodologi UMEA™, kanal pembayaran resmi BCA, serta batasan tanggung jawab sesuai hukum Republik Indonesia.",
   keywords: [
     "syarat dan ketentuan",
     "terms and conditions gunara",
@@ -25,8 +25,8 @@ const breadcrumb = breadcrumbJsonLd("/syarat-ketentuan", "Syarat & Ketentuan");
 
 const webPage = webPageJsonLd(
   "/syarat-ketentuan",
-  "Syarat & Ketentuan Gunara Consultant",
-  "Aturan penggunaan website dan layanan Gunara Consultant — termasuk kanal pembayaran resmi dan perlindungan metodologi UMEA™."
+  "Syarat & Ketentuan GConsultant",
+  "Aturan penggunaan website dan layanan GConsultant — termasuk kanal pembayaran resmi dan perlindungan metodologi UMEA™."
 );
 
 export default function TermsPage() {

@@ -22,7 +22,7 @@ export default function NotFound() {
       <div className="relative z-10 flex flex-col items-center">
         <BrandSeal
           idPrefix="gs-404"
-          title="Logo Gunara Consultant"
+          title="Logo GConsultant"
           className="h-20 w-20 drop-shadow-[0_0_18px_rgba(212,175,55,0.45)]"
         />
         <p

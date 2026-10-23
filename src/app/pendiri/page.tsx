@@ -8,9 +8,9 @@ import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Profil Gugun Gunara — Founder & CEO Gunara Consultant",
+  title: "Profil Gugun Gunara — Founder & CEO GConsultant",
   description:
-    "Profil Gugun Gunara, Founder & CEO Gunara Consultant: 15+ tahun pengalaman berakar dari perusahaan konsultan ternama dunia Mic Kinsey sejak 2009, memimpin pusat perizinan terlengkap di Asia.",
+    "Profil Gugun Gunara, Founder & CEO GConsultant: 15+ tahun pengalaman berakar dari perusahaan konsultan ternama dunia Mic Kinsey sejak 2009, memimpin pusat perizinan terlengkap di Asia.",
   keywords: [
     "gugun gunara",
     "founder gunara consultant",
@@ -27,9 +27,9 @@ const profileJsonLd = {
   "@type": "ProfilePage",
   "@id": `${BRAND.siteUrl}/pendiri#webpage`,
   url: `${BRAND.siteUrl}/pendiri`,
-  name: "Profil Gugun Gunara — Founder & CEO Gunara Consultant",
+  name: "Profil Gugun Gunara — Founder & CEO GConsultant",
   description:
-    "Profil resmi Gugun Gunara, pendiri Gunara Consultant, pusat perizinan terlengkap di Asia.",
+    "Profil resmi Gugun Gunara, pendiri GConsultant, pusat perizinan terlengkap di Asia.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },
@@ -41,7 +41,7 @@ const profileJsonLd = {
     image: `${BRAND.siteUrl}/images/founder.jpg`,
     worksFor: { "@id": `${BRAND.siteUrl}/#organization` },
     description:
-      "Pendiri Gunara Consultant dengan pengalaman 15+ tahun di bidang perizinan dan legalitas usaha, berakar dari praktik perusahaan konsultan ternama dunia Mic Kinsey sejak 2009.",
+      "Pendiri GConsultant dengan pengalaman 15+ tahun di bidang perizinan dan legalitas usaha, berakar dari praktik perusahaan konsultan ternama dunia Mic Kinsey sejak 2009.",
     knowsAbout: [
       "Perizinan Usaha",
       "Legalitas Perusahaan",

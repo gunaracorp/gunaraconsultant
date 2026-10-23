@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "name": "GConsultant",
+    "display_wordmark": "GCONSULTANT",
+    "primary_domain": "gunara.web.id",
+    "signature_tagline": "THE POLYMATHIC PROBLEM SOLVER",
+    "descriptor": "POLYMATHIC STRATEGY & SYSTEMS ARCHITECTURE",
+    "promise_id": "Menyatukan ilmu. Menata kompleksitas. Mewujudkan solusi.",
+    "philosophy_internal": [
+      "Master Polymath",
+      "Sage Universal",
+      "The Ultimate Problem Solver"
+    ]
+  },
+  "colors": {
+    "sovereignGreen": {
+      "hex": "#073B2E",
+      "rgb": [
+        7,
+        59,
+        46
+      ],
+      "usage": "primary brand background, text and icon on light surfaces"
+    },
+    "deepForest": {
+      "hex": "#0F241D",
+      "rgb": [
+        15,
+        36,
+        29
+      ],
+      "usage": "dark background"
+    },
+    "antiqueGold": {
+      "hex": "#C6A15B",
+      "rgb": [
+        198,
+        161,
+        91
+      ],
+      "usage": "accent, mark on dark backgrounds; avoid small text on cream"
+    },
+    "illuminatedGold": {
+      "hex": "#E5C97A",
+      "rgb": [
+        229,
+        201,
+        122
+      ],
+      "usage": "highlight and high-contrast accent on dark green"
+    },
+    "deepGold": {
+      "hex": "#9A742F",
+      "rgb": [
+        154,
+        116,
+        47
+      ],
+      "usage": "gold alternative on light backgrounds when needed"
+    },
+    "legacyCream": {
+      "hex": "#F6F1E4",
+      "rgb": [
+        246,
+        241,
+        228
+      ],
+      "usage": "light background and text on dark green"
+    },
+    "clarityGreen": {
+      "hex": "#CFE3D4",
+      "rgb": [
+        207,
+        227,
+        212
+      ],
+      "usage": "supporting surface; verify contrast by use"
+    },
+    "ink": {
+      "hex": "#111815",
+      "rgb": [
+        17,
+        24,
+        21
+      ],
+      "usage": "body text"
+    },
+    "charcoal": {
+      "hex": "#26332D",
+      "rgb": [
+        38,
+        51,
+        45
+      ],
+      "usage": "neutral dark"
+    }
+  },
+  "typography": {
+    "display": {
+      "preferred": "Cormorant Garamond",
+      "fallback": [
+        "Georgia",
+        "Times New Roman",
+        "serif"
+      ],
+      "weights": [
+        500,
+        600,
+        700
+      ],
+      "use": "custom display wordmark and editorial headlines"
+    },
+    "ui": {
+      "preferred": "Inter",
+      "fallback": [
+        "Manrope",
+        "Plus Jakarta Sans",
+        "Arial",
+        "sans-serif"
+      ],
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "use": "body text, labels, web UI"
+    },
+    "tagline_tracking_em": {
+      "min": 0.18,
+      "max": 0.28
+    },
+    "note": "Use licensed fonts. For final production logo, convert approved lettering to vector outlines."
+  },
+  "logoRules": {
+    "clear_space": "At least the primary monogram stroke width as an initial minimum; use more around the full lockup.",
+    "minimum_sizes": {
+      "horizontal_web_px": 220,
+      "compact_web_px": 120,
+      "mark_web_px": 16,
+      "horizontal_print_mm": 35,
+      "mark_print_mm": 5,
+      "embroidery_mark_mm": 15
+    },
+    "backgrounds": [
+      "cream/light neutral",
+      "sovereign green/deep forest",
+      "black/charcoal"
+    ],
+    "avoid": [
+      "stretching",
+      "rotation",
+      "unapproved recolor",
+      "drop shadows on core logo",
+      "placing on busy images without a solid clear field",
+      "using multiple taglines at once"
+    ]
+  }
+}

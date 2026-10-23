@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
 
   const title = `${service.nameId} — Jasa Pengurusan Resmi, Cepat & Bergaransi`;
-  const description = `${service.shortId} Dikelola Gunara Consultant — pusat perizinan terlengkap di Asia, tersertifikasi ISO 9001:2015, melayani 38 provinsi Indonesia. Estimasi ${service.durationId}, biaya mulai ${service.priceFrom}.`;
+  const description = `${service.shortId} Dikelola GConsultant — pusat perizinan terlengkap di Asia, tersertifikasi ISO 9001:2015, melayani 38 provinsi Indonesia. Estimasi ${service.durationId}, biaya mulai ${service.priceFrom}.`;
 
   return {
     title: service.nameId,

@@ -10,7 +10,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "Kontak & Kantor — Konsultasi Perizinan Gratis",
   description:
-    "Hubungi Gunara Consultant: WhatsApp resmi +62 813-1651-6524, email halo@gunaraconsultant.com. Kantor pusat Tasikmalaya & perwakilan Jakarta di Indonesia Stock Exchange Tower 1. Aktif Senin–Sabtu 08.00–17.00 WIB.",
+    "Hubungi GConsultant: WhatsApp resmi +62 813-1651-6524, email halo@gunara.web.id. Kantor pusat Tasikmalaya & perwakilan Jakarta di Indonesia Stock Exchange Tower 1. Aktif Senin–Sabtu 08.00–17.00 WIB.",
   keywords: [
     "kontak gunara consultant",
     "kantor gunara consultant",
@@ -28,9 +28,9 @@ const contactJsonLd = {
   "@type": "ContactPage",
   "@id": `${BRAND.siteUrl}/kontak#webpage`,
   url: `${BRAND.siteUrl}/kontak`,
-  name: "Kontak & Kantor Gunara Consultant",
+  name: "Kontak & Kantor GConsultant",
   description:
-    "Halaman kontak resmi Gunara Consultant — WhatsApp, email, kantor pusat Tasikmalaya, dan kantor perwakilan Jakarta.",
+    "Halaman kontak resmi GConsultant — WhatsApp, email, kantor pusat Tasikmalaya, dan kantor perwakilan Jakarta.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },

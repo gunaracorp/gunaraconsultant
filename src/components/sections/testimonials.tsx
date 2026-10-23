@@ -17,9 +17,9 @@ const TESTIMONIALS = [
     nameId: "Sari Wijaya",
     role: "Founder Brand Skincare — Jakarta",
     textId:
-      "Produk saya sempat bermasalah notifikasi BPOM. Tim Gunara menyelamatkan seluruh lini produk dalam waktu yang saya kira mustahil. Sekarang bisa masuk ritel modern dengan percaya diri.",
+      "Produk saya sempat bermasalah notifikasi BPOM. Tim GConsultant menyelamatkan seluruh lini produk dalam waktu yang saya kira mustahil. Sekarang bisa masuk ritel modern dengan percaya diri.",
     textEn:
-      "My products had BPOM notification problems. Gunara's team saved the entire product line in a time I thought was impossible. Now we enter modern retail with confidence.",
+      "My products had BPOM notification problems. GConsultant's team saved the entire product line in a time I thought was impossible. Now we enter modern retail with confidence.",
   },
   {
     nameId: "Ahmad Fauzi",
@@ -33,25 +33,25 @@ const TESTIMONIALS = [
     nameId: "Maria Marpaung",
     role: "Owner Villa — Ubud, Bali",
     textId:
-      "PBG dan SLF villa saya bermasalah karena dokumen lama tidak lengkap. Gunara Consultant bereskan semuanya tanpa saya repot. Sekarang bisa kerja sama OTA besar.",
+      "PBG dan SLF villa saya bermasalah karena dokumen lama tidak lengkap. GConsultant bereskan semuanya tanpa saya repot. Sekarang bisa kerja sama OTA besar.",
     textEn:
-      "My villa's PBG and SLF were problematic due to incomplete old documents. Gunara Consultant settled everything without hassle. Now we partner with major OTAs.",
+      "My villa's PBG and SLF were problematic due to incomplete old documents. GConsultant settled everything without hassle. Now we partner with major OTAs.",
   },
   {
     nameId: "David Chen",
     role: "CEO PT PMA — Surabaya",
     textId:
-      "Sebagai investor asing, saya butuh kejelasan. Gunara menjelaskan setiap langkah dalam bahasa yang mudah dipahami, dari PMA hingga KITAS. Worth every rupiah.",
+      "Sebagai investor asing, saya butuh kejelasan. GConsultant menjelaskan setiap langkah dalam bahasa yang mudah dipahami, dari PMA hingga KITAS. Worth every rupiah.",
     textEn:
-      "As a foreign investor, I needed clarity. Gunara explained every step in easy language, from PMA to KITAS. Worth every rupiah.",
+      "As a foreign investor, I needed clarity. GConsultant explained every step in easy language, from PMA to KITAS. Worth every rupiah.",
   },
   {
     nameId: "Rina Halim",
     role: "Owner Klinik — Semarang",
     textId:
-      "Izin klinik dan apotek yang selama setahun saya coba sendiri, dalam 6 minggu selesai lewat Gunara. Standards mereka sangat tinggi. Sangat direkomendasikan.",
+      "Izin klinik dan apotek yang selama setahun saya coba sendiri, dalam 6 minggu selesai lewat GConsultant. Standards mereka sangat tinggi. Sangat direkomendasikan.",
     textEn:
-      "Clinic and pharmacy permits I struggled with for a year were done in 6 weeks through Gunara. Their standards are extremely high. Highly recommended.",
+      "Clinic and pharmacy permits I struggled with for a year were done in 6 weeks through GConsultant. Their standards are extremely high. Highly recommended.",
   },
 ];
 
@@ -95,7 +95,7 @@ export function Testimonials() {
 
         <Reveal delay={0.2} className="mt-10 text-center">
           <p className="text-sm font-semibold text-muted-foreground">
-            ⭐ 4.9/5.0 — rata-rata kepuasan klien Gunara Consultant
+            ⭐ 4.9/5.0 — rata-rata kepuasan klien GConsultant
           </p>
         </Reveal>
       </div>

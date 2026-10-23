@@ -8,7 +8,7 @@ import { pageMetadata, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Kebijakan Privasi — Pelindungan Data Pribadi (UU PDP)",
   description:
-    "Kebijakan Privasi Gunara Consultant: bagaimana kami mengumpulkan, menggunakan, menjaga, dan melindungi data pribadi Anda — selaras UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) dan siap GDPR.",
+    "Kebijakan Privasi GConsultant: bagaimana kami mengumpulkan, menggunakan, menjaga, dan melindungi data pribadi Anda — selaras UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) dan siap GDPR.",
   keywords: [
     "kebijakan privasi gunara consultant",
     "kebijakan privasi perizinan",
@@ -25,7 +25,7 @@ const breadcrumb = breadcrumbJsonLd("/kebijakan-privasi", "Kebijakan Privasi");
 
 const webPage = webPageJsonLd(
   "/kebijakan-privasi",
-  "Kebijakan Privasi Gunara Consultant",
+  "Kebijakan Privasi GConsultant",
   "Bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda — selaras UU PDP No. 27 Tahun 2022."
 );
 

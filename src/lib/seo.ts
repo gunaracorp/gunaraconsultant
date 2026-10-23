@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { BRAND } from "@/lib/brand";
 
 /**
- * Mesin metadata "terlengkap" untuk semua halaman mandiri Gunara Consultant.
+ * Mesin metadata "terlengkap" untuk semua halaman mandiri GConsultant.
  * Satu panggilan = title, description, keywords, canonical, hreflang,
  * OpenGraph penuh, Twitter Card penuh, dan aturan robots googleBot.
  */
 export function pageMetadata(opts: {
-  /** Judul unik halaman (tanpa suffix brand — template layout menambahkan "| Gunara Consultant") */
+  /** Judul unik halaman (tanpa suffix brand — template layout menambahkan "| GConsultant") */
   title: string;
   description: string;
   keywords: string[];

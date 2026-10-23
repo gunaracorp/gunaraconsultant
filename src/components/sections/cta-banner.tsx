@@ -29,7 +29,7 @@ export function CtaBanner() {
               className="btn-shine h-13 rounded-full bg-gold px-8 text-base font-bold text-deep shadow-xl shadow-gold/30 hover:scale-105"
             >
               <a
-                href={waLink("Halo Gunara Consultant, saya siap memulai pengurusan perizinan bisnis saya.")}
+                href={waLink("Halo GConsultant, saya siap memulai pengurusan perizinan bisnis saya.")}
                 target="_blank"
                 rel="noopener noreferrer"
               >

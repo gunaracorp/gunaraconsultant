@@ -33,7 +33,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section id="keunggulan" className="bg-background py-20 sm:py-28" aria-label="Keunggulan Gunara Consultant">
+    <section id="keunggulan" className="bg-background py-20 sm:py-28" aria-label="Keunggulan GConsultant">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading kicker={t("whyKicker")} title={t("whyTitle")} sub={t("whySub")} />
 

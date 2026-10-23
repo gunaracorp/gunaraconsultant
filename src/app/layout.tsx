@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider } from "@/lib/i18n";
@@ -9,31 +9,36 @@ import { BRAND } from "@/lib/brand";
 import { SERVICES } from "@/data/services";
 import { VERSI } from "@/lib/version";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.siteUrl),
   title: {
-    default: `${BRAND.name} — ${BRAND.taglineId} | Jasa Perizinan Usaha 38 Provinsi`,
+    default: `${BRAND.name} — ${BRAND.tagline}`,
     template: `%s | ${BRAND.name}`,
   },
   description:
-    "Gunara Consultant — pusat perizinan terlengkap di Asia. 500+ jenis perizinan usaha, 38 provinsi Indonesia, berakar dari Mic Kinsey sejak 2009, tersertifikasi ISO 9001:2015. Konsultasi gratis!",
+    "GConsultant — The Polymathic Problem Solver. Menyatukan ilmu, menata kompleksitas, mewujudkan solusi: 500+ perizinan & legalitas usaha, arsitektur sistem bisnis UMEA™, 38 provinsi Indonesia, ISO 9001:2015. Konsultasi gratis!",
   keywords: [
+    "GConsultant",
+    "polymathic problem solver",
+    "polymathic strategy",
+    "systems architecture",
+    "konsultan strategi Indonesia",
     "jasa perizinan usaha",
     "jasa legalitas perusahaan",
     "pusat perizinan terlengkap",
-    "izin usaha murah",
     "pendirian PT",
     "NIB OSS RBA",
     "izin edar BPOM",
@@ -41,13 +46,10 @@ export const metadata: Metadata = {
     "SNI",
     "PMA Indonesia",
     "KITAS",
-    "AMDAL",
-    "PBG IMB",
-    "SBU konstruksi",
+    "metodologi UMEA",
     "ISO 9001",
     "jasa perizinan Indonesia",
-    "gunara consultant",
-    "pusatperizinan",
+    "gunara web id",
     "business licensing Indonesia",
     "company registration Indonesia",
   ],
@@ -67,23 +69,23 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     url: BRAND.siteUrl,
     siteName: BRAND.name,
-    title: `${BRAND.name} — ${BRAND.taglineId}`,
+    title: `${BRAND.name} — ${BRAND.tagline}`,
     description:
-      "500+ jenis perizinan, 38 provinsi, berakar dari Mic Kinsey sejak 2009, tersertifikasi ISO 9001:2015. Melegalkan bisnis Anda dengan standar kelas dunia.",
+      "Kompleksitas memiliki struktur. Solusi memiliki jalur. GConsultant menyatukan strategi, sistem bisnis, dan teknologi — 500+ perizinan, 38 provinsi, ISO 9001:2015.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: `${BRAND.name} — ${BRAND.taglineId}`,
+        alt: `${BRAND.name} — ${BRAND.tagline}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BRAND.name} — ${BRAND.taglineId}`,
+    title: `${BRAND.name} — ${BRAND.tagline}`,
     description:
-      "500+ jenis perizinan, 38 provinsi, ISO 9001:2015. Konsultasi perizinan bisnis gratis.",
+      "Kompleksitas memiliki struktur. Solusi memiliki jalur. 500+ perizinan & arsitektur sistem bisnis, 38 provinsi Indonesia.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -101,7 +103,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#04231a",
+  themeColor: "#0f241d",
   width: "device-width",
   initialScale: 1,
 };
@@ -111,14 +113,14 @@ const orgJsonLd = {
   "@type": "Organization",
   "@id": `${BRAND.siteUrl}/#organization`,
   name: BRAND.name,
-  alternateName: "Gunara",
+  alternateName: ["GConsultant", "GCONSULTANT"],
   url: BRAND.siteUrl,
   logo: `${BRAND.siteUrl}/logo.svg`,
   image: `${BRAND.siteUrl}/images/og-image.jpg`,
   description:
-    "Pusat perizinan terlengkap di Asia — 500+ jenis perizinan, 38 provinsi Indonesia, ISO 9001:2015, berakar dari Mic Kinsey sejak 2009.",
+    "The Polymathic Problem Solver — menyatukan strategi, sistem bisnis, dan teknologi. 500+ perizinan & legalitas usaha, arsitektur sistem UMEA™, 38 provinsi Indonesia, ISO 9001:2015.",
   foundingDate: "2024",
-  slogan: "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia",
+  slogan: BRAND.tagline,
   identifier: BRAND.ahu,
   softwareVersion: VERSI,
   foundingLocation: {
@@ -126,6 +128,13 @@ const orgJsonLd = {
     name: "Kota Tasikmalaya, Jawa Barat, Indonesia",
   },
   knowsLanguage: ["id-ID", "en"],
+  knowsAbout: [
+    "Business Licensing",
+    "Corporate Legalization",
+    "Systems Architecture",
+    "Business Strategy",
+    "Regulatory Compliance",
+  ],
   founder: {
     "@type": "Person",
     name: "Gugun Gunara",
@@ -169,8 +178,8 @@ const brandJsonLd = {
   "@type": "Brand",
   "@id": `${BRAND.siteUrl}/#brand`,
   name: BRAND.name,
-  alternateName: "Gunara",
-  slogan: "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia",
+  alternateName: ["GCONSULTANT", "GConsultant"],
+  slogan: BRAND.tagline,
   logo: `${BRAND.siteUrl}/logo.svg`,
   image: `${BRAND.siteUrl}/icons/icon-512.png`,
   url: BRAND.siteUrl,
@@ -183,7 +192,7 @@ const websiteJsonLd = {
   "@id": `${BRAND.siteUrl}/#website`,
   url: BRAND.siteUrl,
   name: BRAND.name,
-  description: BRAND.taglineId,
+  description: BRAND.promiseId,
   inLanguage: "id-ID",
   publisher: { "@id": `${BRAND.siteUrl}/#organization` },
   potentialAction: {
@@ -239,7 +248,7 @@ const localBusinessJsonLd = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Katalog Layanan Perizinan Gunara Consultant",
+    name: "Katalog Layanan GConsultant — Perizinan & Arsitektur Sistem Bisnis",
     numberOfItems: SERVICES.length,
     itemListElement: SERVICES.map((s) => ({
       "@type": "Offer",
@@ -263,7 +272,7 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <body
-        className={`${jakarta.variable} ${playfair.variable} font-sans antialiased bg-background text-foreground`}
+        className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-background text-foreground`}
       >
         <a
           href="#main-content"
