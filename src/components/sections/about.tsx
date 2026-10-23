@@ -9,6 +9,7 @@ import {
   Eye,
   FileCheck2,
   Landmark,
+  Quote,
   ScrollText,
   ShieldCheck,
   Target,
@@ -17,13 +18,14 @@ import {
 import { Reveal } from "@/components/animations";
 import { useLang } from "@/lib/i18n";
 import { BRAND } from "@/lib/brand";
+import { PIAGAM_2125 } from "@/data/umea";
 
 /**
  * Konten halaman Tentang Kami — cerita, visi-misi, nilai, timeline,
  * data legal resmi, dan tautan silang ke profil pendiri + blog.
  */
 export function AboutContent() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   const legalRows = [
     { icon: ScrollText, label: t("aboutLegalHeritage"), value: `${BRAND.heritage} — ${BRAND.since}` },
@@ -264,6 +266,51 @@ export function AboutContent() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </span>
             </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ===== PIAGAM 2125 — Arsitektur Abadi (FASE 3) ===== */}
+      <section className="section-deep relative py-20" aria-labelledby="charter-2125">
+        <div className="pattern-lines pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-[11px] font-bold tracking-[0.22em] text-gold-soft uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
+              {t("chartKicker")}
+            </p>
+            <h2
+              id="charter-2125"
+              className="mt-5 font-display text-3xl font-bold text-cream sm:text-4xl"
+            >
+              {t("chartTitle")}
+            </h2>
+            <div className="gold-divider mx-auto mt-6 w-40" />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <blockquote className="mt-10 space-y-5 text-left">
+              {(lang === "id" ? PIAGAM_2125.bodyId : PIAGAM_2125.bodyEn).map((par, i) => (
+                <p
+                  key={i}
+                  className={`leading-relaxed ${
+                    i === 0
+                      ? "font-display text-lg font-medium text-cream sm:text-xl"
+                      : "text-sm text-cream/75 sm:text-base"
+                  }`}
+                >
+                  {i === 0 && (
+                    <Quote
+                      className="mr-2 inline h-5 w-5 -translate-y-1 text-gold"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {par}
+                </p>
+              ))}
+            </blockquote>
+            <p className="mt-8 font-display text-sm font-bold tracking-[0.2em] text-gold-soft uppercase">
+              {BRAND.name} — {t("chartKicker")}
+            </p>
           </Reveal>
         </div>
       </section>

@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...[
       { path: "/layanan", priority: 0.9 },
+      { path: "/metodologi", priority: 0.9 },
+      { path: "/asesmen", priority: 0.9 },
       { path: "/tentang-kami", priority: 0.8 },
       { path: "/blog", priority: 0.8 },
       { path: "/keunggulan", priority: 0.8 },
@@ -23,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "/pendiri", priority: 0.8 },
       { path: "/faq", priority: 0.8 },
       { path: "/kontak", priority: 0.8 },
+      { path: "/kebijakan-privasi", priority: 0.3 },
+      { path: "/syarat-ketentuan", priority: 0.3 },
     ].map((p) => ({
       url: `${BRAND.siteUrl}${p.path}`,
       lastModified: now,

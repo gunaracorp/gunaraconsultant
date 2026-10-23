@@ -4,8 +4,10 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider } from "@/lib/i18n";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
+import { Analytics } from "@/components/analytics";
 import { BRAND } from "@/lib/brand";
 import { SERVICES } from "@/data/services";
+import { VERSI } from "@/lib/version";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -118,6 +120,7 @@ const orgJsonLd = {
   foundingDate: "2024",
   slogan: "Pusat Perizinan Terlengkap di Asia — Standar Kelas Dunia",
   identifier: BRAND.ahu,
+  softwareVersion: VERSI,
   foundingLocation: {
     "@type": "Place",
     name: "Kota Tasikmalaya, Jawa Barat, Indonesia",
@@ -262,6 +265,12 @@ export default function RootLayout({
       <body
         className={`${jakarta.variable} ${playfair.variable} font-sans antialiased bg-background text-foreground`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:rounded-full focus:bg-gold focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-deep"
+        >
+          Lompat ke konten utama
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
@@ -278,6 +287,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
+        <Analytics />
         <LanguageProvider>
           {children}
           <FloatingWhatsApp />

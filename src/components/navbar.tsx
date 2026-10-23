@@ -12,10 +12,11 @@ import { BRAND, waLink } from "@/lib/brand";
 const LINKS = [
   { key: "navServices" as const, href: "/layanan" },
   { key: "navAbout" as const, href: "/tentang-kami" },
+  { key: "navMetodologi" as const, href: "/metodologi" },
   { key: "navBlog" as const, href: "/blog" },
   { key: "navWhy" as const, href: "/keunggulan" },
   { key: "navProcess" as const, href: "/proses" },
-  { key: "navProvinces" as const, href: "/provinsi" },
+  { key: "navProvinces" as const, href: "/provinsi", wideOnly: true },
   { key: "navFounder" as const, href: "/pendiri", wideOnly: true },
   { key: "navFaq" as const, href: "/faq" },
   { key: "navContact" as const, href: "/kontak" },
@@ -96,6 +97,14 @@ export function Navbar() {
               <PhoneCall className="h-4 w-4" aria-hidden="true" />
               {t("navCta")}
             </a>
+          </Button>
+
+          <Button
+            asChild
+            variant="outline"
+            className="hidden rounded-full border-gold/40 bg-white/5 font-bold text-gold-soft hover:bg-gold/15 hover:text-gold-soft lg:inline-flex xl:hidden"
+          >
+            <Link href="/asesmen">{t("navAsesmen")}</Link>
           </Button>
 
           <Button

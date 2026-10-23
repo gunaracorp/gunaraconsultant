@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { BrandSeal } from "@/components/brand-seal";
-import { BadgeCheck, Landmark, Mail, MapPin, PhoneCall } from "lucide-react";
+import { BadgeCheck, Landmark, Mail, MapPin, PhoneCall, ShieldCheck } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { BRAND, waLink } from "@/lib/brand";
 import { CATEGORIES, SERVICES } from "@/data/services";
 import { PROVINCES } from "@/data/provinces";
+import { VERSI } from "@/lib/version";
 
 const POPULAR = [
   "nib-oss-rba",
@@ -55,6 +56,8 @@ export function Footer() {
               <ul className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold">
                 {[
                   { k: "navAbout" as const, h: "/tentang-kami" },
+                  { k: "navMetodologi" as const, h: "/metodologi" },
+                  { k: "navAsesmen" as const, h: "/asesmen" },
                   { k: "navBlog" as const, h: "/blog" },
                   { k: "navWhy" as const, h: "/keunggulan" },
                   { k: "navProcess" as const, h: "/proses" },
@@ -62,6 +65,8 @@ export function Footer() {
                   { k: "navFounder" as const, h: "/pendiri" },
                   { k: "navFaq" as const, h: "/faq" },
                   { k: "navContact" as const, h: "/kontak" },
+                  { k: "footPrivacy" as const, h: "/kebijakan-privasi" },
+                  { k: "footTerms" as const, h: "/syarat-ketentuan" },
                 ].map((l) => (
                   <li key={l.k}>
                     <Link
@@ -185,11 +190,26 @@ export function Footer() {
           <p className="text-xs font-semibold text-cream/65">
             {t("footRights")}
           </p>
-          <p className="text-[11px] text-cream/45">
-            {t("footLegal")} • {BRAND.siteUrl.replace("https://", "")} • {BRAND.groupSite}
+          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-[11px] text-cream/45">
+            <Link href="/kebijakan-privasi" className="transition-colors hover:text-gold-soft">
+              {t("footPrivacy")}
+            </Link>
+            <span aria-hidden="true">•</span>
+            <Link href="/syarat-ketentuan" className="transition-colors hover:text-gold-soft">
+              {t("footTerms")}
+            </Link>
+            <span aria-hidden="true">•</span>
+            <span>
+              {t("footLegal")} • {BRAND.siteUrl.replace("https://", "")} • {BRAND.groupSite}
+            </span>
           </p>
           <p className="text-[11px] font-semibold text-gold-soft/80">
             {t("footDisclaimer")}
+          </p>
+          {/* S1 — Badge versi */}
+          <p className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-gold/25 bg-gold/8 px-3 py-1 text-[10px] font-bold tracking-wider text-gold-soft/90 uppercase">
+            <ShieldCheck className="h-3 w-3" aria-hidden="true" />
+            {t("footVersionLabel")} {VERSI} • UMEA™ Master Matrix
           </p>
         </div>
       </div>

@@ -342,6 +342,98 @@ const UI_ID = {
   artCtaTitle: "Butuh Bantuan Mengurus Legalitas Ini?",
   artCtaSub:
     "Konsultasi gratis 100% — tim kami memetakan kebutuhan perizinan Anda dan memberi estimasi biaya-waktu yang jujur.",
+  // Nav & Footer — GOD MODE v2
+  navMetodologi: "Metodologi",
+  navAsesmen: "Asesmen UMEA",
+  footPrivacy: "Kebijakan Privasi",
+  footTerms: "Syarat & Ketentuan",
+  footVersionLabel: "Versi",
+  // Halaman Metodologi UMEA
+  pgMetoKicker: "Hukum Minimum Usaha™",
+  pgMetoTitle: "UMEA™ — Universal Minimum Enterprise Architecture",
+  pgMetoSub:
+    "Metodologi milik Gunara Consultant yang menjawab satu pertanyaan: berapa fungsi kritis yang harus selalu hidup agar usaha Anda tidak runtuh — berapa orang, berapa dokumen, dan tingkat mana yang wajib Anda capai.",
+  metoLawKicker: "3 Hukum Besar",
+  metoLawTitle: "Fondasi yang Tidak Bisa Ditawar",
+  metoLawSub:
+    "Bukan teori dari rak buku — tiga hukum inilah yang kami audit di setiap klien sebelum satu dokumen pun dibuat.",
+  metoLevelsKicker: "6 Tingkat Organisasi",
+  metoLevelsTitle: "Tangga Kedewasaan UMEA-03 sampai UMEA-21",
+  metoLevelsSub:
+    "Jumlah orang boleh kecil. Jumlah fungsi kritis tidak boleh hilang. Pilih tingkat yang cocok dengan usaha Anda hari ini — naik tingkat tanpa membongkar sistem dari nol.",
+  metoLevelPeople: "Orang",
+  metoLevelBest: "Cocok untuk",
+  metoLevelDocs: "Paket dokumen",
+  metoLevelProfLabel: "Bahasa profesional",
+  metoLevelAwamLabel: "Bahasa sehari-hari",
+  metoFuncKicker: "21 Fungsi Kritis",
+  metoFuncTitle: "Function-First, Bukan Title-First",
+  metoFuncSub:
+    "Jabatan boleh berganti nama sepanjang zaman — fungsi Direction, Value Creation, Market, Control, People, Intelligence, dan Resilience akan tetap ada. Satu orang boleh memegang banyak fungsi; satu fungsi tidak boleh tanpa pemilik.",
+  metoFuncNo: "No",
+  metoFuncRole: "Wujud hari ini",
+  metoFuncAwamLabel: "Bahasa sehari-hari",
+  metoDocsKicker: "5 Tingkat Dokumen",
+  metoDocsTitle: "Tangga Dokumentasi D-10 sampai D-165",
+  metoDocsSub:
+    "Prinsip Minimum Necessary Architecture: berikan organisasi hanya kompleksitas yang ia butuhkan. Toko tidak dibuat seperti holding; holding tidak diberi paket 10 dokumen.",
+  metoDocsFor: "Untuk siapa",
+  metoUmiKicker: "UMEA Maturity Index™",
+  metoUmiTitle: "Ukur Sebelum Membangun",
+  metoUmiSub:
+    "Organisasi tidak dinilai dari banyaknya orang, melainkan dari banyaknya fungsi kritis yang tetap hidup terus-menerus. Skor 0–100, delapan band kematangan, satu rencana perbaikan.",
+  metoCtaTitle: "Ingin Tahu Tingkat UMEA Usaha Anda?",
+  metoCtaSub:
+    "Lakukan asesmen mandiri 2 menit — mesin kami menghitung Maturity Index Anda dan merekomendasikan tingkat organisasi serta paket dokumen yang tepat.",
+  metoCtaBtn: "Mulai Asesmen Gratis",
+  metoDisclaimer:
+    "UMEA™, Hukum Minimum Usaha™, UMEA Master Matrix™, dan UMEA Maturity Index™ adalah metodologi milik Gunara Consultant — dilindungi sebagai merek, hak cipta, dan rahasia dagang. Pemakaian tanpa izin tertulis akan ditindak hukum.",
+  // Halaman Asesmen
+  pgAsmKicker: "UMEA Maturity Index™",
+  pgAsmTitle: "Asesmen Kematangan Usaha",
+  pgAsmSub:
+    "12 pertanyaan • 2 menit • hasil langsung: skor UMI 0–100, tingkat UMEA, titik terlemah, dan paket dokumen yang direkomendasikan.",
+  asmIntro:
+    "Jawab jujur sesuai kondisi nyata hari ini — bukan yang ideal. Semakin jujur, semakin akurat rencana perbaikannya.",
+  asmPeopleLabel: "Berapa orang yang bekerja di usaha Anda (termasuk pemilik)?",
+  asmPeopleHint: "Masukkan angka, misal 3",
+  asmStart: "Mulai Asesmen",
+  asmQuestion: "Pertanyaan",
+  asmOf: "dari",
+  asmPrev: "Kembali",
+  asmNext: "Lanjut",
+  asmSeeResult: "Lihat Hasil",
+  asmResultTitle: "Hasil Asesmen UMEA™ Anda",
+  asmScoreLabel: "Skor UMI",
+  asmBandLabel: "Band kematangan",
+  asmLevelLabel: "Tingkat UMEA Anda",
+  asmWeakLabel: "3 Titik Terlemah — prioritaskan ini",
+  asmStrongLabel: "Kekuatan Anda",
+  asmDocsLabel: "Paket dokumen yang direkomendasikan",
+  asmWaTitle: "Konsultasikan Hasil Ini Gratis",
+  asmWaSub:
+    "Kirim hasil asesmen Anda ke tim Gunara Consultant via WhatsApp — kami bantu susun rencana naik tingkat + daftar dokumen yang wajib disiapkan.",
+  asmWaBtn: "Kirim Hasil via WhatsApp",
+  asmRestart: "Ulangi Asesmen",
+  asmPrivacyNote:
+    "Asesmen berjalan sepenuhnya di perangkat Anda — tidak ada jawaban yang dikirim ke server.",
+  // 404
+  nfTitle: "Halaman Tidak Ditemukan",
+  nfSub:
+    "Halaman yang Anda cari mungkin sudah dipindah, dihapus, atau alamatnya salah tulis.",
+  nfCta: "Kembali ke Beranda",
+  nfServices: "Lihat 46 Layanan",
+  // Legal
+  pgPrivTitle: "Kebijakan Privasi",
+  pgPrivSub:
+    "Bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda — selaras UU PDP No. 27 Tahun 2022 dan siap GDPR.",
+  pgTermsTitle: "Syarat & Ketentuan",
+  pgTermsSub:
+    "Aturan penggunaan website dan layanan Gunara Consultant — baca sebelum menggunakan layanan kami.",
+  legalUpdated: "Terakhir diperbarui",
+  // Piagam 2125
+  chartKicker: "Piagam 2125",
+  chartTitle: "Dilihat dari Seratus Tahun ke Depan",
 };
 
 export type UIKey = keyof typeof UI_ID;
@@ -662,6 +754,98 @@ const UI_EN: Record<UIKey, string> = {
   artCtaTitle: "Need Help With This Legality Process?",
   artCtaSub:
     "100% free consultation — our team maps your licensing needs and gives honest cost–time estimates.",
+  // Nav & Footer — GOD MODE v2
+  navMetodologi: "Methodology",
+  navAsesmen: "UMEA Assessment",
+  footPrivacy: "Privacy Policy",
+  footTerms: "Terms & Conditions",
+  footVersionLabel: "Version",
+  // Metodologi page
+  pgMetoKicker: "Minimum Business Law™",
+  pgMetoTitle: "UMEA™ — Universal Minimum Enterprise Architecture",
+  pgMetoSub:
+    "Gunara Consultant's proprietary methodology answering one question: how many critical functions must stay alive so your business never collapses — how many people, how many documents, and which level you must reach.",
+  metoLawKicker: "3 Great Laws",
+  metoLawTitle: "The Non-Negotiable Foundation",
+  metoLawSub:
+    "Not shelf theory — these three laws are audited on every client before a single document is drafted.",
+  metoLevelsKicker: "6 Organization Levels",
+  metoLevelsTitle: "The Maturity Ladder: UMEA-03 to UMEA-21",
+  metoLevelsSub:
+    "Headcount may stay small. Critical functions may never disappear. Pick the level that fits today — and level up without rebuilding from zero.",
+  metoLevelPeople: "People",
+  metoLevelBest: "Best for",
+  metoLevelDocs: "Document package",
+  metoLevelProfLabel: "Professional language",
+  metoLevelAwamLabel: "Plain language",
+  metoFuncKicker: "21 Critical Functions",
+  metoFuncTitle: "Function-First, Not Title-First",
+  metoFuncSub:
+    "Job titles change across eras — the functions of Direction, Value Creation, Market, Control, People, Intelligence, and Resilience remain. One person may hold many functions; no function may be left ownerless.",
+  metoFuncNo: "No",
+  metoFuncRole: "Today's form",
+  metoFuncAwamLabel: "Plain language",
+  metoDocsKicker: "5 Document Tiers",
+  metoDocsTitle: "The Documentation Ladder: D-10 to D-165",
+  metoDocsSub:
+    "Minimum Necessary Architecture principle: give an organization only the complexity it needs. A shop is not dressed up as a holding; a holding is never handed a 10-document pack.",
+  metoDocsFor: "For whom",
+  metoUmiKicker: "UMEA Maturity Index™",
+  metoUmiTitle: "Measure Before You Build",
+  metoUmiSub:
+    "Organizations are not judged by headcount but by how many critical functions stay continuously alive. Score 0–100, eight maturity bands, one improvement plan.",
+  metoCtaTitle: "Want to Know Your Business's UMEA Level?",
+  metoCtaSub:
+    "Take the 2-minute self-assessment — our engine computes your Maturity Index and recommends the right organization level and document package.",
+  metoCtaBtn: "Start Free Assessment",
+  metoDisclaimer:
+    "UMEA™, Minimum Business Law™, UMEA Master Matrix™, and UMEA Maturity Index™ are proprietary methodologies of Gunara Consultant — protected as trademarks, copyrights, and trade secrets. Unauthorized use will be prosecuted.",
+  // Assessment page
+  pgAsmKicker: "UMEA Maturity Index™",
+  pgAsmTitle: "Business Maturity Assessment",
+  pgAsmSub:
+    "12 questions • 2 minutes • instant results: UMI score 0–100, your UMEA level, weakest points, and the recommended document package.",
+  asmIntro:
+    "Answer honestly based on today's real condition — not the ideal one. The more honest, the more accurate the improvement plan.",
+  asmPeopleLabel: "How many people work in your business (including the owner)?",
+  asmPeopleHint: "Enter a number, e.g. 3",
+  asmStart: "Start Assessment",
+  asmQuestion: "Question",
+  asmOf: "of",
+  asmPrev: "Back",
+  asmNext: "Next",
+  asmSeeResult: "See Results",
+  asmResultTitle: "Your UMEA™ Assessment Result",
+  asmScoreLabel: "UMI Score",
+  asmBandLabel: "Maturity band",
+  asmLevelLabel: "Your UMEA Level",
+  asmWeakLabel: "3 Weakest Points — prioritize these",
+  asmStrongLabel: "Your Strengths",
+  asmDocsLabel: "Recommended document package",
+  asmWaTitle: "Discuss This Result for Free",
+  asmWaSub:
+    "Send your assessment result to the Gunara Consultant team via WhatsApp — we help you build the level-up plan plus the mandatory document list.",
+  asmWaBtn: "Send Result via WhatsApp",
+  asmRestart: "Retake Assessment",
+  asmPrivacyNote:
+    "The assessment runs entirely on your device — no answers are sent to any server.",
+  // 404
+  nfTitle: "Page Not Found",
+  nfSub:
+    "The page you are looking for may have been moved, deleted, or the address is mistyped.",
+  nfCta: "Back to Home",
+  nfServices: "Browse 46 Services",
+  // Legal
+  pgPrivTitle: "Privacy Policy",
+  pgPrivSub:
+    "How we collect, use, and protect your personal data — aligned with Indonesia's PDP Law No. 27/2022 and GDPR-ready.",
+  pgTermsTitle: "Terms & Conditions",
+  pgTermsSub:
+    "Rules for using the Gunara Consultant website and services — please read before using our services.",
+  legalUpdated: "Last updated",
+  // 2125 Charter
+  chartKicker: "The 2125 Charter",
+  chartTitle: "Seen from a Hundred Years Ahead",
 };
 
 const DICT: Record<Lang, Record<UIKey, string>> = { id: UI_ID, en: UI_EN };
