@@ -1,20 +1,16 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f241d,55:0a4f38,100:d4af37&height=170&section=header&text=GCONSULTANT&fontSize=54&fontColor=f5f0e6&fontAlignY=38&desc=The%20Polymathic%20Problem%20Solver%20%C2%B7%20Pusat%20Perizinan%20Terlengkap%20di%20Asia&descSize=15&descAlignY=64&animation=fadeIn" width="100%" alt="GCONSULTANT — header animasi"/>
+
 <div align="center">
 
-<img src="public/logo-stacked.svg" alt="GConsultant — The Geometric G" width="200"/>
+<img src="public/logo-stacked.svg" alt="GConsultant — The Geometric G" width="170"/>
 
-# GCONSULTANT
-
-### 🧩 The Polymathic Problem Solver
+<img src="https://readme-typing-svg.demolab.com?font=Jost&weight=700&size=20&duration=2800&pause=800&color=D4AF37&center=true&vCenter=true&width=860&height=56&lines=Menyatukan+ilmu.+Menata+kompleksitas.+Mewujudkan+solusi.;Dari+regulasi+di+hulu+%E2%80%94+hingga+izin+terbit+di+hilir.;546+layanan+%C2%B7+38+provinsi+%C2%B7+satu+pintu+WhatsApp.;Asesmen+UMI%E2%84%A2+3+menit+%E2%86%92+tahu+level+usaha+Anda." alt="tagline animasi"/>
 
 **Pusat Perizinan Terlengkap di Asia** · *The Most Complete Licensing Center in Asia*
 
-*"Menyatukan ilmu. Menata kompleksitas. Mewujudkan solusi."*
-
-<br>
-
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![ISO 9001:2015](https://img.shields.io/badge/ISO-9001:2015-certified-0a4f38)](https://gunara.web.id)
+[![ISO 9001:2015](https://img.shields.io/badge/ISO-9001:2015-certified-0a4f38)](https://gunara.web.id/tentang-kami)
 [![AHU Kemenkumham](https://img.shields.io/badge/AHU-038293.AH.01.30-0f241d)](#transparansi)
 [![Bun](https://img.shields.io/badge/Bun-runtime-f472b6?logo=bun)](https://bun.sh)
 
@@ -23,7 +19,7 @@
 [![566 URL SEO](https://img.shields.io/badge/sitemap-566_URL_indexable-d4af37)](https://gunara.web.id/sitemap.xml)
 [![Audit SEO 101/101](https://img.shields.io/badge/audit_SEO-101%2F101_perfect-0a4f38)](#dashboard)
 
-<a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0f241d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="120"/></a>
+<a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0f241d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="110"/></a>
 
 **Scan → Konsultasi Gratis** · [Bahasa Indonesia](#cerita) · [English](#en-story)
 
@@ -37,9 +33,12 @@
 
 | | | | |
 |:---:|:---:|:---:|:---:|
-| 🔍 [**Pencari Izin**](#pencari) | 🗂️ [**Katalog 546**](#katalog) | 🧠 [**Metodologi UMEA™**](#umea) | ⏱️ [**Perjalanan Klien**](#perjalanan) |
+| 🌊 [**Peta Hulu→Hilir**](#peta) | 🔁 [**Workflow 12 Tahap**](#workflow) | 🔄 [**Siklus Hidup Izin**](#siklus) | 📡 [**Alur WhatsApp**](#alur-wa) |
+| 🔍 [**Pencari Izin 30 detik**](#pencari) | 🗂️ [**Katalog 546**](#katalog) | 🧠 [**Metodologi UMEA™**](#umea) | ⏱️ [**Perjalanan Klien**](#perjalanan) |
 | 🧪 [**Checklist Diagnostik**](#checklist) | 📊 [**Dashboard Proyek**](#dashboard) | 🔌 [**Live Telemetry**](#telemetry) | 💰 [**Anti-Penipuan**](#transparansi) |
-| 👤 [**Pendiri**](#pendiri) | 🚀 [**Developer Guide**](#developer) | 🔄 [**Riwayat Rilis**](#riwayat) | ❓ [**FAQ**](#faq) |
+| 👤 [**Pendiri**](#pendiri) | 🚀 [**Developer Guide**](#developer) | 🗓️ [**Arah Pengembangan**](#arah) | ❓ [**FAQ**](#faq) |
+
+> 💡 *Semua diagram Mermaid di README ini **interaktif di GitHub** — klik diagramnya untuk zoom/pan.*
 
 ---
 
@@ -48,34 +47,107 @@
 
 Website resmi **GConsultant** — berakar dari praktik konsultansi **Mic Kinsey sejak 2009**, dilembagakan sebagai badan usaha **AHU-038293.AH.01.30 Tahun 2024**, tersertifikasi **ISO 9001:2015**, melayani **38 provinsi Indonesia** dari dua kantor (Tasikmalaya + Jakarta/IDX Tower 1).
 
-Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 7 grup fungsi kritis, dan 5 tingkat dokumen. Katalog **546 layanan** perizinan (46 unggulan + 500 katalog [PusatPerizinan](https://pusatperizinan.com)) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
+Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **546 layanan** perizinan (46 unggulan + 500 katalog [PusatPerizinan](https://pusatperizinan.com)) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
 
 <a id="en-story"></a>
 ## 🇬🇧 The 30-Second Story
 
-The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 7 critical function groups, and 5 document tiers — fused with a catalog of **546 licensing services** (46 flagship + 500 from [PusatPerizinan](https://pusatperizinan.com)) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button** — no long forms, no unanswered emails. This README itself is *living documentation*: telemetry badges read the production API, decision trees route readers, and every catalog link opens a real page.
+The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **546 licensing services** (46 flagship + 500 from [PusatPerizinan](https://pusatperizinan.com)) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
 
 ---
 
 <a id="angka"></a>
-### 📐 GConsultant dalam Angka
+### 📐 GConsultant dalam Angka — *semua terverifikasi dari source code*
 
 | Angka | Arti | Verifikasi |
 |:---:|---|---|
-| **546** | Layanan aktif: 46 unggulan + 500 katalog | `/api/status` → `modules.servicesTotal` |
-| **4 / 38** | Kategori besar / sub-kelompok layanan | [`/layanan`](https://gunara.web.id/layanan) |
-| **38** | Provinsi terjangkau | [`/provinsi`](https://gunara.web.id/provinsi) |
-| **6 / 21 / 5** | Tingkat organisasi / fungsi kritis / tier dokumen UMEA™ | [`/metodologi`](https://gunara.web.id/metodologi) |
-| **12 → 0-100** | Soal asesmen → skor UMI™ + band kematangan | [`/asesmen`](https://gunara.web.id/asesmen) |
+| **546** | Layanan aktif: **46** unggulan + **500** katalog | `bun -e` → `ALL_COUNT` · [`/api/status`](https://gunara.web.id/api/status) |
+| **4 / 38** | Kelompok katalog / sub-kelompok layanan | `src/data/katalog-meta.ts` → `KAT4=4`, `SUB_ALL=38` |
+| **11** | Kategori layanan unggulan | `src/data/services-types.ts` → `CATEGORIES` |
+| **38** | Provinsi terjangkau | [`/provinsi`](https://gunara.web.id/provinsi) · `provinces.ts` |
+| **3 / 6 / 21 / 5** | Hukum besar / level organisasi / fungsi kritis (7 grup) / tier dokumen UMEA™ | `src/data/umea.ts` |
+| **8** | Band kematangan UMI™ (skor 0–100) | [`/asesmen`](https://gunara.web.id/asesmen) |
+| **12 → 0–100** | Soal asesmen → skor + rekomendasi paket | [`/asesmen`](https://gunara.web.id/asesmen) |
+| **6 / 8** | Artikel blog bilingual / FAQ | [`/blog`](https://gunara.web.id/blog) · [`/faq`](https://gunara.web.id/faq) |
 | **566** | URL terindeks sitemap (audit 101/101 perfect) | [`/sitemap.xml`](https://gunara.web.id/sitemap.xml) |
 | **0** | Form yang wajib diisi sebelum bicara ke manusia | coba sendiri → [WA](https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis.) |
 
 ---
 
+<a id="peta"></a>
+# 🌊 Peta Besar: Dari Hulu ke Hilir
+
+**Satu gambar untuk seluruh peradaban GConsultant** — dari regulasi yang lahir di instansi (hulu), mengalir menjadi data terstruktur, berproses di mesin platform, menetas menjadi layanan untuk klien, hingga izin terbit dan bisnis tumbuh (hilir) — lalu siklus itu kembali ke hulu ketika usaha naik level:
+
+```mermaid
+flowchart TB
+    subgraph H1["🏛️ HULU 1 — INSTANSI PENERBIT (sumber regulasi)"]
+        direction LR
+        A1["Kemenkumham<br/>akta · SK · AHU"]
+        A2["OSS-BKPM<br/>NIB · KBLI"]
+        A3["BPOM · BPJPH · BSN<br/>izin edar · halal · SNI"]
+        A4["KLH · DPMPTSP<br/>AMDAL · PBG · SLF"]
+    end
+
+    subgraph H2["🗄️ HULU 2 — KNOWLEDGE BASE (data terstruktur)"]
+        direction LR
+        B1["katalog.ts<br/>500 layanan + harga"]
+        B2["services.ts<br/>46 unggulan"]
+        B3["umea.ts<br/>3 hukum · 6 level<br/>21 fungsi · 5 tier"]
+        B4["38 provinsi · legal<br/>6 artikel · 8 FAQ"]
+    end
+
+    subgraph P["⚙️ PUSAT — MESIN GCONSULTANT (Next.js)"]
+        direction LR
+        C1["Mesin SEO<br/>566 URL · JSON-LD"]
+        C2["Mesin UMI™<br/>12 soal → band"]
+        C3["Katalog Search<br/>?q= instan"]
+        C4["Funnel WhatsApp<br/>0 form"]
+    end
+
+    subgraph D1["🧳 HILIR 1 — PERJALANAN KLIEN"]
+        D["Konsultasi gratis → Asesmen UMI™ → Perjanjian bergaransi → Dokumen D-10 s.d. D-165 → Pengajuan resmi"]
+    end
+
+    subgraph D2["🚀 HILIR 2 — HASIL & SIKLUS PERTUMBUHAN"]
+        E["Izin terbit → Operasional patuh → Naik level UMEA™ → Ekspansi"]
+    end
+
+    H1 -->|"dasar hukum dan kebijakan"| H2
+    H2 -->|"data terstruktur"| P
+    P -->|"informasi transparan"| D1
+    D1 -->|"permohonan resmi"| H1
+    D1 -->|"izin terbit"| D2
+    D2 -.->|"loop pertumbuhan: kebutuhan level baru"| P
+
+    classDef instansi fill:#1a3a2f,stroke:#d4af37,color:#f5f0e6
+    classDef data fill:#0f241d,stroke:#d4af37,color:#f5f0e6
+    classDef engine fill:#0a4f38,stroke:#ffd700,color:#ffffff
+    classDef hilir fill:#2d1f0e,stroke:#d4af37,color:#f5f0e6
+    class A1,A2,A3,A4 instansi
+    class B1,B2,B3,B4 data
+    class C1,C2,C3,C4 engine
+    class D,E hilir
+```
+
+### Lima Lapis, Lima Peran
+
+| Lapis | Isi | Kebenarannya Dari Mana |
+|---|---|---|
+| 🏛️ **Hulu 1 — Instansi** | Kemenkumham, OSS-BKPM, BPOM, BPJPH, BSN, KLH, DPMPTSP — penerbit akta, NIB, izin edar, halal, SNI, AMDAL, PBG | regulasi resmi RI — bukan karangan konsultan |
+| 🗄️ **Hulu 2 — Knowledge Base** | `src/data/*` — katalog 500, layanan 46, UMEA™ (3 hukum · 6 level · 21 fungsi · 5 tier), provinsi, legal, blog, FAQ | commit di repo ini — bisa diaudit siapa pun |
+| ⚙️ **Pusat — Mesin** | Next.js: mesin SEO (566 URL, JSON-LD 6–8 blok/halaman), mesin UMI™, katalog search `?q=`, funnel WhatsApp | `src/app/*` + `scripts/seo-audit.py` (101/101) |
+| 🧳 **Hilir 1 — Perjalanan** | Chat → asesmen → perjanjian bergaransi → dokumen D-10 s.d. D-165 → pengajuan ke instansi | SOP ISO 9001:2015 |
+| 🚀 **Hilir 2 — Hasil** | Izin terbit → operasional patuh → naik level UMEA™ → ekspansi → kebutuhan baru mengalir kembali ke hulu | siklus hidup klien — lihat [Workflow 12 Tahap](#workflow) |
+
+> [!TIP]
+> **Baca peta ini dua arah.** Ke bawah = alur *nilai* (regulasi → izin di tangan Anda). Ke atas (garis putus-putus) = alur *pertumbuhan* — setiap kali usaha Anda naik level UMEA™, kebutuhan izin baru mengalir kembali ke hulu, dan siklusnya berputar lagi. Konsultan sejati membangun **loop**, bukan transaksi sekali jalan.
+
+---
 <a id="pencari"></a>
 ## 🔍 Pencari Izin dalam 30 Detik
 
-**Diagram hidup pertama di README konsultan mana pun** — ikuti jalurnya, lalu klik kategori di [katalog](#katalog):
+Ikuti jalurnya, lalu klik kategori di [katalog](#katalog):
 
 ```mermaid
 flowchart TD
@@ -99,12 +171,20 @@ flowchart TD
 ```
 
 > [!TIP]
-> **Trik pro:** di website, pencarian instan 546 layanan bisa dijangkau langsung lewat URL — `gunara.web.id/layanan?q=halal` atau `?q=NIB` atau `?q=kode layanan`. Kotak pencarian terisi sendiri dan halaman menggulir otomatis ke katalog.
+> **Trik pro:** di website, pencarian instan 546 layanan bisa dijangkau langsung lewat URL — `gunara.web.id/layanan?q=halal` atau `?q=NIB` atau `?q=kode layanan`. Kotak pencarian terisi sendiri dan halaman menggulir otomatis ke katalog (teruji E2E — inilah *sitelinks search box* yang dibaca Google).
 
 ---
 
 <a id="katalog"></a>
 ## 🗂️ Katalog 546 Layanan — Interaktif
+
+Komposisi katalog (angka langsung dari `src/data`):
+
+```mermaid
+pie title Komposisi Katalog — 546 Layanan Aktif
+    "Layanan unggulan — halaman khusus + penawaran" : 46
+    "Katalog PusatPerizinan — harga terbuka berdiskon" : 500
+```
 
 Klik setiap kelompok untuk membuka. Setiap tautan **hidup** — langsung menuju halaman layanan berisi harga, diskon resmi, proses, dokumen, dan FAQ.
 
@@ -189,7 +269,7 @@ Klik setiap kelompok untuk membuka. Setiap tautan **hidup** — langsung menuju 
 </details>
 
 > [!NOTE]
-> 500 layanan katalog memuat **harga resmi + diskon + estimasi hemat** yang tampil transparan di setiap halaman. Ingin membandingkan 546 sekaligus? Buka [`/layanan`](https://gunara.web.id/layanan) dan gunakan filter 4 kategori + 38 sub-kelompok.
+> 500 layanan katalog memuat **harga resmi + diskon + estimasi hemat** yang tampil transparan di setiap halaman. Ingin membandingkan 546 sekaligus? Buka [`/layanan`](https://gunara.web.id/layanan) dan gunakan filter 4 kelompok + 38 sub-kelompok.
 
 ---
 
@@ -268,6 +348,81 @@ timeline
 
 ---
 
+<a id="workflow"></a>
+# 🔁 Workflow Operasional 12 Tahap — Hulu ke Hilir di Level Layanan
+
+Peta besar di atas menjelaskan *ekosistem*; ini SOP *operasional* yang dijalankan tim untuk setiap klien — dua titik keputusan (5 dan 9) adalah jaminan kualitas ISO 9001:2015:
+
+```mermaid
+flowchart TD
+    W1["1 · Chat WhatsApp<br/>konsultasi gratis — 0 form"] --> W2["2 · Pemetaan kebutuhan<br/>dan kode layanan katalog"]
+    W2 --> W3["3 · Rekomendasi jalur:<br/>unggulan 46 / katalog 500"]
+    W3 --> W4["4 · Penawaran transparan<br/>harga terbuka + estimasi hemat"]
+    W4 --> W5{"5 · Sepakat?"}
+    W5 -- "perlu diskusi" --> W2
+    W5 -- "ya" --> W6["6 · Perjanjian kerja<br/>garansi tertulis"]
+    W6 --> W7["7 · Penyusunan dokumen<br/>sesuai tier D-10 s.d. D-165"]
+    W7 --> W8["8 · Pengajuan resmi<br/>ke instansi penerbit"]
+    W8 --> W9{"9 · Verifikasi instansi"}
+    W9 -- "ada kekurangan" --> W7
+    W9 -- "lengkap" --> W10["10 · Izin / sertifikat terbit"]
+    W10 --> W11["11 · Serah terima<br/>+ arsip digital"]
+    W11 --> W12["12 · Pendampingan pasca-terbit<br/>+ naik level UMEA™"]
+
+    classDef mulai fill:#0f241d,stroke:#d4af37,color:#f5f0e6
+    classDef putus fill:#4a3a10,stroke:#d4af37,color:#f5f0e6
+    classDef hasil fill:#0a4f38,stroke:#ffd700,color:#ffffff
+    class W1 mulai
+    class W5,W9 putus
+    class W10,W12 hasil
+```
+
+<a id="alur-wa"></a>
+### 📡 Alur WhatsApp — Yang Sebenarnya Terjadi Saat Anda Chat
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor K as Klien
+    participant W as WhatsApp GConsultant
+    participant T as Tim Ahli — ISO 9001:2015
+    participant I as Instansi Penerbit
+    K->>W: "Saya ingin pendirian PT / izin BPOM…"
+    W->>T: Konsultasi gratis — pemetaan kebutuhan
+    T->>K: Rekomendasi layanan + estimasi transparan
+    K->>T: Perjanjian kerja bergaransi
+    T->>T: Penyusunan dokumen — tier D-10 s.d. D-165
+    T->>I: Pengajuan permohonan resmi
+    I->>I: Verifikasi dan pengesahan
+    I->>T: Izin / sertifikat terbit
+    T->>K: Serah terima dokumen + arsip digital
+    K-->>W: Operasional — kembali kapan pun untuk level berikutnya
+```
+
+<a id="siklus"></a>
+### 🔄 Siklus Hidup Izin — Setelah Terbit Pun Kami Tetap Memetakan
+
+```mermaid
+stateDiagram-v2
+    [*] --> Persiapan
+    Persiapan --> Pengajuan: dokumen lengkap
+    state Pengajuan {
+        [*] --> Verifikasi
+        Verifikasi --> Perbaikan: ada kekurangan
+        Perbaikan --> Verifikasi: revisi — garansi tanpa biaya
+        Verifikasi --> [*]: dinyatakan lengkap
+    }
+    Pengajuan --> Terbit: ditetapkan instansi
+    Terbit --> Berlaku
+    Berlaku --> Perpanjangan: mendekati masa berlaku
+    Perpanjangan --> Berlaku
+    Berlaku --> PerubahanData: NIB / alamat / KBLI berubah
+    PerubahanData --> Pengajuan
+    Berlaku --> [*]
+```
+
+---
+
 <a id="checklist"></a>
 ## 🧪 Checklist Kesiapan Usaha — *Self-Diagnostic*
 
@@ -322,10 +477,9 @@ Metrik yang diperiksa otomatis setiap rilis — semuanya bisa Anda verifikasi se
 | ![Rilis](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgunara.web.id%2Fapi%2Fstatus&query=%24.release&label=rilis&color=0f241d) | `$.release` |
 
 > [!NOTE]
-> Badge akan **menyala otomatis** begitu v3.3.0 dideploy ke produksi (saat ini produksi masih menjalankan build lama tanpa endpoint `/api/status`). Tidak ada yang perlu diedit di README ini — itulah makna *living documentation*.
+> Badge akan **menyala otomatis** begitu v3.4.0 dideploy ke produksi (saat ini produksi masih menjalankan build lama tanpa endpoint `/api/status`). Tidak ada yang perlu diedit di README ini — itulah makna *living documentation*.
 
 ---
-
 <a id="transparansi"></a>
 ## 💰 Transparansi & Anti-Penipuan
 
@@ -380,7 +534,7 @@ cd gunaraconsultant
 bun install
 
 # 3. Database SQLite (Prisma)
-export DATABASE_URL="file:/home/z/my-project/db/custom.db"
+export DATABASE_URL="file:./db/custom.db"
 
 # 4. Jalankan dev server → http://localhost:3000
 bun run dev
@@ -394,6 +548,8 @@ bun run dev
 | `bun run lint` | ESLint — wajib 0 error sebelum commit |
 | `bun run build` | Build produksi (prerender 46 layanan unggulan; 500 katalog on-demand) |
 | `bunx prisma db push` | Sinkron skema database |
+| `python3 scripts/seo-audit.py` | Audit SEO 11 kriteria — wajib 101/101 sebelum rilis |
+| `python3 scripts/readme-validate.py` | Validasi struktur README (fence, Mermaid, anchor, tautan) |
 
 | Env Var | Wajib? | Fungsi |
 |---|:---:|---|
@@ -401,6 +557,32 @@ bun run dev
 | `FRAME_POLICY` | 🟡 | `sameorigin` di produksi (anti-klikjacking); default preview = longgar |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | 🟡 | Meta verifikasi Google Search Console — muncul otomatis saat di-set |
 | `NEXT_PUBLIC_GA_ID` / `NEXT_PUBLIC_CLARITY_ID` | 🟡 | Analytics GA4 / Microsoft Clarity |
+
+### 🌊 Pipeline Teknis — Juga Mengalir dari Hulu ke Hilir
+
+Kode mengikuti pola yang sama dengan bisnisnya: sumber kebenaran di hulu (repo), berproses di tengah (build + audit), lalu mengalir ke hilir (SERP → pengunjung → klien):
+
+```mermaid
+flowchart LR
+    R["📚 Repo GitHub<br/>main"] --> C["🔧 clone<br/>bun install"]
+    C --> V["🧪 bun run lint<br/>0 error"]
+    V --> S["🏗️ bun run build<br/>prerender 46 unggulan"]
+    S --> A["🔍 seo-audit.py<br/>wajib 101/101"]
+    A --> D["🚀 Deploy produksi<br/>gunara.web.id"]
+    D --> H["🛡️ Security headers<br/>6 lapis"]
+    H --> G["🤖 Googlebot crawl<br/>sitemap 566 URL"]
+    G --> SERP["🔎 SERP<br/>sitelinks search box"]
+    SERP --> U["👤 Pengunjung"]
+    U --> WA["💬 WhatsApp funnel"]
+    WA -.->|"klien baru = data baru"| R
+
+    classDef code fill:#0f241d,stroke:#d4af37,color:#f5f0e6
+    classDef gate fill:#4a3a10,stroke:#d4af37,color:#f5f0e6
+    classDef hidup fill:#0a4f38,stroke:#ffd700,color:#ffffff
+    class R,C,S code
+    class V,A gate
+    class D,H,G,SERP,U,WA hidup
+```
 
 ### 🏗️ Arsitektur Satu Gambar
 
@@ -436,6 +618,9 @@ curl -s http://localhost:3000/api/status | jq
 # Audit SEO 11 kriteria — wajib PERFECT 101/101
 python3 scripts/seo-audit.py
 
+# Validasi struktur README — wajib PASS
+python3 scripts/readme-validate.py
+
 # Cek cepat robots + sitemap + landing pencarian
 curl -s localhost:3000/robots.txt
 curl -s localhost:3000/sitemap.xml | grep -c "<loc>"
@@ -444,11 +629,27 @@ curl -s -o /dev/null -w "%{http_code}\n" "localhost:3000/layanan?q=halal"
 
 ---
 
+<a id="arah"></a>
+## 🗓️ Arah Pengembangan
+
+Berdasarkan catatan kerja yang terdokumentasi di repo ini — bukan janji kosong:
+
+| Status | Item | Rujukan |
+|:---:|---|---|
+| 🔴 **Mendesak** | Redeploy v3.4.0 ke produksi `gunara.web.id` (produksi masih build lama — canonical menunjuk domain mati `gunaraconsultant.com` = risiko deindexing) | `worklog.md` Task 27 |
+| 🔴 **Mendesak** | Set `FRAME_POLICY=sameorigin` + submit sitemap ke Google Search Console | `worklog.md` Task 27 |
+| 🟡 Menyala-otomatis | Live Telemetry badge aktif penuh begitu `/api/status` hadir di produksi | bagian [telemetry](#telemetry) |
+| 🟢 Berjalan | Katalog, SEO audit, dan README tumbuh mengikuti rilis — sinkron 4 titik (package.json, version.ts, CHANGELOG, worklog) | [`CHANGELOG.md`](CHANGELOG.md) |
+
+---
+
 <a id="riwayat"></a>
 ## 🔄 Riwayat Rilis
 
 | Versi | Nama Rilis | Sorotan |
 |:---:|---|---|
+| **3.4.0** | *Hulu-Hilir Animated Documentation* | Peta besar hulu→hilir 5 lapis · workflow 12 tahap · sequence WA · siklus hidup izin · header/footer/typing animasi · angka diverifikasi langsung dari `src/data` |
+| **3.3.1** | *Living README* | Badge telemetri hidup · katalog collapsible 546 · checklist interaktif · anti-penipuan |
 | **3.3.0** | *Google Search Optimization* | Audit 101/101 · robots dinamis · sitelinks search box hidup · clamp title/desc SERP |
 | **3.2.0** | *Full Catalog Integration* | +500 layanan PusatPerizinan → 546 aktif · harga transparan berdiskon · sitemap 566 |
 | **3.1.1** | *Preview Iframe Hardening* | CSP `frame-ancestors` adaptif — fix "refused to connect" |
@@ -518,9 +719,11 @@ Seluruh situs bilingual ID ⇄ EN (toggle navbar), dan tim melayani investor asi
 
 ---
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:d4af37,55:0a4f38,100:0f241d&height=110&section=footer&animation=fadeIn" width="100%" alt="footer animasi"/>
+
 <div align="center">
 
-<sub><b>GCONSULTANT</b> — Kompleksitas memiliki struktur. Solusi memiliki jalur.</sub>
+<sub><b>GCONSULTANT</b> — Kompleksitas memiliki struktur. Solusi memiliki jalur.</sub><br>
 
 <sub>
 <a href="https://gunara.web.id">🌐 Situs</a> ·

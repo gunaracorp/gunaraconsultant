@@ -124,3 +124,21 @@ Work Log:
 Stage Summary:
 - GitHub main = GConsultant v3.3.1 lengkap: README Living Documentation 535 baris tampil di halaman repo, 166 file terkurasi, 0 file sensitif.
 - Verifikasi pasca-push: ls-remote SHA cocok + raw README ter-fetch dari GitHub.
+
+---
+Task ID: 30 (hulu-hilir-animated-readme-v3.4.0)
+Agent: Z.ai — Omnibrand Council (DevRel/Systems/Brand/Release)
+Task: README super lengkap yang terupdate + workflow dan diagram dari hulu ke hilir harus lengkap + full animasi.
+
+Work Log:
+- ANGKA DIVERIFIKASI ULANG (bukan dikutip dari README lama): import langsung src/data via `bun -e` → ALL_COUNT=546 (46+500), CATEGORIES=11, KAT4=4/SUB_ALL=38, PROVINCES=38, POSTS=6, FAQS=8, UMEA 6 level/21 fungsi/5 tier/3 hukum. README lama ternyata benar; versi baru menambah 11 kategori + 8 FAQ + 6 artikel ke tabel "dalam Angka".
+- DESAIN HULU-HILIR: diagram induk flowchart TB 5 subgraph (Instansi → Knowledge Base → Mesin → Perjalanan Klien → Hasil) + loop dashed "kebutuhan level baru" kembali ke hulu; classDef 4 warna brand; tabel 5 lapis peran. Plus 3 diagram SOP baru: workflow 12 tahap (2 decision gate ISO), sequenceDiagram WhatsApp (autonumber), stateDiagram siklus hidup izin (nested state + perpanjangan/perubahan data).
+- ANIMASI GITHUB-NATIVE: header+footer capsule-render waving gradient brand (fadeIn), typing-svg 4 kalimat, pie komposisi katalog, live telemetry badge (dari v3.3.1), task list checklist, 10 <details> accordions. Semua berfungsi di light/dark GitHub.
+- PIPELINE TEKNIS BARU: flowchart Repo→lint→build→audit→deploy→headers→Googlebot→SERP→WA dengan loop klien baru → repo.
+- KONSISTENSI: bugfix tautan kontak halo@ (rusak sejak v3.3.1); DATABASE_URL contoh jadi relatif file:./db/custom.db; bagian "Arah Pengembangan" hanya memuat item terdokumentasi worklog (tanpa roadmap fiktif — gantt dengan tanggal karangan sengaja DITOLAK demi akurasi).
+- VALIDATOR PERMANEN: scripts/readme-validate.py (8 pemeriksaan) — menutup celah changelog 3.3.1 yang menyebut validator tapi file tidak tersimpan; sekarang menjadi gate rilis.
+- VER-1: 3.3.1 → 3.4.0 (package.json, version.ts "Hulu-Hilir Animated Documentation", CHANGELOG entri baru, worklog ini).
+- Catatan anomali sandbox: 2x terlihat file berubah sendiri di antara tool call (HEAD git dipindah snapshot ke main lama; baris kontak sempat tampak rusak lalu benar) — semua diverifikasi ulang dengan grep sebelum commit.
+
+Stage Summary:
+- README v3.4.0: 738 baris, 10 diagram Mermaid (flowchart×5, mindmap, pie, sequence, state, timeline), animasi header/footer/typing, 18 anchor internal valid, validator PASS — dipush ke GitHub main agar tampil.

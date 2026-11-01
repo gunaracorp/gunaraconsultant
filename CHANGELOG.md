@@ -2,6 +2,28 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.4.0] — 2026-11-01 — Hulu-Hilir Animated Documentation
+
+### Added
+- **Peta Besar "Dari Hulu ke Hilir"** — diagram induk Mermaid 5 lapis dengan subgraph + classDef warna brand: Instansi Penerbit → Knowledge Base → Mesin GConsultant → Perjalanan Klien → Hasil & Siklus Pertumbuhan (loop terbalik ke hulu), plus tabel peran-per-lapis.
+- **Workflow Operasional 12 Tahap** (flowchart) — SOP layanan hulu-ke-hilir dengan 2 titik keputusan ISO 9001:2015.
+- **Sequence diagram Alur WhatsApp** — interaksi Klien ↔ WhatsApp ↔ Tim ↔ Instansi (autonumber).
+- **State diagram Siklus Hidup Izin** — Persiapan → Pengajuan (nested: Verifikasi/Perbaikan bergaransi) → Terbit → Berlaku → Perpanjangan/PerubahanData.
+- **Pie chart komposisi katalog** (46 + 500 = 546) langsung dari `src/data`.
+- **Pipeline teknis hulu-hilir** (flowchart): Repo → lint → build → audit 101/101 → deploy → headers → Googlebot → SERP → pengunjung → WhatsApp (loop klien baru).
+- **Header & footer animasi** capsule-render (gradient brand 0f241d→0a4f38→d4af37, `animation=fadeIn`) + **typing SVG** 4 kalimat berputar.
+- **Bagian "Arah Pengembangan"** — status mendesak/menyala/berjalan dengan rujukan worklog (deploy produksi, Search Console, telemetry).
+- **Validator README permanen** `scripts/readme-validate.py` — 8 pemeriksaan (fence, 10 blok Mermaid bracket-balanced, 18 anchor internal, details/summary, https images, tautan relatif, placeholder, H1) — kini bagian dari verifikasi rilis.
+
+### Changed
+- Seluruh angka diverifikasi ulang langsung dari source code via `bun -e` import: 546=46+500, 11 kategori unggulan, 4 kelompok+38 sub-kelompok katalog, 38 provinsi, 3/6/21/5 UMEA™, 8 band UMI™, 6 artikel, 8 FAQ, 566 URL.
+- README 535 → 738 baris; navigasi kilat diperluas 12 → 16 tautan (4 baris × 4).
+- Bugfix: tautan kontak `halo@gunara.web.id` yang rusak sejak v3.3.1 kini diperbaiki.
+- `DATABASE_URL` contoh developer diganti path relatif `file:./db/custom.db` (sebelumnya path absolut sandbox).
+
+### Verified
+- `python3 scripts/readme-validate.py` → PASS (738 baris; flowchart×5, mindmap×1, pie×1, sequence×1, state×1, timeline×1).
+
 ## [3.3.1] — 2026-10-24 — Living README
 
 ### Added
