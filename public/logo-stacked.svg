@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-label="GConsultant — stacked lockup">
+  <!-- GCONSULTANT stacked lockup (v3.0) — covers, sosial, ruang tinggi -->
+  <g fill="none" stroke="#073B2E" stroke-width="7.2" stroke-linecap="round">
+    <path d="M 141.4 63.6 A 41 41 0 1 0 141.4 116.4" transform="translate(-21 0)"/>
+    <path d="M 130.7 72.6 A 27 27 0 1 0 130.7 107.4" transform="translate(-21 0)" opacity=".55"/>
+    <path d="M 150 100 L 122 100" transform="translate(-21 0)" stroke-width="8.2"/>
+  </g>
+  <text x="160" y="205" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="44" font-weight="600" letter-spacing="5" fill="#073B2E">GCONSULTANT</text>
+  <text x="160" y="238" text-anchor="middle" font-family="Inter, Manrope, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="3.2" fill="#C6A15B">THE POLYMATHIC PROBLEM SOLVER</text>
+</svg>

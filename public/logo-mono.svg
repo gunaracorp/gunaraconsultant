@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Logo GConsultant mono">
+  <!-- GCONSULTANT mark — satu warna tinta (cetak/stempel) -->
+  <g fill="none" stroke="#111815" stroke-width="7.2" stroke-linecap="round">
+    <path d="M 91.4 33.6 A 41 41 0 1 0 91.4 86.4"/>
+    <path d="M 80.7 42.6 A 27 27 0 1 0 80.7 77.4" opacity=".55"/>
+    <path d="M 101 60 L 58 60" stroke-width="8.2"/>
+  </g>
+</svg>

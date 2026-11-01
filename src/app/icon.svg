@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="GConsultant">
+  <!-- GCONSULTANT app icon / favicon — tile Deep Forest + Geometric G -->
+  <defs>
+    <radialGradient id="gc-tile" cx=".5" cy=".3" r=".9">
+      <stop offset="0" stop-color="#12352B"/>
+      <stop offset="1" stop-color="#0F241D"/>
+    </radialGradient>
+    <linearGradient id="gc-gold" gradientUnits="userSpaceOnUse" x1="101" y1="60" x2="58" y2="60">
+      <stop offset="0" stop-color="#E5C97A"/>
+      <stop offset="1" stop-color="#C6A15B"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="120" height="120" rx="27" fill="url(#gc-tile)"/>
+  <g fill="none" stroke="#F6F1E4" stroke-width="8.2" stroke-linecap="round">
+    <path d="M 91.4 33.6 A 41 41 0 1 0 91.4 86.4"/>
+    <path d="M 80.7 42.6 A 27 27 0 1 0 80.7 77.4" opacity=".5"/>
+  </g>
+  <path d="M 101 60 L 58 60" fill="none" stroke="url(#gc-gold)" stroke-width="8.2" stroke-linecap="round"/>
+</svg>
