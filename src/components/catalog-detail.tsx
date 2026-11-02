@@ -152,7 +152,7 @@ export function CatalogDetail({
                   </p>
                 )}
                 {hemat > 0 && (
-                  <p className="mt-2 flex items-center gap-1.5 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+                  <p className="mt-2 flex items-center gap-1.5 rounded-xl bg-sky-500/10 px-3 py-2 text-sm font-semibold text-sky-700 dark:text-sky-400">
                     <PiggyBank className="h-4 w-4" aria-hidden="true" />
                     {t("katSave")} {formatRp(hemat)}
                   </p>
@@ -275,7 +275,7 @@ export function CatalogDetail({
                       <span className="mt-2 flex items-baseline gap-1.5">
                         <span className="text-sm font-bold text-primary">{formatRp(r.hargaDiskon)}</span>
                         {r.diskon > 0 && (
-                          <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                          <span className="text-[11px] font-semibold text-sky-700 dark:text-sky-400">
                             -{Math.round(r.diskon * 100)}%
                           </span>
                         )}

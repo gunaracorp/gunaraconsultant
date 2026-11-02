@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f241d,55:0a4f38,100:d4af37&height=170&section=header&text=GCONSULTANT&fontSize=54&fontColor=f5f0e6&fontAlignY=38&desc=The%20Polymathic%20Problem%20Solver%20%C2%B7%20Pusat%20Perizinan%20Terlengkap%20di%20Asia&descSize=15&descAlignY=64&animation=fadeIn" width="100%" alt="GCONSULTANT — header animasi"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a1b3d,55:16345f,100:d4af37&height=170&section=header&text=GCONSULTANT&fontSize=54&fontColor=f7f5ee&fontAlignY=38&desc=The%20Polymathic%20Problem%20Solver%20%C2%B7%20Pusat%20Perizinan%20Terlengkap%20di%20Asia&descSize=15&descAlignY=64&animation=fadeIn" width="100%" alt="GCONSULTANT — header animasi"/>
 
 <div align="center">
 
@@ -10,16 +10,16 @@
 
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![ISO 9001:2015](https://img.shields.io/badge/ISO-9001:2015-certified-0a4f38)](https://gunara.web.id/tentang-kami)
-[![AHU Kemenkumham](https://img.shields.io/badge/AHU-038293.AH.01.30-0f241d)](#transparansi)
+[![ISO 9001:2015](https://img.shields.io/badge/ISO-9001:2015-certified-16345f)](https://gunara.web.id/tentang-kami)
+[![AHU Kemenkumham](https://img.shields.io/badge/AHU-038293.AH.01.30-0a1b3d)](#transparansi)
 [![Bun](https://img.shields.io/badge/Bun-runtime-f472b6?logo=bun)](https://bun.sh)
 
 [![546 Layanan](https://img.shields.io/badge/layanan-546_aktif-d4af37)](#katalog)
 [![38 Provinsi](https://img.shields.io/badge/jangkauan-38_provinsi-d4af37)](https://gunara.web.id/provinsi)
 [![566 URL SEO](https://img.shields.io/badge/sitemap-566_URL_indexable-d4af37)](https://gunara.web.id/sitemap.xml)
-[![Audit SEO 101/101](https://img.shields.io/badge/audit_SEO-101%2F101_perfect-0a4f38)](#dashboard)
+[![Audit SEO 101/101](https://img.shields.io/badge/audit_SEO-101%2F101_perfect-16345f)](#dashboard)
 
-<a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0f241d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="110"/></a>
+<a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0a1b3d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="110"/></a>
 
 **Scan → Konsultasi Gratis** · [Bahasa Indonesia](#cerita) · [English](#en-story)
 
@@ -120,10 +120,10 @@ flowchart TB
     D1 -->|"izin terbit"| D2
     D2 -.->|"loop pertumbuhan: kebutuhan level baru"| P
 
-    classDef instansi fill:#1a3a2f,stroke:#d4af37,color:#f5f0e6
-    classDef data fill:#0f241d,stroke:#d4af37,color:#f5f0e6
-    classDef engine fill:#0a4f38,stroke:#ffd700,color:#ffffff
-    classDef hilir fill:#2d1f0e,stroke:#d4af37,color:#f5f0e6
+    classDef instansi fill:#1a3552,stroke:#d4af37,color:#f7f5ee
+    classDef data fill:#0a1b3d,stroke:#d4af37,color:#f7f5ee
+    classDef engine fill:#16345f,stroke:#ffd700,color:#ffffff
+    classDef hilir fill:#2d1f0e,stroke:#d4af37,color:#f7f5ee
     class A1,A2,A3,A4 instansi
     class B1,B2,B3,B4 data
     class C1,C2,C3,C4 engine
@@ -369,9 +369,9 @@ flowchart TD
     W10 --> W11["11 · Serah terima<br/>+ arsip digital"]
     W11 --> W12["12 · Pendampingan pasca-terbit<br/>+ naik level UMEA™"]
 
-    classDef mulai fill:#0f241d,stroke:#d4af37,color:#f5f0e6
-    classDef putus fill:#4a3a10,stroke:#d4af37,color:#f5f0e6
-    classDef hasil fill:#0a4f38,stroke:#ffd700,color:#ffffff
+    classDef mulai fill:#0a1b3d,stroke:#d4af37,color:#f7f5ee
+    classDef putus fill:#4a3a10,stroke:#d4af37,color:#f7f5ee
+    classDef hasil fill:#16345f,stroke:#ffd700,color:#ffffff
     class W1 mulai
     class W5,W9 putus
     class W10,W12 hasil
@@ -473,8 +473,8 @@ Metrik yang diperiksa otomatis setiap rilis — semuanya bisa Anda verifikasi se
 | Badge | Sumber Data |
 |---|---|
 | ![Versi Produksi](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgunara.web.id%2Fapi%2Fstatus&query=%24.version&label=versi%20produksi&color=d4af37) | `$.version` |
-| ![Status API](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgunara.web.id%2Fapi%2Fstatus&query=%24.status&label=api&color=0a4f38) | `$.status` |
-| ![Rilis](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgunara.web.id%2Fapi%2Fstatus&query=%24.release&label=rilis&color=0f241d) | `$.release` |
+| ![Status API](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgunara.web.id%2Fapi%2Fstatus&query=%24.status&label=api&color=16345f) | `$.status` |
+| ![Rilis](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgunara.web.id%2Fapi%2Fstatus&query=%24.release&label=rilis&color=0a1b3d) | `$.release` |
 
 > [!NOTE]
 > Badge akan **menyala otomatis** begitu v3.4.0 dideploy ke produksi (saat ini produksi masih menjalankan build lama tanpa endpoint `/api/status`). Tidak ada yang perlu diedit di README ini — itulah makna *living documentation*.
@@ -576,9 +576,9 @@ flowchart LR
     U --> WA["💬 WhatsApp funnel"]
     WA -.->|"klien baru = data baru"| R
 
-    classDef code fill:#0f241d,stroke:#d4af37,color:#f5f0e6
-    classDef gate fill:#4a3a10,stroke:#d4af37,color:#f5f0e6
-    classDef hidup fill:#0a4f38,stroke:#ffd700,color:#ffffff
+    classDef code fill:#0a1b3d,stroke:#d4af37,color:#f7f5ee
+    classDef gate fill:#4a3a10,stroke:#d4af37,color:#f7f5ee
+    classDef hidup fill:#16345f,stroke:#ffd700,color:#ffffff
     class R,C,S code
     class V,A gate
     class D,H,G,SERP,U,WA hidup
@@ -719,7 +719,7 @@ Seluruh situs bilingual ID ⇄ EN (toggle navbar), dan tim melayani investor asi
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:d4af37,55:0a4f38,100:0f241d&height=110&section=footer&animation=fadeIn" width="100%" alt="footer animasi"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:d4af37,55:16345f,100:0a1b3d&height=110&section=footer&animation=fadeIn" width="100%" alt="footer animasi"/>
 
 <div align="center">
 

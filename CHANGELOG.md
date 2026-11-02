@@ -2,6 +2,23 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.5.0] — 2026-11-03 — Restu Ibu: Rebrand Biru × Gold (Royal Navy × Imperial Gold)
+
+### Changed
+- **Rebrand identitas menyeluruh atas masukan psikologi warna dari Ibu (pemilik):** hijau = keagamaan/daun layu → dikeluarkan dari brand usaha; palet baru **Royal Navy × Imperial Gold** — biru (langit, tinggi, laut → kepercayaan & ketinggian), gold (menang, jaya, kekayaan → kesuksesan klien), ivory (putih = bersih, suci, damai); kuning diserap keluarga gold.
+- 17 token warna + 3 triplet rgba dipetakan ulang di `globals.css` (light + dark): `--deep` #0f241d→#0a1b3d, `--primary` #073b2e→#0d2e6b, `--gold` #c6a15b→#d4af37, `--gold-soft` #e5c97a→#eed88a, `--cream` #f6f1e4→#f7f5ee, `--clarity` #cfe3d4→#d6e4f7, ink/charcoal/muted/border/ring mengikuti — seluruh 101 halaman berubah otomatis via token semantik.
+- Aset brand diregenerasi dari `src/app/icon.svg` baru: favicon.ico (16/24/32/48), apple-icon 180, icon-192/512, og-image.jpg 1200×630 (gradient Royal Navy + Imperial Gold), 4 logo SVG geometric-G kini Sovereign Navy × Imperial Gold.
+- Meta `theme-color` (viewport layout) + manifest `background_color`/`theme_color` → #0a1b3d.
+- 6 cover blog diremaphue hijau→Royal Navy (PIL+numpy, 50–96% piksel per cover); foto pendiri tidak disentuh.
+- README v3.4.0 ikut disinkronkan warnanya: header/footer capsule-render (0a1b3d→16345f→d4af37), 3 classDef Mermaid + varian gelap, badge AHU/ISO/audit/rilis, QR WhatsApp.
+
+### Removed
+- Seluruh jejak hijau/emerald dari UI: badge "hemat" & diskon katalog kini Sky Blue, aksen kekuatan UMEA™ (trophy/shield/progress) kini Imperial Gold, gradient thumbnail blog kini navy. (Hijau #25d366 dipertahankan HANYA pada tombol WhatsApp — warna resmi platform, bukan warna brand.)
+
+### Verified
+- Zero-grep palet lama (0f241d/073b2e/c6a15b/emerald/…) di src + public + README = 0 hasil.
+- `python3 scripts/readme-validate.py` → PASS (738 baris, 10 diagram Mermaid).
+
 ## [3.4.0] — 2026-11-01 — Hulu-Hilir Animated Documentation
 
 ### Added

@@ -32,7 +32,7 @@ type Step = "intro" | "quiz" | "result";
 
 /**
  * Mesin asesmen UMEA Maturity Index™ — pola visual terang situs
- * (kartu putih card-lux + teks ink) dengan aksen emerald-gold.
+ * (kartu putih card-lux + teks ink) dengan aksen gold-navy.
  * Seluruh skor dihitung di perangkat pengguna (privasi penuh).
  */
 export function UmeaAssessment() {
@@ -341,22 +341,22 @@ export function UmeaAssessment() {
 
               {/* Kekuatan */}
               <Reveal delay={0.16}>
-                <div className="card-lux h-full rounded-3xl border-l-4 border-l-emerald-500 p-6 sm:p-7">
+                <div className="card-lux h-full rounded-3xl border-l-4 border-l-gold p-6 sm:p-7">
                   <h3 className="flex items-center gap-2 font-display text-lg font-bold text-ink">
-                    <Trophy className="h-5 w-5 text-emerald-600" aria-hidden="true" />
+                    <Trophy className="h-5 w-5 text-gold" aria-hidden="true" />
                     {t("asmStrongLabel")}
                   </h3>
                   <ul className="mt-5 space-y-4">
                     {result.strengths.map((s) => (
                       <li key={s.dim} className="flex items-center gap-3">
-                        <ShieldCheck className="h-5 w-5 shrink-0 text-emerald-600" aria-hidden="true" />
+                        <ShieldCheck className="h-5 w-5 shrink-0 text-gold" aria-hidden="true" />
                         <span className="flex-1 text-sm font-semibold text-ink/90">{s.dim}</span>
                         <span
                           className="h-1.5 w-20 overflow-hidden rounded-full bg-ink/10 sm:w-24"
                           aria-hidden="true"
                         >
                           <span
-                            className="block h-full rounded-full bg-emerald-500"
+                            className="block h-full rounded-full bg-gold"
                             style={{ width: `${Math.max(6, s.ratio)}%` }}
                           />
                         </span>

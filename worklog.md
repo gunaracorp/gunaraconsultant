@@ -142,3 +142,18 @@ Work Log:
 
 Stage Summary:
 - README v3.4.0: 738 baris, 10 diagram Mermaid (flowchart×5, mindmap, pie, sequence, state, timeline), animasi header/footer/typing, 18 anchor internal valid, validator PASS — dipush ke GitHub main agar tampil.
+
+---
+Task ID: 31 (rebrand-biru-gold-v3.5.0)
+Agent: Z.ai — Omnibrand Council (Brand/Psychology/Design/Release)
+Task: Rebrand warna menyeluruh hijau → biru × gold atas masukan Ibu (pemilik): usaha ok = biru/kuning/gold/putih; hijau = keagamaan (daun layu) → dihapus dari identitas. "Role activation full, god mode tier max, ubah semuanya."
+
+Work Log:
+- SUMBER KEBIJAKAN (pesan Ibu): biru = langit/tinggi/laut; kuning = smart/matahari/ceria; gold = menang/jaya/kekayaan; putih = cahaya/bersih/suci/damai. Dewan memetakan: merah hanya untuk semantik error (--destructive tetap #b3261e); hijau dihapus total KECUALI #25d366 WhatsApp (warna resmi platform, bukan warna brand).
+- AUDIT TOTAL: palet terpusat di globals.css (48 hex + rgba), icon.svg master, 4 logo SVG, manifest + layout theme-color, gradient thumbnail blog (3 file), 2 file emerald (catalog-detail, umea-assessment), README v3.4.0 (capsule-render/classDef/badge/QR). founder.jpg (foto manusia) sengaja tidak disentuh.
+- EKSEKUSI: scripts/rebrand-birugold-v35.py — remap deterministik 17 hex + 3 triplet rgba + istilah komentar (46 jenis penggantian; bug hex-bare URL README terdeteksi & diperbaiki: shields/capsule/QR butuh hex TANPA '#'); aset biner via scripts/rebrand-assets-v35.js (sharp: favicon.ico 7.170 B, apple-icon 180, icon-192/512, og-image 86,8 kB); 6 cover blog via scripts/recolor-blog-v35.py (PIL+numpy, mask hue 60–185°, 50–96% px per cover).
+- PALET BARU "ROYAL NAVY × IMPERIAL GOLD": --primary #0D2E6B Sovereign Navy; --deep #0A1B3D Deep Royal Navy; --gold #D4AF37 Imperial Gold; --gold-soft #EED88A; --deep-gold #A67C1E; --cream #F7F5EE Sacred Ivory; --clarity #D6E4F7 Clarity Sky; ink #101828; charcoal #24344D; muted-fg #4C5872; dark mode/border/ring rgba ikut dipetakan. Badge "hemat"/diskon → Sky Blue; aksen kekuatan UMEA™ → Imperial Gold.
+- VER-1: 3.4.0 → 3.5.0 sinkron 4 titik; python3 scripts/readme-validate.py PASS (738 baris); zero-grep palet lama = 0 (src + public + README).
+
+Stage Summary:
+- GConsultant v3.5.0 "Restu Ibu": 101 halaman + favicon + ikon + OG + logo + cover blog + README konsisten Biru × Gold dari hulu (token/data) ke hilir (SERP/OG thumbnail); siap commit & push (membawa README v3.4.0 yang belum terpush).

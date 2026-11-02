@@ -38,13 +38,13 @@ export function BrandSeal({
     >
       <defs>
         <linearGradient id={au} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#E5C97A" />
-          <stop offset="1" stopColor="#C6A15B" />
+          <stop offset="0" stopColor="#EED88A" />
+          <stop offset="1" stopColor="#D4AF37" />
         </linearGradient>
         {/* userSpaceOnUse — gradient objectBoundingBox tidak dirender pada garis horizontal (bbox tinggi-0) */}
         <linearGradient id={auBar} gradientUnits="userSpaceOnUse" x1="101" y1="60" x2="58" y2="60">
-          <stop offset="0" stopColor="#E5C97A" />
-          <stop offset="1" stopColor="#C6A15B" />
+          <stop offset="0" stopColor="#EED88A" />
+          <stop offset="1" stopColor="#D4AF37" />
         </linearGradient>
       </defs>
 

@@ -24,7 +24,7 @@ export function Hero() {
 
   return (
     <>
-      {/* HERO — Deep Forest, kicker emas, headline serif */}
+      {/* HERO — Deep Royal Navy, kicker Imperial Gold, headline serif */}
       <section
         id="beranda"
         className="relative overflow-hidden bg-deep"
