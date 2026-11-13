@@ -129,7 +129,7 @@ export function OfficialAccount() {
 
               <p className="mt-6 flex items-center justify-center gap-2 text-center text-[11px] font-semibold tracking-[0.18em] text-cream/45 uppercase">
                 <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />
-                {BRAND.name} • {BRAND.iso} • {BRAND.groupSite}
+                {BRAND.name} • {BRAND.iso}
               </p>
             </div>
           </div>

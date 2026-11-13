@@ -9,7 +9,7 @@ import { BRAND } from "@/lib/brand";
 import { POSTS } from "@/data/blog";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Blog Perizinan & Legalitas Bisnis — Panduan Terlengkap",
+  title: "Blog Perizinan & Legalitas Bisnis — Panduan & Wawasan",
   description:
     "Panduan praktis perizinan bisnis Indonesia dari praktisi: NIB OSS RBA, memilih PT/CV/Perorangan, pendirian PT PMA, izin edar BPOM, ISO 9001, dan strategi legalitas UMKM — gratis & selalu diperbarui.",
   keywords: [

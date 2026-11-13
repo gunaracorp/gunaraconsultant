@@ -149,7 +149,7 @@ export function Contact() {
               <div className="rounded-3xl border border-gold/30 bg-secondary p-6">
                 <p className="flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-primary uppercase">
                   <Globe2 className="h-4 w-4 text-gold" aria-hidden="true" />
-                  {t("conGroupSite")}: {BRAND.groupSite}
+                  {BRAND.siteUrl.replace("https://", "")}
                 </p>
                 <p className="mt-2 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-primary/70 uppercase">
                   <Building2 className="h-4 w-4 text-gold" aria-hidden="true" />

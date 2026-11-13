@@ -72,7 +72,7 @@ const UI_ID = {
   why2: "Legal 100% Resmi",
   why2d:
     "Setiap dokumen diterbitkan lewat jalur resmi pemerintah — OSS RBA, Kemenkumham, BPOM, BSN, BPJPH. Tanpa jalan pintas berisiko.",
-  why3: "Terlengkap di Asia",
+  why3: "Jangkauan Lintas Sektor",
   why3d:
     "500+ jenis perizinan lintas sektor: usaha, lingkungan, konstruksi, pangan, kesehatan, pariwisata, pertambangan, hingga investasi asing.",
   why4: "38 Provinsi Indonesia",
@@ -130,7 +130,7 @@ const UI_ID = {
   fouP2:
     "Pada tahun 2024, visi tersebut dilembagakan: GConsultant resmi berbadan usaha di Kota Tasikmalaya dengan modal dasar Rp5.000.000.000, terdaftar di Kemenkumham RI (AHU-038293.AH.01.30.Tahun 2024). Dengan sistem mutu tersertifikasi ISO 9001:2015, kami membawa standar konsultan global ke seluruh 38 provinsi Indonesia.",
   fouP3:
-    "Misi kami sederhana namun ambisius: menjadikan GConsultant pusat perizinan terlengkap di Asia, tempat setiap pelaku usaha — dari UMKM hingga PMA — melegalkan bisnisnya dengan tenang, cepat, dan 100% resmi.",
+    "Misi kami sederhana namun ambisius: menjadikan GConsultant rumah konsultansi bisnis, legalitas, dan strategi terpadu, tempat setiap pelaku usaha — dari UMKM hingga PMA — melegalkan bisnisnya dengan tenang, cepat, dan 100% resmi.",
   fouChip1: "Dekade Pengalaman",
   fouChip2: "Modal Dasar Rp5 M",
   fouChip3: "ISO 9001:2015",
@@ -198,7 +198,6 @@ const UI_ID = {
   conErrMsg: "Ceritakan singkat kebutuhan Anda.",
   conSuccess: "WhatsApp terbuka di tab baru — kami menanti pesan Anda!",
   conSentBtn: "WhatsApp Terbuka",
-  conGroupSite: "Portal Grup",
   // Footer
   footDesc:
     "GConsultant — The Polymathic Problem Solver. Menyatukan ilmu, menata kompleksitas, mewujudkan solusi: 500+ perizinan & legalitas usaha, arsitektur sistem bisnis UMEA™, ISO 9001:2015, melayani 38 provinsi Indonesia.",
@@ -247,11 +246,11 @@ const UI_ID = {
   // Language
   langLabel: "Bahasa",
   // Halaman mandiri (PageHero)
-  pgLayananKicker: "Pusat Perizinan Terlengkap",
+  pgLayananKicker: "Layanan Bisnis & Legalitas",
   pgLayananTitle: "546 Layanan Perizinan & Legalitas Usaha",
   pgLayananSub:
     "Dari NIB hingga AMDAL — 546 layanan dalam katalog terpadu: 46 halaman panduan penuh + 500 layanan katalog berharga transparan. Satu pintu, tersertifikasi ISO 9001:2015.",
-  // Katalog lengkap (500 layanan PusatPerizinan)
+  // Katalog lengkap (500 layanan)
   katKicker: "Katalog Lengkap",
   katTitle: "546 Layanan, Harga Transparan",
   katSub: "Jelajahi katalog terpadu 546 layanan perizinan & legalitas — lengkap dengan harga, diskon aktif, dan estimasi hemat langsung di halaman detail.",
@@ -284,7 +283,7 @@ const UI_ID = {
   pgFounderKicker: "Profil Pemimpin",
   pgFounderTitle: "Gugun Gunara — Founder & CEO",
   pgFounderSub:
-    "Di balik GConsultant: pengalaman 15+ tahun berakar dari praktik konsultan ternama dunia, dengan visi pusat perizinan terlengkap di Asia.",
+    "Di balik GConsultant: pengalaman 15+ tahun berakar dari praktik konsultan ternama dunia, dengan visi rumah konsultansi bisnis & legalitas terpadu.",
   pgFaqKicker: "Pusat Bantuan",
   pgFaqTitle: "Pertanyaan yang Sering Diajukan",
   pgFaqSub:
@@ -308,7 +307,7 @@ const UI_ID = {
     "Hari ini, dengan dukungan 46 Dewan Pakar lintas bidang yang mewarisi praktik terbaik 150 tahun per bidang, kami menjadi satu pintu bagi pelaku usaha — dari UMKM hingga PMA — untuk melegalkan bisnis dengan tenang, cepat, dan 100% resmi.",
   aboutVisionKicker: "Visi",
   aboutVisionD:
-    "Menjadi pusat perizinan terlengkap di Asia — rumah pertama yang terpikir oleh setiap pelaku usaha ketika berbicara tentang legalitas bisnis.",
+    "Menjadi rumah pertama yang terpikir oleh setiap pelaku usaha ketika berbicara tentang legalitas dan strategi bisnis.",
   aboutMissionKicker: "Misi",
   aboutMission1:
     "Menyediakan 500+ jenis perizinan dalam satu pintu layanan dengan standar mutu internasional.",
@@ -525,7 +524,7 @@ const UI_EN: Record<UIKey, string> = {
   why2: "100% Official Legal Path",
   why2d:
     "Every document is issued through official government channels — OSS RBA, Kemenkumham, BPOM, BSN, BPJPH. No risky shortcuts.",
-  why3: "Most Complete in Asia",
+  why3: "Cross-Sector Reach",
   why3d:
     "500+ license types across sectors: business, environment, construction, food, health, tourism, mining, and foreign investment.",
   why4: "38 Provinces of Indonesia",
@@ -580,7 +579,7 @@ const UI_EN: Record<UIKey, string> = {
   fouP2:
     "In 2024, that vision was institutionalized: GConsultant officially became a legal entity in Kota Tasikmalaya with Rp5,000,000,000 authorized capital, registered with the Ministry of Law of the Republic of Indonesia (AHU-038293.AH.01.30.Tahun 2024). With an ISO 9001:2015 certified quality system, we bring global consulting standards to all 38 provinces of Indonesia.",
   fouP3:
-    "Our mission is simple yet ambitious: to make GConsultant the most complete licensing center in Asia — where every entrepreneur, from SMEs to foreign investors, legalizes their business calmly, quickly, and 100% officially.",
+    "Our mission is simple yet ambitious: to make GConsultant the integrated home for business, licensing, and strategy consulting — where every entrepreneur, from SMEs to foreign investors, legalizes their business calmly, quickly, and 100% officially.",
   fouChip1: "Decade of Experience",
   fouChip2: "Rp5B Authorized Capital",
   fouChip3: "ISO 9001:2015",
@@ -643,7 +642,6 @@ const UI_EN: Record<UIKey, string> = {
   conErrMsg: "Briefly tell us your needs.",
   conSuccess: "WhatsApp opened in a new tab — we await your message!",
   conSentBtn: "WhatsApp Opened",
-  conGroupSite: "Group Portal",
   footDesc:
     "GConsultant — The Polymathic Problem Solver. Uniting knowledge, structuring complexity, delivering solutions: 500+ licensing & legalization services, UMEA™ business systems architecture, ISO 9001:2015, serving 38 provinces of Indonesia.",
   footServices: "Popular Services",
@@ -690,11 +688,11 @@ const UI_EN: Record<UIKey, string> = {
   cnl4L: "Certified Quality Standard",
   langLabel: "Language",
   // Dedicated pages (PageHero)
-  pgLayananKicker: "The Most Complete Licensing Center",
+  pgLayananKicker: "Business & Licensing Services",
   pgLayananTitle: "546 Business Licensing & Legality Services",
   pgLayananSub:
     "From NIB to AMDAL — 546 services in one unified catalog: 46 full-guide pages + 500 catalog services with transparent pricing. One door, ISO 9001:2015 certified.",
-  // Full catalog (500 PusatPerizinan services)
+  // Full catalog (500 services)
   katKicker: "Full Catalog",
   katTitle: "546 Services, Transparent Pricing",
   katSub: "Browse the unified catalog of 546 licensing & legality services — complete with prices, active discounts, and estimated savings right on each detail page.",
@@ -727,7 +725,7 @@ const UI_EN: Record<UIKey, string> = {
   pgFounderKicker: "Leadership Profile",
   pgFounderTitle: "Gugun Gunara — Founder & CEO",
   pgFounderSub:
-    "Behind GConsultant: 15+ years of experience rooted in world-renowned consulting practice, with the vision of Asia's most complete licensing center.",
+    "Behind GConsultant: 15+ years of experience rooted in world-renowned consulting practice, with the vision of an integrated home for business and licensing consulting.",
   pgFaqKicker: "Help Center",
   pgFaqTitle: "Frequently Asked Questions",
   pgFaqSub:
@@ -751,7 +749,7 @@ const UI_EN: Record<UIKey, string> = {
     "Today, backed by 46 cross-disciplinary Expert Councils inheriting 150 years of best practice per field, we are the one door for every entrepreneur — from SMEs to PMA — to legalize their business calmly, quickly, and 100% officially.",
   aboutVisionKicker: "Vision",
   aboutVisionD:
-    "To become the most complete licensing center in Asia — the first home every entrepreneur thinks of when it comes to business legality.",
+    "To become the first home every entrepreneur thinks of when it comes to business legality and strategy.",
   aboutMissionKicker: "Mission",
   aboutMission1:
     "Provide 500+ license types in one service door with international quality standards.",

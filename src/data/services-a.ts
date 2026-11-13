@@ -75,7 +75,7 @@ export const SERVICES_A: Service[] = [
         qId: "Apakah NIB bisa dibuat sendiri?",
         aId: "Bisa, tetapi banyak pemilik usaha gagal karena salah memilih KBLI yang berdampak pada risiko dan perizinan lanjutan. Kami memastikan KBLI tepat sejak awal agar Anda tidak rugi waktu dan biaya.",
         qEn: "Can I register NIB myself?",
-        aId: "You can, but many business owners fail because of wrong KBLI selection, which impacts risk level and further licensing. We ensure correct KBLI from the start so you save time and money.",
+        aEn: "You can, but many business owners fail because of wrong KBLI selection, which impacts risk level and further licensing. We ensure correct KBLI from the start so you save time and money.",
       },
     ],
   },

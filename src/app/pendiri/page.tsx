@@ -10,7 +10,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "Profil Gugun Gunara — Founder & CEO GConsultant",
   description:
-    "Profil Gugun Gunara, Founder & CEO GConsultant: 15+ tahun pengalaman berakar dari perusahaan konsultan ternama dunia Mic Kinsey sejak 2009, memimpin pusat perizinan terlengkap di Asia.",
+    "Profil Gugun Gunara, Founder & CEO GConsultant: 15+ tahun pengalaman berakar dari perusahaan konsultan ternama dunia Mic Kinsey sejak 2009, memimpin konsultan bisnis, legalitas & strategi terpadu untuk 38 provinsi Indonesia.",
   keywords: [
     "gugun gunara",
     "founder gunara consultant",
@@ -29,7 +29,7 @@ const profileJsonLd = {
   url: `${BRAND.siteUrl}/pendiri`,
   name: "Profil Gugun Gunara — Founder & CEO GConsultant",
   description:
-    "Profil resmi Gugun Gunara, pendiri GConsultant, pusat perizinan terlengkap di Asia.",
+    "Profil resmi Gugun Gunara, pendiri GConsultant.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },

@@ -13,7 +13,7 @@ import { formatRp } from "@/data/services";
 const PAGE = 24;
 
 /**
- * Katalog Lengkap — 500 layanan PusatPerizinan (v3.2.0).
+ * Katalog Lengkap — 500 layanan (v3.2.0).
  * Pencarian instan (nama/kode/sub), filter 4 kategori + chip sub,
  * paginasi tambah-beransur agar DOM tetap ramping.
  */

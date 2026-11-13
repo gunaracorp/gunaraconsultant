@@ -62,3 +62,4 @@ server.log
 /worklog-github.md
 # robots.txt kini route dinamis src/app/robots.ts (konflik next build jika statis ada)
 /public/robots.txt
+/upload/

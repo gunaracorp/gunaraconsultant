@@ -46,7 +46,7 @@ export function pageMetadata(opts: {
   return {
     title: opts.title,
     description: desc,
-    keywords: [...opts.keywords, "gunara consultant", "pusat perizinan terlengkap"],
+    keywords: [...opts.keywords, "gunara consultant", "konsultan perizinan"],
     alternates: {
       canonical: opts.path,
       languages: {

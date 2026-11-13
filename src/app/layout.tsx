@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "konsultan strategi Indonesia",
     "jasa perizinan usaha",
     "jasa legalitas perusahaan",
-    "pusat perizinan terlengkap",
+    "konsultan perizinan",
     "pendirian PT",
     "NIB OSS RBA",
     "izin edar BPOM",
@@ -178,7 +178,6 @@ const orgJsonLd = {
     "@type": "Country",
     name: "Indonesia",
   },
-  sameAs: [`https://${BRAND.groupSite}`],
 };
 
 const brandJsonLd = {

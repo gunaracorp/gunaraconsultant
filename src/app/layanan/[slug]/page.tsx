@@ -49,7 +49,7 @@ function catalogMetadata(item: CatalogItem): Metadata {
       "jasa pengurusan",
       "biaya" + item.nama.toLowerCase(),
       "gunara consultant",
-      "pusat perizinan terlengkap",
+      "konsultan perizinan",
     ],
     alternates: {
       canonical: `/layanan/${item.slug}`,
@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = resolved.service;
   const title = `${service.nameId} — Jasa Pengurusan Resmi, Cepat & Bergaransi`;
   const description = clampDesc(
-    `${service.shortId} Dikelola GConsultant — pusat perizinan terlengkap di Asia, tersertifikasi ISO 9001:2015, melayani 38 provinsi Indonesia. Estimasi ${service.durationId}, biaya mulai ${service.priceFrom}.`
+    `${service.shortId} Dikelola GConsultant — konsultan bisnis, legalitas & strategi terpadu, tersertifikasi ISO 9001:2015, melayani 38 provinsi Indonesia. Estimasi ${service.durationId}, biaya mulai ${service.priceFrom}.`
   );
 
   return {
@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ...service.keywords,
       "jasa perizinan",
       "gunara consultant",
-      "pusat perizinan terlengkap",
+      "konsultan perizinan",
       service.nameId,
       service.nameEn,
     ],

@@ -1,5 +1,5 @@
 /**
- * META KATALOG — taksonomi 4 kategori & 38 sub-kategori (500 layanan PusatPerizinan).
+ * META KATALOG — taksonomi 4 kategori & 38 sub-kategori (500 layanan).
  * Konten lingkup/proses/dokumen/FAQ bersifat keluarga-layanan (sah untuk seluruh anggota
  * sub yang sama), disusun ulang untuk GConsultant v3.2.0 "Full Catalog Integration".
  * Bilingual ID/EN; nama layanan individual tetap Bahasa Indonesia (istilah legal resmi).

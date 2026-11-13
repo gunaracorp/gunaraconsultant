@@ -2,6 +2,22 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.6.0] — 2026-11-13 — GConsultant Pure Identity: Pemisahan Merek PusatPerizinan
+
+### Changed
+- **Brand separation total atas arahan pemilik:** situs ini kini murni identitas **GConsultant** — seluruh referensi merek PusatPerizinan.com dihapus: kartu "Portal Grup" halaman kontak (kini menampilkan domain situs sendiri), footer, halaman rekening resmi, dan `sameAs` JSON-LD Organization (dihapus — tidak ada profil eksternal terverifikasi untuk dicantumkan).
+- Positioning lama "Pusat Perizinan Terlengkap di Asia" diganti positioning GConsultant-native: **"Konsultan Bisnis, Legalitas & Strategi Terpadu"** / *Integrated Business, Licensing & Strategy Consulting* — berlaku di tagline brand (brand.ts), misi & visi (ID+EN), kicker halaman layanan, why-us, description metadata 546 halaman layanan, profil pendiri, dan header README.
+- Klaim superlatif tanpa bukti turut dibersihkan sesuai disiplin klaim: "Terlengkap di Asia" → "Jangkauan Lintas Sektor" (EN: "Cross-Sector Reach"); judul blog "Panduan Terlengkap" → "Panduan & Wawasan".
+- Keyword SEO "pusat perizinan terlengkap" → "konsultan perizinan" (layout global, seo.ts, halaman detail layanan) — intent pencarian nyata, tanpa merek pihak ketiga.
+- Komentar provenance data katalog dineutralkan ("repositori internal gunaracorp"); README: baris tabel "Jaringan grup" & tautan footer grup dihapus, pie chart katalog dinetralkan.
+
+### Removed
+- `BRAND.groupSite` dari brand.ts dan seluruh pemakaiannya; key i18n `conGroupSite` (ID+EN).
+
+### Verified
+- Zero-grep "pusatperizinan|Pusat Perizinan|conGroupSite|Terlengkap di Asia|Most Complete in Asia" di src/ + README = 0 (sisa hanya di riwayat CHANGELOG/worklog — catatan historis, bukan promosi).
+- Semua halaman kunci render 200 tanpa jejak merek lama di HTML.
+
 ## [3.5.0] — 2026-11-03 — Restu Ibu: Rebrand Biru × Gold (Royal Navy × Imperial Gold)
 
 ### Changed

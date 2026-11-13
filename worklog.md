@@ -157,3 +157,19 @@ Work Log:
 
 Stage Summary:
 - GConsultant v3.5.0 "Restu Ibu": 101 halaman + favicon + ikon + OG + logo + cover blog + README konsisten Biru × Gold dari hulu (token/data) ke hilir (SERP/OG thumbnail); siap commit & push (membawa README v3.4.0 yang belum terpush).
+
+---
+Task ID: 32 (pure-identity-v3.6.0)
+Agent: Z.ai — Omnibrand Council (Brand Architecture / SEO / Legal)
+Task: Arahan pemilik — "hapus pusatperizinan nya, ini khusus gconsultant bukan gunara.web.id tapi gconsultant": pemisahan merek total, situs murni identitas GConsultant.
+
+Work Log:
+- AUDIT: grep pusatperizinan|Pusat Perizinan|groupSite|Terlengkap di src/ + README → 28 lokasi pada 16 file (UI 3, i18n 14, SEO/meta 5, komentar data 5, README 5, JSON-LD 1).
+- HAPUS MEREK: BRAND.groupSite dihapus dari brand.ts; kartu kontak "Portal Grup" kini menampilkan domain situs sendiri; footer & halaman rekening resmi tanpa grup; sameAs JSON-LD Organization dihapus (tanpa profil eksternal terverifikasi); key i18n conGroupSite ID+EN dihapus.
+- POSITIONING BARU: taglineId "Konsultan Bisnis, Legalitas & Strategi Terpadu" / taglineEn "Integrated Business, Licensing & Strategy Consulting"; misi-visi ID+EN, pgLayananKicker, why3 "Jangkauan Lintas Sektor"/"Cross-Sector Reach", description 546 halaman layanan, profil pendiri, judul blog — tanpa "Pusat Perizinan Terlengkap di Asia" & tanpa klaim superlatif tak terverifikasi.
+- SEO: keyword "pusat perizinan terlengkap" → "konsultan perizinan" (layout, seo.ts, halaman layanan); README: tagline header, cerita 30 detik ID+EN, pie chart katalog, baris tabel "Jaringan grup" dihapus, tautan footer grup dihapus.
+- KANONIK: siteUrl tetap https://gunara.web.id (domain produksi terverifikasi — mengubahnya tanpa domain baru akan mematahkan canonical/sitemap/OG).
+- VER-1: 3.5.0 → 3.6.0 sinkron 4 titik (package.json, version.ts, CHANGELOG, worklog ini).
+
+Stage Summary:
+- GConsultant v3.6.0 "Pure Identity": nol referensi merek PusatPerizinan di UI/meta/schema/komentar aktif; riwayat CHANGELOG tetap utuh sebagai catatan historis; siap commit & push.

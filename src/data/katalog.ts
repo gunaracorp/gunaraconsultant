@@ -1,6 +1,6 @@
 /**
- * KATALOG LENGKAP — 500 layanan PusatPerizinan (gunaracorp) terintegrasi GConsultant.
- * Sumber: gunaracorp/pusatperizinan src/data/layanan-500.json (v3.2.0 "Full Catalog Integration").
+ * KATALOG LENGKAP — 500 layanan terintegrasi GConsultant.
+ * Sumber: repositori internal gunaracorp (v3.2.0 "Full Catalog Integration").
  * Harga dalam Rupiah penuh; diskon & hemat mengikuti data resmi perusahaan.
  * Seluruh slug terverifikasi unik & tidak bentrok dengan 46 layanan unggulan (SERVICES).
  */

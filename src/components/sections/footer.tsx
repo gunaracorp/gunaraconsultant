@@ -200,7 +200,7 @@ export function Footer() {
             </Link>
             <span aria-hidden="true">•</span>
             <span>
-              {t("footLegal")} • {BRAND.siteUrl.replace("https://", "")} • {BRAND.groupSite}
+              {t("footLegal")} • {BRAND.siteUrl.replace("https://", "")}
             </span>
           </p>
           <p className="text-[11px] font-semibold text-gold-soft/80">

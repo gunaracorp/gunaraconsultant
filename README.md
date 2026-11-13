@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a1b3d,55:16345f,100:d4af37&height=170&section=header&text=GCONSULTANT&fontSize=54&fontColor=f7f5ee&fontAlignY=38&desc=The%20Polymathic%20Problem%20Solver%20%C2%B7%20Pusat%20Perizinan%20Terlengkap%20di%20Asia&descSize=15&descAlignY=64&animation=fadeIn" width="100%" alt="GCONSULTANT — header animasi"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a1b3d,55:16345f,100:d4af37&height=170&section=header&text=GCONSULTANT&fontSize=54&fontColor=f7f5ee&fontAlignY=38&desc=The%20Polymathic%20Problem%20Solver%20%C2%B7%20Konsultan%20Bisnis%2C%20Legalitas%20%26%20Strategi%20Terpadu&descSize=15&descAlignY=64&animation=fadeIn" width="100%" alt="GCONSULTANT — header animasi"/>
 
 <div align="center">
 
@@ -6,7 +6,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Jost&weight=700&size=20&duration=2800&pause=800&color=D4AF37&center=true&vCenter=true&width=860&height=56&lines=Menyatukan+ilmu.+Menata+kompleksitas.+Mewujudkan+solusi.;Dari+regulasi+di+hulu+%E2%80%94+hingga+izin+terbit+di+hilir.;546+layanan+%C2%B7+38+provinsi+%C2%B7+satu+pintu+WhatsApp.;Asesmen+UMI%E2%84%A2+3+menit+%E2%86%92+tahu+level+usaha+Anda." alt="tagline animasi"/>
 
-**Pusat Perizinan Terlengkap di Asia** · *The Most Complete Licensing Center in Asia*
+**Konsultan Bisnis, Legalitas & Strategi Terpadu** · *Integrated Business, Licensing & Strategy Consulting*
 
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -47,12 +47,12 @@
 
 Website resmi **GConsultant** — berakar dari praktik konsultansi **Mic Kinsey sejak 2009**, dilembagakan sebagai badan usaha **AHU-038293.AH.01.30 Tahun 2024**, tersertifikasi **ISO 9001:2015**, melayani **38 provinsi Indonesia** dari dua kantor (Tasikmalaya + Jakarta/IDX Tower 1).
 
-Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **546 layanan** perizinan (46 unggulan + 500 katalog [PusatPerizinan](https://pusatperizinan.com)) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
+Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **546 layanan** perizinan (46 unggulan + 500 katalog) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
 
 <a id="en-story"></a>
 ## 🇬🇧 The 30-Second Story
 
-The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **546 licensing services** (46 flagship + 500 from [PusatPerizinan](https://pusatperizinan.com)) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
+The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **546 licensing services** (46 flagship + 500 catalog) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
 
 ---
 
@@ -183,7 +183,7 @@ Komposisi katalog (angka langsung dari `src/data`):
 ```mermaid
 pie title Komposisi Katalog — 546 Layanan Aktif
     "Layanan unggulan — halaman khusus + penawaran" : 46
-    "Katalog PusatPerizinan — harga terbuka berdiskon" : 500
+    "Katalog layanan — harga terbuka berdiskon" : 500
 ```
 
 Klik setiap kelompok untuk membuka. Setiap tautan **hidup** — langsung menuju halaman layanan berisi harga, diskon resmi, proses, dokumen, dan FAQ.
@@ -516,7 +516,6 @@ Legitimasi bukan klaim — semua bisa dicek publik:
 |---|---|
 | Filosofi | *The Polymathic Problem Solver* — satu otak yang menyatukan hukum, sistem, dan teknologi |
 | Jejak | [`/pendiri`](https://gunara.web.id/pendiri) · [`/tentang-kami`](https://gunara.web.id/tentang-kami) |
-| Jaringan grup | [PusatPerizinan.com](https://pusatperizinan.com) — mesin katalog 500 layanan |
 
 ---
 
@@ -651,7 +650,7 @@ Berdasarkan catatan kerja yang terdokumentasi di repo ini — bukan janji kosong
 | **3.4.0** | *Hulu-Hilir Animated Documentation* | Peta besar hulu→hilir 5 lapis · workflow 12 tahap · sequence WA · siklus hidup izin · header/footer/typing animasi · angka diverifikasi langsung dari `src/data` |
 | **3.3.1** | *Living README* | Badge telemetri hidup · katalog collapsible 546 · checklist interaktif · anti-penipuan |
 | **3.3.0** | *Google Search Optimization* | Audit 101/101 · robots dinamis · sitelinks search box hidup · clamp title/desc SERP |
-| **3.2.0** | *Full Catalog Integration* | +500 layanan PusatPerizinan → 546 aktif · harga transparan berdiskon · sitemap 566 |
+| **3.2.0** | *Full Catalog Integration* | +500 layanan katalog → 546 aktif · harga transparan berdiskon · sitemap 566 |
 | **3.1.1** | *Preview Iframe Hardening* | CSP `frame-ancestors` adaptif — fix "refused to connect" |
 | **3.1.0** | *Lead UX Hardening* | Form kontak anti silent-fail · validasi aksesibel · funnel WA teruji E2E |
 | **3.0.0** | *Polymathic Rebrand* | Identitas Geometric G · UMEA™ · asesmen UMI™ · i18n penuh |
@@ -729,8 +728,7 @@ Seluruh situs bilingual ID ⇄ EN (toggle navbar), dan tim melayani investor asi
 <a href="https://gunara.web.id">🌐 Situs</a> ·
 <a href="https://gunara.web.id/layanan">🗂️ 546 Layanan</a> ·
 <a href="https://gunara.web.id/asesmen">🧪 Asesmen Gratis</a> ·
-<a href="https://wa.me/6281316516524">💬 WhatsApp</a> ·
-<a href="https://pusatperizinan.com">🤝 Grup</a>
+<a href="https://wa.me/6281316516524">💬 WhatsApp</a>
 </sub>
 
 <img src="public/logo-mono.svg" alt="Geometric G" width="46"/>

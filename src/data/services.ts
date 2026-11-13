@@ -42,7 +42,7 @@ export function validateServices(): string[] {
 }
 
 /* ============================================================
- * KATALOG LENGKAP — integrasi 500 layanan PusatPerizinan (v3.2.0)
+ * KATALOG LENGKAP — integrasi 500 layanan (v3.2.0)
  * Dua tier: SERVICES (46 unggulan, halaman detail penuh bilingual)
  * + KATALOG (500, harga resmi & diskon). Total 546 layanan aktif.
  * ============================================================ */
