@@ -6,11 +6,12 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { pageMetadata, breadcrumbJsonLd, webPageJsonLd } from "@/lib/seo";
 import { BRAND } from "@/lib/brand";
+import { PROVINSI_WILAYAH } from "@/data/wilayah";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Izin Usaha PPIU Umrah — Syarat, Biaya & Paket Full All-In Rp19,5 Jt | GConsultant",
+  title: "Izin Usaha PPIU Umrah — Syarat, Biaya & Paket Full All-In Rp12 Jt (Promo 2026) | GConsultant",
   description:
-    "Panduan lengkap izin PPIU 2026: pengertian, dasar hukum UU 13/2008, syarat Kemenag, alur 6 tahap, ruang lingkup paket full all-in Rp19,5 juta, dan FAQ — didampingi tim bersertifikasi ISO 9001:2015 di 38 provinsi.",
+    "Panduan lengkap izin PPIU 2026: pengertian, dasar hukum UU 13/2008, syarat Kemenag, alur 6 tahap, ruang lingkup paket full all-in Rp12 juta (Promo Khusus 2026, harga normal Rp25 juta), dan FAQ — didampingi tim bersertifikasi ISO 9001:2015 di 38 provinsi.",
   keywords: [
     "izin PPIU",
     "biaya izin PPIU 2026",
@@ -29,7 +30,7 @@ export const metadata: Metadata = pageMetadata({
 const FAQS = [
   {
     q: "Berapa biaya izin PPIU 2026 di GConsultant?",
-    a: "Paket full all-in kami Rp19.500.000 (harga normal Rp26.000.000). Paket mencakup pembentukan badan usaha bila belum ada, seluruh penyiapan dokumen, pengurusan rekomendasi hingga izin Kemenag terbit, serta pendampingan pelaporan pertama. Biaya pihak ketiga seperti deposit bank dan kepesertaan asosiasi dihitung terpisah dan transparan.",
+    a: "Paket full all-in kami Rp12.000.000 — Promo Khusus tahun 2026 (harga normal Rp25.000.000). Paket mencakup pembentukan badan usaha bila belum ada, seluruh penyiapan dokumen, pengurusan rekomendasi hingga izin Kemenag terbit, serta pendampingan pelaporan pertama. Biaya pihak ketiga seperti deposit bank dan kepesertaan asosiasi dihitung terpisah dan transparan.",
   },
   {
     q: "Berapa lama proses pengurusan izin PPIU?",
@@ -86,7 +87,7 @@ export default function PpiuPage() {
     offers: {
       "@type": "Offer",
       name: "Paket Full All-In PPIU 2026",
-      price: 19500000,
+      price: 12000000,
       priceCurrency: "IDR",
       url: `${BRAND.siteUrl}/sertifikasi-travel/ppiu`,
       availability: "https://schema.org/InStock",
@@ -223,7 +224,7 @@ export default function PpiuPage() {
           </div>
 
           <h2 className="mt-12 font-display text-2xl font-bold">
-            Isi Paket Full All-In Rp19.500.000
+            Isi Paket Full All-In Rp12.000.000 — Promo Khusus 2026
           </h2>
           <div className="mt-4 overflow-x-auto rounded-2xl border">
             <table className="w-full min-w-[560px] text-sm">
@@ -289,17 +290,18 @@ export default function PpiuPage() {
             </p>
             <p>
               Rekomendasi dewan kami sederhana: mulai dari PPIU hari ini, jalankan keberangkatan pertama dengan
-              rapi, dan rencanakan naik kelas sejak awal. Tiga paket full all-in —{" "}
+              rapi, dan rencanakan naik kelas sejak awal. Tiga paket full all-in (semuanya Rp12 juta pada Promo
+              Khusus 2026) —{" "}
               <Link href="/layanan/tda-biro-perjalanan-wisata-bpw" className="font-semibold text-gold underline underline-offset-4">
-                BPW Rp14,9 juta
+                BPW Rp12 juta
               </Link>
               ,{" "}
               <Link href="/layanan/izin-usaha-ppiu-umrah" className="font-semibold text-gold underline underline-offset-4">
-                PPIU Rp19,5 juta
+                PPIU Rp12 juta
               </Link>
               , dan{" "}
               <Link href="/layanan/izin-usaha-ppihk-haji-khusus" className="font-semibold text-gold underline underline-offset-4">
-                PIHK Rp24,9 juta
+                PIHK Rp12 juta
               </Link>
               {" "}— tersedia dalam satu halaman{" "}
               <Link href="/sertifikasi-travel" className="font-semibold text-gold underline underline-offset-4">
@@ -327,12 +329,43 @@ export default function PpiuPage() {
           </p>
         </article>
 
+        <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+          <h2 className="font-display text-2xl font-bold">Layanan Izin PPIU per Kota &amp; Provinsi</h2>
+          <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+            Panduan ini kini hadir untuk seluruh Indonesia — 514 halaman kota/kabupaten dan 38 halaman provinsi,
+            semuanya membawa paket full all-in Rp12 juta Promo Khusus 2026. Pilih provinsi Anda untuk melihat
+            halaman tiap kota:
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {PROVINSI_WILAYAH.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/sertifikasi-travel/ppiu/provinsi/${p.slug}`}
+                className="rounded-full border border-gold/30 px-4 py-2 text-sm font-semibold transition-colors hover:border-gold/60 hover:bg-gold/10 hover:text-gold"
+              >
+                {p.nama}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            Jangkauan lengkap:{" "}
+            <Link href="/sertifikasi-travel/kota" className="font-semibold text-gold underline underline-offset-4">
+              Direktori 514 Kota/Kabupaten (PPIU &amp; PIHK)
+            </Link>{" "}
+            — dan lihat{" "}
+            <Link href="/kanal-pemerintah" className="font-semibold text-gold underline underline-offset-4">
+              20 kanal resmi pemerintah
+            </Link>{" "}
+            tempat berkas Anda dikerjakan.
+          </p>
+        </section>
+
         <CtaBanner />
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(webPageJsonLd("/sertifikasi-travel/ppiu", "Izin Usaha PPIU Umrah — Syarat, Biaya & Paket Full All-In", "Panduan lengkap izin PPIU 2026: dasar hukum, syarat Kemenag, alur 6 tahap, paket full all-in Rp19,5 juta, dan FAQ.")),
+            __html: JSON.stringify(webPageJsonLd("/sertifikasi-travel/ppiu", "Izin Usaha PPIU Umrah — Syarat, Biaya & Paket Full All-In", "Panduan lengkap izin PPIU 2026: dasar hukum, syarat Kemenag, alur 6 tahap, paket full all-in Rp12 juta (Promo Khusus 2026), dan FAQ.")),
           }}
         />
         <script

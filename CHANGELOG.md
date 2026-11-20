@@ -2,6 +2,19 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.12.0] — 2026-11-20 — Promo Khusus 2026: Rp12 Jt Sertifikasi Travel + Programmatic SEO 1.104 Halaman
+
+### Changed
+- **Harga ketiga paket sertifikasi travel (angka pemilik, "khusus tahun ini")**: BPW, PPIU Umrah, dan PIHK Haji Khusus kini **Rp12.000.000 per paket — diskon dari harga normal Rp25.000.000** (hemat Rp13 juta, 52%). Satu sumber harga baru `src/data/promo-travel.ts` (`PROMO_TRAVEL`); tersinkron ke katalog.ts + katalog-lite.ts (SK-PR-001/002/015: harga, diskon 0,52, descId), halaman hub `/sertifikasi-travel` (kartu paket + chip "KHUSUS 2026" + banner promo + tabel perbandingan + metadata + JSON-LD), pillar `/sertifikasi-travel/ppiu` (title, desc, FAQ, heading isi paket, tautan paket, JSON-LD Service & WebPage), dan i18n ID/EN (`certHubSub`, `certPpiuTitle`).
+
+### Added
+- **Sistem programmatic SEO lini ibadah (v3.12.0)** — **1.104 halaman baru + 1 direktori = 1.105 URL**:
+  - Data wilayah `src/data/wilayah.ts` — **38 provinsi + 514 kabupaten/kota** (98 kota + 416 kabupaten), digenerate dari dataset IndoArea 19-04-2024 (github.com/hanifabd/wilayah-indonesia-area; BPS & Kemendagri) oleh `scripts/fetch-wilayah.py` dengan validasi keras (jumlah, slug unik, spot-check provinsi pemekaran Papua: Mimika→Papua Tengah, Jayawijaya→Papua Pegunungan, Merauke→Papua Selatan, Raja Ampat→Papua Barat Daya).
+  - Halaman kota `/sertifikasi-travel/ppiu/[kota]` & `/sertifikasi-travel/pihk/[kota]` (514×2): H1 lokal, kartu harga promo, data penting (dasar hukum UU 13/2008 jo. Permenag 15/2012 untuk PPIU; UU 13/2008 untuk PIHK), ruang lingkup, alur 4 langkah, FAQ 4 ber-flavor kota, tautan silang (pillar, provinsi, layanan pasangan, direktori, 6 kota seprovinsi), JSON-LD Service+Offer · FAQPage · BreadcrumbList.
+  - Halaman provinsi `.../provinsi/[provinsi]` (38×2): daftar seluruh kota seprovinsi, sampingan promo, FAQ 2, JSON-LD ItemList.
+  - Direktori induk `/sertifikasi-travel/kota`: seluruh 1.104 tautan dikelompokkan per layanan → provinsi (details/summary), CollectionPage JSON-LD.
+  - Internal linking baru: pillar `/ppiu` mendapat section "Layanan Izin PPIU per Kota & Provinsi" (38 tautan provinsi), hub travel menautkan direktori; sitemap +1.105 → **1.680 URL** (README badge 575 → 1.680).
+
 ## [3.11.0] — 2026-11-20 — Government Channels: 20 Kanal Resmi + Role Activation Master
 
 ### Added

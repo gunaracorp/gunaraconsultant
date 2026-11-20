@@ -10,7 +10,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "Sertifikasi Travel Full All-In 2026 — BPW, PPIU & PIHK | GConsultant",
   description:
-    "Tiga paket full all-in perizinan travel 2026: BPW Rp14,9 jt, Izin PPIU Umrah Rp19,5 jt, Izin PIHK Haji Khusus Rp24,9 jt — dari badan usaha hingga izin Kemenag terbit, satu harga transparan.",
+    "Tiga paket full all-in perizinan travel — BPW, Izin PPIU Umrah, Izin PIHK Haji Khusus — Promo Khusus 2026 Rp12 juta per paket (harga normal Rp25 juta): dari badan usaha hingga izin terbit, satu harga transparan.",
   keywords: [
     "sertifikasi travel full all-in",
     "paket izin BPW biro perjalanan wisata",
@@ -30,9 +30,9 @@ const PACKAGES = [
     nama: "Izin Biro Perjalanan Wisata (BPW)",
     namaPaket: "BPW — Full All-In",
     target: "Tour & travel umum: paket wisata domestik, tiket, MICE",
-    harga: 20000000,
-    hargaDiskon: 14900000,
-    hemat: 5100000,
+    harga: 25000000,
+    hargaDiskon: 12000000,
+    hemat: 13000000,
     berlaku: "Sesuai TDA/NIB — tanda daftar usaha pariwisata",
     ruang: [
       "Pendirian badan usaha (PT/CV) bila belum ada",
@@ -46,9 +46,9 @@ const PACKAGES = [
     nama: "Izin Usaha PPIU (Umrah)",
     namaPaket: "PPIU Umrah — Full All-In",
     target: "Travel ibadah umrah: jualan paket umrah dengan izin Kemenag",
-    harga: 26000000,
-    hargaDiskon: 19500000,
-    hemat: 6500000,
+    harga: 25000000,
+    hargaDiskon: 12000000,
+    hemat: 13000000,
     berlaku: "Izin PPIU berlaku 5 tahun (dapat diperpanjang)",
     ruang: [
       "Badan usaha PT, akta, SK Kemenkumham, NIB & KBLI",
@@ -63,9 +63,9 @@ const PACKAGES = [
     nama: "Izin Usaha PPIHK (Haji Khusus)",
     namaPaket: "PIHK Haji Khusus — Full All-In",
     target: "Penyelenggara haji khusus: layanan ibadah eksklusif premium",
-    harga: 33200000,
-    hargaDiskon: 24900000,
-    hemat: 8300000,
+    harga: 25000000,
+    hargaDiskon: 12000000,
+    hemat: 13000000,
     berlaku: "Izin PIHK berlaku 3 tahun (dapat diperpanjang)",
     ruang: [
       "Pemetaan prasyarat & jalur naik kelas dari PPIU",
@@ -155,6 +155,22 @@ export default function SertifikasiTravelPage() {
             melayani 38 provinsi Indonesia.
           </p>
 
+          <div className="mt-6 flex flex-wrap items-center gap-3 rounded-2xl border border-gold/45 bg-gold/10 px-5 py-4">
+            <span className="rounded-full bg-gold px-3 py-1 font-display text-xs font-black tracking-wide text-deep">
+              PROMO KHUSUS TAHUN 2026
+            </span>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Ketiga paket full all-in dibanderol{" "}
+              <strong className="font-display text-gold">Rp12 juta</strong> per paket — diskon dari harga normal{" "}
+              <span className="line-through">Rp25 juta</span> (hemat Rp13 juta). Berlaku untuk pendaftaran tahun
+              2026. Jangkauan kota:{" "}
+              <Link href="/sertifikasi-travel/kota" className="font-semibold text-gold underline underline-offset-4">
+                direktori 514 kota/kabupaten
+              </Link>
+              .
+            </p>
+          </div>
+
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {PACKAGES.map((p) => (
               <article
@@ -175,6 +191,9 @@ export default function SertifikasiTravelPage() {
                   <span className="text-sm text-muted-foreground line-through">{fmt(p.harga)}</span>
                   <span className="rounded-full bg-sky-500/10 px-2 py-0.5 text-xs font-bold text-sky-700 dark:text-sky-400">
                     Hemat {fmt(p.hemat)}
+                  </span>
+                  <span className="rounded-full bg-gold/15 px-2 py-0.5 text-xs font-black text-gold">
+                    KHUSUS 2026
                   </span>
                 </div>
                 <ul className="mt-5 space-y-2 text-sm leading-relaxed">
@@ -236,9 +255,9 @@ export default function SertifikasiTravelPage() {
                 </tr>
                 <tr>
                   <td className="px-4 py-3 font-semibold">Harga paket all-in</td>
-                  <td className="px-4 py-3 font-bold text-gold">{fmt(14900000)}</td>
-                  <td className="px-4 py-3 font-bold text-gold">{fmt(19500000)}</td>
-                  <td className="px-4 py-3 font-bold text-gold">{fmt(24900000)}</td>
+                  <td className="px-4 py-3 font-bold text-gold">{fmt(12000000)}</td>
+                  <td className="px-4 py-3 font-bold text-gold">{fmt(12000000)}</td>
+                  <td className="px-4 py-3 font-bold text-gold">{fmt(12000000)}</td>
                 </tr>
               </tbody>
             </table>
@@ -266,7 +285,7 @@ export default function SertifikasiTravelPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(webPageJsonLd("/sertifikasi-travel", "Sertifikasi Travel Full All-In 2026 — BPW, PPIU & PIHK", "Tiga paket full all-in perizinan travel 2026: BPW, PPIU Umrah, dan PIHK Haji Khusus dengan harga transparan dan garansi pengerjaan tertulis.")),
+            __html: JSON.stringify(webPageJsonLd("/sertifikasi-travel", "Sertifikasi Travel Full All-In — BPW, PPIU & PIHK", "Tiga paket full all-in perizinan travel: BPW, PPIU Umrah, dan PIHK Haji Khusus — Promo Khusus 2026 Rp12 juta per paket (harga normal Rp25 juta), harga transparan dan garansi pengerjaan tertulis.")),
           }}
         />
         <script

@@ -250,3 +250,19 @@ Work Log:
 
 Stage Summary:
 - v3.11.0 "Government Channels": GConsultant kini menampilkan medan kerja resminya secara eksplisit — 20 kanal terverifikasi + panggung role activation 4 peran master — jawaban langsung atas kepemilikan fitur kompetitor dengan tampilan lebih sinematik; batasan klaim & kemandirian akun klien mengikat; sitemap 575 URL.
+
+---
+Task ID: 38 (promo-2026-programmatic-seo-v3.12.0)
+Agent: Z.ai — 46 Dewan Pakar (Pricing/SEO-Programmatic/Data-Verification)
+Task: Pemilik: "harganya murah banget sayang pasang harga 12 juta diskon dari 25 juta khusus tahun ini" → terapkan ke 3 paket sertifikasi travel + lanjutkan rencana programmatic SEO PPIU (~1000 halaman) dari sesi terdahulu.
+
+Work Log:
+- FAKTA START: commit "9cb3ac3" pada todo tak pernah ada (HEAD a07947f v3.11.0, origin sinkron); diff working tree ternyata murni mode file 644→755 (artefak recycle sandbox) → kunci `core.fileMode false`, nol perubahan konten hilang.
+- HARGA (satu sumber baru data/promo-travel.ts PROMO_TRAVEL): BPW/PPIU/PIHK → hargaDiskon 12.000.000, harga 25.000.000, hemat 13.000.000, diskon 0,52 — sinkron 9 titik: katalog.ts (3 blok + descId), katalog-lite.ts (3 baris), halaman travel (3 paket + banner "PROMO KHUSUS TAHUN 2026" + chip "KHUSUS 2026" + tabel perbandingan + metadata + webPageJsonLd), pillar ppiu (title/desc/FAQ/heading/3 tautan paket/Service offer price), i18n ID+EN certHubSub & certPpiuTitle. ENTRI IATA GoLite (Rp19,5 jt katalog / Rp9,75 jt promo) SENGAJA tidak disentuh — produk berbeda.
+- WILAYAH: Wikipedia diblokir rate-limit IP sandbox; dataset GitHub adhiprs (34 provinsi pra-pemekaran) DITOLAK; terpilih hanifabd/wilayah-indonesia-area IndoArea-19-04-2024 (BPS+Kemendagri, 38 provinsi ✓). scripts/fetch-wilayah.py: validasi keras 38/514 (98 kota+416 kab), slug unik, spot-check pemekaran Papua (Mimika→96, Jayawijaya→97, Merauke→95, Raja Ampat→92, Manokwari→91, kode 93 tak ada). Normalisasi "KAB."→"Kabupaten", "KOTA ADM."→kota.
+- PROGRAMMATIC: template server components/sections/kota-programmatic.tsx (CityServiceContent: hero lokal, kartu promo PROMO_TRAVEL, data penting, ruang lingkup, alur 4 langkah, FAQ 4 kota, navigasi silang, batasan klaim; ProvinsiServiceContent: grid kota, sampingan promo, FAQ 2, JSON-LD ItemList) + data/layanan-programmatic.ts (konfigurasi PPIU/PIHK: metaNama ≤52 char utk clampTitle, dasar hukum terverifikasi, ruang lingkup dari paket) + 4 rute dinamis generateStaticParams + direktori /sertifikasi-travel/kota (1.104 tautan per layanan→provinsi, CollectionPage JSON-LD).
+- LINKING/SITEMAP: pillar ppiu + section 38 provinsi; hub travel + tautan direktori; sitemap +1.105 → 1.680 (static 17 + blog 6 + svc 50 + katalog 502 + home 1 + programmatic 1.104); README badge 1.680.
+- VER-1: 3.11.0 → 3.12.0 sinkron 4 titik.
+
+Stage Summary:
+- v3.12.0 "Promo Khusus 2026": ketiga paket sertifikasi travel Rp12 jt (normal Rp25 jt) tampil konsisten di seluruh titik sentuh harga; sistem programmatic SEO lini ibadah menghadirkan 1.105 URL baru berbasis data wilayah resmi BPS/Kemendagri; sitemap 1.680 URL.
