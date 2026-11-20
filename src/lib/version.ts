@@ -7,6 +7,6 @@
  *   4. worklog.md
  * Badge footer & endpoint /api/status mengikuti file ini secara otomatis.
  */
-export const VERSI = "3.10.0";
-export const NAMA_RILIS = "GCONSULTANT CERTIFICATION SUITE — PPIU · PIHK · BPW · ISO 9001:2026";
+export const VERSI = "3.11.0";
+export const NAMA_RILIS = "GCONSULTANT GOVERNMENT CHANNELS — 20 Kanal Resmi · Role Activation Master";
 export const TANGGAL_RILIS = "2026-11-20";

@@ -12,6 +12,7 @@ import { BRAND, waLink } from "@/lib/brand";
 const LINKS = [
   { key: "navServices" as const, href: "/layanan" },
   { key: "navCertification" as const, href: "/sertifikasi-travel", wideOnly: true },
+  { key: "navKanal" as const, href: "/kanal-pemerintah", wideOnly: true },
   { key: "navAbout" as const, href: "/tentang-kami" },
   { key: "navMetodologi" as const, href: "/metodologi" },
   { key: "navBlog" as const, href: "/blog" },

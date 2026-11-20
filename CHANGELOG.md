@@ -2,6 +2,18 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.11.0] — 2026-11-20 — Government Channels: 20 Kanal Resmi + Role Activation Master
+
+### Added
+- **Halaman `/kanal-pemerintah` — Direktori 20 Kanal Resmi Pemerintah** (respons atas permintaan pemilik menyaingi direktori kanal kompetitor): 20 instansi resmi dalam 5 kluster kerja (Fondasi Badan Usaha & Fiskal · Produk, Halal & Kesehatan · Ibadah, Pariwisata & Perdagangan · Industri, Tenaga Kerja & Digital · Lingkungan, Konstruksi & Hukum), kartu berkode KR-01…KR-20 dengan monogram, badan induk, domain resmi, fungsi (ID/EN), dan tautan langsung.
+- **Verifikasi domain dua jalur sebelum publikasi** (curl HTTP + DNS + pencarian situs resmi): menemukan rebrand domain aktif — `bpom.go.id → pom.go.id`, `kemenkes.go.id → kemkes.go.id`, `kemenkumham.go.id → kemenham.go.id`, `kemenparekraf.go.id → kemenpar.go.id`; kandidat tak terverifikasi dibuang (lpjk.info hanya halaman challenge; digantikan Ditjen Bina Konstruksi PU yang terverifikasi). Metode dicatat di `scripts/verify-kanal.sh`.
+- **Panggung Role Activation** (komponen `kanal-activation.tsx`): empat peran master — Master Polymath → Polytech → Sage Universal → The Ultimate Problem Solver — menyala berurutan (sequencer useInView + timer, cincin dashed berputar + sapuan conic-gradient gold, pil status STANDBY→AKTIF), disusul **46 Dewan Pakar** (7 grup fungsi UMEA™ menyala berjenjang) dan pita **7 Lapis Design Terbaik Dunia**.
+- **Alur 4 langkah** (Diagnosis Medan → Arsitektur Proses → Eksekusi di Kanal → Verifikasi & Serah Terima) + disclaimer kemandirian (tanpa afiliasi; akun portal selalu atas nama klien) + **tabel ringkasan 20 kanal** + FAQ 6 butir (mencakup penjelasan rebrand domain) + JSON-LD CollectionPage ItemList (20 URL resmi) + FAQPage + Breadcrumb + WebPage.
+
+### Changed
+- Navbar: menu baru **"Kanal Pemerintah"** (wideOnly) + i18n ID/EN (~64 kunci baru); sitemap +1 URL pilar (575 total); README badge sitemap 574 → 575.
+- Data baru `src/data/kanal-pemerintah.ts` — satu sumber untuk direktori, JSON-LD, dan tabel ringkasan; fungsi kanal dwibahasa.
+
 ## [3.10.0] — 2026-11-20 — Certification Suite: PPIU · PIHK · BPW · ISO 9001:2026 Full All-In
 
 ### Added

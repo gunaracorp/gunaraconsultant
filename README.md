@@ -16,7 +16,7 @@
 
 [![552 Layanan](https://img.shields.io/badge/layanan-552_aktif-d4af37)](#katalog)
 [![38 Provinsi](https://img.shields.io/badge/jangkauan-38_provinsi-d4af37)](https://www.gconsultant.web.id/provinsi)
-[![574 URL SEO](https://img.shields.io/badge/sitemap-574_URL_indexable-d4af37)](https://www.gconsultant.web.id/sitemap.xml)
+[![575 URL SEO](https://img.shields.io/badge/sitemap-575_URL_indexable-d4af37)](https://www.gconsultant.web.id/sitemap.xml)
 [![Audit SEO 101/101](https://img.shields.io/badge/audit_SEO-101%2F101_perfect-16345f)](#dashboard)
 
 <a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0a1b3d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="110"/></a>

@@ -33,6 +33,76 @@ const UI_ID = {
   navAbout: "Tentang Kami",
   navBlog: "Blog",
   navCta: "Konsultasi Gratis",
+  navKanal: "Kanal Pemerintah",
+  kanalCrumb: "Kanal Pemerintah",
+  kanalKicker: "Direktori Gerbang Resmi",
+  kanalTitle: "20 Kanal Resmi Pemerintah, Satu Peta Eksekusi",
+  kanalSub:
+    "Setiap izin dikerjakan DI DALAM portal resmi pemerintah. Direktori 20 kanal yang kami pandu setiap hari — dengan panggung role activation empat peran master dan 46 Dewan Pakar lintas bidang.",
+  kanalRolesKicker: "Role Activation",
+  kanalRolesTitle: "Empat Peran Master Teraktifkan",
+  kanalRolesSub:
+    "Saat Anda membuka halaman ini, empat peran master menyala berurutan — persis cara kami menangani berkas Anda: membaca medan, merancang sistem, mengunci rujukan resmi, lalu menuntaskan.",
+  kanalRole1Name: "Master Polymath",
+  kanalRole1Desc:
+    "Membaca seluruh medan regulasi lintas 552 layanan dan memetakan kewajiban Anda sebelum satu dokumen pun digarap.",
+  kanalRole2Name: "Polytech",
+  kanalRole2Desc:
+    "Menerjemahkan regulasi menjadi arsitektur proses: urutan kanal, dokumen, dan jadwal yang siap dieksekusi.",
+  kanalRole3Name: "Sage Universal",
+  kanalRole3Desc:
+    "Mengunci setiap langkah ke rujukan resmi — satu kanal, satu domain resmi, nol tautan abu-abu.",
+  kanalRole4Name: "The Ultimate Problem Solver",
+  kanalRole4Desc:
+    "Menggerakkan 46 Dewan Pakar lintas bidang menuntaskan setiap kanal hingga izin terbit dan diserahkan.",
+  kanalStandby: "STANDBY",
+  kanalActive: "AKTIF",
+  kanalCouncilTitle: "46 Dewan Pakar Lintas Bidang",
+  kanalCouncilSub:
+    "Tujuh grup fungsi UMEA™ menyala bersamaan — satu perangkat dewan yang mengawal setiap berkas dari hulu ke hilir.",
+  kanalGrp1: "Strategi & Kepemimpinan",
+  kanalGrp2: "Legal & Perizinan",
+  kanalGrp3: "Keuangan & Pajak",
+  kanalGrp4: "SDM & Organisasi",
+  kanalGrp5: "Operasional & Rantai Pasok",
+  kanalGrp6: "Pemasaran & Penjualan",
+  kanalGrp7: "Teknologi & Sistem",
+  kanalLapisTitle: "7 Lapis Design Terbaik Dunia",
+  kanalLapisSub:
+    "Setiap halaman situs ini — termasuk direktori yang sedang Anda lihat — dibangun di atas tujuh lapis keahlian design.",
+  kanalLapis1: "Typografi",
+  kanalLapis2: "Palet Warna",
+  kanalLapis3: "Gerak & Transisi",
+  kanalLapis4: "Kedalaman & Cahaya",
+  kanalLapis5: "Tata Letak",
+  kanalLapis6: "Mikro-Interaksi",
+  kanalLapis7: "Narasi",
+  kanalDirKicker: "Direktori Kanal",
+  kanalDirTitle: "20 Kanal Resmi, Lima Kluster Kerja",
+  kanalDirSub:
+    "Setiap kartu adalah domain resmi pemerintah yang kami kerjakan setiap hari — dikelompokkan lima kluster supaya urutan pengurusan Anda selalu benar sejak awal. Domain diverifikasi langsung sebelum tampil di sini.",
+  kanalVisit: "Buka Kanal",
+  kanalFlowKicker: "Cara Kami Bekerja",
+  kanalFlowTitle: "Alur Empat Langkah di Kanal Resmi",
+  kanalFlowSub:
+    "Peran-peran master bukan sekadar animasi — mereka adalah cara kerja nyata ketika berkas Anda bergerak dari satu kanal ke kanal berikutnya.",
+  kanalFlow1T: "Diagnosis Medan",
+  kanalFlow1D:
+    "Master Polymath memetakan seluruh kewajiban perizinan usaha Anda dan menyusun peta kanal yang harus dilewati.",
+  kanalFlow2T: "Arsitektur Proses",
+  kanalFlow2D:
+    "Polytech menyusun urutan kanal, daftar dokumen, dan jadwal — satu rencana kerja yang bisa Anda baca dan ukur.",
+  kanalFlow3T: "Eksekusi di Kanal",
+  kanalFlow3D:
+    "Tim dewan mengerjakan setiap kanal resmi — dengan akun yang selalu atas nama dan kendali Anda.",
+  kanalFlow4T: "Verifikasi & Serah Terima",
+  kanalFlow4D:
+    "The Ultimate Problem Solver memverifikasi setiap terbitan di kanal sumbernya, lalu menyerahkan paket legalitas lengkap kepada Anda.",
+  kanalDiscTitle: "Kemandirian & Batasan Klaim",
+  kanalDisc:
+    "GConsultant adalah konsultan independen — tanpa afiliasi, kemitraan, atau mandat resmi dari instansi mana pun. Semua tautan di halaman ini mengarah ke domain resmi pemerintah untuk informasi publik, dan setiap keputusan perizinan sepenuhnya berada pada instansi penerbit.",
+  kanalDiscAccount:
+    "Seluruh akun portal didaftarkan atas nama klien — kendali penuh tetap di tangan Anda.",
   navTagline: "The Polymathic Problem Solver",
   // Hero
   heroTitle1: "Kompleksitas memiliki struktur.",
@@ -513,6 +583,76 @@ const UI_EN: Record<UIKey, string> = {
   navAbout: "About Us",
   navBlog: "Blog",
   navCta: "Free Consultation",
+  navKanal: "Gov Channels",
+  kanalCrumb: "Government Channels",
+  kanalKicker: "Official Gateway Directory",
+  kanalTitle: "20 Official Government Channels, One Execution Map",
+  kanalSub:
+    "Every licence is processed INSIDE official government portals. A directory of 20 channels we navigate daily — staged with a four-master role activation and a cross-field council of 46 experts.",
+  kanalRolesKicker: "Role Activation",
+  kanalRolesTitle: "Four Master Roles Activate",
+  kanalRolesSub:
+    "As this page opens, four master roles light up in sequence — exactly how we handle your file: read the field, design the system, lock official references, then finish the job.",
+  kanalRole1Name: "Master Polymath",
+  kanalRole1Desc:
+    "Reads the entire regulatory field across 552 services and maps your obligations before a single document is drafted.",
+  kanalRole2Name: "Polytech",
+  kanalRole2Desc:
+    "Translates regulation into process architecture: channel order, documents and a ready-to-run schedule.",
+  kanalRole3Name: "Sage Universal",
+  kanalRole3Desc:
+    "Locks every step to official references — one channel, one official domain, zero grey links.",
+  kanalRole4Name: "The Ultimate Problem Solver",
+  kanalRole4Desc:
+    "Deploys the 46-member cross-field expert council to carry every channel through to issuance and handover.",
+  kanalStandby: "STANDBY",
+  kanalActive: "ACTIVE",
+  kanalCouncilTitle: "46-Member Expert Council",
+  kanalCouncilSub:
+    "Seven UMEA™ function groups light up together — one council apparatus guarding every file from upstream to downstream.",
+  kanalGrp1: "Strategy & Leadership",
+  kanalGrp2: "Legal & Licensing",
+  kanalGrp3: "Finance & Tax",
+  kanalGrp4: "HR & Organisation",
+  kanalGrp5: "Operations & Supply Chain",
+  kanalGrp6: "Marketing & Sales",
+  kanalGrp7: "Technology & Systems",
+  kanalLapisTitle: "7 Layers of World-Class Design",
+  kanalLapisSub:
+    "Every page on this site — including the directory you are viewing — is built on seven layers of design mastery.",
+  kanalLapis1: "Typography",
+  kanalLapis2: "Colour Palette",
+  kanalLapis3: "Motion & Transition",
+  kanalLapis4: "Depth & Light",
+  kanalLapis5: "Layout",
+  kanalLapis6: "Micro-Interaction",
+  kanalLapis7: "Narrative",
+  kanalDirKicker: "Channel Directory",
+  kanalDirTitle: "20 Official Channels, Five Work Clusters",
+  kanalDirSub:
+    "Every card is an official government domain we work with daily — grouped into five clusters so your filing order is right from the start. Domains are verified directly before appearing here.",
+  kanalVisit: "Open Channel",
+  kanalFlowKicker: "How We Work",
+  kanalFlowTitle: "Four-Step Workflow on Official Channels",
+  kanalFlowSub:
+    "The master roles are not just animation — they are how your file actually moves from one channel to the next.",
+  kanalFlow1T: "Field Diagnosis",
+  kanalFlow1D:
+    "Master Polymath maps all your licensing obligations and drafts the channel map your business must traverse.",
+  kanalFlow2T: "Process Architecture",
+  kanalFlow2D:
+    "Polytech sequences the channels, documents and schedule — one work plan you can read and measure.",
+  kanalFlow3T: "Channel Execution",
+  kanalFlow3D:
+    "The council team works every official channel — with accounts always in your name and under your control.",
+  kanalFlow4T: "Verify & Hand Over",
+  kanalFlow4D:
+    "The Ultimate Problem Solver verifies every issuance at its source channel, then hands you the complete legality package.",
+  kanalDiscTitle: "Independence & Claim Limits",
+  kanalDisc:
+    "GConsultant is an independent consultancy — with no affiliation, partnership or official mandate from any government body. Every link on this page points to official government domains for public information, and every licensing decision rests with the issuing agency.",
+  kanalDiscAccount:
+    "All portal accounts are registered in the client's name — full control stays in your hands.",
   navTagline: "The Polymathic Problem Solver",
   heroTitle1: "Complexity has a structure.",
   heroTitleGold: "Solutions have a path.",

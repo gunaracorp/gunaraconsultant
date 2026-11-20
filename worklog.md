@@ -235,3 +235,18 @@ Work Log:
 
 Stage Summary:
 - v3.10.0 "Certification Suite": 3 paket travel all-in hidup dengan satu sumber harga katalog; PPIU memiliki halaman SEO mendalam pertama untuk kategori perizinan ibadah; produk transisi ISO 9001:2026 (BU-MS-009) melengkapi lini sertifikasi sistem manajemen; batasan klaim independen mengikat; sitemap 574 URL.
+
+---
+Task ID: 37 (government-channels-v3.11.0)
+Agent: Z.ai — 46 Dewan Pakar (Regulatory/UX-Motion/Fact-Verification)
+Task: Pemilik minta fitur ala direktori 20 kanal pemerintah kompetitor pusatperizinan.com di GConsultant, "jauh lebih canggih animasinya", dengan role activation Master Polymath, Polytech, Sage Universal, The Ultimate Problem Solver + 46 Dewan Pakar + 7 lapis design.
+
+Work Log:
+- FAKTA KOMPETITOR: pusatperizinan.com (PT Top Konsultan Internasional, SCBD) menayangkan "Direktori 20 Kanal Resmi Pemerintah" — Kemenkumham, DJP, OSS-RBA, BPJPH, BPOM, Kemenag, ESDM, LPJK, PU + 12 lain. Situs tak dijangkau WebFetch (timeout) → struktur diambil dari snippet pencarian; konten dikembangkan mandiri, bukan salinan.
+- VERIFIKASI DOMAIN DUA JALUR (curl 200/403/DNS/search — scripts/verify-kanal.sh): 20 kanal terverifikasi; rebrand terdeteksi: pom.go.id, kemkes.go.id, kemenpar.go.id, kemenham.go.id, umkm.go.id; DIBUANG: lpjk.info (halaman challenge), lpjk.org (mati), ekon.go.id, kemenhub.go.id, ekonomi.go.id (gagal verifikasi) → slot konstruksi diisi Ditjen Bina Konstruksi (binakonstruksi.pu.go.id, judul resmi terkonfirmasi). Nol link karangan.
+- BUILD: data/kanal-pemerintah.ts (20 kanal, 5 kluster, fungsi ID/EN) + sections/kanal-activation.tsx (sequencer useInView+timer 800 ms: 4 peran → dewan 7 grup → 7 lapis; cincin dashed spin + conic sapuan var(--color-gold)) + sections/kanal-directory.tsx (direktori per kluster + alur 4 langkah + disclaimer) + app/kanal-pemerintah/page.tsx (PageHero, JSON-LD CollectionPage ItemList 20 URL + FAQPage + Breadcrumb, tabel ringkasan, FAQ 6 incl. penjelasan rebrand domain).
+- I18N/NAV/SITEMAP: ~64 kunci ID/EN; navbar "Kanal Pemerintah" (wideOnly); sitemap +1 → 575; README badge 574→575.
+- VER-1: 3.10.0 → 3.11.0 sinkron 4 titik (package.json, version.ts, CHANGELOG, worklog).
+
+Stage Summary:
+- v3.11.0 "Government Channels": GConsultant kini menampilkan medan kerja resminya secara eksplisit — 20 kanal terverifikasi + panggung role activation 4 peran master — jawaban langsung atas kepemilikan fitur kompetitor dengan tampilan lebih sinematik; batasan klaim & kemandirian akun klien mengikat; sitemap 575 URL.
