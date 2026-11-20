@@ -2,6 +2,17 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.9.0] — 2026-11-20 — Mail Suite: Six-Channel Command Center
+
+### Added
+- **Email Command Center — 6 kanal email resmi cPanel `@gconsultant.web.id`** (halo, info, cs, finance, admin, gunara) dengan routing per kebutuhan client: konsultasi & penawaran, informasi & kerja sama, layanan pelanggan & status order, pembayaran & konfirmasi, administrasi & dokumen, kantor pendiri. Grid 6 kartu ikon (mailto langsung) pada halaman kontak — i18n penuh ID/EN, satu sumber `MAIL_CHANNELS` di brand.ts.
+- **JSON-LD Organization diperkaya**: `contactPoint` kini array 4 titik (customer service WhatsApp, sales halo@, customer support cs@, billing support finance@ — masing-masing `availableLanguage` + `areaServed: ID`) + field `email` Organization — menguatkan jawaban answer-engine untuk pertanyaan "email resmi GConsultant".
+- **Anti-fraud berbasis email**: halaman rekening resmi mencantumkan `finance@gconsultant.web.id` sebagai kanal verifikasi tertulis pembayaran; Syarat & Ketentuan seksi 3 menambah klausa domain email resmi (hanya `@gconsultant.web.id` yang resmi).
+- README: tabel 6 kanal email resmi pada seksi kontak.
+
+### Changed
+- `BRAND.email` halo@gunara.web.id → **halo@gconsultant.web.id** — footer, CTA banner, kartu kontak, dan JSON-LD mengikuti otomatis; metadata halaman kontak diperbarui; `BRAND.emails` + `BRAND.mailDomain` ditambahkan.
+
 ## [3.8.0] — 2026-11-20 — IATA Launch: GoLite · GoStandard · GoGlobal
 
 ### Added

@@ -10,7 +10,7 @@ import { BRAND } from "@/lib/brand";
 export const metadata: Metadata = pageMetadata({
   title: "Kontak & Kantor — Konsultasi Perizinan Gratis",
   description:
-    "Hubungi GConsultant: WhatsApp resmi +62 813-1651-6524, email halo@gunara.web.id. Kantor pusat Tasikmalaya & perwakilan Jakarta di Indonesia Stock Exchange Tower 1. Aktif Senin–Sabtu 08.00–17.00 WIB.",
+    "Hubungi GConsultant: WhatsApp resmi +62 813-1651-6524, email halo@gconsultant.web.id. Kantor pusat Tasikmalaya & perwakilan Jakarta di Indonesia Stock Exchange Tower 1. Aktif Senin–Sabtu 08.00–17.00 WIB.",
   keywords: [
     "kontak gunara consultant",
     "kantor gunara consultant",

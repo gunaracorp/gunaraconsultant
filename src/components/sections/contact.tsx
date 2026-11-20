@@ -3,12 +3,18 @@
 import { useState } from "react";
 import {
   Building2,
+  Crown,
+  FolderOpen,
   Globe2,
+  Headset,
+  Info,
   Landmark,
   Mail,
   MessageCircle,
   PhoneCall,
+  Receipt,
   Send,
+  type LucideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,8 +23,18 @@ import { Label } from "@/components/ui/label";
 import { ChevronDown } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/animations";
 import { useLang } from "@/lib/i18n";
-import { BRAND, waLink } from "@/lib/brand";
+import { BRAND, MAIL_CHANNELS, type MailChannel, waLink } from "@/lib/brand";
 import { SERVICES } from "@/data/services";
+
+/** Ikon per kanal email departemen (Email Command Center v3.9.0). */
+const MAIL_ICONS: Record<MailChannel["key"], LucideIcon> = {
+  general: Mail,
+  info: Info,
+  cs: Headset,
+  finance: Receipt,
+  admin: FolderOpen,
+  founder: Crown,
+};
 
 export function Contact() {
   const { t, lang } = useLang();
@@ -283,6 +299,43 @@ export function Contact() {
             </form>
           </Reveal>
         </div>
+
+        {/* Email Command Center — 6 kanal departemen resmi (v3.9.0) */}
+        <Reveal delay={0.08}>
+          <div className="mt-14 rounded-[2rem] border border-gold/25 bg-secondary p-7 sm:p-9">
+            <h3 className="font-display text-xl font-bold text-ink sm:text-2xl">
+              {t("mailTitle")}
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {t("mailSub")}
+            </p>
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {MAIL_CHANNELS.map((ch) => {
+                const Icon = MAIL_ICONS[ch.key];
+                return (
+                  <a
+                    key={ch.key}
+                    href={`mailto:${ch.email}`}
+                    className="card-lux group rounded-2xl p-5 transition-transform hover:-translate-y-0.5"
+                  >
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-gold-soft transition-colors group-hover:bg-gold group-hover:text-deep">
+                      <Icon className="h-4.5 w-4.5" aria-hidden="true" />
+                    </span>
+                    <h4 className="mt-3 font-display text-sm font-bold text-ink">
+                      {t(ch.labelKey)}
+                    </h4>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                      {t(ch.descKey)}
+                    </p>
+                    <p className="mt-3 truncate text-xs font-bold text-primary underline decoration-gold/40 underline-offset-4 group-hover:text-gold">
+                      {ch.email}
+                    </p>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

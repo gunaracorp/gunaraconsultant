@@ -22,7 +22,16 @@ export const BRAND = {
     "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II, Kota Tasikmalaya, Jawa Barat 46115",
   addressJkt:
     "Indonesia Stock Exchange Tower 1 Level 3, Unit 304, Jl. Jendral Sudirman Kav 52-53, Desa/Kelurahan Senayan, Kec. Kebayoran Baru, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta",
-  email: "halo@gunara.web.id",
+  email: "halo@gconsultant.web.id",
+  mailDomain: "gconsultant.web.id",
+  emails: {
+    general: "halo@gconsultant.web.id",
+    info: "info@gconsultant.web.id",
+    cs: "cs@gconsultant.web.id",
+    finance: "finance@gconsultant.web.id",
+    admin: "admin@gconsultant.web.id",
+    founder: "gunara@gconsultant.web.id",
+  },
   waNumber: "6281316516524",
   waDisplay: "+62 813-1651-6524",
   ahu: "AHU-038293.AH.01.30.Tahun 2024",
@@ -36,5 +45,52 @@ export const BRAND = {
 
 export const waLink = (text: string) =>
   `https://wa.me/${BRAND.waNumber}?text=${encodeURIComponent(text)}`;
+
+/**
+ * Email Command Center — 6 kanal email resmi cPanel (v3.9.0).
+ * Satu sumber untuk UI kontak, JSON-LD contactPoint, dan README.
+ * Routing: halo=umum/penawaran · info=informasi · cs=pelanggan ·
+ * finance=pembayaran · admin=administrasi · gunara=kantor pendiri.
+ */
+export const MAIL_CHANNELS = [
+  {
+    key: "general",
+    email: BRAND.emails.general,
+    labelKey: "mailGenT",
+    descKey: "mailGenD",
+  },
+  {
+    key: "info",
+    email: BRAND.emails.info,
+    labelKey: "mailInfoT",
+    descKey: "mailInfoD",
+  },
+  {
+    key: "cs",
+    email: BRAND.emails.cs,
+    labelKey: "mailCsT",
+    descKey: "mailCsD",
+  },
+  {
+    key: "finance",
+    email: BRAND.emails.finance,
+    labelKey: "mailFinT",
+    descKey: "mailFinD",
+  },
+  {
+    key: "admin",
+    email: BRAND.emails.admin,
+    labelKey: "mailAdmT",
+    descKey: "mailAdmD",
+  },
+  {
+    key: "founder",
+    email: BRAND.emails.founder,
+    labelKey: "mailFouT",
+    descKey: "mailFouD",
+  },
+] as const;
+
+export type MailChannel = (typeof MAIL_CHANNELS)[number];
 
 export const PROVINCE_COUNT = 38;

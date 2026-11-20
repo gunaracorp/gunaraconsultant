@@ -111,6 +111,13 @@ export function OfficialAccount() {
                     >
                       {BRAND.waDisplay}
                     </a>
+                    {" • "}
+                    <a
+                      href={`mailto:${BRAND.emails.finance}`}
+                      className="font-bold text-gold-soft underline decoration-gold/40 underline-offset-4 hover:text-gold"
+                    >
+                      {BRAND.emails.finance}
+                    </a>
                   </p>
                 </div>
               </div>

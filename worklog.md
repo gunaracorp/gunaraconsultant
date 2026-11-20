@@ -201,3 +201,20 @@ Work Log:
 
 Stage Summary:
 - v3.8.0 "IATA Launch": 4 halaman produk IATA SEO-ready (bilingual, FAQ, keywords "iata golite/gostandard/goglobal indonesia"), harga tak pernah bisa beda antar-halaman, klaim konservatif tanpa afiliasi/jaminan — sesuai master prompt Bagian 3, 5, 6, 16.
+
+---
+Task ID: 35 (mail-suite-v3.9.0)
+Agent: Z.ai — Omnibrand Council (Infrastructure/UX/Compliance/AEO)
+Task: Pemilik aktifkan 6 mailbox cPanel @gconsultant.web.id (halo, info, cs, finance, admin, gunara) — "maksimalkan email untuk ditampilkan full power di website".
+
+Work Log:
+- TEMUAN DNS KRITIS (pra-implementasi): NS gconsultant.web.id = vercel-dns; grep MX via 1.1.1.1 = KOSONG, SPF TXT kosong → mailbox ada tapi email eksternal belum bisa masuk. Resep DNS (MX+SPF+DKIM via Vercel dashboard) diserahkan ke pemilik dgn nilai dari cPanel Email Deliverability. Website tetap dirilis karena mailto adalah deklarasi kanal, bukan pengiriman.
+- SINGLE SOURCE: brand.ts — BRAND.email → halo@gconsultant.web.id; tambah BRAND.mailDomain, BRAND.emails (6 kanal), MAIL_CHANNELS (key/email/labelKey/descKey) → footer, cta-banner, kartu kontak, JSON-LD ikut otomatis.
+- UI: contact.tsx — "Email Command Center": grid 6 kartu ikon per departemen (Mail/Info/Headset/Receipt/FolderOpen/Crown) dgn mailto + label & deskripsi i18n ID/EN (15 kunci x 2).
+- COMPLIANCE: official-account.tsx — finance@gconsultant.web.id sebagai verifikasi tertulis rekening resmi; legal.ts seksi 3 + klausa "email resmi hanya @gconsultant.web.id" (ID+EN).
+- AEO/SEO: layout.tsx Organization — contactPoint array 4 titik (customer service/sales/customer support/billing support, areaServed ID) + field email.
+- README: tabel 6 kanal; kontak meta email baru.
+- VER-1: 3.8.0 → 3.9.0 sinkron 4 titik.
+
+Stage Summary:
+- v3.9.0 "Mail Suite": 6 kanal email tampil dengan routing jelas di kontak + rekening resmi + JSON-LD + legal; sisa email lama = 0 (grep bersih); klausul anti-fraud mengikat domain email resmi.

@@ -7,6 +7,6 @@
  *   4. worklog.md
  * Badge footer & endpoint /api/status mengikuti file ini secara otomatis.
  */
-export const VERSI = "3.8.0";
-export const NAMA_RILIS = "GCONSULTANT IATA LAUNCH — GoLite · GoStandard · GoGlobal";
+export const VERSI = "3.9.0";
+export const NAMA_RILIS = "GCONSULTANT MAIL SUITE — Six-Channel Command Center";
 export const TANGGAL_RILIS = "2026-11-20";

@@ -168,12 +168,37 @@ const orgJsonLd = {
       addressCountry: "ID",
     },
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: `+${BRAND.waNumber}`,
-    contactType: "customer service",
-    availableLanguage: ["id", "en"],
-  },
+  email: BRAND.email,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: `+${BRAND.waNumber}`,
+      contactType: "customer service",
+      availableLanguage: ["id", "en"],
+      areaServed: "ID",
+    },
+    {
+      "@type": "ContactPoint",
+      email: BRAND.emails.general,
+      contactType: "sales",
+      availableLanguage: ["id", "en"],
+      areaServed: "ID",
+    },
+    {
+      "@type": "ContactPoint",
+      email: BRAND.emails.cs,
+      contactType: "customer support",
+      availableLanguage: ["id", "en"],
+      areaServed: "ID",
+    },
+    {
+      "@type": "ContactPoint",
+      email: BRAND.emails.finance,
+      contactType: "billing support",
+      availableLanguage: ["id", "en"],
+      areaServed: "ID",
+    },
+  ],
   areaServed: {
     "@type": "Country",
     name: "Indonesia",

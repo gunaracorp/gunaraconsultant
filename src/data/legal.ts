@@ -96,10 +96,12 @@ export const TERMS_BLOCKS: LegalBlock[] = [
     p: [
       "Pembayaran hanya sah jika dilakukan ke rekening resmi: BCA 0860742187 a.n. Gugun Gunara. Kami TIDAK pernah meminta pembayaran ke rekening pribadi lain, dompet digital yang tidak tercantum resmi, atau akun atas nama pihak ketiga. GConsultant tidak bertanggung jawab atas kerugian akibat pembayaran ke kanal non-resmi.",
       "Waspadai penipuan yang mengatasnamakan kami. Verifikasi setiap penawaran melalui nomor WhatsApp resmi +62 813-1651-6524 atau kontak di halaman Kontak sebelum melakukan transfer apa pun.",
+      "Konfirmasi pembayaran, invoice, dan verifikasi penawaran secara tertulis dilayani melalui email resmi finance@gconsultant.web.id. Seluruh alamat email resmi GConsultant hanya berakhiran @gconsultant.web.id — pesan dari domain lain yang mengatasnamakan kami bukan komunikasi resmi GConsultant.",
     ],
     pEn: [
       "Payment is only valid when made to the official account: BCA 0860742187 under the name Gugun Gunara. We NEVER request payment to other personal accounts, unlisted digital wallets, or third-party accounts. GConsultant is not liable for losses from payments via unofficial channels.",
       "Beware of fraud impersonating us. Verify every offer through the official WhatsApp number +62 813-1651-6524 or the contacts on the Contact page before transferring any funds.",
+      "Written confirmation of payments, invoices, and offer verification is served via the official email finance@gconsultant.web.id. All official GConsultant email addresses end with @gconsultant.web.id only — messages from other domains impersonating us are not official GConsultant communication.",
     ],
   },
   {

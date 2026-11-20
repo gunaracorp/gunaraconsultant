@@ -716,7 +716,19 @@ Seluruh situs bilingual ID ⇄ EN (toggle navbar), dan tim melayani investor asi
 | Diskusi hasil Asesmen UMI™ | [💬 Chat sekarang](https://wa.me/6281316516524?text=Halo%2C%20saya%20sudah%20mengerjakan%20Asesmen%20UMI%20dan%20ingin%20diskusi%20hasilnya.) |
 | Layanan katalog (punya kode layanan) | [💬 Chat sekarang](https://wa.me/6281316516524?text=Halo%2C%20saya%20menemukan%20layanan%20kode%20ISI-KODE%20di%20katalog%20Anda.%20Mohon%20detailnya.) |
 
-**+62 813-1651-6524** · [halo@gunara.web.id](mailto:halo@gunara.web.id) · 🌐 [www.gconsultant.web.id](https://www.gconsultant.web.id)
+**+62 813-1651-6524** · [halo@gconsultant.web.id](mailto:halo@gconsultant.web.id) · 🌐 [www.gconsultant.web.id](https://www.gconsultant.web.id)
+
+**📧 Enam Kanal Email Resmi** — seluruhnya di domain `gconsultant.web.id`:
+
+| Kanal | Untuk |
+|---|---|
+| [halo@gconsultant.web.id](mailto:halo@gconsultant.web.id) | Konsultasi & penawaran |
+| [info@gconsultant.web.id](mailto:info@gconsultant.web.id) | Informasi & kerja sama |
+| [cs@gconsultant.web.id](mailto:cs@gconsultant.web.id) | Layanan pelanggan & status order |
+| [finance@gconsultant.web.id](mailto:finance@gconsultant.web.id) | Pembayaran, invoice & konfirmasi resmi |
+| [admin@gconsultant.web.id](mailto:admin@gconsultant.web.id) | Administrasi & dokumen |
+| [gunara@gconsultant.web.id](mailto:gunara@gconsultant.web.id) | Kantor pendiri (eksekutif) |
+
 
 📍 Tasikmalaya: Andalusia Garden Cluster Granada No.11 · 🏙️ Jakarta: IDX Tower 1 L3 Unit 304
 🕐 Senin–Sabtu, 08.00–17.00 WIB
