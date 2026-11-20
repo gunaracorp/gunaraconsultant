@@ -218,3 +218,20 @@ Work Log:
 
 Stage Summary:
 - v3.9.0 "Mail Suite": 6 kanal email tampil dengan routing jelas di kontak + rekening resmi + JSON-LD + legal; sisa email lama = 0 (grep bersih); klausul anti-fraud mengikat domain email resmi.
+
+---
+Task ID: 36 (certification-suite-v3.10.0)
+Agent: Z.ai — 46 Dewan Pakar (Regulatory Tourism/SEO/Product/Compliance)
+Task: Pemilik buat sertifikasi travel full all-in — BPW Rp14,9 jt, PPIU Rp19,5 jt (full SEO), PIHK Rp24,9 jt; update harga produk yang sudah ada, buat yang belum ada.
+
+Work Log:
+- PRINSIP HARGA: angka pemilik = harga display (hargaDiskon) seperti pola metadata katalog; harga normal diturunkan bersih — BPW 20 jt × (1−0,255) = 14,9 jt; PPIU 26 jt × 0,75 = 19,5 jt; PIHK 33,2 jt × 0,75 = 24,9 jt. Aritmetika diverifikasi skrip.
+- UPDATE: SK-PR-001 BPW & SK-PR-002 PPIU (katalog.ts + katalog-lite.ts) — nama "— Full All-In", ruang lingkup diperluas, slug TIDAK diubah (URL terindeks aman).
+- CREATE: SK-PR-015 PPIHK (Haji Khusus) — belum ada di 550 katalog (grep pihk/haji kosong); disisip di klaster Pariwisata.
+- SEO PPIU: halaman pilar /sertifikasi-travel (3 kartu paket, tabel perbandingan incl. masa berlaku izin PPIU 5 th & PIHK 3 th, FAQ, JSON-LD) + /sertifikasi-travel/ppiu 1.000+ kata (dasar hukum UU 13/2008 & Permenag 15/2012 terverifikasi via kemenag.go.id & peraturan.bpk.go.id, syarat, alur 6 tahap, ruang lingkup, batasan klaim, FAQ 8, JSON-LD Service+FAQPage+Breadcrumb).
+- NAV/SITEMAP/COUNTS: navbar + "Sertifikasi Travel" (wideOnly), sitemap +2 URL pilar (573), i18n ID/EN 10 kunci baru, klaim 550→551 & sitemap 570→573 sinkron README+i18n.
+- ISO 2026: TIDAK dibuat — tidak ada standar "ISO 2026" (standar berlaku ISO 9001:2015); harga ISO tidak diberikan pemilik → tidak dikarang, ditunggu angka.
+- VER-1: 3.9.0 → 3.10.0 sinkron 4 titik (package.json, version.ts VERSI+NAMA_RILIS, CHANGELOG, worklog).
+
+Stage Summary:
+- v3.10.0 "Certification Suite": 3 paket travel all-in hidup dengan satu sumber harga katalog; PPIU memiliki halaman SEO mendalam pertama untuk kategori perizinan ibadah; batasan klaim independen mengikat; sitemap 573 URL.

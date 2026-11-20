@@ -2,6 +2,17 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.10.0] — 2026-11-20 — Certification Suite: PPIU · PIHK · BPW Full All-In
+
+### Added
+- **Paket Sertifikasi Travel Full All-In 2026 (master pricing pemilik)**: Izin Biro Perjalanan Wisata (BPW) **Rp14.900.000**, Izin Usaha PPIU (Umrah) **Rp19.500.000**, dan produk baru **Izin Usaha PPIHK (Haji Khusus) Rp24.900.000** (SK-PR-015) — satu harga all-in: badan usaha, dokumen, rekomendasi, hingga izin terbit. Halaman pilar [`/sertifikasi-travel`](perbandingan 3 paket, tabel masa berlaku, FAQ, JSON-LD) dan halaman SEO mendalam [`/sertifikasi-travel/ppiu`](1.000+ kata: dasar hukum UU 13/2008 & Permenag 15/2012, syarat, alur 6 tahap, ruang lingkup & batasan, FAQ 8 butir, JSON-LD Service + FAQPage + Breadcrumb).
+- `src/data/katalog.ts` — PPIHK masuk kategori Pariwisata; `katalog-lite.ts` ikut sinkron (search hub /layanan).
+
+### Changed
+- Harga & ruang lingkup BPW dan PPIU dinaikkan ke tingkat full all-in sesuai master pricing pemilik — harga display (`hargaDiskon`) Rp14,9 jt / Rp19,5 jt; harga normal Rp20 jt / Rp26 jt. PPIU Plus tidak berubah.
+- Navbar: menu baru **"Sertifikasi Travel"** (wideOnly) + i18n ID/EN; sitemap +2 URL pilar (573 total); klaim jumlah layanan **550 → 551** (badge, meta, i18n ID+EN, README).
+- Batasan klaim gaya IATA diterapkan pada halaman baru: konsultan independen, tanpa afiliasi Kemenag, tanpa jaminan persetujuan; biaya pihak ketiga (deposit bank, kepesertaan asosiasi, perjalanan dinas) selalu quotation terpisah.
+
 ## [3.9.0] — 2026-11-20 — Mail Suite: Six-Channel Command Center
 
 ### Added

@@ -7,6 +7,6 @@
  *   4. worklog.md
  * Badge footer & endpoint /api/status mengikuti file ini secara otomatis.
  */
-export const VERSI = "3.9.0";
-export const NAMA_RILIS = "GCONSULTANT MAIL SUITE — Six-Channel Command Center";
+export const VERSI = "3.10.0";
+export const NAMA_RILIS = "GCONSULTANT CERTIFICATION SUITE — PPIU · PIHK · BPW Full All-In";
 export const TANGGAL_RILIS = "2026-11-20";

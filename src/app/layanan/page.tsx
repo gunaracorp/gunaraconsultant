@@ -10,13 +10,13 @@ import { BRAND } from "@/lib/brand";
 import { SERVICES, ALL_COUNT } from "@/data/services";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Layanan Perizinan Usaha — 550 Jenis Legalitas Satu Pintu",
+  title: "Layanan Perizinan Usaha — 551 Jenis Legalitas Satu Pintu",
   description:
-    "Katalog terpadu 550 layanan perizinan & legalitas usaha: 50 panduan lengkap + 500 layanan katalog dengan harga transparan. NIB OSS RBA, PT/CV/PMA, BPOM, halal, SNI, AMDAL, PBG, KITAS. ISO 9001:2015.",
+    "Katalog terpadu 551 layanan perizinan & legalitas usaha: 50 panduan lengkap + 501 layanan katalog dengan harga transparan. NIB OSS RBA, PT/CV/PMA, BPOM, halal, SNI, AMDAL, PBG, KITAS. ISO 9001:2015.",
   keywords: [
     "jasa perizinan usaha",
     "katalog layanan perizinan",
-    "550 layanan perizinan",
+    "551 layanan perizinan",
     "500 layanan perizinan",
     "biaya perizinan usaha",
     "jasa legalitas perusahaan",
@@ -36,9 +36,9 @@ const collectionJsonLd = {
   "@type": "CollectionPage",
   "@id": `${BRAND.siteUrl}/layanan#webpage`,
   url: `${BRAND.siteUrl}/layanan`,
-  name: "Katalog 550 Layanan Perizinan & Legalitas Usaha",
+  name: "Katalog 551 Layanan Perizinan & Legalitas Usaha",
   description:
-    "Daftar lengkap layanan perizinan dan legalitas usaha GConsultant: 50 panduan penuh + 500 layanan katalog untuk seluruh Indonesia.",
+    "Daftar lengkap layanan perizinan dan legalitas usaha GConsultant: 50 panduan penuh + 501 layanan katalog untuk seluruh Indonesia.",
   inLanguage: "id-ID",
   isPartOf: { "@id": `${BRAND.siteUrl}/#website` },
   about: { "@id": `${BRAND.siteUrl}/#organization` },

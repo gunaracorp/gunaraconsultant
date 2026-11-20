@@ -4,7 +4,7 @@
 
 <img src="public/logo-stacked.svg" alt="GConsultant — The Geometric G" width="170"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Jost&weight=700&size=20&duration=2800&pause=800&color=D4AF37&center=true&vCenter=true&width=860&height=56&lines=Menyatukan+ilmu.+Menata+kompleksitas.+Mewujudkan+solusi.;Dari+regulasi+di+hulu+%E2%80%94+hingga+izin+terbit+di+hilir.;550+layanan+%C2%B7+38+provinsi+%C2%B7+satu+pintu+WhatsApp.;Asesmen+UMI%E2%84%A2+3+menit+%E2%86%92+tahu+level+usaha+Anda." alt="tagline animasi"/>
+<img src="https://readme-typing-svg.demolab.com?font=Jost&weight=700&size=20&duration=2800&pause=800&color=D4AF37&center=true&vCenter=true&width=860&height=56&lines=Menyatukan+ilmu.+Menata+kompleksitas.+Mewujudkan+solusi.;Dari+regulasi+di+hulu+%E2%80%94+hingga+izin+terbit+di+hilir.;551+layanan+%C2%B7+38+provinsi+%C2%B7+satu+pintu+WhatsApp.;Asesmen+UMI%E2%84%A2+3+menit+%E2%86%92+tahu+level+usaha+Anda." alt="tagline animasi"/>
 
 **Konsultan Bisnis, Legalitas & Strategi Terpadu** · *Integrated Business, Licensing & Strategy Consulting*
 
@@ -14,9 +14,9 @@
 [![AHU Kemenkumham](https://img.shields.io/badge/AHU-038293.AH.01.30-0a1b3d)](#transparansi)
 [![Bun](https://img.shields.io/badge/Bun-runtime-f472b6?logo=bun)](https://bun.sh)
 
-[![550 Layanan](https://img.shields.io/badge/layanan-550_aktif-d4af37)](#katalog)
+[![551 Layanan](https://img.shields.io/badge/layanan-551_aktif-d4af37)](#katalog)
 [![38 Provinsi](https://img.shields.io/badge/jangkauan-38_provinsi-d4af37)](https://www.gconsultant.web.id/provinsi)
-[![570 URL SEO](https://img.shields.io/badge/sitemap-570_URL_indexable-d4af37)](https://www.gconsultant.web.id/sitemap.xml)
+[![573 URL SEO](https://img.shields.io/badge/sitemap-573_URL_indexable-d4af37)](https://www.gconsultant.web.id/sitemap.xml)
 [![Audit SEO 101/101](https://img.shields.io/badge/audit_SEO-101%2F101_perfect-16345f)](#dashboard)
 
 <a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0a1b3d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="110"/></a>
@@ -34,7 +34,7 @@
 | | | | |
 |:---:|:---:|:---:|:---:|
 | 🌊 [**Peta Hulu→Hilir**](#peta) | 🔁 [**Workflow 12 Tahap**](#workflow) | 🔄 [**Siklus Hidup Izin**](#siklus) | 📡 [**Alur WhatsApp**](#alur-wa) |
-| 🔍 [**Pencari Izin 30 detik**](#pencari) | 🗂️ [**Katalog 550**](#katalog) | 🧠 [**Metodologi UMEA™**](#umea) | ⏱️ [**Perjalanan Klien**](#perjalanan) |
+| 🔍 [**Pencari Izin 30 detik**](#pencari) | 🗂️ [**Katalog 551**](#katalog) | 🧠 [**Metodologi UMEA™**](#umea) | ⏱️ [**Perjalanan Klien**](#perjalanan) |
 | 🧪 [**Checklist Diagnostik**](#checklist) | 📊 [**Dashboard Proyek**](#dashboard) | 🔌 [**Live Telemetry**](#telemetry) | 💰 [**Anti-Penipuan**](#transparansi) |
 | 👤 [**Pendiri**](#pendiri) | 🚀 [**Developer Guide**](#developer) | 🗓️ [**Arah Pengembangan**](#arah) | ❓ [**FAQ**](#faq) |
 
@@ -47,12 +47,12 @@
 
 Website resmi **GConsultant** — berakar dari praktik konsultansi **Mic Kinsey sejak 2009**, dilembagakan sebagai badan usaha **AHU-038293.AH.01.30 Tahun 2024**, tersertifikasi **ISO 9001:2015**, melayani **38 provinsi Indonesia** dari dua kantor (Tasikmalaya + Jakarta/IDX Tower 1).
 
-Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **550 layanan** perizinan (50 unggulan + 500 katalog) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
+Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **551 layanan** perizinan (50 unggulan + 501 katalog) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
 
 <a id="en-story"></a>
 ## 🇬🇧 The 30-Second Story
 
-The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **550 licensing services** (50 flagship + 500 catalog) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
+The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **551 licensing services** (50 flagship + 501 catalog) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
 
 ---
 
@@ -61,7 +61,7 @@ The official **GConsultant** website — rooted in **Mic Kinsey consulting pract
 
 | Angka | Arti | Verifikasi |
 |:---:|---|---|
-| **550** | Layanan aktif: **50** unggulan + **500** katalog | `bun -e` → `ALL_COUNT` · [`/api/status`](https://www.gconsultant.web.id/api/status) |
+| **551** | Layanan aktif: **50** unggulan + **501** katalog | `bun -e` → `ALL_COUNT` · [`/api/status`](https://www.gconsultant.web.id/api/status) |
 | **4 / 38** | Kelompok katalog / sub-kelompok layanan | `src/data/katalog-meta.ts` → `KAT4=4`, `SUB_ALL=38` |
 | **11** | Kategori layanan unggulan | `src/data/services-types.ts` → `CATEGORIES` |
 | **38** | Provinsi terjangkau | [`/provinsi`](https://www.gconsultant.web.id/provinsi) · `provinces.ts` |

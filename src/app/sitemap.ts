@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...[
       { path: "/layanan", priority: 0.9 },
+      { path: "/sertifikasi-travel", priority: 0.9 },
+      { path: "/sertifikasi-travel/ppiu", priority: 0.8 },
       { path: "/metodologi", priority: 0.9 },
       { path: "/asesmen", priority: 0.9 },
       { path: "/tentang-kami", priority: 0.8 },
