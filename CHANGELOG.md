@@ -2,6 +2,13 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.12.1] — 2026-11-20 — IATA GoLite Paket Lengkap: Rp12 Jt (Katalog Rp25 Jt) + Label Promo Diseragamkan
+
+### Changed
+- **IATA GoLite → Paket Lengkap (angka pemilik 2026-11-20)**: katalog **Rp19.500.000 → Rp25.000.000**, promo **Rp9.750.000 → Rp12.000.000** — kini senada dengan kampanye sertifikasi travel (semua paket unggulan Rp12 jt). Satu sumber `src/data/iata.ts` diperbarui (priceCatalog, pricePromo, nameId "IATA GoLite — Paket Lengkap" / nameEn "Complete Package"); string harga hardcode di `services-iata.ts` ikut disinkronkan (desc ID/EN, FAQ harga ID/EN, deskripsi layanan umum "mulai Rp12.000.000"), plus baris tabel README.
+- **Label promo IATA diseragamkan**: "Promo Konsultasi 2026" / "2026 Consultancy Promo" → **"Promo Khusus 2026" / "2026 Special Promo"** (`IATA_PROMO_LABEL` + seluruh string hardcode di GoStandard & GoGlobal — harga GoStandard Rp37,5/Rp18,75 jt dan GoGlobal Rp75/Rp37,5 jt TIDAK berubah).
+- Regresi terjaga: verifikasi v3.12.0 (62 cek) tetap lolos; sweep 0 sisa harga/label lama.
+
 ## [3.12.0] — 2026-11-20 — Promo Khusus 2026: Rp12 Jt Sertifikasi Travel + Programmatic SEO 1.104 Halaman
 
 ### Changed

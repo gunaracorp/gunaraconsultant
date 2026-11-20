@@ -3,8 +3,10 @@
  * Aturan pemilik: harga sama di semua kanal & tampilan; jangan mengubah,
  * membulatkan, atau menampilkan harga lama; harga adalah jasa konsultasi &
  * pendampingan — BUKAN tarif resmi IATA; seluruh biaya resmi IATA dinyatakan
- * terpisah dalam quotation; label promo "Promo Konsultasi 2026"; masa promo
- * dapat diatur administrator. Dipakai oleh services-iata.ts (priceFrom) dan
+ * terpisah dalam quotation; label promo "Promo Khusus 2026" (diseragamkan
+ * dengan kampanye sertifikasi travel); masa promo dapat diatur administrator.
+ * Angka GoLite (Rp25 jt katalog → Rp12 jt promo, paket lengkap) = instruksi
+ * pemilik 2026-11-20. Dipakai oleh services-iata.ts (priceFrom) dan
  * seluruh tampilan harga IATA agar antar-halaman tidak pernah berbeda.
  */
 
@@ -21,19 +23,19 @@ export interface IataProduct {
 }
 
 export const IATA_PROMO_LABEL = {
-  id: "Promo Konsultasi 2026",
-  en: "2026 Consultancy Promo",
+  id: "Promo Khusus 2026",
+  en: "2026 Special Promo",
 } as const;
 
 export const IATA_PRODUCTS: IataProduct[] = [
   {
     code: "golite",
-    nameId: "IATA GoLite",
-    nameEn: "IATA GoLite",
+    nameId: "IATA GoLite — Paket Lengkap",
+    nameEn: "IATA GoLite — Complete Package",
     modelId: "Standard Accreditation tanpa Cash Facility",
     modelEn: "Standard Accreditation without Cash Facility",
-    priceCatalog: "Rp19.500.000",
-    pricePromo: "Rp9.750.000",
+    priceCatalog: "Rp25.000.000",
+    pricePromo: "Rp12.000.000",
     isStarting: false,
   },
   {

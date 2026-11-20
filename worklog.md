@@ -266,3 +266,17 @@ Work Log:
 
 Stage Summary:
 - v3.12.0 "Promo Khusus 2026": ketiga paket sertifikasi travel Rp12 jt (normal Rp25 jt) tampil konsisten di seluruh titik sentuh harga; sistem programmatic SEO lini ibadah menghadirkan 1.105 URL baru berbasis data wilayah resmi BPS/Kemendagri; sitemap 1.680 URL.
+
+---
+Task ID: 39 (iata-golite-paket-lengkap-v3.12.1)
+Agent: Z.ai — 46 Dewan Pakar (Pricing/IATA-Compliance)
+Task: Pemilik: "buatkan paket 25 juta lengkap IATA GoLite … diskon menjadi [pesan terpotong]" → katalog Rp25 jt, promo diset Rp12 jt (senada kampanye; asumsi dinyatakan ke pemilik, mudah diubah). Token GitHub baru dipakai untuk push — tidak disimpan di file mana pun.
+
+Work Log:
+- IATA-PRICING: satu sumber iata.ts — golite priceCatalog Rp25.000.000, pricePromo Rp12.000.000, nameId "IATA GoLite — Paket Lengkap"/nameEn "Complete Package"; label IATA_PROMO_LABEL → "Promo Khusus 2026"/"2026 Special Promo" (diseragamkan dengan kampanye travel).
+- SINKRON: services-iata.ts — desc umum "mulai Rp12.000.000" (ID+EN), desc GoLite "paket lengkap: katalog Rp25.000.000, Promo Khusus 2026 Rp12.000.000" (ID+EN), FAQ harga GoLite (ID+EN); label di GoStandard & GoGlobal (6 string) ikut "Promo Khusus 2026" — HARGA GoStandard (37,5/18,75 jt) & GoGlobal (75/mulai 37,5 jt) TIDAK berubah; priceFrom otomatis via P.golite. README tabel IATA: baris GoLite "Paket Lengkap" 25/12 + header kolom "Promo Khusus 2026".
+- SWEEP: 0 sisa "19.500.000/9.750.000/Promo Konsultasi/Consultancy Promo" di src+README (CHANGELOG/worklog historis biarkan). legal.ts hanya menyebut model, tanpa harga.
+- VER-1: 3.12.0 → 3.12.1 sinkron 4 titik; verify-v3121.py (IATA + regresi travel).
+
+Stage Summary:
+- v3.12.1 "IATA GoLite Paket Lengkap": paket IATA entry-level kini Rp25 jt katalog → Rp12 jt promo, satu label promo "Promo Khusus 2026" untuk seluruh lini IATA; arsitektur satu-sumber harga terbukti — 1 file master + string hardcode tersinkron, tanpa menyentuh harga GoStandard/GoGlobal.

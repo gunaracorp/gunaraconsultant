@@ -270,9 +270,9 @@ Klik setiap kelompok untuk membuka. Setiap tautan **hidup** — langsung menuju 
 
 Baru di v3.8.0: konsultasi & pendampingan akreditasi IATA untuk travel agent — [halaman pilar](https://www.gconsultant.web.id/layanan/konsultasi-akreditasi-iata) memetakan pemilihan model (GoLite / GoStandard / GoGlobal), review dokumen korporasi, dan penilaian kesiapan finansial sebelum aplikasi diajukan.
 
-| Produk | Model Akreditasi | Katalog | **Promo Konsultasi 2026** |
+| Produk | Model Akreditasi | Katalog | **Promo Khusus 2026** |
 |---|---|---|---|
-| [IATA GoLite](https://www.gconsultant.web.id/layanan/iata-golite) | Standard tanpa Cash Facility | Rp19.500.000 | **Rp9.750.000** |
+| [IATA GoLite — Paket Lengkap](https://www.gconsultant.web.id/layanan/iata-golite) | Standard tanpa Cash Facility | Rp25.000.000 | **Rp12.000.000** |
 | [IATA GoStandard](https://www.gconsultant.web.id/layanan/iata-gostandard) | Standard dengan Cash Facility | Rp37.500.000 | **Rp18.750.000** |
 | [IATA GoGlobal](https://www.gconsultant.web.id/layanan/iata-goglobal) | Multi-Country Accreditation | Rp75.000.000 | **Mulai Rp37.500.000** |
 
