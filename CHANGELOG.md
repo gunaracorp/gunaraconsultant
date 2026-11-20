@@ -2,6 +2,17 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.7.0] — 2026-11-20 — Domain Ascension: gconsultant.web.id
+
+### Changed
+- **Migrasi domain utama ke `https://www.gconsultant.web.id`** atas konfirmasi pemilik (gunara.web.id & gconsultant.web.id adalah deployment yang sama; domain baru dipilih karena selaras dengan merek GConsultant). `BRAND.siteUrl` kini menunjuk domain baru — canonical, `og:url`, JSON-LD (`@id`, `url`, `isPartOf`), sitemap.xml, robots.txt, dan seluruh URL metadata 546+ halaman mengikuti otomatis via satu konstanta.
+- Pilihan `www` disesuaikan dengan realitas Vercel: apex `gconsultant.web.id` melakukan 308 ke `www.gconsultant.web.id` (primary domain) — canonical langsung menunjuk URL final tanpa redirect-chain.
+- Halaman legal (`/syarat-ketentuan`): ruang lingkup "Situs" diperbarui ke domain baru (ID + EN). Email kontak `halo@gunara.web.id` sengaja dipertahankan (mailbox aktif) hingga mailbox `@gconsultant.web.id` dibuat.
+
+### Verified
+- Kedua domain terverifikasi hidup dari sandbox: `gunara.web.id` 200, `gconsultant.web.id` 308→www 200, `/api/status` di www menjawab `service: gconsultant` (deployment sama).
+- Zero-grep `gunara.web.id` di src/ aktif = hanya email kontak.
+
 ## [3.6.0] — 2026-11-13 — GConsultant Pure Identity: Pemisahan Merek PusatPerizinan
 
 ### Changed

@@ -70,11 +70,11 @@ export const TERMS_BLOCKS: LegalBlock[] = [
     h: "1. Penerimaan dan Ruang Lingkup",
     hEn: "1. Acceptance and Scope",
     p: [
-      "Dengan mengakses website gunara.web.id (\"Situs\") dan/atau menggunakan layanan GConsultant, Anda menyatakan telah membaca, memahami, dan menyetujui Syarat & Ketentuan ini. Jika Anda tidak menyetujui salah satu ketentuan, mohon hentikan penggunaan Situs. Layanan kami adalah jasa konsultansi dan pengurusan perizinan usaha di wilayah Republik Indonesia, termasuk metodologi UMEA™ (Universal Minimum Enterprise Architecture) yang bersifat milik eksklusif GConsultant.",
+      "Dengan mengakses website www.gconsultant.web.id (\"Situs\") dan/atau menggunakan layanan GConsultant, Anda menyatakan telah membaca, memahami, dan menyetujui Syarat & Ketentuan ini. Jika Anda tidak menyetujui salah satu ketentuan, mohon hentikan penggunaan Situs. Layanan kami adalah jasa konsultansi dan pengurusan perizinan usaha di wilayah Republik Indonesia, termasuk metodologi UMEA™ (Universal Minimum Enterprise Architecture) yang bersifat milik eksklusif GConsultant.",
       "Informasi di Situs — termasuk estimasi biaya (priceFrom), estimasi waktu proses, dan artikel — bersifat informatif umum dan bukan nasihat hukum final untuk kasus spesifik Anda. Rekomendasi mengikat hanya diberikan melalui kanal konsultasi resmi setelah pemeriksaan kondisi nyata usaha Anda.",
     ],
     pEn: [
-      "By accessing gunara.web.id (the \"Site\") and/or using GConsultant services, you declare that you have read, understood, and agreed to these Terms & Conditions. If you disagree with any provision, please stop using the Site. Our services are consulting and business-licensing processing services within the Republic of Indonesia, including the UMEA™ (Universal Minimum Enterprise Architecture) methodology exclusively owned by GConsultant.",
+      "By accessing www.gconsultant.web.id (the \"Site\") and/or using GConsultant services, you declare that you have read, understood, and agreed to these Terms & Conditions. If you disagree with any provision, please stop using the Site. Our services are consulting and business-licensing processing services within the Republic of Indonesia, including the UMEA™ (Universal Minimum Enterprise Architecture) methodology exclusively owned by GConsultant.",
       "Information on the Site — including cost estimates (priceFrom), processing-time estimates, and articles — is general information, not final legal advice for your specific case. Binding recommendations are given only through official consultation channels after examining your business's actual condition.",
     ],
   },

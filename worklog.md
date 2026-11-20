@@ -173,3 +173,16 @@ Work Log:
 
 Stage Summary:
 - GConsultant v3.6.0 "Pure Identity": nol referensi merek PusatPerizinan di UI/meta/schema/komentar aktif; riwayat CHANGELOG tetap utuh sebagai catatan historis; siap commit & push.
+
+---
+Task ID: 33 (domain-ascension-v3.7.0)
+Agent: Z.ai — Omnibrand Council (SEO/Infrastructure/Release)
+Task: Arahan pemilik — "maksimalkan untuk gconsultant.web.id, gunara.web.id website yang sama": migrasi domain utama situs ke www.gconsultant.web.id (brand-matched), satu deployment Vercel.
+
+Work Log:
+- PROBE: gconsultant.web.id apex 308→www (Vercel primary), www 200 v3.5.0 service:"gconsultant" = deployment sama dgn gunara.web.id; gunara apex 200. Canonical memilih www (URL final, tanpa redirect-chain).
+- EKSEKUSI: BRAND.siteUrl → https://www.gconsultant.web.id (canonical/og/JSON-LD/sitemap/robots ikut otomatis); legal.ts ruang lingkup Situs ID+EN; README ±60 URL. Email halo@gunara.web.id dipertahankan (mailbox aktif) — tunggu mailbox @gconsultant.web.id dari pemilik.
+- VER-1: 3.6.0 → 3.7.0 sinkron 4 titik.
+
+Stage Summary:
+- v3.7.0 "Domain Ascension": satu konstanta memindahkan seluruh 566 URL SEO ke domain brand-matched; nol hardcode terlewat (grep bersih); riwayat CHANGELOG tetap utuh.

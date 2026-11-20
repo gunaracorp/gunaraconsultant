@@ -17,7 +17,7 @@ export const BRAND = {
   founded: 2024,
   heritage: "Mic Kinsey",
   iso: "ISO 9001:2015",
-  siteUrl: "https://gunara.web.id",
+  siteUrl: "https://www.gconsultant.web.id",
   address:
     "Andalusia Garden Cluster Granada No.11, Jln. Abdi Negara II, Kota Tasikmalaya, Jawa Barat 46115",
   addressJkt:
