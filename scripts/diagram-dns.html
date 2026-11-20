@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --text: #111827; --text-sub: #6B7280; --text-muted: #9CA3AF;
+    --bg: #FFFFFF; --surface: #F8FAFC; --border: #E5E7EB;
+    --connector: #94A3B8;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  #root { width: fit-content; min-width: 1480px; margin: 0 auto; padding: 48px 44px; background: #FFFFFF; }
+
+  .flow-title { font-size: 24px; font-weight: 700; color: var(--text); text-align: center; }
+  .flow-subtitle { font-size: 14px; color: var(--text-sub); text-align: center; margin-top: 8px; margin-bottom: 36px; }
+
+  /* Primary top node */
+  .domain-node {
+    width: 620px; margin: 0 auto;
+    background: #EFF6FF; border: 2.5px solid #3B82F6; border-radius: 14px;
+    padding: 18px 26px; text-align: center; position: relative; z-index: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  }
+  .domain-node .dn-title { font-size: 21px; font-weight: 700; color: #1E40AF; }
+  .domain-node .dn-desc { font-size: 13px; color: #374151; margin-top: 6px; line-height: 1.5; }
+
+  /* Connector layer */
+  .arch-wrap { position: relative; }
+  .flow-connectors { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .flow-connectors path { stroke: var(--connector); stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+
+  /* Three pathway group cards */
+  .arch-grid { display: flex; gap: 26px; justify-content: center; padding-top: 84px; }
+  .path-group {
+    width: 460px; background: var(--surface); border-radius: 12px;
+    padding: 20px 22px 18px; position: relative; z-index: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .path-title {
+    font-size: 16px; font-weight: 700; padding: 10px 14px;
+    border-radius: 8px; margin-bottom: 6px;
+  }
+  .path-sub { font-size: 12px; color: var(--text-sub); margin: 0 2px 14px; }
+  /* Same-hue blue-gray progression */
+  .pg-1 { border-left: 4px solid #64748B; }
+  .pg-1 .path-title { background: #F0F4F8; color: #334155; border-left: 4px solid #64748B; }
+  .pg-2 { border-left: 4px solid #5B7A99; }
+  .pg-2 .path-title { background: #E8EDF2; color: #1E3A5F; border-left: 4px solid #5B7A99; }
+  .pg-3 { border-left: 4px solid #4A6B8A; }
+  .pg-3 .path-title { background: #E0E7EF; color: #1E3050; border-left: 4px solid #4A6B8A; }
+
+  .chips { display: flex; flex-direction: column; gap: 8px; }
+  .chip {
+    display: flex; align-items: center; gap: 10px;
+    background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px;
+    padding: 9px 12px;
+  }
+  .rec {
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-weight: 700; font-size: 12px; color: #1E3A5F;
+    background: #E8EDF2; border-radius: 6px; padding: 3px 9px;
+    flex-shrink: 0;
+  }
+  .val { font-size: 13px; color: #374151; font-weight: 600; flex: 1; text-align: left; }
+  .val small { display: block; font-size: 11px; font-weight: 400; color: var(--text-sub); margin-top: 1px; }
+  .badge { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 10px; flex-shrink: 0; }
+  .badge.ok   { background: #F0FDF4; color: #065F46; border: 1.5px solid #10B981; }
+  .badge.todo { background: #FFF7ED; color: #92400E; border: 1.5px solid #F59E0B; }
+
+  .path-note {
+    margin-top: 14px; font-size: 12.5px; line-height: 1.55; color: #4B5563;
+    background: #FFFFFF; border: 1px dashed #CBD5E1; border-radius: 8px; padding: 10px 12px;
+  }
+  .path-note b { color: #1E3050; }
+
+  /* Legend — independent container */
+  .flow-legend {
+    display: flex; gap: 28px; justify-content: center;
+    margin-top: 34px; padding: 14px 24px;
+    background: #F9FAFB; border-radius: 8px; border: 1px solid #E5E7EB;
+    width: fit-content; margin-left: auto; margin-right: auto;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #4B5563; }
+  .legend-dot { width: 13px; height: 13px; border-radius: 4px; border: 2px solid; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="flow-title">Arsitektur Dua Platform GConsultant — Satu Domain, Dua Pintu</div>
+  <div class="flow-subtitle">Semua record diatur di satu buku alamat: DNS Vercel (ns1/ns2.vercel-dns.com) &middot; gconsultant.web.id</div>
+
+  <div class="arch-wrap">
+    <svg class="flow-connectors" id="connectorSvg"></svg>
+
+    <div class="domain-node" data-id="domain">
+      <div class="dn-title">gconsultant.web.id</div>
+      <div class="dn-desc">Dibeli di registrar (.web.id diurus PANDI) &middot; nameserver mengarah ke Vercel DNS,<br>sehingga seluruh record A / CNAME / MX / TXT dikelola di dashboard Vercel</div>
+    </div>
+
+    <div class="arch-grid">
+      <div class="path-group pg-1" data-id="web">
+        <div class="path-title">JALUR WEB — Pengunjung Website</div>
+        <div class="path-sub">Orang membuka situs &rarr; dibawa ke pabrik website Vercel</div>
+        <div class="chips">
+          <div class="chip"><span class="rec">A</span><span class="val">@ &rarr; Vercel<small>216.198.79.1 / 64.29.17.65 (anycast)</small></span><span class="badge ok">sudah ada</span></div>
+          <div class="chip"><span class="rec">CNAME</span><span class="val">www &rarr; Vercel<small>kanonik www.gconsultant.web.id</small></span><span class="badge ok">sudah ada</span></div>
+        </div>
+        <div class="path-note"><b>Alur:</b> GitHub push &rarr; Vercel deploy otomatis &rarr; website v3.9.0 LIVE. Tidak ada yang perlu diubah di jalur ini.</div>
+      </div>
+
+      <div class="path-group pg-2" data-id="mail">
+        <div class="path-title">JALUR SURAT — Email Masuk &amp; Pintu cPanel</div>
+        <div class="path-sub">Surat ke @gconsultant.web.id dibawa kurir MX ke server cPanel</div>
+        <div class="chips">
+          <div class="chip"><span class="rec">MX</span><span class="val">@ &rarr; mail.gconsultant.web.id<small>prioritas 0 &middot; alamat kurir surat masuk</small></span><span class="badge todo">perlu dibuat</span></div>
+          <div class="chip"><span class="rec">A</span><span class="val">mail &rarr; IP server cPanel<small>tujuan akhir kurir MX</small></span><span class="badge todo">perlu dibuat</span></div>
+          <div class="chip"><span class="rec">A</span><span class="val">webmail &rarr; IP server cPanel<small>pintu webmail di browser</small></span><span class="badge todo">perlu dibuat</span></div>
+          <div class="chip"><span class="rec">A</span><span class="val">cpanel &rarr; IP server cPanel<small>pintu login cPanel via domain</small></span><span class="badge todo">perlu dibuat</span></div>
+        </div>
+        <div class="path-note"><b>Alur:</b> Gmail/klien kirim ke halo@ &rarr; cek MX &rarr; server cPanel &rarr; mailbox. Saat ini MX kosong, jadi surat belum bisa masuk.</div>
+      </div>
+
+      <div class="path-group pg-3" data-id="trust">
+        <div class="path-title">JALUR KEPERCAYAAN — Bukti Surat Asli</div>
+        <div class="path-sub">Surat keluar dari cPanel dibuktikan sah agar masuk inbox</div>
+        <div class="chips">
+          <div class="chip"><span class="rec">TXT</span><span class="val">SPF @<small>daftar server yang boleh mengirim</small></span><span class="badge todo">perlu dibuat</span></div>
+          <div class="chip"><span class="rec">TXT</span><span class="val">DKIM (default._domainkey)<small>tanda tangan digital tiap surat</small></span><span class="badge todo">perlu dibuat</span></div>
+          <div class="chip"><span class="rec">TXT</span><span class="val">DMARC (_dmarc)<small>polisi + laporan penyalahgunaan</small></span><span class="badge todo">perlu dibuat</span></div>
+        </div>
+        <div class="path-note"><b>Alur:</b> cPanel mengirim surat &rarr; Gmail cek SPF/DKIM/DMARC &rarr; lolos = masuk inbox; tanpa itu = risiko folder spam.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flow-legend">
+    <div class="legend-item"><div class="legend-dot" style="border-color:#10B981;background:#F0FDF4;"></div>Sudah terpasang di DNS Vercel</div>
+    <div class="legend-item"><div class="legend-dot" style="border-color:#F59E0B;background:#FFF7ED;"></div>Perlu dibuat (Panduan Bab 5&ndash;6)</div>
+    <div class="legend-item"><div class="legend-dot" style="border-color:#3B82F6;background:#EFF6FF;"></div>Pusat kendali: dashboard Vercel</div>
+  </div>
+</div>
+
+<script>
+  function ensureArrowDef(svg) {
+    if (svg.querySelector('#arrowhead')) return;
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    defs.innerHTML = '<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8" /></marker>';
+    svg.appendChild(defs);
+  }
+  function drawConnectors(connections) {
+    const svg = document.getElementById('connectorSvg');
+    const container = svg.parentElement;
+    const cRect = container.getBoundingClientRect();
+    svg.setAttribute('width', cRect.width);
+    svg.setAttribute('height', cRect.height);
+    svg.setAttribute('viewBox', `0 0 ${cRect.width} ${cRect.height}`);
+    svg.querySelectorAll('line, path').forEach(el => el.remove());
+    connections.forEach(([fromId, toId]) => {
+      const fromEl = document.querySelector(`[data-id="${fromId}"]`);
+      const toEl = document.querySelector(`[data-id="${toId}"]`);
+      if (!fromEl || !toEl) return;
+      const f = fromEl.getBoundingClientRect();
+      const t = toEl.getBoundingClientRect();
+      const x1 = f.left + f.width / 2 - cRect.left;
+      const y1 = f.bottom - cRect.top;
+      const x2 = t.left + t.width / 2 - cRect.left;
+      const y2 = t.top - cRect.top;
+      const midY = y1 + (y2 - y1) / 2;
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', `M ${x1} ${y1} L ${x1} ${midY} L ${x2} ${midY} L ${x2} ${y2}`);
+      svg.appendChild(path);
+    });
+  }
+  window.addEventListener('load', () => {
+    const svg = document.getElementById('connectorSvg');
+    ensureArrowDef(svg);
+    setTimeout(() => drawConnectors([['domain', 'web'], ['domain', 'mail'], ['domain', 'trust']]), 120);
+  });
+</script>
+</body>
+</html>
