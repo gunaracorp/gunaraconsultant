@@ -247,13 +247,13 @@ const UI_ID = {
   langLabel: "Bahasa",
   // Halaman mandiri (PageHero)
   pgLayananKicker: "Layanan Bisnis & Legalitas",
-  pgLayananTitle: "546 Layanan Perizinan & Legalitas Usaha",
+  pgLayananTitle: "550 Layanan Perizinan & Legalitas Usaha",
   pgLayananSub:
-    "Dari NIB hingga AMDAL — 546 layanan dalam katalog terpadu: 46 halaman panduan penuh + 500 layanan katalog berharga transparan. Satu pintu, tersertifikasi ISO 9001:2015.",
+    "Dari NIB hingga AMDAL — 550 layanan dalam katalog terpadu: 50 halaman panduan penuh + 500 layanan katalog berharga transparan. Satu pintu, tersertifikasi ISO 9001:2015.",
   // Katalog lengkap (500 layanan)
   katKicker: "Katalog Lengkap",
-  katTitle: "546 Layanan, Harga Transparan",
-  katSub: "Jelajahi katalog terpadu 546 layanan perizinan & legalitas — lengkap dengan harga, diskon aktif, dan estimasi hemat langsung di halaman detail.",
+  katTitle: "550 Layanan, Harga Transparan",
+  katSub: "Jelajahi katalog terpadu 550 layanan perizinan & legalitas — lengkap dengan harga, diskon aktif, dan estimasi hemat langsung di halaman detail.",
   katSearch: "Cari layanan / kode (mis. PT, halal, AMDAL, BU-PT-001)…",
   katAll: "Semua Kategori",
   katFeatured: "Unggulan (Panduan Penuh)",
@@ -336,7 +336,7 @@ const UI_ID = {
   aboutM1T: "Pengalaman konsultansi dimulai di Mic Kinsey — perusahaan konsultan ternama dunia.",
   aboutM2T: "GConsultant resmi berbadan usaha: AHU-038293.AH.01.30.Tahun 2024, modal dasar Rp5 M.",
   aboutM3T: "Kantor Perwakilan Jakarta dibuka di Indonesia Stock Exchange Tower 1, Sudirman — pusat bisnis nasional.",
-  aboutM4T: "46 layanan halaman detail penuh, 38 provinsi terjangkau, dan sistem mutu ISO 9001:2015 berjalan penuh.",
+  aboutM4T: "50 layanan halaman detail penuh, 38 provinsi terjangkau, dan sistem mutu ISO 9001:2015 berjalan penuh.",
   aboutLegalKicker: "Legalitas",
   aboutLegalTitle: "Data Resmi Perusahaan",
   aboutLegalHeritage: "Warisan Praktik",
@@ -452,7 +452,7 @@ const UI_ID = {
   nfSub:
     "Halaman yang Anda cari mungkin sudah dipindah, dihapus, atau alamatnya salah tulis.",
   nfCta: "Kembali ke Beranda",
-  nfServices: "Lihat 46 Layanan",
+  nfServices: "Lihat 50 Layanan",
   // Legal
   pgPrivTitle: "Kebijakan Privasi",
   pgPrivSub:
@@ -689,13 +689,13 @@ const UI_EN: Record<UIKey, string> = {
   langLabel: "Language",
   // Dedicated pages (PageHero)
   pgLayananKicker: "Business & Licensing Services",
-  pgLayananTitle: "546 Business Licensing & Legality Services",
+  pgLayananTitle: "550 Business Licensing & Legality Services",
   pgLayananSub:
-    "From NIB to AMDAL — 546 services in one unified catalog: 46 full-guide pages + 500 catalog services with transparent pricing. One door, ISO 9001:2015 certified.",
+    "From NIB to AMDAL — 550 services in one unified catalog: 50 full-guide pages + 500 catalog services with transparent pricing. One door, ISO 9001:2015 certified.",
   // Full catalog (500 services)
   katKicker: "Full Catalog",
-  katTitle: "546 Services, Transparent Pricing",
-  katSub: "Browse the unified catalog of 546 licensing & legality services — complete with prices, active discounts, and estimated savings right on each detail page.",
+  katTitle: "550 Services, Transparent Pricing",
+  katSub: "Browse the unified catalog of 550 licensing & legality services — complete with prices, active discounts, and estimated savings right on each detail page.",
   katSearch: "Search services / codes (e.g. PT, halal, AMDAL, BU-PT-001)…",
   katAll: "All Categories",
   katFeatured: "Featured (Full Guides)",
@@ -778,7 +778,7 @@ const UI_EN: Record<UIKey, string> = {
   aboutM1T: "Consulting experience began at Mic Kinsey — a world-renowned consulting firm.",
   aboutM2T: "GConsultant officially became a legal entity: AHU-038293.AH.01.30.Tahun 2024, Rp5B authorized capital.",
   aboutM3T: "Jakarta Representative Office opened at Indonesia Stock Exchange Tower 1, Sudirman — the nation's business heart.",
-  aboutM4T: "46 services with full detail pages, all 38 provinces covered, and ISO 9001:2015 quality system fully running.",
+  aboutM4T: "50 services with full detail pages, all 38 provinces covered, and ISO 9001:2015 quality system fully running.",
   aboutLegalKicker: "Legality",
   aboutLegalTitle: "Official Company Data",
   aboutLegalHeritage: "Practice Heritage",
@@ -894,7 +894,7 @@ const UI_EN: Record<UIKey, string> = {
   nfSub:
     "The page you are looking for may have been moved, deleted, or the address is mistyped.",
   nfCta: "Back to Home",
-  nfServices: "Browse 46 Services",
+  nfServices: "Browse 50 Services",
   // Legal
   pgPrivTitle: "Privacy Policy",
   pgPrivSub:

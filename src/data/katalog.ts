@@ -2,7 +2,7 @@
  * KATALOG LENGKAP — 500 layanan terintegrasi GConsultant.
  * Sumber: repositori internal gunaracorp (v3.2.0 "Full Catalog Integration").
  * Harga dalam Rupiah penuh; diskon & hemat mengikuti data resmi perusahaan.
- * Seluruh slug terverifikasi unik & tidak bentrok dengan 46 layanan unggulan (SERVICES).
+ * Seluruh slug terverifikasi unik & tidak bentrok dengan 50 layanan unggulan (SERVICES).
  */
 export interface CatalogItem {
   slug: string;

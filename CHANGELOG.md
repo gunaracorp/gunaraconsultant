@@ -2,6 +2,21 @@
 
 Semua perubahan penting dicatat di sini (format: Keep a Changelog, SemVer).
 
+## [3.8.0] — 2026-11-20 — IATA Launch: GoLite · GoStandard · GoGlobal
+
+### Added
+- **Garis produk IATA 2026** (master pricing pemilik): 4 layanan unggulan baru di kategori Pariwisata — halaman pilar [`/layanan/konsultasi-akreditasi-iata`](penjelasan 3 model + pemilihan + ruang lingkup konsultansi) dan 3 halaman produk `/layanan/iata-golite`, `/layanan/iata-gostandard`, `/layanan/iata-goglobal`. Seluruhnya bilingual ID/EN dengan proses konsultansi, checklist dokumen awal, dan FAQ 5–6 butir per halaman.
+- `src/data/iata.ts` — **sumber harga tunggal**: GoLite katalog Rp19.500.000 / promo Rp9.750.000; GoStandard Rp37.500.000 / Rp18.750.000; GoGlobal Rp75.000.000 / mulai Rp37.500.000; label "Promo Konsultasi 2026". `priceFrom` layanan direferensikan dari konstanta ini — harga tidak pernah bisa berbeda antar-halaman (aturan master pricing pemilik).
+- Catatan kewenangan & batasan klaim pada setiap halaman IATA: konsultan independen, tanpa afiliasi resmi IATA, tanpa jaminan persetujuan, financial security "dinilai IATA sesuai profil", biaya resmi IATA (application fee, annual fee, financial security, audit, notaris, terjemahan) selalu terpisah dalam quotation.
+- 3 referensi resmi IATA (iata.org accreditation, country requirements Indonesia, GoLite FAQ) untuk dasar verifikasi konten.
+
+### Changed
+- Jumlah layanan unggulan 46 → **50**; total layanan aktif 546 → **550**; URL sitemap 566 → **570** (badge, meta, i18n ID+EN, komentar data, README). Klaim "46 Dewan Pakar" tidak disentuh (semantik berbeda — jumlah dewan pakar, bukan layanan).
+- README: bagian baru "🛫 Garis Produk IATA 2026" dengan tabel master pricing.
+
+### Verified
+- `validateAllSlugs()` — tanpa slug bentrok featured/katalog; seluruh UI dinamis (homepage ItemList, dropdown kontak, katalog, footer, sitemap) otomatis memuat 4 layanan baru.
+
 ## [3.7.0] — 2026-11-20 — Domain Ascension: gconsultant.web.id
 
 ### Changed

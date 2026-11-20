@@ -26,7 +26,7 @@ interface Props {
 }
 
 /**
- * Prerender hanya 46 layanan unggulan; 500 halaman katalog dirender
+ * Prerender hanya 50 layanan unggulan; 500 halaman katalog dirender
  * on-demand (dynamicParams) agar build deploy tetap cepat.
  */
 export function generateStaticParams() {

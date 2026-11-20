@@ -1,11 +1,12 @@
 import { CATEGORIES, type Service, type ServiceCategory } from "./services-types";
 import { SERVICES_A } from "./services-a";
 import { SERVICES_B } from "./services-b";
+import { SERVICES_IATA } from "./services-iata";
 
 export type { Service, ServiceCategory, ServiceFaq } from "./services-types";
 export { CATEGORIES } from "./services-types";
 
-export const SERVICES: Service[] = [...SERVICES_A, ...SERVICES_B];
+export const SERVICES: Service[] = [...SERVICES_A, ...SERVICES_B, ...SERVICES_IATA];
 
 export const SERVICE_COUNT = SERVICES.length;
 export const SERVICE_SLUGS = SERVICES.map((s) => s.slug);
@@ -43,8 +44,8 @@ export function validateServices(): string[] {
 
 /* ============================================================
  * KATALOG LENGKAP — integrasi 500 layanan (v3.2.0)
- * Dua tier: SERVICES (46 unggulan, halaman detail penuh bilingual)
- * + KATALOG (500, harga resmi & diskon). Total 546 layanan aktif.
+ * Dua tier: SERVICES (50 unggulan, halaman detail penuh bilingual)
+ * + KATALOG (500, harga resmi & diskon). Total 550 layanan aktif.
  * ============================================================ */
 import { KATALOG, getCatalog, catalogBySub, KATALOG_COUNT, type CatalogItem } from "./katalog";
 import { getCatalogSub, getCatalogKat, SUB_ALL, type CatalogSub, type CatalogKat } from "./katalog-meta";
@@ -76,7 +77,7 @@ export function resolveAnySlug(
   return undefined;
 }
 
-/** Semua slug aktif untuk sitemap & validasi (546). */
+/** Semua slug aktif untuk sitemap & validasi (550). */
 export function allSlugs(): string[] {
   return [...SERVICE_SLUGS, ...KATALOG.map((k) => k.slug)];
 }

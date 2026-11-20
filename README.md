@@ -4,7 +4,7 @@
 
 <img src="public/logo-stacked.svg" alt="GConsultant — The Geometric G" width="170"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Jost&weight=700&size=20&duration=2800&pause=800&color=D4AF37&center=true&vCenter=true&width=860&height=56&lines=Menyatukan+ilmu.+Menata+kompleksitas.+Mewujudkan+solusi.;Dari+regulasi+di+hulu+%E2%80%94+hingga+izin+terbit+di+hilir.;546+layanan+%C2%B7+38+provinsi+%C2%B7+satu+pintu+WhatsApp.;Asesmen+UMI%E2%84%A2+3+menit+%E2%86%92+tahu+level+usaha+Anda." alt="tagline animasi"/>
+<img src="https://readme-typing-svg.demolab.com?font=Jost&weight=700&size=20&duration=2800&pause=800&color=D4AF37&center=true&vCenter=true&width=860&height=56&lines=Menyatukan+ilmu.+Menata+kompleksitas.+Mewujudkan+solusi.;Dari+regulasi+di+hulu+%E2%80%94+hingga+izin+terbit+di+hilir.;550+layanan+%C2%B7+38+provinsi+%C2%B7+satu+pintu+WhatsApp.;Asesmen+UMI%E2%84%A2+3+menit+%E2%86%92+tahu+level+usaha+Anda." alt="tagline animasi"/>
 
 **Konsultan Bisnis, Legalitas & Strategi Terpadu** · *Integrated Business, Licensing & Strategy Consulting*
 
@@ -14,9 +14,9 @@
 [![AHU Kemenkumham](https://img.shields.io/badge/AHU-038293.AH.01.30-0a1b3d)](#transparansi)
 [![Bun](https://img.shields.io/badge/Bun-runtime-f472b6?logo=bun)](https://bun.sh)
 
-[![546 Layanan](https://img.shields.io/badge/layanan-546_aktif-d4af37)](#katalog)
+[![550 Layanan](https://img.shields.io/badge/layanan-550_aktif-d4af37)](#katalog)
 [![38 Provinsi](https://img.shields.io/badge/jangkauan-38_provinsi-d4af37)](https://www.gconsultant.web.id/provinsi)
-[![566 URL SEO](https://img.shields.io/badge/sitemap-566_URL_indexable-d4af37)](https://www.gconsultant.web.id/sitemap.xml)
+[![570 URL SEO](https://img.shields.io/badge/sitemap-570_URL_indexable-d4af37)](https://www.gconsultant.web.id/sitemap.xml)
 [![Audit SEO 101/101](https://img.shields.io/badge/audit_SEO-101%2F101_perfect-16345f)](#dashboard)
 
 <a href="https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis."><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&bgcolor=0a1b3d&color=d4af37&data=https%3A%2F%2Fwa.me%2F6281316516524" alt="QR WhatsApp GConsultant" width="110"/></a>
@@ -34,7 +34,7 @@
 | | | | |
 |:---:|:---:|:---:|:---:|
 | 🌊 [**Peta Hulu→Hilir**](#peta) | 🔁 [**Workflow 12 Tahap**](#workflow) | 🔄 [**Siklus Hidup Izin**](#siklus) | 📡 [**Alur WhatsApp**](#alur-wa) |
-| 🔍 [**Pencari Izin 30 detik**](#pencari) | 🗂️ [**Katalog 546**](#katalog) | 🧠 [**Metodologi UMEA™**](#umea) | ⏱️ [**Perjalanan Klien**](#perjalanan) |
+| 🔍 [**Pencari Izin 30 detik**](#pencari) | 🗂️ [**Katalog 550**](#katalog) | 🧠 [**Metodologi UMEA™**](#umea) | ⏱️ [**Perjalanan Klien**](#perjalanan) |
 | 🧪 [**Checklist Diagnostik**](#checklist) | 📊 [**Dashboard Proyek**](#dashboard) | 🔌 [**Live Telemetry**](#telemetry) | 💰 [**Anti-Penipuan**](#transparansi) |
 | 👤 [**Pendiri**](#pendiri) | 🚀 [**Developer Guide**](#developer) | 🗓️ [**Arah Pengembangan**](#arah) | ❓ [**FAQ**](#faq) |
 
@@ -47,12 +47,12 @@
 
 Website resmi **GConsultant** — berakar dari praktik konsultansi **Mic Kinsey sejak 2009**, dilembagakan sebagai badan usaha **AHU-038293.AH.01.30 Tahun 2024**, tersertifikasi **ISO 9001:2015**, melayani **38 provinsi Indonesia** dari dua kantor (Tasikmalaya + Jakarta/IDX Tower 1).
 
-Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **546 layanan** perizinan (46 unggulan + 500 katalog) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
+Situs ini tidak menjual "jasa ngurus izin" — situs ini menjual **metodologi**: [UMEA™](#umea), kerangka arsitektur sistem bisnis dengan 6 tingkat organisasi, 21 fungsi kritis (7 grup), dan 5 tingkat dokumen. Katalog **550 layanan** perizinan (50 unggulan + 500 katalog) dipadukan dengan **mesin asesmen UMI™** berbasis 12 pertanyaan, dan seluruh funnel berujung pada **satu tombol WhatsApp** — tanpa form panjang, tanpa email yang tak pernah dibalas.
 
 <a id="en-story"></a>
 ## 🇬🇧 The 30-Second Story
 
-The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **546 licensing services** (46 flagship + 500 catalog) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
+The official **GConsultant** website — rooted in **Mic Kinsey consulting practice since 2009**, incorporated as **AHU-038293.AH.01.30 (2024)**, certified **ISO 9001:2015**, serving **all 38 Indonesian provinces** from two offices (Tasikmalaya + Jakarta/IDX Tower 1). This site sells a **methodology**, not errands: [UMEA™](#umea) — a business-systems architecture with 6 organization levels, 21 critical functions across 7 groups, and 5 document tiers — fused with a catalog of **550 licensing services** (50 flagship + 500 catalog) and a **12-question UMI™ maturity assessment**. Every path ends in **one WhatsApp button**. This README itself is *living documentation*: animated telemetry, decision trees, and a full upstream-to-downstream map.
 
 ---
 
@@ -61,7 +61,7 @@ The official **GConsultant** website — rooted in **Mic Kinsey consulting pract
 
 | Angka | Arti | Verifikasi |
 |:---:|---|---|
-| **546** | Layanan aktif: **46** unggulan + **500** katalog | `bun -e` → `ALL_COUNT` · [`/api/status`](https://www.gconsultant.web.id/api/status) |
+| **550** | Layanan aktif: **50** unggulan + **500** katalog | `bun -e` → `ALL_COUNT` · [`/api/status`](https://www.gconsultant.web.id/api/status) |
 | **4 / 38** | Kelompok katalog / sub-kelompok layanan | `src/data/katalog-meta.ts` → `KAT4=4`, `SUB_ALL=38` |
 | **11** | Kategori layanan unggulan | `src/data/services-types.ts` → `CATEGORIES` |
 | **38** | Provinsi terjangkau | [`/provinsi`](https://www.gconsultant.web.id/provinsi) · `provinces.ts` |
@@ -69,7 +69,7 @@ The official **GConsultant** website — rooted in **Mic Kinsey consulting pract
 | **8** | Band kematangan UMI™ (skor 0–100) | [`/asesmen`](https://www.gconsultant.web.id/asesmen) |
 | **12 → 0–100** | Soal asesmen → skor + rekomendasi paket | [`/asesmen`](https://www.gconsultant.web.id/asesmen) |
 | **6 / 8** | Artikel blog bilingual / FAQ | [`/blog`](https://www.gconsultant.web.id/blog) · [`/faq`](https://www.gconsultant.web.id/faq) |
-| **566** | URL terindeks sitemap (audit 101/101 perfect) | [`/sitemap.xml`](https://www.gconsultant.web.id/sitemap.xml) |
+| **570** | URL terindeks sitemap (audit 101/101 perfect) | [`/sitemap.xml`](https://www.gconsultant.web.id/sitemap.xml) |
 | **0** | Form yang wajib diisi sebelum bicara ke manusia | coba sendiri → [WA](https://wa.me/6281316516524?text=Halo%20GConsultant%2C%20saya%20ingin%20konsultasi%20gratis.) |
 
 ---
@@ -92,14 +92,14 @@ flowchart TB
     subgraph H2["🗄️ HULU 2 — KNOWLEDGE BASE (data terstruktur)"]
         direction LR
         B1["katalog.ts<br/>500 layanan + harga"]
-        B2["services.ts<br/>46 unggulan"]
+        B2["services.ts<br/>50 unggulan"]
         B3["umea.ts<br/>3 hukum · 6 level<br/>21 fungsi · 5 tier"]
         B4["38 provinsi · legal<br/>6 artikel · 8 FAQ"]
     end
 
     subgraph P["⚙️ PUSAT — MESIN GCONSULTANT (Next.js)"]
         direction LR
-        C1["Mesin SEO<br/>566 URL · JSON-LD"]
+        C1["Mesin SEO<br/>570 URL · JSON-LD"]
         C2["Mesin UMI™<br/>12 soal → band"]
         C3["Katalog Search<br/>?q= instan"]
         C4["Funnel WhatsApp<br/>0 form"]
@@ -136,7 +136,7 @@ flowchart TB
 |---|---|---|
 | 🏛️ **Hulu 1 — Instansi** | Kemenkumham, OSS-BKPM, BPOM, BPJPH, BSN, KLH, DPMPTSP — penerbit akta, NIB, izin edar, halal, SNI, AMDAL, PBG | regulasi resmi RI — bukan karangan konsultan |
 | 🗄️ **Hulu 2 — Knowledge Base** | `src/data/*` — katalog 500, layanan 46, UMEA™ (3 hukum · 6 level · 21 fungsi · 5 tier), provinsi, legal, blog, FAQ | commit di repo ini — bisa diaudit siapa pun |
-| ⚙️ **Pusat — Mesin** | Next.js: mesin SEO (566 URL, JSON-LD 6–8 blok/halaman), mesin UMI™, katalog search `?q=`, funnel WhatsApp | `src/app/*` + `scripts/seo-audit.py` (101/101) |
+| ⚙️ **Pusat — Mesin** | Next.js: mesin SEO (570 URL, JSON-LD 6–8 blok/halaman), mesin UMI™, katalog search `?q=`, funnel WhatsApp | `src/app/*` + `scripts/seo-audit.py` (101/101) |
 | 🧳 **Hilir 1 — Perjalanan** | Chat → asesmen → perjanjian bergaransi → dokumen D-10 s.d. D-165 → pengajuan ke instansi | SOP ISO 9001:2015 |
 | 🚀 **Hilir 2 — Hasil** | Izin terbit → operasional patuh → naik level UMEA™ → ekspansi → kebutuhan baru mengalir kembali ke hulu | siklus hidup klien — lihat [Workflow 12 Tahap](#workflow) |
 
@@ -171,17 +171,17 @@ flowchart TD
 ```
 
 > [!TIP]
-> **Trik pro:** di website, pencarian instan 546 layanan bisa dijangkau langsung lewat URL — `www.gconsultant.web.id/layanan?q=halal` atau `?q=NIB` atau `?q=kode layanan`. Kotak pencarian terisi sendiri dan halaman menggulir otomatis ke katalog (teruji E2E — inilah *sitelinks search box* yang dibaca Google).
+> **Trik pro:** di website, pencarian instan 550 layanan bisa dijangkau langsung lewat URL — `www.gconsultant.web.id/layanan?q=halal` atau `?q=NIB` atau `?q=kode layanan`. Kotak pencarian terisi sendiri dan halaman menggulir otomatis ke katalog (teruji E2E — inilah *sitelinks search box* yang dibaca Google).
 
 ---
 
 <a id="katalog"></a>
-## 🗂️ Katalog 546 Layanan — Interaktif
+## 🗂️ Katalog 550 Layanan — Interaktif
 
 Komposisi katalog (angka langsung dari `src/data`):
 
 ```mermaid
-pie title Komposisi Katalog — 546 Layanan Aktif
+pie title Komposisi Katalog — 550 Layanan Aktif
     "Layanan unggulan — halaman khusus + penawaran" : 46
     "Katalog layanan — harga terbuka berdiskon" : 500
 ```
@@ -265,11 +265,25 @@ Klik setiap kelompok untuk membuka. Setiap tautan **hidup** — langsung menuju 
 | SLF | Sertifikat laik fungsi | [→ buka](https://www.gconsultant.web.id/layanan/slf) |
 | KKPR | Konfirmasi kesesuaian tata ruang | [→ buka](https://www.gconsultant.web.id/layanan/kkpr) |
 
+
+### 🛫 Garis Produk IATA 2026 — Konsultasi Akreditasi Travel Agent
+
+Baru di v3.8.0: konsultasi & pendampingan akreditasi IATA untuk travel agent — [halaman pilar](https://www.gconsultant.web.id/layanan/konsultasi-akreditasi-iata) memetakan pemilihan model (GoLite / GoStandard / GoGlobal), review dokumen korporasi, dan penilaian kesiapan finansial sebelum aplikasi diajukan.
+
+| Produk | Model Akreditasi | Katalog | **Promo Konsultasi 2026** |
+|---|---|---|---|
+| [IATA GoLite](https://www.gconsultant.web.id/layanan/iata-golite) | Standard tanpa Cash Facility | Rp19.500.000 | **Rp9.750.000** |
+| [IATA GoStandard](https://www.gconsultant.web.id/layanan/iata-gostandard) | Standard dengan Cash Facility | Rp37.500.000 | **Rp18.750.000** |
+| [IATA GoGlobal](https://www.gconsultant.web.id/layanan/iata-goglobal) | Multi-Country Accreditation | Rp75.000.000 | **Mulai Rp37.500.000** |
+
+> Jasa konsultasi & pendampingan — bukan tarif resmi IATA. Application fee, annual fee, financial security, dan biaya resmi lainnya dinyatakan terpisah dalam quotation. IATA berwenang penuh atas evaluasi & keputusan akreditasi. Harga disajikan dari satu sumber: `src/data/iata.ts`.
+
+
 **+ keluarga lingkungan lain** — [telusuri di sini](https://www.gconsultant.web.id/layanan?q=lingkungan) 🔎
 </details>
 
 > [!NOTE]
-> 500 layanan katalog memuat **harga resmi + diskon + estimasi hemat** yang tampil transparan di setiap halaman. Ingin membandingkan 546 sekaligus? Buka [`/layanan`](https://www.gconsultant.web.id/layanan) dan gunakan filter 4 kelompok + 38 sub-kelompok.
+> 500 layanan katalog memuat **harga resmi + diskon + estimasi hemat** yang tampil transparan di setiap halaman. Ingin membandingkan 550 sekaligus? Buka [`/layanan`](https://www.gconsultant.web.id/layanan) dan gunakan filter 4 kelompok + 38 sub-kelompok.
 
 ---
 
@@ -453,8 +467,8 @@ Metrik yang diperiksa otomatis setiap rilis — semuanya bisa Anda verifikasi se
 
 | Domain | Metrik | Nilai | Cara Verifikasi |
 |---|---|:---:|---|
-| **Katalog** | Layanan aktif | 546 | `curl www.gconsultant.web.id/api/status` |
-| **SEO** | URL sitemap | 566 | `curl www.gconsultant.web.id/sitemap.xml \| grep -c loc` |
+| **Katalog** | Layanan aktif | 550 | `curl www.gconsultant.web.id/api/status` |
+| **SEO** | URL sitemap | 570 | `curl www.gconsultant.web.id/sitemap.xml \| grep -c loc` |
 | **SEO** | Audit 11 kriteria Google | **101/101** | `python3 scripts/seo-audit.py` |
 | **SEO** | Canonical benar / noindex bocor | 100% / 0 | hasil audit — kolom canonical & noindex |
 | **Schema** | JSON-LD per halaman | 6–8 blok | view-source → `application/ld+json` |
@@ -565,11 +579,11 @@ Kode mengikuti pola yang sama dengan bisnisnya: sumber kebenaran di hulu (repo),
 flowchart LR
     R["📚 Repo GitHub<br/>main"] --> C["🔧 clone<br/>bun install"]
     C --> V["🧪 bun run lint<br/>0 error"]
-    V --> S["🏗️ bun run build<br/>prerender 46 unggulan"]
+    V --> S["🏗️ bun run build<br/>prerender 50 unggulan"]
     S --> A["🔍 seo-audit.py<br/>wajib 101/101"]
     A --> D["🚀 Deploy produksi<br/>www.gconsultant.web.id"]
     D --> H["🛡️ Security headers<br/>6 lapis"]
-    H --> G["🤖 Googlebot crawl<br/>sitemap 566 URL"]
+    H --> G["🤖 Googlebot crawl<br/>sitemap 570 URL"]
     G --> SERP["🔎 SERP<br/>sitelinks search box"]
     SERP --> U["👤 Pengunjung"]
     U --> WA["💬 WhatsApp funnel"]
@@ -588,12 +602,12 @@ flowchart LR
 ```mermaid
 flowchart LR
     P(["Pengunjung / Googlebot"]) --> N["Next.js 16<br/>App Router"]
-    N --> S["Server Components<br/>546 halaman layanan + 14 halaman statis"]
+    N --> S["Server Components<br/>550 halaman layanan + 14 halaman statis"]
     N --> C["Client Islands<br/>Asesmen UMI - Katalog search - i18n ID/EN"]
     N --> A["/api/status<br/>telemetri JSON"]
     D[("SQLite<br/>via Prisma")] --> N
     S --> M["Mesin Metadata<br/>canonical - OG - Twitter - JSON-LD x6-8"]
-    M --> G(["Google Search<br/>sitemap 566 URL"])
+    M --> G(["Google Search<br/>sitemap 570 URL"])
     S --> W(["Funnel WhatsApp<br/>+62 813-1651-6524"])
 ```
 
@@ -602,8 +616,8 @@ flowchart LR
 | Rute | Isi | Rute | Isi |
 |---|---|---|---|
 | `/` | Beranda polymathic | `/blog/[slug]` | 6 artikel bilingual |
-| `/layanan` | Hub 546 + pencarian `?q=` | `/metodologi` | UMEA™ lengkap |
-| `/layanan/[slug]` | 46 unggulan + 500 katalog | `/asesmen` | Mesin UMI™ 12 soal |
+| `/layanan` | Hub 550 + pencarian `?q=` | `/metodologi` | UMEA™ lengkap |
+| `/layanan/[slug]` | 50 unggulan + 500 katalog | `/asesmen` | Mesin UMI™ 12 soal |
 | `/provinsi` | 38 provinsi | `/faq` · `/kontak` | Jawaban + funnel WA |
 | `/tentang-kami` · `/pendiri` | Profil & legitimasi | `/api/status` | Telemetri JSON |
 | `/keunggulan` · `/proses` | Diferensiasi & SOP | `/kebijakan-privasi` · `/syarat-ketentuan` | Legal UU PDP |
@@ -648,7 +662,7 @@ Berdasarkan catatan kerja yang terdokumentasi di repo ini — bukan janji kosong
 | Versi | Nama Rilis | Sorotan |
 |:---:|---|---|
 | **3.4.0** | *Hulu-Hilir Animated Documentation* | Peta besar hulu→hilir 5 lapis · workflow 12 tahap · sequence WA · siklus hidup izin · header/footer/typing animasi · angka diverifikasi langsung dari `src/data` |
-| **3.3.1** | *Living README* | Badge telemetri hidup · katalog collapsible 546 · checklist interaktif · anti-penipuan |
+| **3.3.1** | *Living README* | Badge telemetri hidup · katalog collapsible 550 · checklist interaktif · anti-penipuan |
 | **3.3.0** | *Google Search Optimization* | Audit 101/101 · robots dinamis · sitelinks search box hidup · clamp title/desc SERP |
 | **3.2.0** | *Full Catalog Integration* | +500 layanan katalog → 546 aktif · harga transparan berdiskon · sitemap 566 |
 | **3.1.1** | *Preview Iframe Hardening* | CSP `frame-ancestors` adaptif — fix "refused to connect" |
@@ -726,7 +740,7 @@ Seluruh situs bilingual ID ⇄ EN (toggle navbar), dan tim melayani investor asi
 
 <sub>
 <a href="https://www.gconsultant.web.id">🌐 Situs</a> ·
-<a href="https://www.gconsultant.web.id/layanan">🗂️ 546 Layanan</a> ·
+<a href="https://www.gconsultant.web.id/layanan">🗂️ 550 Layanan</a> ·
 <a href="https://www.gconsultant.web.id/asesmen">🧪 Asesmen Gratis</a> ·
 <a href="https://wa.me/6281316516524">💬 WhatsApp</a>
 </sub>

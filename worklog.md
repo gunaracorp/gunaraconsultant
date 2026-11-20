@@ -186,3 +186,18 @@ Work Log:
 
 Stage Summary:
 - v3.7.0 "Domain Ascension": satu konstanta memindahkan seluruh 566 URL SEO ke domain brand-matched; nol hardcode terlewat (grep bersih); riwayat CHANGELOG tetap utuh.
+
+---
+Task ID: 34 (iata-launch-v3.8.0)
+Agent: Z.ai — Omnibrand Council (Product/Content/SEO/Compliance)
+Task: Peluncuran Garis Produk IATA 2026 (master prompt pemilik): 1 halaman pilar + 3 halaman produk (GoLite/GoStandard/GoGlobal) dengan master pricing terpusat, bilingual, disiplin klaim konservatif.
+
+Work Log:
+- PRICING SATU SUMBER: src/data/iata.ts — GoLite katalog Rp19.500.000/promo Rp9.750.000; GoStandard Rp37.500.000/Rp18.750.000; GoGlobal Rp75.000.000/mulai Rp37.500.000; label "Promo Konsultasi 2026"; IATA_AUTHORITY_NOTE (independen, tanpa jaminan, biaya resmi terpisah); 3 referensi resmi IATA (iata.org + portal FAQ).
+- LAYANAN: src/data/services-iata.ts — 4 entri Service penuh (slug konsultasi-akreditasi-iata, iata-golite, iata-gostandard, iata-goglobal; cat: pariwisata), konten ID+EN lengkap (desc/benefits/req/steps/duration/faq 5-6), priceFrom direferensikan dari IATA_PRODUCTS (bukan hardcode).
+- INTEGRASI: services.ts merge → SERVICES 50 unggulan; ALL_COUNT 550; UI dinamis (homepage ItemList, dropdown kontak, katalog, footer, sitemap) otomatis; angka ter-update di i18n (546→550, 46→50, EN+ID), layanan meta, blog CTA, komentar; README +blok "Garis Produk IATA 2026" dgn tabel harga.
+- DISIPLIN ANGKA: klaim "46 Dewan Pakar" TIDAK disentuh (semantik berbeda — jumlah dewan, bukan layanan); hanya nfServices 404 yang disesuaikan.
+- VER-1: 3.7.0 → 3.8.0 sinkron 4 titik.
+
+Stage Summary:
+- v3.8.0 "IATA Launch": 4 halaman produk IATA SEO-ready (bilingual, FAQ, keywords "iata golite/gostandard/goglobal indonesia"), harga tak pernah bisa beda antar-halaman, klaim konservatif tanpa afiliasi/jaminan — sesuai master prompt Bagian 3, 5, 6, 16.
