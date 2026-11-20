@@ -271,13 +271,13 @@ const UI_ID = {
   langLabel: "Bahasa",
   // Halaman mandiri (PageHero)
   pgLayananKicker: "Layanan Bisnis & Legalitas",
-  pgLayananTitle: "551 Layanan Perizinan & Legalitas Usaha",
+  pgLayananTitle: "552 Layanan Perizinan & Legalitas Usaha",
   pgLayananSub:
-    "Dari NIB hingga AMDAL — 551 layanan dalam katalog terpadu: 50 halaman panduan penuh + 501 layanan katalog berharga transparan. Satu pintu, tersertifikasi ISO 9001:2015.",
+    "Dari NIB hingga AMDAL — 552 layanan dalam katalog terpadu: 50 halaman panduan penuh + 502 layanan katalog berharga transparan. Satu pintu, tersertifikasi ISO 9001:2015.",
   // Katalog lengkap (500 layanan)
   katKicker: "Katalog Lengkap",
-  katTitle: "551 Layanan, Harga Transparan",
-  katSub: "Jelajahi katalog terpadu 551 layanan perizinan & legalitas — lengkap dengan harga, diskon aktif, dan estimasi hemat langsung di halaman detail.",
+  katTitle: "552 Layanan, Harga Transparan",
+  katSub: "Jelajahi katalog terpadu 552 layanan perizinan & legalitas — lengkap dengan harga, diskon aktif, dan estimasi hemat langsung di halaman detail.",
   katSearch: "Cari layanan / kode (mis. PT, halal, AMDAL, BU-PT-001)…",
   katAll: "Semua Kategori",
   katFeatured: "Unggulan (Panduan Penuh)",
@@ -737,13 +737,13 @@ const UI_EN: Record<UIKey, string> = {
   langLabel: "Language",
   // Dedicated pages (PageHero)
   pgLayananKicker: "Business & Licensing Services",
-  pgLayananTitle: "551 Business Licensing & Legality Services",
+  pgLayananTitle: "552 Business Licensing & Legality Services",
   pgLayananSub:
-    "From NIB to AMDAL — 551 services in one unified catalog: 50 full-guide pages + 501 catalog services with transparent pricing. One door, ISO 9001:2015 certified.",
+    "From NIB to AMDAL — 552 services in one unified catalog: 50 full-guide pages + 502 catalog services with transparent pricing. One door, ISO 9001:2015 certified.",
   // Full catalog (500 services)
   katKicker: "Full Catalog",
-  katTitle: "551 Services, Transparent Pricing",
-  katSub: "Browse the unified catalog of 551 licensing & legality services — complete with prices, active discounts, and estimated savings right on each detail page.",
+  katTitle: "552 Services, Transparent Pricing",
+  katSub: "Browse the unified catalog of 552 licensing & legality services — complete with prices, active discounts, and estimated savings right on each detail page.",
   katSearch: "Search services / codes (e.g. PT, halal, AMDAL, BU-PT-001)…",
   katAll: "All Categories",
   katFeatured: "Featured (Full Guides)",

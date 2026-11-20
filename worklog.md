@@ -230,8 +230,8 @@ Work Log:
 - CREATE: SK-PR-015 PPIHK (Haji Khusus) — belum ada di 550 katalog (grep pihk/haji kosong); disisip di klaster Pariwisata.
 - SEO PPIU: halaman pilar /sertifikasi-travel (3 kartu paket, tabel perbandingan incl. masa berlaku izin PPIU 5 th & PIHK 3 th, FAQ, JSON-LD) + /sertifikasi-travel/ppiu 1.000+ kata (dasar hukum UU 13/2008 & Permenag 15/2012 terverifikasi via kemenag.go.id & peraturan.bpk.go.id, syarat, alur 6 tahap, ruang lingkup, batasan klaim, FAQ 8, JSON-LD Service+FAQPage+Breadcrumb).
 - NAV/SITEMAP/COUNTS: navbar + "Sertifikasi Travel" (wideOnly), sitemap +2 URL pilar (573), i18n ID/EN 10 kunci baru, klaim 550→551 & sitemap 570→573 sinkron README+i18n.
-- ISO 2026: TIDAK dibuat — tidak ada standar "ISO 2026" (standar berlaku ISO 9001:2015); harga ISO tidak diberikan pemilik → tidak dikarang, ditunggu angka.
+- ISO 9001:2026 (KOREKSI — dugaan awal "tidak ada standar" keliru): standar NYATA, terbit 16 Sep 2026 oleh ISO/TC 176/SC 2, masa transisi s.d. 30 Sep 2029 (verifikasi committee.iso.org, smithers.com, TÜV). Pemilik = konsultan ISO 9001 → buat produk BU-MS-009 "Pendampingan Transisi ISO 9001:2026" (gap analysis edisi, pembaruan dokumen SMM, audit internal transisi). Harga placeholder mengikuti price book ISO existing (6 jt display) — menunggu angka master pricing pemilik. Desc BU-MS-001 diperbarui ke edisi 2026. Klaim 551→552 & sitemap 573→574 sinkron.
 - VER-1: 3.9.0 → 3.10.0 sinkron 4 titik (package.json, version.ts VERSI+NAMA_RILIS, CHANGELOG, worklog).
 
 Stage Summary:
-- v3.10.0 "Certification Suite": 3 paket travel all-in hidup dengan satu sumber harga katalog; PPIU memiliki halaman SEO mendalam pertama untuk kategori perizinan ibadah; batasan klaim independen mengikat; sitemap 573 URL.
+- v3.10.0 "Certification Suite": 3 paket travel all-in hidup dengan satu sumber harga katalog; PPIU memiliki halaman SEO mendalam pertama untuk kategori perizinan ibadah; produk transisi ISO 9001:2026 (BU-MS-009) melengkapi lini sertifikasi sistem manajemen; batasan klaim independen mengikat; sitemap 574 URL.

@@ -77,7 +77,7 @@ export function resolveAnySlug(
   return undefined;
 }
 
-/** Semua slug aktif untuk sitemap & validasi (551). */
+/** Semua slug aktif untuk sitemap & validasi (552). */
 export function allSlugs(): string[] {
   return [...SERVICE_SLUGS, ...KATALOG.map((k) => k.slug)];
 }

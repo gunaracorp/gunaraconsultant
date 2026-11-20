@@ -89,6 +89,7 @@ export const KATALOG_LITE: CatalogLite[] = [
     { slug: "lkpm-tahunan-perencanaan-investasi", kode: "BU-PM-007", nama: "LKPM Tahunan & Perencanaan Investasi", catCode: "BU", subCode: "BU-PM", harga: 1250000, diskon: 0.3, hargaDiskon: 880000 },
     { slug: "konsultasi-positive-investment-list-kbli-berisiko", kode: "BU-PM-008", nama: "Konsultasi Positive Investment List & KBLI Berisiko", catCode: "BU", subCode: "BU-PM", harga: 1000000, diskon: 0.3, hargaDiskon: 700000 },
     { slug: "sertifikasi-iso-9001-manajemen-mutu", kode: "BU-MS-001", nama: "Sertifikasi ISO 9001 (Manajemen Mutu)", catCode: "BU", subCode: "BU-MS", harga: 7500000, diskon: 0.2, hargaDiskon: 6000000 },
+    { slug: "pendampingan-transisi-iso-9001-2026", kode: "BU-MS-009", nama: "Pendampingan Transisi ISO 9001:2026", catCode: "BU", subCode: "BU-MS", harga: 7500000, diskon: 0.2, hargaDiskon: 6000000 },
     { slug: "sertifikasi-iso-14001-manajemen-lingkungan", kode: "BU-MS-002", nama: "Sertifikasi ISO 14001 (Manajemen Lingkungan)", catCode: "BU", subCode: "BU-MS", harga: 8500000, diskon: 0.2, hargaDiskon: 6800000 },
     { slug: "sertifikasi-iso-45001-k3", kode: "BU-MS-003", nama: "Sertifikasi ISO 45001 (K3)", catCode: "BU", subCode: "BU-MS", harga: 8500000, diskon: 0.2, hargaDiskon: 6800000 },
     { slug: "sertifikasi-smk3-pp-50-2012", kode: "BU-MS-004", nama: "Sertifikasi SMK3 (PP 50/2012)", catCode: "BU", subCode: "BU-MS", harga: 9500000, diskon: 0.2, hargaDiskon: 7600000 },

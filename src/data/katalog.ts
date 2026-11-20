@@ -1067,7 +1067,21 @@ export const KATALOG: CatalogItem[] = [
     hargaDiskon: 6000000,
     hemat: 1500000,
     descId:
-      "Sistem manajemen mutu internasional yang meningkatkan konsistensi layanan dan kredibilitas tender, dari gap analysis hingga sertifikat terbit.",
+      "Sertifikasi sistem manajemen mutu ISO 9001:2026 (edisi terbaru, terbit September 2026): konsistensi layanan, kredibilitas tender, dari gap analysis hingga sertifikat terbit.",
+  },
+  {
+    slug: "pendampingan-transisi-iso-9001-2026",
+    kode: "BU-MS-009",
+    nama: "Pendampingan Transisi ISO 9001:2026",
+    catCode: "BU",
+    subCode: "BU-MS",
+    sub: "Sertifikasi Sistem Manajemen",
+    harga: 7500000,
+    diskon: 0.2,
+    hargaDiskon: 6000000,
+    hemat: 1500000,
+    descId:
+      "Migrasi sistem manajemen mutu ke edisi baru ISO 9001:2026 (terbit 16 September 2026, masa transisi hingga 30 September 2029): gap analysis perubahan, pembaruan dokumentasi, audit internal transisi, hingga siap audit edisi baru.",
   },
   {
     slug: "sertifikasi-iso-14001-manajemen-lingkungan",

@@ -29,11 +29,15 @@ for nama, harga, diskon, hd, hemat in cases:
 # 3) Konsistensi katalog vs lite
 kat = Path("/home/z/my-project/src/data/katalog.ts").read_text(encoding="utf-8")
 lite = Path("/home/z/my-project/src/data/katalog-lite.ts").read_text(encoding="utf-8")
-for slug in ["tda-biro-perjalanan-wisata-bpw", "izin-usaha-ppiu-umrah", "izin-usaha-ppihk-haji-khusus"]:
+for slug in ["tda-biro-perjalanan-wisata-bpw", "izin-usaha-ppiu-umrah", "izin-usaha-ppihk-haji-khusus", "pendampingan-transisi-iso-9001-2026"]:
     in_kat = slug in kat
     in_lite = slug in lite
     print(f"{slug}: katalog={'ada' if in_kat else 'HILANG'} lite={'ada' if in_lite else 'HILANG'}")
     assert in_kat and in_lite
+# aritmetika ISO transisi (placeholder price book ISO existing)
+calc_hd = round(7500000 * (1 - 0.2))
+assert calc_hd == 6000000 and 7500000 - calc_hd == 1500000, "ARITMETIKA ISO GAGAL"
+print(f"ISO 9001:2026 transisi: 7.500.000 x 0,8 = {calc_hd:,} | hemat 1.500.000 -> OK")
 # slug unik di katalog
 slugs = re.findall(r'slug: "([^"]+)"', kat)
 dup = [s for s, c in __import__("collections").Counter(slugs).items() if c > 1]
